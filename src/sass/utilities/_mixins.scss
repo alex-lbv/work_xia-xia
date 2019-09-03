@@ -1,24 +1,62 @@
-/* Fonts */
 @mixin screen($size) {
-  @if $size=='sm' {
+  @if $size=='x' {
+    @media only screen and (min-width: 0) and (max-width: ($breakpoint-sm - 1) + px) {
+      @content;
+    }
+  }
+
+  @if $size=='xs' {
     @media only screen and (min-width: 0) and (max-width: ($breakpoint-md - 1) + px) {
       @content;
     }
   }
 
-  @else if $size=='smlim' {
+  @if $size=='s' {
+    @media only screen and (min-width: $breakpoint-sm + px) and (max-width: ($breakpoint-md - 1) + px) {
+      @content;
+    }
+  }
+
+  @if $size=='sm' {
+    @media only screen and (min-width: $breakpoint-sm + px) and (max-width: ($breakpoint-lg - 1) + px) {
+      @content;
+    }
+  }
+
+  @if $size=='m' {
+    @media only screen and (min-width: $breakpoint-md + px) and (max-width: ($breakpoint-lg - 1) + px) {
+      @content;
+    }
+  }
+
+  @if $size=='l' {
+    @media only screen and (min-width: $breakpoint-lg + px) {
+      @content;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  @else if $size=='sm' {
     @media only screen and (min-width: 0) and (max-width: ($breakpoint-lg - 1) + px) {
       @content;
     }
   }
 
-  @else if $size=='md' {
+  @else if $size=='mdlim' {
     @media only screen and (min-width: $breakpoint-md + px) {
       @content;
     }
   }
 
-  @else if $size=='mdlim' {
+  @else if $size=='md' {
     @media only screen and (min-width: $breakpoint-md + px) and (max-width: ($breakpoint-lg - 1) + px) {
       @content;
     }
@@ -31,6 +69,7 @@
   }
 }
 
+/* Fonts */
 @mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
   @font-face {
     font-family: quote($font-name);
