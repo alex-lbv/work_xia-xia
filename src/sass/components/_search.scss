@@ -1,0 +1,54 @@
+.search {
+  position: relative;
+  z-index: 105;
+
+  @include screen(l) {
+    margin-right: 15px;
+  }
+
+  &__open {
+    @include screen(l) {
+      display: none;
+    }
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    right: 105px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: #B8B4B4;
+    }
+  }
+
+  &__btn {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    max-width: 85px;
+    padding: 10px 20px;
+    font: 600 16px/22px FuturaPT;
+    border-radius: 6px;
+    z-index: 1000;
+  }
+
+  input {
+    padding: 16px 50px;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    background: url('../img/pic/ico/search.svg') 20px center no-repeat, #ffffff;
+
+    &::placeholder {
+      font: normal 14px/18px FuturaPT;
+      color: rgba(43, 45, 48, .9);
+    }
+  }
+}

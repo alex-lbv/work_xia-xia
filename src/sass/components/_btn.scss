@@ -1,0 +1,20 @@
+.btn {
+  width: 100%;
+  font-family: FuturaPT;
+  color: #ffffff;
+
+  &--orange {
+    background: #FF7914;
+    box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
+  }
+
+  &--orange-gradient {
+    background: linear-gradient(180deg, #FFB02D 0%, #FF7914 100%);
+    box-shadow: 0px 4px 15px rgba(255, 121, 20, 0.4);
+  }
+
+  &--green-gradient {
+    background: linear-gradient(180deg, #90E744 0%, #53B525 100%);
+    box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
+  }
+}

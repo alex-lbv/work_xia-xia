@@ -10,6 +10,163 @@
 </head>
 
 <body>
+  <header class="header">
+    <div class="header__top uk-visible@l">
+      <div class="uk-container uk-flex uk-flex-between uk-padding uk-padding-remove-vertical">
+        <div class="uk-width-expand">
+          <ul class="uk-flex uk-flex-between">
+            <li>
+              <a href="#">Гарантия</a>
+            </li>
+            <li>
+              <a href="#">Кредит</a>
+            </li>
+            <li>
+              <a href="#">Оплата и доставка</a>
+            </li>
+            <li>
+              <a href="#">Трейд-ин</a>
+            </li>
+            <li>
+              <a href="#">Новости</a>
+            </li>
+            <li>
+              <a href="#">Отзывы</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__feedback">
+          <span>Задать вопрос</span>
+          <span class="feedback__online">Мы онлайн</span>
+        </div>
+      </div>
+    </div>
+    <div class="uk-container uk-flex uk-flex-between uk-flex-column">
+      <div class="header__container uk uk-flex uk-flex-middle uk-width-1-1@l">
+        <button type="button" class="header__hamburger uk-hidden@l">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="header__logo" href="#">
+          <picture>
+            <source srcset="img/pic/logo/logo.svg" media="(min-width:1200px)">
+            <img src="img/pic/logo/logo-mobile.svg" alt="Логотип SPB Xiaomi">
+          </picture>
+        </a>
+        <div class="search uk-width-expand">
+          <button class="search__open" type="button">
+            <svg width="24" height="24">
+              <use xlink:href="img/symbol/sprite.svg#search" />
+            </svg>
+          </button>
+          <input class="uk-width-1-1" type="text" placeholder="Поиск" uk-toggle="target: header; cls: search-active" />
+          <button class="search__close" type="button">
+            <svg width="24" height="24">
+              <use xlink:href="img/symbol/sprite.svg#close" />
+            </svg>
+          </button>
+          <button class="btn btn--orange search__btn" type="button">Найти</button>
+        </div>
+        <div class="backdrop" uk-toggle="target: header; cls: search-active"></div>
+        <div class="header__contact">
+          <a href="tel:88125076559">
+            <svg width="16" height="16">
+              <use xlink:href="img/symbol/sprite.svg#phone" />
+            </svg>
+            <span>(812)507-65-59</span>
+          </a>
+          <div>С 10:00 до 21:00 без выходных<br> Бесплатно РФ</div>
+        </div>
+      </div>
+      <div class="uk-flex uk-flex-middle uk-width-1-1">
+        <nav class="menu uk-width-expend">
+          <ul class="menu__list uk-flex uk-flex-between">
+            <li>
+              <a href="#">Mi</a>
+              <ul class="menu__sublist">
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS Max</a>
+                </li>
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Redmi</a>
+              <ul class="menu__sublist">
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS Max</a>
+                </li>
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Redmi Note</a>
+              <ul class="menu__sublist">
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS Max</a>
+                </li>
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Pocophone</a>
+              <ul class="menu__sublist">
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS Max</a>
+                </li>
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Аксессуары</a>
+              <ul class="menu__sublist">
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS Max</a>
+                </li>
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Электроника</a>
+              <ul class="menu__sublist">
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS Max</a>
+                </li>
+                <li>
+                  <a href="#" title="Перейти на страницу">iPhone XS</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__discount">
+              <a href="#">Скидки</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#" class="header__cart header__cart--green">
+          <svg width="22" height="22">
+            <use xlink:href="img/symbol/sprite.svg#cart" />
+          </svg>
+          <span>Корзина</span>
+          <span>0 шт</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
 </body>
 <script src="js/scripts.min.js"></script>
 

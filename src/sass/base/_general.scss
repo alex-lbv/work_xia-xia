@@ -1,0 +1,40 @@
+*,
+::before,
+::after {
+  box-sizing: border-box !important;
+  outline: none;
+}
+
+body {
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+  transition: color .3s;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .2);
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .3s;
+
+  header.search-active & {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+  }
+}

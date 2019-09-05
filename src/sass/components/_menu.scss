@@ -1,0 +1,106 @@
+.menu {
+  margin-right: 15px;
+  padding: 0 20px 0 10px;
+  border: 1px solid #F0F0F0;
+  border-radius: 12px;
+  background: #FFFFFF;
+
+  &__list {
+    li {
+      position: relative;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      padding: 20px;
+      font: 500 16px/20px Helvetica;
+
+      &::after {
+        content: "";
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: inline-block;
+        margin: auto auto auto 8px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        border-radius: 3px 0 0 0;
+        transform: rotate(225deg) translate(0, 50%);
+      }
+
+      &:hover {
+        color: #FF7914;
+      }
+    }
+
+    li {
+      &:hover .menu__sublist {
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+  }
+
+  &__discount {
+    a::after {
+      display: none;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 10px;
+      height: 13px;
+      background: url(../img/pic/ico/lightning.svg) no-repeat;
+    }
+  }
+
+  &__sublist {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: -5px;
+    min-width: 196px;
+    padding: 5px 0;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      height: 10px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 45px;
+      border: 8px solid transparent;
+      border-top: none;
+      border-bottom: 8px solid #fff;
+      z-index: 1;
+      transform: translateX(-50%);
+    }
+
+    a {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

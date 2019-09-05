@@ -3,4 +3,12 @@
 @import "utilities/mixins";
 @import "utilities/variables";
 
-@import "components/uikit.css";
+@import "base/fonts";
+@import "base/general";
+
+@import "components/uikit";
+@import "components/search";
+@import "components/menu";
+@import "components/btn";
+
+@import "layout/header";
