@@ -33,9 +33,12 @@
   }
 
   &__cart {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     border-radius: 12px;
+    -webkit-backface-visibility: hidden;
 
     @include screen(xl) {
       justify-content: center;
@@ -49,18 +52,47 @@
       padding: 10px 10px 10px 20px;
     }
 
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      transition: opacity 0.5s ease-out;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+
     &--orange {
       background: #FF7914;
       box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
+
+      &:after {
+        background: #FF5614;
+        box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
+      }
     }
 
     &--green {
-      background: linear-gradient(180deg, rgba(144, 231, 68, 1) 0%, rgba(83, 181, 37, 1) 100%);
+      background-image: linear-gradient(180deg, #90E744 0%, #53B525 100%);
       box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
+
+      &:after {
+        box-shadow: 0px 5px 20px rgba(137, 225, 64, 0.6);
+        background-image: linear-gradient(180deg, #8EE641 0%, #43D000 100%);
+      }
     }
 
     svg {
       fill: #FFFFFF;
+      position: relative;
+      z-index: 3;
 
       @include screen(l) {
         margin-right: 15px;
@@ -68,6 +100,9 @@
     }
 
     span {
+      position: relative;
+      z-index: 3;
+
       @include screen(xl) {
         display: none;
       }
@@ -197,6 +232,12 @@
           margin-bottom: 6px;
         }
       }
+    }
+  }
+
+  .uk-container {
+    @include screen(xl) {
+      flex-direction: row;
     }
   }
 }

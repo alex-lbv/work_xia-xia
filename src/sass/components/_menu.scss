@@ -1,11 +1,23 @@
 .menu {
-  margin-right: 15px;
-  padding: 0 20px 0 10px;
-  border: 1px solid #F0F0F0;
-  border-radius: 12px;
-  background: #FFFFFF;
+  @include screen(xl) {
+    display: none;
+  }
+
+  @include screen(l) {
+    margin-right: 15px;
+    padding: 0 20px 0 10px;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+  }
 
   &__list {
+    @include screen(xl) {
+      flex-direction: column;
+      background-color: #ffffff;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 12px 12px;
+    }
+
     li {
       position: relative;
     }
@@ -64,37 +76,39 @@
   }
 
   &__sublist {
-    position: absolute;
-    top: calc(100% + 4px);
-    left: -5px;
-    min-width: 196px;
-    padding: 5px 0;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
-    background: #fff;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .5s;
-
-    &::before {
-      content: '';
+    @include screen(l) {
       position: absolute;
-      top: -10px;
-      left: 0;
-      right: 0;
-      height: 10px;
-    }
+      top: calc(100% + 4px);
+      left: -5px;
+      min-width: 196px;
+      padding: 5px 0;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+      background: #fff;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .5s;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: -8px;
-      left: 45px;
-      border: 8px solid transparent;
-      border-top: none;
-      border-bottom: 8px solid #fff;
-      z-index: 1;
-      transform: translateX(-50%);
+      &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        height: 10px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 45px;
+        border: 8px solid transparent;
+        border-top: none;
+        border-bottom: 8px solid #fff;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
     }
 
     a {
@@ -102,5 +116,43 @@
         display: none;
       }
     }
+  }
+
+  &.uk-offcanvas:not(.uk-open) {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 50;
+
+    @include screen(l) {
+      display: block;
+    }
+
+    & .uk-offcanvas-bar {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      box-sizing: border-box;
+      padding: 0;
+      width: 100%;
+      background: transparent;
+      overflow-y: unset;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  & .uk-offcanvas-bar {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 10px;
+    width: 100%;
+    background: 0 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
