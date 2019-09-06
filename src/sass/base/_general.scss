@@ -7,7 +7,9 @@
 
 body {
   position: relative;
+  font-family: Helvetica;
   color: #333333;
+  background-color: #F2F2F2;
 }
 
 a {
@@ -40,31 +42,14 @@ button {
   }
 }
 
-.ui {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 999;
+.title {
+  color: #2B2D30;
 
-  button {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: green;
+  @include screen(xl) {
+    font: 600 24px/32px FuturaPT;
   }
 
-  ul {
-    position: relative;
-  }
-  li {
-    padding-bottom: 5px;
-  }
-
-  a {
-    font-size: 18px;
-
-    &:hover {
-      color: blue;
-    } 
+  @include screen(l) {
+    font: 600 32px/40px FuturaPT;
   }
 }

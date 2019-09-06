@@ -1,6 +1,7 @@
 .header {
   position: relative;
   z-index: 100;
+  background-color: #ffffff;
 
   @include screen(xl) {
     padding: 10px 0;
