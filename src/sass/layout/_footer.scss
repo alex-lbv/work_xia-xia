@@ -1,0 +1,225 @@
+.footer {
+  &__top {
+    @include screen(xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__about {
+    @include screen(xl) {
+      order: 1;
+      max-width: 600px;
+    }
+
+    @include screen(l) {
+      max-width: 340px;
+    }
+
+    img {
+      @include screen(xl) {
+        margin: 30px 0;
+      }
+
+      @include screen(l) {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font: 500 12px/20px Helvetica;
+      color: rgba(51, 51, 51, .4);
+
+      &:last-of-type {
+        font: 500 11px/18px Helvetica;
+
+        @include screen(l) {
+          overflow: visible;
+          white-space: pre;
+        }
+      }
+    }
+  }
+
+  &__social {
+    margin: 25px 0 15px;
+
+    span {
+      font: 700 12px/15px FuturaPT;
+      text-transform: uppercase;
+      color: rgba(43, 45, 48, .3);
+    }
+
+    ul {
+      margin-top: 10px;
+    }
+
+    li {
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+
+    svg {
+      transition: opacity .3s;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+  &__list {
+    li {
+      margin-bottom: 10px;
+
+      span {
+        font: 700 12px/15px FuturaPT;
+        text-transform: uppercase;
+        color: rgba(43, 45, 48, .3);
+      }
+    }
+
+    a {
+      font: normal 14px/28px Helvetica;
+      color: #333333;
+
+      &:hover {
+        color: #FF7914;
+      }
+    }
+
+    &--address {
+      @include screen(xl) {
+        padding-top: 30px;
+      }
+
+      li {
+        margin: 0;
+      }
+
+      li:not(:first-of-type) {
+        font: normal 12px/32px Helvetica;
+      }
+    }
+  }
+
+  &__contact {
+    @include screen(xl) {
+      padding: 30px 0;
+      order: -1;
+      border-bottom: 1px solid rgba(223, 223, 223, .67);
+      border-radius: .5px;
+    }
+
+    a {
+      @include screen(xl) {
+        font: 600 24px/31px FuturaPT;
+      }
+
+      @include screen(l) {
+        font: 600 20px/26px FuturaPT;
+      }
+
+      &:hover {
+        color: #FF7914;
+      }
+    }
+
+    div {
+      opacity: .5;
+
+      @include screen(xl) {
+        margin-bottom: 10px;
+        font: normal 12px/20px FuturaPT;
+      }
+
+      @include screen(l) {
+        margin-bottom: 10px;
+        font: normal 12px/16px FuturaPT;
+      }
+    }
+
+    button {
+      padding: 0;
+      font: 500 18px/21px FuturaPT;
+      border-bottom: 1px solid transparent;
+      color: #FF7914;
+      transition: color .3s, border-color .3s;
+
+      &:hover {
+        border-color: #FF7914;
+        color: #FF7914;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 10px 0 30px;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    @include screen(xl) {
+      max-width: 250px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #dfdfdf;
+    border-radius: .5px;
+    font: normal 14px/18px FuturaPT;
+    color: rgba(43, 45, 48, .4);
+
+    @include screen(xl) {
+      padding-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    li {
+      @include screen(xl) {
+        margin-bottom: 10px;
+      }
+
+      &:nth-of-type(2) {
+        ul {
+          @include screen(xl) {
+            min-width: 100%;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    a {
+      color: rgba(43, 45, 48, .4);
+      transition: color .3s;
+
+      &:hover {
+        color: #FF7914;
+      }
+    }
+  }
+
+  &__links {
+    @include screen(xl) {
+      order: -1;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(223, 223, 223, .67);
+      border-radius: .5px;
+    }
+
+    .footer__list {
+      @include screen(xl) {
+        flex: 1 0 auto;
+      }
+    }
+  }
+
+  &__address {
+    @include screen(xl) {
+      border-bottom: 1px solid rgba(223, 223, 223, .67);
+      border-radius: .5px;
+    }
+  }
+}
