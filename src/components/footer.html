@@ -121,3 +121,44 @@
     <li class="uk-width-1-2 uk-width-auto@l uk-flex-last@l">antonov.design</li>
   </ul>
 </footer>
+
+<button type="button" class="hamburger" uk-toggle="target: #uinav">
+  <span></span>
+  <span></span>
+  <span></span>
+
+  <style>
+    .hamburger {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      margin-right: 20px;
+      padding: 0;
+    }
+
+    .hamburger span {
+      display: flex;
+      width: 32px;
+      height: 4px;
+      background: #333333;
+      border-radius: 1.5px;
+      margin-bottom: 6px;
+    }
+  </style>
+
+</button>
+<div id="uinav" uk-offcanvas="overlay: true; mode: none;">
+  <div class="uk-offcanvas-bar">
+    <button class="uk-button" type="button"
+      uk-toggle="target: #toggle-animation-multiple; animation:  uk-animation-slide-left, uk-animation-slide-bottom"
+      uk-icon="grid"></button>
+    <ul id="toggle-animation-multiple" class="uk-card uk-card-default uk-card-body uk-margin-small">
+      <li style="margin-bottom: 10px;">
+        <a href="index.html" style="color: #fff;">Главная</a>
+      </li>
+      <li style="margin-bottom: 10px;">
+        <a href="ui.html" style="color: #fff;">UI</a>
+      </li>
+    </ul>
+  </div>
+</div>

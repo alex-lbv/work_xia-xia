@@ -1,0 +1,171 @@
+.features {
+  &--column {
+    .features__item {
+      @include screen(xl) {
+        align-items: center;
+      }
+
+      @include screen(l) {
+        flex-direction: column;
+      }
+    }
+
+    div {
+      @include screen(xl) {
+        margin-right: 20px;
+      }
+
+      @include screen(l) {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &--row {
+    div {
+      margin-right: 10px;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      @include screen(xl) {
+        margin-bottom: 20px;
+      }
+    }
+
+    div {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--orange div {
+      border: 5px solid rgba(252, 88, 24, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #FF8F2D 0%, #FF5614 100%);
+      }
+    }
+
+    &--dark-orange div {
+      border: 5px solid rgba(255, 91, 54, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #FF9264 0%, #FF5934 100%);
+      }
+    }
+
+    &--silver div {
+      border: 5px solid rgba(139, 143, 147, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #BEC1C4 0%, #8A8E92 100%);
+      }
+    }
+
+    &--violet div {
+      border: 5px solid rgba(130, 98, 247, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #B797FF 0%, #815EFF 100%);
+      }
+    }
+
+    &--light-blue div {
+      border: 5px solid rgba(98, 200, 241, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #94EAFF 0%, #5BD0FF 100%);
+      }
+    }
+
+    &--green div {
+      border: 5px solid rgba(139, 220, 52, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #BEF062 0%, #8ADC33 100%);
+      }
+    }
+
+    &--blue div {
+      border: 5px solid rgba(57, 116, 241, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #68AAF9 0%, #3772F0 100%);
+      }
+    }
+
+    &--turquoise div {
+      border: 5px solid rgba(29, 220, 187, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #3CEFDE 0%, #1CDBBA 100%);
+      }
+    }
+
+    &--pink div {
+      border: 5px solid rgba(239, 70, 111, 0.2);
+
+      &::after {
+        background: linear-gradient(180deg, #F879A6 0%, #EE446D 100%);
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      fill: #ffffff;
+      z-index: 1;
+    }
+
+    p {
+      font: normal 14px/22px Helvetica;
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__wrap {
+    border-bottom: 1px solid #DFDFDF;
+    border-radius: 0.5px;
+
+    @include screen(xl) {
+      padding: 30px 35px;
+    }
+
+    @include screen(l) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .title {
+      margin-bottom: 20px;
+
+      @include screen(l) {
+        max-width: 480px;
+      }
+    }
+  }
+}
