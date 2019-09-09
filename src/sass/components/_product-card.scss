@@ -20,8 +20,6 @@
       margin-bottom: 15px;
       mix-blend-mode: darken;
       height: 220px;
-      overflow-x: hidden;
-      overflow-y: visible;
 
       @include screen(l) {
         transition: all .2s;
@@ -43,6 +41,7 @@
           height: 200px;
           background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, #FFFFFF 70.11%);
           opacity: 0;
+          z-index: 5;
         }
       }
     }
