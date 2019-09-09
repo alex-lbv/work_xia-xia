@@ -24,7 +24,7 @@ gulp.task("styles", function () {
   return gulp
     .src("src/sass/main.scss")
     .pipe(sass())
-    .pipe(groupmq())
+    //.pipe(groupmq())  group media queries
     .pipe(postcss([autoprefixer()]))
     .pipe(cleanCSS())
     .pipe(rename({
