@@ -1,0 +1,157 @@
+.subscribe {
+  background-color: #F2F2F3;
+  border-radius: 12px;
+
+  @include screen(xl) {
+    padding: 25px 30px 40px;
+  }
+
+  @include screen(sm) {
+    min-height: 260px;
+    background: url("../img/pic/bg/subscribe-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include screen(l) {
+    padding: 35px 15px 50px 50px;
+    margin: 60px auto;
+    min-height: 260px;
+    background: url("../img/pic/bg/subscribe-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__wrap {
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font: 600 28px/40px FuturaPT;
+    color: #2B2D30;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font: normal 14px/24px Helvetica;
+    color: #333333;
+  }
+
+  &__btn-wrap {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    &:not(:last-of-type) {
+      margin-right: 5px;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    &--mail {
+      background: linear-gradient(180deg, #FFB02D 0%, #FF7914 100%);
+
+      svg {
+        fill: #ffffff;
+      }
+
+      &:hover {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(255, 142, 29, 0.2);
+
+        svg {
+          fill: #FF7914;
+        }
+      }
+    }
+
+    &--viber {
+      background: linear-gradient(180deg, #B568D9 0%, #7E37B1 100%);
+
+      svg {
+        fill: #ffffff;
+      }
+
+      &:hover {
+        background: #FFFFFF;
+        box-shadow: 0px 3px 8px rgba(135, 63, 184, 0.5);
+
+        svg {
+          fill: #7E37B1;
+        }
+      }
+    }
+
+    &--whatsapp {
+      background: linear-gradient(180deg, #57DC77 0%, #2CB742 100%);
+
+      svg {
+        fill: #ffffff;
+      }
+
+      &:hover {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(45, 184, 67, 0.2);
+
+        svg {
+          fill: #2CB742;
+        }
+      }
+    }
+
+    &--telegram {
+      background: linear-gradient(180deg, #57D1F2 0%, #2CA5E0 100%);
+
+      svg {
+        fill: #ffffff;
+      }
+
+      &:hover {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(56, 178, 229, 0.2);
+
+        svg {
+          fill: #2CA5E0;
+        }
+      }
+    }
+  }
+
+  input {
+    padding: 15px;
+    margin: 5px 10px 0 0;
+    max-width: 280px;
+    border: 1px solid #ECECEC;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__container {
+    @include screen(xl) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    div:first-of-type {
+      @include screen(x) {
+        width: 100%;
+      }
+    }
+  }
+}
