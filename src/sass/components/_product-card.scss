@@ -8,11 +8,6 @@
     border-radius: 12px;
     background: #ffffff;
 
-    @include screen(l) {
-      transition: all .2s;
-    }
-
-
     .product-card__image {
       position: relative;
       display: block;
@@ -20,10 +15,6 @@
       margin-bottom: 15px;
       mix-blend-mode: darken;
       height: 220px;
-
-      @include screen(l) {
-        transition: all .2s;
-      }
 
       img {
         max-width: 100%;
@@ -57,7 +48,7 @@
         @include screen(l) {
           position: relative;
           transform: scale(1.3, 1.3);
-          transition: all .5s;
+          transition: transform .5s;
         }
       }
 
@@ -71,14 +62,14 @@
     &:hover .product-card__price {
       @include screen(l) {
         transform: translateY(-50px);
-        transition: all .5s;
+        transition: transform .5s;
       }
     }
 
     &:hover .product-card__name {
       @include screen(l) {
         transform: translateY(-70px);
-        transition: all .5s;
+        transition: transform .5s;
       }
     }
 
@@ -121,11 +112,8 @@
     }
 
     .product-card__buttons {
-
       padding: 0 15px 15px;
-
       background: #ffffff;
-
 
       @include screen(l) {
         position: absolute;
