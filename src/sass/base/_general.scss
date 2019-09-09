@@ -9,7 +9,7 @@ body {
   position: relative;
   font-family: Helvetica;
   color: #333333;
-  background-color: #F2F2F2;
+  background-color: #ffffff;
 }
 
 a {
@@ -51,5 +51,24 @@ button {
 
   @include screen(l) {
     font: 600 32px/40px FuturaPT;
+  }
+}
+
+.bg-full-width {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    display: block;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+    background: #f2f2f2;
   }
 }
