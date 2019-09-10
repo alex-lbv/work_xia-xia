@@ -1,0 +1,64 @@
+.banner {
+  color: #ffffff;
+
+  @include screen('x') {
+    background: url("../img/pic/bg/banner-bg-mobile.jpg") no-repeat, #180925;
+    background-size: 100% auto;
+    background-position: bottom;
+  }
+
+  @include screen(xl) {
+    padding: 40px 0;
+    min-height: 460px;
+    text-align: center;
+  }
+
+  @include screen(sm) {
+    background: url("../img/pic/bg/banner-bg.jpg") no-repeat, #180925;
+    background-size: cover;
+  }
+
+  @include screen(l) {
+    padding: 80px 0;
+    min-height: 400px;
+    text-align: right;
+    background: url("../img/pic/bg/banner-bg.jpg") no-repeat, #180925;
+    background-size: cover;
+  }
+
+  p {
+    margin-bottom: 10px;
+
+    @include screen(xl) {
+      font: 600 60px/77px FuturaPT;
+    }
+
+    @include screen(l) {
+      font: 600 72px/92px FuturaPT;
+    }
+  }
+
+  span {
+    @include screen(xl) {
+      font: 500 24px/29px Helvetica;
+    }
+
+    @include screen(l) {
+      font: 500 38px/46px Helvetica;
+    }
+  }
+
+  .btn {
+    padding: 10px 15px;
+    max-width: 128px;
+    border-radius: 6px;
+
+    @include screen(xl) {
+      margin: 30px auto 0;
+    }
+
+    @include screen(l) {
+      margin: 50px 0 0 auto;
+    }
+  }
+}
