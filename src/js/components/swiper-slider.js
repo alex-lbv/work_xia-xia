@@ -19,3 +19,20 @@ var swiperArticles = new Swiper('.swiper-articles', {
     }
   },
 });
+
+var swiperReviews = new Swiper('.swiper-reviews', {
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+  spaceBetween: 10,
+  slidesPerView: 3,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    1200: {
+      slidesPerView: 2,
+    }
+  },
+});

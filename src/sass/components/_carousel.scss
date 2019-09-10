@@ -46,4 +46,35 @@
       border-radius: 2.5px;
     }
   }
+
+  &-reviews {
+    position: relative;
+    background: white;
+    /* overflow: hidden; */
+
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    .swiper-pagination {
+      @include screen(xl) {
+        bottom: -45px;
+        left: 40px !important;
+        z-index: 100;
+        overflow: visible;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      top: -1px;
+      height: 5px;
+      width: 40px;
+      background: #FF7914;
+      border-radius: 2.5px;
+    }
+  }
 }

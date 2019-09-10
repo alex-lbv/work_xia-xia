@@ -7854,6 +7854,20 @@ iframe.uk-cover {
   }
 }
 
+.uk-flex-column-reverse {
+  &\@s {
+    @include screen(xl) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &\@l {
+    @include screen(l) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
 .uk-grid-small>* {
   padding-left: 10px;
 }
