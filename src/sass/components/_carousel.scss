@@ -1,8 +1,49 @@
 .carousel {
-  background: #f2f2f2;
+  &-articles {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-right: 25px;
+    overflow: hidden;
 
-  .swiper-wrapper {
-    background: #f2f2f2;
-    padding: 50px 0;
+    .title {
+      @include screen(xl) {
+        margin-bottom: 15px;
+      }
+
+      @include screen(l) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .article {
+      @include screen(xl) {
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .swiper-wrapper {
+      @include screen(l) {
+        transform: translate3d(0px, 0, 0) !important;
+      }
+    }
+
+    .swiper-pagination {
+      @include screen(xl) {
+        left: 50px !important;
+        overflow: visible;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      top: -1px;
+      height: 5px;
+      width: 40px;
+      background: #FF7914;
+      border-radius: 2.5px;
+    }
   }
 }
