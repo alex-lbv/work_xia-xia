@@ -29,7 +29,7 @@
 
     .swiper-pagination {
       @include screen(xl) {
-        left: 50px !important;
+        left: 70px !important;
         overflow: visible;
       }
 
@@ -44,6 +44,153 @@
       width: 40px;
       background: #FF7914;
       border-radius: 2.5px;
+    }
+  }
+
+  &-reviews {
+    position: relative;
+    background: white;
+
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      padding-right: 300px;
+      overflow: hidden;
+    }
+
+    &::after {
+      @include screen(l) {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50px;
+        background: url('../img/pic/bg/shadow.svg') no-repeat 0 0;
+        z-index: 1;
+        opacity: 1;
+        transition: opacity .5s;
+      }
+    }
+
+    .swiper-pagination {
+      @include screen(xl) {
+        width: 100px !important;
+        bottom: -45px;
+        left: 55px !important;
+        z-index: 100;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      top: -1px;
+      height: 5px;
+      width: 35px;
+      background: #FF7914;
+      border-radius: 2.5px;
+    }
+  }
+
+  &-product-card {
+    position: relative;
+    background: white;
+
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      overflow: hidden;
+    }
+
+    &::after {
+      @include screen(l) {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50px;
+        background: url('../img/pic/bg/shadow.svg') no-repeat 0 0;
+        z-index: 1;
+        opacity: 1;
+        transition: opacity .5s;
+      }
+    }
+
+    .swiper-pagination {
+      @include screen(xl) {
+        width: 100px !important;
+        bottom: -45px;
+        left: 55px !important;
+        z-index: 100;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      top: -1px;
+      height: 5px;
+      width: 35px;
+      background: #FF7914;
+      border-radius: 2.5px;
+    }
+  }
+}
+
+/* Buttons */
+.carousel__wrap {
+  &-reviews {
+    .swiper-button-next {
+      @include screen(xl) {
+        display: none;
+      }
+
+      @include screen(l) {
+        right: -25px;
+        width: 48px;
+        height: 48px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+        border-radius: 30px;
+        background: url('../img/pic/ico/arrow-next.svg') center no-repeat, #ffffff;
+      }
+    }
+  }
+
+  &-product-card {
+    .swiper-button {
+      @include screen(xl) {
+        display: none;
+      }
+
+      @include screen(l) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 5;
+        margin: auto;
+        width: 48px;
+        height: 48px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+        border-radius: 30px;
+        cursor: pointer;
+      }
+
+      &-next {
+        @include screen(l) {
+          right: -25px;
+          background: url('../img/pic/ico/arrow-next.svg') center no-repeat, #ffffff;
+        }
+      }
     }
   }
 }

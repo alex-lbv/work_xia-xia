@@ -147,4 +147,138 @@
       }
     }
   }
+
+  &__main {
+    @include screen(xl) {
+      padding-top: 30px;
+    }
+
+    @include screen(l) {
+      padding-top: 40px;
+    }
+
+    .title {
+      @include screen(xl) {
+        margin-bottom: 15px;
+      }
+
+      @include screen(l) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .product-card__button {
+      position: relative;
+      z-index: 101;
+      border-radius: 12px;
+      cursor: pointer;
+      backface-visibility: hidden;
+      transition: background-color .4s, box-shadow .4s;
+
+      @include screen(xl) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin: 0 0 0 auto;
+        padding: 10px 15px 10px 20px;
+        width: 185px;
+      }
+
+      @include screen(l) {
+        padding: 20px;
+        max-width: 80px;
+        margin-right: 10px;
+        padding-bottom: 20px;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        transition: opacity 0.5s ease-out;
+        opacity: 0;
+      }
+
+      &:hover:after {
+        opacity: 1;
+      }
+
+      &--violet {
+        background: linear-gradient(90deg, #B779FA 0%, #8044F3 100%);
+        color: #ffffff;
+
+        &::after {
+          background: linear-gradient(180deg, #B779FA 0%, #8044F3 100%);
+        }
+      }
+
+      &--blue {
+        background: linear-gradient(90deg, #64CEF7 0%, #34A0ED 100%);
+        color: #ffffff;
+
+        &::after {
+          background: linear-gradient(180deg, #64CEF7 0%, #34A0ED 100%);
+        }
+      }
+
+      &--orange {
+        background: linear-gradient(90deg, #FF964A 0%, #FF6B19 100%);
+        color: #ffffff;
+
+        &::after {
+          background: linear-gradient(180deg, #FF964A 0%, #FF6B19 100%);
+        }
+      }
+
+      &--violet-light {
+        background: linear-gradient(90deg, #E39EF0 0%, #C365DD 100%);
+        color: #ffffff;
+
+        &::after {
+          background: linear-gradient(180deg, #E39EF0 0%, #C365DD 100%);
+        }
+      }
+
+      span {
+        position: relative;
+        display: block;
+        z-index: 1;
+
+        @include screen(xl) {
+          margin-right: 20px;
+          white-space: nowrap;
+          font: 500 16px/19px FuturaPT;
+        }
+
+        @include screen(l) {
+          transform: rotate(-90deg) translate(200%, 90%);
+          height: 100%;
+          width: 100%;
+          transform-origin: 100% 100%;
+          white-space: nowrap;
+          font: 500 28px/33px FuturaPT;
+          letter-spacing: -1px;
+        }
+      }
+
+      a {
+        position: relative;
+        display: block;
+        z-index: 1;
+        color: #ffffff;
+
+        @include screen(l) {
+          transform: rotate(-90deg) translate(-30px, -10px);
+          transform-origin: 100% 100%;
+          white-space: nowrap;
+          font: 500 16px/22px FuturaPT;
+        }
+      }
+
+    }
+  }
 }
