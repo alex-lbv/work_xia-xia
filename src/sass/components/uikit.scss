@@ -7868,6 +7868,20 @@ iframe.uk-cover {
   }
 }
 
+.uk-flex-bottom {
+  &\@s {
+    @include screen(xl) {
+     align-items: flex-end;
+    }
+  }
+
+  &\@l {
+    @include screen(l) {
+      align-items: flex-end;
+    }
+  }
+}
+
 .uk-grid-small>* {
   padding-left: 10px;
 }

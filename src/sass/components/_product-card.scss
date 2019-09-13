@@ -1,6 +1,5 @@
 .product-card {
   position: relative;
-  background-color: #f2f2f2;
 
   &--default {
     padding: 20px 0 15px;
@@ -279,6 +278,113 @@
         }
       }
 
+    }
+  }
+
+  &--banner {
+    padding: 15px 20px 20px;
+    border: 1px solid #F0F0F0;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+
+    .product-card {
+      &__image {
+        @include screen(xl) {
+          flex: 0 0 33%;
+          padding: 20px 0 0;
+          margin-right: 15px;
+        }
+
+        @include screen(l) {
+          padding: 25px 30px 0;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      &__title {
+        font: 700 16px/21px FuturaPT;
+        color: #14cbff;
+        text-transform: uppercase;
+      }
+
+      &__date {
+        font: 500 16px/19px FuturaPT;
+        color: #a3a3a3;
+        text-transform: uppercase;
+      }
+
+      &__name {
+        font: 600 22px/30px FuturaPT;
+        color: #333333;
+        text-transform: uppercase;
+
+        @include screen(xl) {
+          padding: 20px 0 0;
+          margin-bottom: 5px;
+        }
+
+        span {
+          font-weight: 500;
+          font-size: 20px;
+        }
+      }
+
+      &__price {
+        @include screen(l) {
+          text-align: right;
+        }
+
+        &-old {
+          font: normal 12px/14px Helvetica;
+          color: #979797;
+          text-decoration: line-through;
+
+          @include screen(xl) {
+
+            margin-right: 5px;
+          }
+
+          @include screen(l) {
+            margin-bottom: 5px;
+          }
+        }
+
+        &-sale {
+          padding: 4px 7px 3px;
+          font: 700 12px/15px Helvetica;
+          color: #ff4300;
+          background: #FFF0EC;
+          border-radius: 10.5px;
+
+          @include screen(l) {
+            margin-bottom: 3px;
+          }
+        }
+
+        &-total {
+          font: 700 20px/30px Helvetica;
+          color: #333333;
+        }
+      }
+
+      &__buttons {
+        margin-top: 15px;
+
+        .btn {
+          padding: 8px 15px;
+          font: 500 16px/22px FuturaPT;
+          border-radius: 6px;
+
+          &:first-of-type {
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
   }
 }
