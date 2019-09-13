@@ -1,0 +1,48 @@
+.error404 {
+  .breadcrumbs {
+    @include screen(xl) {
+      padding: 10px 20px 0;
+    }
+
+    @include screen(l) {
+      padding: 20px 30px 0;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+
+    @include screen(xl) {
+      margin: 80px auto 20px;
+      font: 700 42px/54px FuturaPT;
+    }
+
+    @include screen(l) {
+      margin: 80px auto 20px;
+      font: 700 80px/103px FuturaPT;
+    }
+  }
+
+  p {
+    text-align: center;
+
+    @include screen(xl) {
+      margin-bottom: 40px;
+      font: normal 18px/21px Helvetica;
+    }
+
+    @include screen(l) {
+      margin-bottom: 60px;
+      font: normal 24px/29px Helvetica;
+    }
+  }
+
+  .btn {
+    margin: 0 auto 100px;
+    padding: 10px 15px;
+    max-width: 185px;
+    border-radius: 8px;
+    font: 500 16px/19px FuturaPT;
+  }
+}
