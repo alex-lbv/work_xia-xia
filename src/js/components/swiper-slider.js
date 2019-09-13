@@ -129,3 +129,7 @@ var swiperProductCard3 = new Swiper('.swiper-product-card4', {
     nextEl: '.product-card4-button-next',
   },
 });
+
+var swiperBanner = new Swiper('.main-banner__swiper', {
+  
+});

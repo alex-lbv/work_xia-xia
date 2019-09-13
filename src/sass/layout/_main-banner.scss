@@ -1,0 +1,137 @@
+.main-banner {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 85px;
+  background: #F2F2F2;
+
+  .swiper-slide {
+    background: #fff;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    @include screen(x) {
+      padding: 70% 15px 50px 20px;
+    }
+
+    @include screen(sm) {
+      padding: 40px 15px 50px 20px;
+    }
+
+    @include screen(l) {
+      padding: 40px 0 70px 15px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 15px;
+      max-width: 128px;
+      border-radius: 6px;
+      font: 500 16px/22px FuturaPT;
+    }
+  }
+
+  &__container {
+    position: relative;
+    min-height: 425px;
+
+    &--mia3 {
+      @include screen(xl) {
+        /*  background: url("../img/pic/bg/main-banner-1-mobile.jpg") no-repeat;
+        background-size: contain;
+        background-position: 50% -20%; */
+      }
+
+      @include screen(l) {
+        /* background: url("../img/pic/bg/main-banner-1.jpg") no-repeat;
+        background-size: 150% 150%;
+        background-position: 50% 90%; */
+      }
+    }
+
+    .main-banner__image {
+      @include screen(x) {
+        position: absolute;
+        top: -10%;
+        width: 100%;
+        height: auto;
+      }
+
+      @include screen(sm) {
+        position: absolute;
+        top: -100px;
+        right: -400px;
+        width: 1200px;
+        height: auto;
+      }
+
+      @include screen(l) {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        top: -180px;
+        left: -300px;
+      }
+    }
+  }
+
+  &__sticker {
+    font: 700 16px/21px FuturaPT;
+    color: #14cbff;
+  }
+
+  &__title {
+    display: block;
+    color: #2B2D30;
+
+    @include screen(xl) {
+      font: 600 32px/41px FuturaPT;
+    }
+
+    @include screen(l) {
+      font: 600 50px/64px FuturaPT;
+    }
+  }
+
+  &__price {
+    margin: 20px 0 5px;
+
+    @include screen(xl) {
+      display: flex;
+    }
+
+    &-old {
+      color: #333333;
+      opacity: .4;
+
+      @include screen(xl) {
+        margin-right: 10px;
+        font: normal 18px/28px Helvetica;
+      }
+
+      @include screen(l) {
+        font: normal 18px/24px Helvetica;
+      }
+    }
+
+    &-total {
+      display: block;
+      color: #333333;
+
+      @include screen(xl) {
+        font: 700 18px/28px Helvetica;
+      }
+
+      @include screen(l) {
+        font: 700 32px/42px Helvetica;
+      }
+    }
+  }
+
+  &__special {
+    font: normal 12px/14px Helvetica;
+    opacity: .4;
+  }
+}
