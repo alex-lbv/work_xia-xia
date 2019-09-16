@@ -1,0 +1,170 @@
+.payment {
+  &__header {
+    position: relative;
+    background: #F7F7F7;
+    border-radius: 12px;
+
+    @include screen(xl) {
+      padding: 10px 15px 15px;
+      margin: 10px 0 30px;
+    }
+
+    @include screen(l) {
+      padding: 20px 30px 60px;
+      margin: 10px auto 40px;
+    }
+
+    .breadcrumbs {
+      @include screen(xl) {
+        margin-bottom: 30px;
+      }
+
+      @include screen(l) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .title {
+      @include screen(xl) {
+        margin-bottom: 15px;
+      }
+
+      @include screen(l) {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      margin-bottom: 40px;
+      font: normal 18px/24px Helvetica;
+    }
+
+    img {
+      width: 100%;
+      height: 100;
+      mix-blend-mode: darken;
+
+      @include screen(xl) {
+        margin-bottom: 30px;
+        max-width: 350px;
+      }
+
+      @include screen(l) {
+        position: absolute;
+        right: 65px;
+        top: 50px;
+        max-width: 315px;
+      }
+    }
+
+    .payment__header-list {
+      max-width: 700px;
+
+      li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 25px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 15px;
+          height: 15px;
+          background: url(../img/pic/ico/check.svg) no-repeat;
+        }
+      }
+    }
+  }
+
+  .accordion {
+    @include screen(xl) {
+      margin: 15px auto 20px;
+    }
+
+    @include screen(l) {
+      margin: 30px auto 40px;
+    }
+  }
+
+  .btn {
+    @include screen(xl) {
+      margin: auto;
+      margin-bottom: 45px;
+      max-width: 320px;
+    }
+
+    @include screen(l) {
+      margin-left: 30px;
+      max-width: 210px;
+    }
+  }
+
+  &__features {
+    border: 1px solid #EEEEEE;
+    background: #FFFFFF;
+    border-radius: 12px;
+
+    @include screen(xl) {
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      padding: 30px;
+      margin-bottom: 60px;
+    }
+
+    &:first-of-type {
+      @include screen(l) {
+        margin-right: 30px;
+      }
+    }
+
+    .title {
+      @include screen(l) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &-text {
+      @include screen(l) {
+        margin-bottom: 30px;
+        max-width: 360px;
+      }
+    }
+
+    .features__item:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__pay {
+    @include screen(xl) {
+      padding: 15px;
+      margin-bottom: 30px;
+      border: 1px solid #EEEEEE;
+      background: #FFFFFF;
+      border-radius: 12px;
+    }
+
+    @include screen(l) {
+      padding-bottom: 60px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #DBDEE4;
+      border-radius: .5px;
+    }
+
+    .title {
+      @include screen(xl) {
+        margin-bottom: 15px;
+      }
+
+      @include screen(l) {
+        padding-left: 50px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
