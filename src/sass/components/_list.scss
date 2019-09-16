@@ -1,0 +1,15 @@
+.list {
+  p {
+    margin-bottom: 15px;
+    font: 500 18px/28px FuturaPT;
+  }
+
+  ol {
+    padding-left: 15px;
+    list-style: decimal;
+  }
+
+  li:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+}

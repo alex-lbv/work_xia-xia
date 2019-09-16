@@ -1,0 +1,76 @@
+.accordion {
+  &__title {
+    position: relative;
+    display: block;
+    background-color: #F7F7F7;
+    border-radius: 12px;
+
+    @include screen(xl) {
+      padding: 15px 45px 15px 15px;
+      font: normal 16px/20px FuturaPT;
+    }
+
+    @include screen(l) {
+      padding: 18px 20px;
+      font: normal 18px/26px FuturaPT;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 15px;
+      width: 24px;
+      height: 24px;
+      background: #FF7914;
+      border-radius: 50%;
+
+      @include screen(xl) {
+        top: 12px;
+      }
+
+      @include screen(l) {
+        top: 18px;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 22px;
+      display: inline-block;
+      transform: rotate(225deg);
+      width: 9px;
+      height: 9px;
+      border-top: 2px solid;
+      border-left: 2px solid;
+      border-radius: 3px 0 0 0;
+      border-color: #fff;
+      transition: transform .5s;
+
+      @include screen(xl) {
+        top: 18px;
+      }
+
+      @include screen(l) {
+        top: 24px;
+      }
+
+      .uk-open>& {
+        transform: rotate(45deg);
+        top: 27px;
+      }
+    }
+  }
+
+
+
+  &__content {
+    padding: 25px 20px;
+    font: normal 14px/24px Helvetica;
+    color: #333333;
+  }
+
+  li:not(:first-of-type) {
+    margin-top: 5px;
+  }
+}

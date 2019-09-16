@@ -52,6 +52,16 @@ button {
   @include screen(l) {
     font: 600 32px/40px FuturaPT;
   }
+
+  &--large {
+    @include screen(xl) {
+      font: 600 32px/32px FuturaPT;
+    }
+
+    @include screen(l) {
+      font: 600 42px/50px FuturaPT;
+    }
+  }
 }
 
 .bg-full-width {
