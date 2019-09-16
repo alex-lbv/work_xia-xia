@@ -1,0 +1,171 @@
+//= components/head.html
+
+<body>
+  //= components/header.html
+  <div class="payment">
+    <div class="uk-container">
+      <div class="payment__header">
+        <div class="breadcrumbs">
+          <ul class="uk-subnav uk-subnav-divider" uk-margin>
+            <li class="uk-active"><a href="#">Главная</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+          </ul>
+        </div>
+
+        <img src="img/pic/bg/payment-bg.svg" alt="">
+
+        <h1 class="title title--large">Оплата и доставка</h1>
+
+        <p>Быстрая доставка товаров по Санкт-Петербургу</p>
+        <ul class="payment__header-list uk-flex uk-flex-wrap uk-flex-column@s">
+          <li class="uk-width-1-2@l">Доставим вашу покупку в день заказа</li>
+          <li class="uk-width-1-2@l">Вы оплатите товар после проверки</li>
+          <li class="uk-width-1-2@l">Курьер поможет настроить устройство</li>
+          <li class="uk-width-1-2@l">У курьера есть сдача и терминал для оплаты</li>
+        </ul>
+      </div>
+
+      <div class="uk-flex uk-flex-column@s" uk-height-match="target: .payment__features-text">
+        <div class="payment__features uk-width-1-2@l">
+          <h2 class="title">Доставка</h2>
+          <p class="payment__features-text">Вы можете забрать товар прямо у своего дома. Курьер довезет ваш заказ до
+            двери за несколько часов после
+            заказа.</p>
+          <ul class="features features--row uk-flex uk-flex-column">
+            <li class="features__item features__item--green uk-flex uk-flex-middle">
+              <div>
+                <svg width="36" height="42">
+                  <use xlink:href="img/symbol/sprite.svg#feature-sms"></use>
+                </svg>
+              </div>
+              <p>Отслеживайте статус заказа<br> с помощью смс-оповещений</p>
+            </li>
+            <li class="features__item features__item--orange uk-flex uk-flex-middle">
+              <div>
+                <svg width="36" height="42">
+                  <use xlink:href="img/symbol/sprite.svg#feature-phone"></use>
+                </svg>
+              </div>
+              <p>За час до доставки курьер<br> Вас наберет</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="payment__features uk-width-1-2@l">
+          <h2 class="title">Самовывоз</h2>
+          <p class="payment__features-text">Заберите ваше устройство самостоятельно по&nbsp;адресу, указанному на странице контактов.</p>
+          <ul class="features features--row uk-flex uk-flex-column">
+            <li class="features__item features__item--pink uk-flex uk-flex-middle">
+              <div>
+                <svg width="36" height="42">
+                  <use xlink:href="img/symbol/sprite.svg#feature-locate"></use>
+                </svg>
+              </div>
+              <p>Удобно расположенный<br> пункт выдачи</p>
+            </li>
+            <li class="features__item features__item--light-blue uk-flex uk-flex-middle">
+              <div>
+                <svg width="36" height="42">
+                  <use xlink:href="img/symbol/sprite.svg#feature-time"></use>
+                </svg>
+              </div>
+              <p>Работаем с 10:00 до 21:00,<br> 7 дней в неделю</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="payment__pay">
+        <h2 class="title">Оплата</h2>
+        <ul class="features features--row uk-flex uk-flex-around uk-flex-column@s">
+          <li class="features__item features__item--blue uk-flex uk-flex-middle">
+            <div>
+              <svg width="36" height="42">
+                <use xlink:href="img/symbol/sprite.svg#feature-cash"></use>
+              </svg>
+            </div>
+            <p><span>Оплата наличными</span><br>Оплачивайте товары наличными<br> после полного осмотра</p>
+          </li>
+          <li class="features__item features__item--dark-orange uk-flex uk-flex-middle">
+            <div>
+              <svg width="36" height="42">
+                <use xlink:href="img/symbol/sprite.svg#feature-score"></use>
+              </svg>
+            </div>
+            <p><span>Безналичный рассчет</span><br>Деньги списываются с расчетного <br> счета предпринимателя (Без НДС)
+            </p>
+          </li>
+          <li class="features__item features__item--turquoise uk-flex uk-flex-middle">
+            <div>
+              <svg width="36" height="42">
+                <use xlink:href="img/symbol/sprite.svg#feature-card"></use>
+              </svg>
+            </div>
+            <p><span>Банковской картой</span><br>Наши курьеры всегда носят<br> с собой терминал для оплаты</p>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="title">Частые вопросы</h2>
+      <ul class="accordion"
+        uk-accordion="multiple: true; content: > .accordion__content; toggle: > .accordion__title; transition: ease-out"
+        uk-height-match="row: false; target: .accordion__title">
+        <li>
+          <a class="accordion__title" href="#">У вас есть доставка за пределы КАД?</a>
+          <div class="accordion__content">
+            <p>Да. Более того, мы можем доставить товар в любую России.</p>
+          </div>
+        </li>
+        <li>
+          <a class="accordion__title" href="#">Есть ли у курьера сдача?</a>
+          <div class="accordion__content">
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor reprehenderit.</p>
+          </div>
+        </li>
+        <li>
+          <a class="accordion__title" href="#">Курьер поможет активировать и настроить устройство?</a>
+          <div class="accordion__content">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat proident.</p>
+          </div>
+        </li>
+        <li>
+          <a class="accordion__title" href="#">Есть ли у курьера банковский терминал?</a>
+          <div class="accordion__content">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat proident.</p>
+          </div>
+        </li>
+        <li>
+          <a class="accordion__title" href="#">Как перенести доставку?</a>
+          <div class="accordion__content">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat proident.</p>
+          </div>
+        </li>
+        <li>
+          <a class="accordion__title" href="#">Могу ли я открыть и проверить товар перед оплатой?</a>
+          <div class="accordion__content">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat proident.</p>
+          </div>
+        </li>
+        <li>
+          <a class="accordion__title" href="#">Могу ли я оплатить картой курьеру?</a>
+          <div class="accordion__content">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat proident.</p>
+          </div>
+        </li>
+      </ul>
+
+      <button class="btn btn--orange-gradient footer__btn" type="button">Задать вопрос оператору</button>
+
+    </div>
+  </div>
+  //= components/subscribe.html
+  //= components/footer.html
+</body>
+
+//= components/bottom.html
