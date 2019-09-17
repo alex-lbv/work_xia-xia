@@ -39,14 +39,21 @@
     }
 
     .title {
+      display: inline-block;
       margin-bottom: 10px;
+      transition: color .5s;
 
       @include screen(xl) {
         padding: 0 15px;
       }
+
+      &:hover {
+        color: #FF7914;
+      }
     }
 
     span {
+      display: block;
       color: #14CBFF;
 
       @include screen(xl) {
@@ -65,6 +72,45 @@
 
       @include screen(l) {
         margin-top: 15px;
+      }
+    }
+  }
+
+  .title:not(.title--large) {
+    padding-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .pagination {
+    @include screen(xl) {
+      margin-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @include screen(l) {
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .article {
+    overflow: hidden;
+
+    .article__title {
+      transition: color 0.5s;
+    }
+
+    img {
+      transition: transform 0.5s;
+    }
+
+    &:hover {
+      .article__title {
+        color: #FF7914;
+      }
+
+      img {
+        transform: scale(1.2);
       }
     }
   }
