@@ -1,0 +1,117 @@
+.articles {
+  .breadcrumbs {
+    @include screen(xl) {
+      padding: 10px 15px 0;
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      padding: 20px 30px 0;
+      margin-bottom: -20px;
+    }
+  }
+
+  &__header {
+    @include screen(xl) {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include screen(l) {
+      padding-left: 30px;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 580px;
+      max-height: 400px;
+      border-radius: 12px;
+
+      @include screen(xl) {
+        margin-bottom: 20px;
+      }
+
+      @include screen(l) {
+        margin-left: 60px;
+      }
+    }
+
+    .title {
+      display: inline-block;
+      margin-bottom: 10px;
+      transition: color .5s;
+
+      @include screen(xl) {
+        padding: 0 15px;
+      }
+
+      &:hover {
+        color: #FF7914;
+      }
+    }
+
+    span {
+      display: block;
+      color: #14CBFF;
+
+      @include screen(xl) {
+        padding: 0 15px;
+      }
+    }
+
+    p {
+      font: normal 18px/32px Helvetica;
+      color: #333333;
+
+      @include screen(xl) {
+        margin-top: 10px;
+        padding: 0 15px;
+      }
+
+      @include screen(l) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .title:not(.title--large) {
+    padding-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .pagination {
+    @include screen(xl) {
+      margin-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @include screen(l) {
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .article {
+    overflow: hidden;
+
+    .article__title {
+      transition: color 0.5s;
+    }
+
+    img {
+      transition: transform 0.5s;
+    }
+
+    &:hover {
+      .article__title {
+        color: #FF7914;
+      }
+
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
