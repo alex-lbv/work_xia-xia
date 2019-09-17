@@ -14,6 +14,23 @@ var swiperArticles = new Swiper('.swiper-articles', {
     }
   },
 });
+var swiperArticle = new Swiper('.swiper-article', {
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+  spaceBetween: 10,
+  slidesPerView: 3,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    1200: {
+      slidesPerView: 2,
+      
+    }
+  },
+});
 
 var swiperReviews = new Swiper('.swiper-reviews', {
   pagination: {
@@ -131,5 +148,5 @@ var swiperProductCard3 = new Swiper('.swiper-product-card4', {
 });
 
 var swiperBanner = new Swiper('.main-banner__swiper', {
-  
+
 });

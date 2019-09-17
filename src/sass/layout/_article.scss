@@ -1,0 +1,94 @@
+.article {
+  .breadcrumbs {
+    @include screen(xl) {
+      padding: 10px 15px 0;
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      padding: 20px 30px 0;
+      margin-bottom: 30px;
+    }
+  }
+
+
+  &__big-image {
+    width: 100%;
+    height: auto;
+
+    @include screen(xl) {
+      max-width: 100%;
+    }
+
+    @include screen(l) {
+      max-width: 100%;
+      max-width: 840px;
+      max-height: 560px;
+    }
+  }
+
+
+  .title {
+    @include screen(xl) {
+      margin-bottom: 10px;
+    }
+
+    @include screen(l) {
+      margin-bottom: 10px;
+      padding-left: 30px;
+      max-width: 860px;
+    }
+  }
+
+  &__description {
+    @include screen(xl) {
+      margin-top: 20px;
+      font: normal 16px/24px Helvetica;
+    }
+
+    @include screen(l) {
+      padding-left: 30px;
+      margin-top: 40px;
+      font: normal 18px/32px Helvetica;
+    }
+  }
+
+  &__date {
+    margin-bottom: 20px;
+    color: #14CBFF;
+
+    @include screen(l) {
+      padding-left: 30px;
+    }
+  }
+
+  &__more {
+    display: block;
+    margin-bottom: 20px;
+    font: 700 12px/15px FuturaPT;
+    text-transform: uppercase;
+    color: #2B2D30;
+    opacity: .3;
+
+    @include screen(xl) {
+      margin-top: 20px;
+    }
+  }
+
+  .article-card {
+    @include screen(xl) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: none;
+    }
+
+    &__footer {
+      background-color: #F7F7F7;
+
+      @include screen(xl) {
+        flex: 1;
+      }
+    }
+  }
+}
