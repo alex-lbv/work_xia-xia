@@ -7865,7 +7865,7 @@ iframe.uk-cover {
 .uk-flex-bottom {
   &\@s {
     @include screen(xl) {
-     align-items: flex-end;
+      align-items: flex-end;
     }
   }
 
@@ -7954,6 +7954,184 @@ iframe.uk-cover {
   &\@l {
     @include screen(l) {
       overflow: hidden;
+    }
+  }
+}
+
+.uk-margin {
+
+  /* margin default */
+  &-top {
+    &\@s {
+      @include screen(xl) {
+        margin-top: 20px;
+      }
+    }
+
+    &\@l {
+      @include screen(l) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &-bottom {
+    &\@s {
+      @include screen(xl) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &\@l {
+      @include screen(l) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &-left {
+    &\@s {
+      @include screen(xl) {
+        margin-left: 20px;
+      }
+    }
+
+    &\@l {
+      @include screen(l) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &-right {
+    &\@s {
+      @include screen(xl) {
+        margin-right: 20px;
+      }
+    }
+
+    &\@l {
+      @include screen(l) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  /* margin-small */
+  &-small {
+    &-top {
+      &\@s {
+        @include screen(xl) {
+          margin-top: 10px;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &-bottom {
+      &\@s {
+        @include screen(xl) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-left {
+      &\@s {
+        @include screen(xl) {
+          margin-left: 10px;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &-right {
+      &\@s {
+        @include screen(xl) {
+          margin-right: 10px;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  /* margin-medium */
+  &-medium {
+    &-top {
+      &\@s {
+        @include screen(xl) {
+          margin-top: 40px;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    &-bottom {
+      &\@s {
+        @include screen(xl) {
+          margin-bottom: 40px;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    &-left {
+      &\@s {
+        @include screen(xl) {
+          margin-left: 40px;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          margin-left: 40px;
+        }
+      }
+    }
+
+    &-right {
+      &\@s {
+        @include screen(xl) {
+          margin-right: 40px;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          margin-right: 40px;
+        }
+      }
     }
   }
 }

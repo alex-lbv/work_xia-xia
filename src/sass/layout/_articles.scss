@@ -93,10 +93,10 @@
     }
   }
 
-  .article {
+  .article-card {
     overflow: hidden;
 
-    .article__title {
+    &__title {
       transition: color 0.5s;
     }
 
@@ -105,7 +105,7 @@
     }
 
     &:hover {
-      .article__title {
+      .article-card__title {
         color: #FF7914;
       }
 
