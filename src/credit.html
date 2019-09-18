@@ -1,0 +1,172 @@
+//= components/head.html
+
+<body>
+  //= components/header.html
+  <div class="credit uk-container">
+
+    <div class="credit__header">
+      <div class="breadcrumbs">
+        <ul class="uk-subnav uk-subnav-divider" uk-margin>
+          <li class="uk-active"><a href="#">Главная</a></li>
+          <li><a href="#">Кредит</a></li>
+        </ul>
+      </div>
+
+      <img src="img/pic/bg/credit-bg.jpg" alt="">
+
+      <h1 class="title title--large">Кредит</h1>
+
+      <p>С нами покупать в кредит легко!</p>
+      <div class="uk-flex uk-flex-column@s">
+        <ul class="credit__header-list uk-flex uk-flex-column uk-width-1-3@l">
+          <li>Среднее время одобрения 30 минут</li>
+          <li>80% заявок одобряется</li>
+          <li>Оформляем кредит по телефону</li>
+        </ul>
+        <ul class="credit__header-list uk-flex uk-flex-column uk-width-1-2@l">
+          <li class="uk-width-1-2@l">Нет скрытых платежей. Вам заранее сообщат все условия кредитования</li>
+          <li class="uk-width-1-2@l">Нет длинных анкет 10 минут по телефону и вся информация у сотрудника банка
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="uk-flex uk-flex-column@s uk-child-width-1-2@l">
+      <div class="credit__steps">
+        <h2 class="title">Как это работает</h2>
+        <ul class="credit__steps-tabs uk-flex" uk-switcher="animation: uk-animation-scale-up">
+          <li>
+            <a href="#">1 шаг</a>
+          </li>
+          <li>
+            <a href="#">2 шаг</a>
+          </li>
+          <li>
+            <a href="#">3 шаг</a>
+          </li>
+          <li>
+            <a href="#">4 шаг</a>
+          </li>
+        </ul>
+
+        <ul class="uk-switcher credit__steps-content">
+          <li class="uk-flex uk-flex-column">
+            <p class="uk-width-1-2@l">Выбирите на сайте нужный вам товар и нажмите “Расчитать кредит”</p>
+            <span>Пример:</span>
+            <picture>
+              <source srcset="img/pic/credit-step-1.jpg" media="(min-width: 1200px)">
+              <img src="img/pic/credit-step-1-mobile.jpg" alt="">
+            </picture>
+          </li>
+          <li class="uk-flex uk-flex-column">
+            <p class="uk-width-1-2@l">Кредитный специалист заполнит с вами короткую анкету по телефону</p>
+            <svg class="uk-margin-right" width="54" height="60">
+              <use xlink:href="img/symbol/sprite.svg#credit-step-2" />
+            </svg>
+          </li>
+          <li class="uk-flex uk-flex-column">
+            <p class="uk-width-1-2@l">Ожидайте решения от банков. В среднем это занимает 30 минут.</p>
+            <svg class="uk-margin-right" width="58" height="60">
+              <use xlink:href="img/symbol/sprite.svg#credit-step-3" />
+            </svg>
+          </li>
+          <li class="uk-flex uk-flex-column">
+            <p class="uk-width-1-2@l">Ваш заказ доставят вам на дом и останется лишь подписать бумаги.</p>
+            <svg class="uk-margin-right" width="74" height="54">
+              <use xlink:href="img/symbol/sprite.svg#credit-step-4" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+
+      <div class="credit__conditions">
+        <h2 class="title uk-margin-bottom uk-margin-medium-bottom@l">Условия получения кредита</h2>
+        <ul>
+          <li class="uk-flex uk-flex-middle">
+            <svg class="uk-margin-right" width="32" height="37">
+              <use xlink:href="img/symbol/sprite.svg#credit1" />
+            </svg>
+            <p>Возраст - от 18 до 69 лет</p>
+          </li>
+          <li class="uk-flex uk-flex-middle">
+            <svg class="uk-margin-right" width="32" height="32">
+              <use xlink:href="img/symbol/sprite.svg#credit2" />
+            </svg>
+            <p>Наличие постоянного источника дохода<br><span>(работа, пенсия)</span></p>
+          </li>
+          <li class="uk-flex uk-flex-middle">
+            <svg class="uk-margin-right" width="32" height="44">
+              <use xlink:href="img/symbol/sprite.svg#credit3" />
+            </svg>
+            <p>Наличие паспорта гражданина РФ</p>
+          </li>
+        </ul>
+        <span class="credit__conditions-gray">На срок:</span>
+        <span class="credit__conditions-large">4 — 36 месяцев</span>
+        <span class="credit__conditions-gray">Возможная сумма кредита:</span>
+        <span class="credit__conditions-large">10000 — 600000&#8381;</span>
+      </div>
+    </div>
+
+    <h2 class="title">Частые вопросы</h2>
+    <ul class="accordion"
+      uk-accordion="multiple: true; content: > .accordion__content; toggle: > .accordion__title; transition: ease-out"
+      uk-height-match="row: false; target: .accordion__title">
+      <li>
+        <a class="accordion__title" href="#">У вас есть доставка за пределы КАД?</a>
+        <div class="accordion__content">
+          <p>Да. Более того, мы можем доставить товар в любую России.</p>
+        </div>
+      </li>
+      <li>
+        <a class="accordion__title" href="#">Есть ли у курьера сдача?</a>
+        <div class="accordion__content">
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor reprehenderit.</p>
+        </div>
+      </li>
+      <li>
+        <a class="accordion__title" href="#">Курьер поможет активировать и настроить устройство?</a>
+        <div class="accordion__content">
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat proident.</p>
+        </div>
+      </li>
+      <li>
+        <a class="accordion__title" href="#">Есть ли у курьера банковский терминал?</a>
+        <div class="accordion__content">
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat proident.</p>
+        </div>
+      </li>
+      <li>
+        <a class="accordion__title" href="#">Как перенести доставку?</a>
+        <div class="accordion__content">
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat proident.</p>
+        </div>
+      </li>
+      <li>
+        <a class="accordion__title" href="#">Могу ли я открыть и проверить товар перед оплатой?</a>
+        <div class="accordion__content">
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat proident.</p>
+        </div>
+      </li>
+      <li>
+        <a class="accordion__title" href="#">Могу ли я оплатить картой курьеру?</a>
+        <div class="accordion__content">
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat proident.</p>
+        </div>
+      </li>
+    </ul>
+
+    <button class="btn btn--orange-gradient footer__btn" type="button">Задать вопрос оператору</button>
+
+  </div>
+  //= components/subscribe.html
+  //= components/footer.html
+</body>
+
+//= components/bottom.html
