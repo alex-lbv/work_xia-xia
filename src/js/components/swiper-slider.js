@@ -27,7 +27,7 @@ var swiperArticle = new Swiper('.swiper-article', {
     },
     1200: {
       slidesPerView: 2,
-      
+
     }
   },
 });
@@ -149,4 +149,37 @@ var swiperProductCard3 = new Swiper('.swiper-product-card4', {
 
 var swiperBanner = new Swiper('.main-banner__swiper', {
 
+});
+
+var swiperCheckout = new Swiper('.checkout__swiper', {
+  mousewheel: true,
+  slidesPerView: 2,
+  direction: 'vertical',
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  breakpoints: {
+    640: {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      direction: 'horizontal',
+      mousewheel: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        dynamicBullets: true,
+      },
+    },
+    1200: {
+      spaceBetween: 10,
+      slidesPerView: 2,
+      direction: 'horizontal',
+      mousewheel: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        dynamicBullets: true,
+      },
+    }
+  },
 });
