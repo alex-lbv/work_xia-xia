@@ -1,0 +1,309 @@
+//= components/head.html
+
+<body>
+  //= components/header.html
+
+  <div class="checkout uk-container">
+    <div class="breadcrumbs">
+      <ul class="uk-subnav uk-subnav-divider" uk-margin>
+        <li class="uk-active"><a href="#">Главная</a></li>
+        <li><a href="#">Корзина</a></li>
+      </ul>
+    </div>
+
+    <h1 class="title">Корзина</h1>
+
+    <div class="checkout__empty uk-width-1-4@l">
+      <p>Ваша корзина пуста, вернитесь в каталог и&nbsp;добавьте в корзину товары которые хотите купить</p>
+      <a class="btn btn--orange-gradient" href="#">В каталог</a>
+    </div>
+
+    <div class="uk-flex uk-flex-column@s">
+      <div class="uk-width-expand uk-margin-small-right@l">
+        <ul class="checkout__cards">
+          <li class="checkout__card">
+            <div class="product-card product-card--checkout uk-flex uk-flex-middle">
+              <a class="product-card__image" href="#">
+                <img src="img/temp/checkout-1-1.jpg" alt="">
+              </a>
+              <div class="uk-flex uk-flex-column uk-width-2-3">
+                <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                <div class="product-card__price uk-flex uk-flex-middle">
+                  <span class="product-card__price-old uk-margin-small-right">2&nbsp;699&nbsp;&#8381;</span>
+                  <span class="product-card__price-total uk-margin-small-right">1&nbsp;990&nbsp;&#8381;</span>
+                  <span class="product-card__price-sale">-15&#37;</span>
+                </div>
+                <div class="product-card__quantity uk-flex uk-flex-middle">
+                  <button type="button">
+                    <svg width="12" height="3">
+                      <use xlink:href="img/symbol/sprite.svg#minus" />
+                    </svg>
+                  </button>
+                  <input type="text" value="1">
+                  <button type="button">
+                    <svg width="11" height="11">
+                      <use xlink:href="img/symbol/sprite.svg#plus" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button class="product-card__close">
+                <svg width="16" height="16">
+                  <use xlink:href="img/symbol/sprite.svg#close" />
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li class="checkout__card">
+            <div class="product-card product-card--checkout uk-flex uk-flex-middle">
+              <a class="product-card__image" href="#">
+                <img src="img/temp/checkout-2.jpg" alt="">
+              </a>
+              <div class="uk-flex uk-flex-column uk-width-2-3">
+                <a href="#" class="product-card__name">УМБ Xiaomi Mi Power Bank 2s 10000 mAh</a>
+                <div class="product-card__price uk-flex uk-flex-middle">
+                  <span class="product-card__price-total uk-margin-small-right">1&nbsp;990&nbsp;&#8381;</span>
+                </div>
+                <div class="product-card__quantity uk-flex uk-flex-middle">
+                  <button type="button">
+                    <svg width="12" height="3">
+                      <use xlink:href="img/symbol/sprite.svg#minus" />
+                    </svg>
+                  </button>
+                  <input type="text" value="1">
+                  <button type="button">
+                    <svg width="11" height="11">
+                      <use xlink:href="img/symbol/sprite.svg#plus" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button class="product-card__close">
+                <svg width="16" height="16">
+                  <use xlink:href="img/symbol/sprite.svg#close" />
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li class="checkout__card">
+            <div class="product-card product-card--checkout uk-flex uk-flex-middle">
+              <a class="product-card__image" href="#">
+                <img src="img/temp/checkout-1-1.jpg" alt="">
+              </a>
+              <div class="uk-flex uk-flex-column uk-width-2-3">
+                <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                <div class="product-card__price uk-flex uk-flex-middle">
+                  <span class="product-card__price-total uk-margin-small-right">1&nbsp;990&nbsp;&#8381;</span>
+                </div>
+                <div class="product-card__quantity uk-flex uk-flex-middle">
+                  <button type="button">
+                    <svg width="12" height="3">
+                      <use xlink:href="img/symbol/sprite.svg#minus" />
+                    </svg>
+                  </button>
+                  <input type="text" value="1">
+                  <button type="button">
+                    <svg width="11" height="11">
+                      <use xlink:href="img/symbol/sprite.svg#plus" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button class="product-card__close">
+                <svg width="16" height="16">
+                  <use xlink:href="img/symbol/sprite.svg#close" />
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li class="checkout__card checkout__card--sale">
+            <div class="product-card product-card--checkout-sale uk-flex uk-flex-middle">
+              <a class="product-card__image" href="#">
+                <img src="img/temp/checkout-3.jpg" alt="">
+              </a>
+              <div class="uk-flex uk-flex-column uk-width-2-3">
+                <span class="product-card__sale">Товар по скидке</span>
+                <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                <div class="product-card__price uk-flex uk-flex-middle">
+                  <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                  <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                  <span class="product-card__price-sale">-25&#37;</span>
+                </div>
+              </div>
+              <button class="product-card__close">
+                <svg width="16" height="16">
+                  <use xlink:href="img/symbol/sprite.svg#close" />
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <p class="checkout__title">Добавьте аксессуары в корзину вместе с Mi 9T по специальной цене:</p>
+
+          <div class="checkout__swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="product-card product-card--checkout-recommendation uk-flex uk-flex-middle">
+                  <a class="product-card__image" href="#">
+                    <img src="img/temp/checkout-3.jpg" alt="">
+                  </a>
+                  <div class="uk-flex uk-flex-column uk-width-2-3">
+                    <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                    <div class="product-card__price uk-flex uk-flex-middle">
+                      <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                      <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                      <span class="product-card__price-sale">-25&#37;</span>
+                    </div>
+                    <button class="product-card__adds uk-flex uk-flex-middle">
+                      <svg width="16" height="16">
+                        <use xlink:href="img/symbol/sprite.svg#plus-circle" />
+                      </svg>
+                      <span>Добавить</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="product-card product-card--checkout-recommendation uk-flex uk-flex-middle">
+                  <a class="product-card__image" href="#">
+                    <img src="img/temp/checkout-3.jpg" alt="">
+                  </a>
+                  <div class="uk-flex uk-flex-column uk-width-2-3">
+                    <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                    <div class="product-card__price uk-flex uk-flex-middle">
+                      <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                      <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                      <span class="product-card__price-sale">-25&#37;</span>
+                    </div>
+                    <button class="product-card__adds uk-flex uk-flex-middle">
+                      <svg width="16" height="16">
+                        <use xlink:href="img/symbol/sprite.svg#plus-circle" />
+                      </svg>
+                      <span>Добавить</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="product-card product-card--checkout-recommendation uk-flex uk-flex-middle">
+                  <a class="product-card__image" href="#">
+                    <img src="img/temp/checkout-3.jpg" alt="">
+                  </a>
+                  <div class="uk-flex uk-flex-column uk-width-2-3">
+                    <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                    <div class="product-card__price uk-flex uk-flex-middle">
+                      <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                      <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                      <span class="product-card__price-sale">-25&#37;</span>
+                    </div>
+                    <button class="product-card__adds uk-flex uk-flex-middle">
+                      <svg width="16" height="16">
+                        <use xlink:href="img/symbol/sprite.svg#plus-circle" />
+                      </svg>
+                      <span>Добавить</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="product-card product-card--checkout-recommendation uk-flex uk-flex-middle">
+                  <a class="product-card__image" href="#">
+                    <img src="img/temp/checkout-2.jpg" alt="">
+                  </a>
+                  <div class="uk-flex uk-flex-column uk-width-2-3">
+                    <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                    <div class="product-card__price uk-flex uk-flex-middle">
+                      <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                      <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                      <span class="product-card__price-sale">-25&#37;</span>
+                    </div>
+                    <button class="product-card__adds uk-flex uk-flex-middle">
+                      <svg width="16" height="16">
+                        <use xlink:href="img/symbol/sprite.svg#plus-circle" />
+                      </svg>
+                      <span>Добавить</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- Add Scrollbar -->
+            <div class="swiper-scrollbar"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout__form uk-width-2-5@l">
+        <span class="checkout__title">Оформление заказа</span>
+        <ul class="checkout__total uk-margin-bottom">
+          <li class="uk-flex uk-flex-between uk-flex-middle">
+            <span>Сумма заказа:</span>
+            <span class="checkout__total-number checkout__total-number--lg">108&nbsp;990&nbsp;&#8381;</span>
+          </li>
+          <li class="uk-flex uk-flex-between uk-flex-middle">
+            <span>Сумма скидки:</span>
+            <span class="checkout__total-number checkout__total-number--md">-10&nbsp;000&nbsp;&#8381;</span>
+          </li>
+          <li class="uk-flex uk-flex-between uk-flex-middle">
+            <span>Доставка:</span>
+            <span class="checkout__total-number checkout__total-number--sm">0&nbsp;&#8381;</span>
+          </li>
+        </ul>
+        <ul class="checkout__delivery uk-flex uk-child-width-expand">
+          <li>
+            <input class="uk-hidden" type="radio" id="ship" name="shipping">
+            <label for="ship">Самовывоз</label>
+          </li>
+          <li>
+            <input class="uk-hidden" type="radio" id="delivery" name="shipping" checked>
+            <label for="delivery">Доставка</label>
+          </li>
+        </ul>
+        <p class="checkout__point">Точку выдачи с товаром в наличии уточняйте у менеджера</p>
+        <div class="checkout__field uk-flex uk-flex-column">
+          <span>Телефон</span>
+          <input type="text">
+        </div>
+        <div class="checkout__field uk-flex uk-flex-column">
+          <span>Email</span>
+          <input type="text">
+        </div>
+        <div class="checkout__field uk-flex uk-flex-column">
+          <span>Адрес</span>
+          <input type="text">
+        </div>
+        <ul class="checkout__radio">
+          <li>
+            <input class="uk-hidden" type="radio" id="cashless" name="payment" checked>
+            <label for="cashless">Безналичный рассчет</label>
+          </li>
+          <li>
+            <input class="uk-hidden" type="radio" id="cash" name="payment" checked>
+            <label for="cash">Наличными</label>
+          </li>
+          <li>
+            <input class="uk-hidden" type="radio" id="card" name="payment" checked>
+            <label for="card">Банковской картой</label>
+          </li>
+        </ul>
+        <div class="checkout__check">
+          <input class="uk-hidden" type="checkbox" id="specification" name="specification" checked>
+          <label for="specification">Согласен с правилами обработки персональных данных</label>
+        </div>
+        <button class="btn btn--green-gradient" type="button">Оформить заказ</button>
+        <div class="checkout__credit uk-flex uk-flex-between uk-flex-middle">
+          <span>Рассчитать кредит</span>
+          <span>от&nbsp;<span>990&#8381;</span>&nbsp;в&nbsp;месяц</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= components/subscribe.html
+  //= components/footer.html
+</body>
+
+//= components/bottom.html
