@@ -183,3 +183,14 @@ var swiperCheckout = new Swiper('.checkout__swiper', {
     }
   },
 });
+
+var initialSlide = $('.catalog__swiper-link--active').index();
+var swiperCatalog = new Swiper('.catalog__swiper', {
+  navigation: {
+    nextEl: '.catalog__swiper-button-next',
+    prevEl: '.catalog__swiper-button-prev',
+  },
+  slidesPerView: 8,
+  spaceBetween: 5,
+  initialSlide: initialSlide,
+});

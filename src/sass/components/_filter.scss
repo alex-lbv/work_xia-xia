@@ -1,0 +1,54 @@
+.filter {
+  &__frame {
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 6px;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__checkbox {
+    margin: 20px 0 15px;
+
+    li {
+      padding-left: 25px;
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+    }
+
+    input+label::after {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      background-color: #E9EBEC;
+    }
+
+    input:checked+label::after {
+      background-color: #F6F6F6;
+    }
+
+    input:checked+label::before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 15px;
+      height: 10px;
+      background: url("../img/pic/ico/check-orange.svg") no-repeat;
+      z-index: 1;
+    }
+  }
+}
