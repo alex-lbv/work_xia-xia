@@ -10,6 +10,18 @@ body {
   font: normal 14px/24px Helvetica;
   color: #333333;
   background-color: #ffffff;
+
+  &.bg-shadowed .backdrop {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: #000000;
+    opacity: .2;
+    z-index: 1000;
+    transition: background-color .4s;
+  }
 }
 
 a {
@@ -23,7 +35,7 @@ button {
   background-color: transparent;
 }
 
-.backdrop {
+/* .backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -40,7 +52,7 @@ button {
     opacity: 1;
     z-index: 100;
   }
-}
+} */
 
 .title {
   color: #2B2D30;
@@ -73,12 +85,12 @@ button {
     left: 50%;
     right: 50%;
     bottom: 0;
-    display: block;
+    display: block!important;
     margin-left: -50vw;
     margin-right: -50vw;
     height: 100%;
     width: 100vw;
     z-index: -1;
-    background: #f2f2f2;
+    background-color: rgba(242, 242, 242, 1);
   }
 }

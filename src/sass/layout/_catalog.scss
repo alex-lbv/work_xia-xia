@@ -19,8 +19,11 @@
   &__swiper {
     position: relative;
     overflow: hidden;
-    padding-right: 50px;
     margin-left: 15px;
+
+    @include screen(l) {
+      padding-right: 50px;
+    }
 
     &-container {
       position: relative;
@@ -128,6 +131,13 @@
   /* -------------------- */
 
   &__sorting {
+
+    @include screen(xl) {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(223, 223, 223, .7);
+    }
+
     &-title {
       margin-right: 15px;
       font: 700 12px/15px FuturaPT;
@@ -138,16 +148,18 @@
     /* Select */
 
     .nice-select {
-      width: 185px;
+      width: 100%;
+      max-width: 185px;
       border: none;
       background: #FFFFFF;
       border-radius: 8px;
-      transition: transform .3s;
 
       &::after {
         width: 8px;
         height: 8px;
         right: 14px;
+        border-color: #FF5614;
+        transition: transform .3s;
       }
 
       &::before {
@@ -164,6 +176,7 @@
       }
 
       span {
+        vertical-align: sub;
         font: normal 14px/17px Helvetica;
       }
 
@@ -199,7 +212,134 @@
       font: 500 14px/24px FuturaPT;
       color: #FF7914;
     }
+
+    &__drop {
+      margin-left: 20px;
+    }
   }
 
+  /* Catalog-accordion */
 
+  &__accordion {
+    @include screen(xl) {
+      border: 1px solid #F0F0F0;
+      border-radius: 12px;
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      position: relative;
+      display: block;
+      padding: 15px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      transition: border-radius .3s;
+
+      @include screen(xl) {
+        font: normal 16px/20px FuturaPT;
+      }
+
+      @include screen(l) {
+        padding: 15px 20px;
+        font: normal 18px/26px FuturaPT;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        background: #F7F7F7;
+        border-radius: 50%;
+
+        @include screen(xl) {
+          top: 12px;
+        }
+
+        @include screen(l) {
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 22px;
+        display: inline-block;
+        transform: rotate(225deg);
+        width: 9px;
+        height: 9px;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        border-radius: 3px 0 0 0;
+        border-color: #FF5614;
+        transition: transform .3s;
+
+        @include screen(xl) {
+          top: 18px;
+        }
+
+        @include screen(l) {
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        .uk-open>& {
+          transform: rotate(45deg);
+
+        }
+      }
+
+      .uk-open>& {
+        border-radius: 6px 6px 0 0;
+      }
+    }
+
+    &-content {
+      margin: 0;
+      padding: 5px 20px 20px 10px;
+      font: normal 14px/24px Helvetica;
+      color: #333333;
+      border-radius: 0 0 6px 6px;
+      background-color: #ffffff;
+    }
+  }
+
+  /*  */
+
+
+  &__filter-btn {
+    @include screen(xl) {
+      position: relative;
+      margin-left: 10px;
+      padding: 10px 15px;
+      width: 100%;
+      z-index: 200;
+      max-width: 160px;
+      background-color: #FFFFFF;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      font: 500 14px/18px Helvetica;
+      color: #333333;
+      transition: background-color .15s, color .15s;
+    }
+
+    svg {
+      transform: translate(-10px, 4px);
+      transition: fill .15s;
+    }
+  }
 }

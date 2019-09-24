@@ -7880,6 +7880,11 @@ iframe.uk-cover {
   padding-left: 10px;
 }
 
+.uk-grid-small {
+  margin-left: -10px;
+}
+
+
 .uk-padding-top-0 {
   padding-top: 0;
 
@@ -8022,13 +8027,13 @@ iframe.uk-cover {
     &-top {
       &\@s {
         @include screen(xl) {
-          margin-top: 10px!important;
+          margin-top: 10px !important;
         }
       }
 
       &\@l {
         @include screen(l) {
-          margin-top: 10px!important;
+          margin-top: 10px !important;
         }
       }
     }
@@ -8036,13 +8041,13 @@ iframe.uk-cover {
     &-bottom {
       &\@s {
         @include screen(xl) {
-          margin-bottom: 10px!important;
+          margin-bottom: 10px !important;
         }
       }
 
       &\@l {
         @include screen(l) {
-          margin-bottom: 10px!important;
+          margin-bottom: 10px !important;
         }
       }
     }
@@ -8050,13 +8055,13 @@ iframe.uk-cover {
     &-left {
       &\@s {
         @include screen(xl) {
-          margin-left: 10px!important;
+          margin-left: 10px !important;
         }
       }
 
       &\@l {
         @include screen(l) {
-          margin-left: 10px!important;
+          margin-left: 10px !important;
         }
       }
     }
@@ -8064,13 +8069,13 @@ iframe.uk-cover {
     &-right {
       &\@s {
         @include screen(xl) {
-          margin-right: 10px!important;
+          margin-right: 10px !important;
         }
       }
 
       &\@l {
         @include screen(l) {
-          margin-right: 10px!important;
+          margin-right: 10px !important;
         }
       }
     }
@@ -8081,13 +8086,13 @@ iframe.uk-cover {
     &-top {
       &\@s {
         @include screen(xl) {
-          margin-top: 40px!important;
+          margin-top: 40px !important;
         }
       }
 
       &\@l {
         @include screen(l) {
-          margin-top: 40px!important;
+          margin-top: 40px !important;
         }
       }
     }
@@ -8095,13 +8100,13 @@ iframe.uk-cover {
     &-bottom {
       &\@s {
         @include screen(xl) {
-          margin-bottom: 40px!important;
+          margin-bottom: 40px !important;
         }
       }
 
       &\@l {
         @include screen(l) {
-          margin-bottom: 40px!important;
+          margin-bottom: 40px !important;
         }
       }
     }
@@ -8109,13 +8114,13 @@ iframe.uk-cover {
     &-left {
       &\@s {
         @include screen(xl) {
-          margin-left: 40px!important;
+          margin-left: 40px !important;
         }
       }
 
       &\@l {
         @include screen(l) {
-          margin-left: 40px!important;
+          margin-left: 40px !important;
         }
       }
     }
@@ -8123,15 +8128,29 @@ iframe.uk-cover {
     &-right {
       &\@s {
         @include screen(xl) {
-          margin-right: 40px!important;
+          margin-right: 40px !important;
         }
       }
 
       &\@l {
         @include screen(l) {
-          margin-right: 40px!important;
+          margin-right: 40px !important;
         }
       }
+    }
+  }
+}
+
+.uk-flex-middle {
+  &\@s {
+    @include screen(xl) {
+      align-items: center;
+    }
+  }
+
+  &\@l {
+    @include screen(l) {
+      align-items: center;
     }
   }
 }

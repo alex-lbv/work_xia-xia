@@ -193,4 +193,12 @@ var swiperCatalog = new Swiper('.catalog__swiper', {
   slidesPerView: 8,
   spaceBetween: 5,
   initialSlide: initialSlide,
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 6,
+    }
+  }
 });

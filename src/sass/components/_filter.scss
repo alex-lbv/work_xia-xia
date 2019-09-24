@@ -1,11 +1,42 @@
 .filter {
-  &__frame {
+  @include screen(xl) {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: -10;
+    padding: 10px 10px 15px;
+    width: 205px;
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    transition: opacity .2s ,top .2s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &::before {
+    @include screen(xl) {
+      content: '';
+      position: absolute;
+      top: -8px;
+      right: 35%;
+      border: 8px solid transparent;
+      border-top: none;
+      border-bottom: 8px solid #fff;
+      z-index: 1;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__unit {
     padding: 15px;
+    margin-bottom: 5px;
     background: #FFFFFF;
     border-radius: 6px;
 
-    &:not(:last-child) {
-      margin-bottom: 5px;
+    @include screen(xl) {
+      border: 1px solid #F0F0F0;
+      border-radius: 12px;
     }
   }
 
@@ -50,5 +81,196 @@
       background: url("../img/pic/ico/check-orange.svg") no-repeat;
       z-index: 1;
     }
+  }
+
+  &__colors {
+    label {
+      position: relative;
+      margin-left: 25px;
+      cursor: pointer;
+    }
+
+    input+label::after {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      transition: border .3s;
+    }
+
+    input:checked+label::after {
+      border-radius: 10px;
+      border: 4px solid #FF5614;
+    }
+
+    .filter__color {
+      &--black {
+        input+label::after {
+          background: linear-gradient(180deg, #626262 0%, #333333 100%);
+        }
+      }
+
+      &--orange {
+        input+label::after {
+          background: linear-gradient(180deg, #FF8F2D 0%, #FF5614 100%);
+        }
+      }
+
+      &--violet {
+        input+label::after {
+          background: linear-gradient(180deg, #FA9CDE 0%, #F263BA 100%);
+        }
+      }
+
+      &--white {
+        input+label::after {
+          background: linear-gradient(180deg, #F9F9F9 0%, #F0F0F0 100%);
+        }
+      }
+
+      &--turquoise {
+        input+label::after {
+          background: linear-gradient(180deg, #76F1D3 0%, #41E0A8 100%);
+        }
+      }
+
+      &--pearl {
+        input+label::after {
+          background: linear-gradient(180deg, #EFEFEF 0%, #C7D4F0 32.17%, #FFD1C9 59.58%, #F2FCCD 80.73%, #C6E8F6 100%);
+        }
+      }
+
+      &--gray {
+        input+label::after {
+          background: linear-gradient(180deg, #BDBDBD 0%, #888888 100%);
+        }
+      }
+
+      &--blue {
+        input+label::after {
+          background: linear-gradient(360deg, #206AFF 0%, #00FFF9 100%);
+        }
+      }
+
+      &--green {
+        input+label::after {
+          background: linear-gradient(180deg, #2DED96 0%, #14D75D 100%);
+        }
+      }
+
+      &--red {
+        input+label::after {
+          background: linear-gradient(180deg, #FF9999 0%, #FF6060 100%);
+        }
+      }
+    }
+  }
+
+  &__memory {
+    label {
+      position: relative;
+      padding: 8px 15px;
+      cursor: pointer;
+      border: 1px solid #E2E2E2;
+      border-radius: 8px;
+      font: 500 12px/15px Helvetica;
+      color: #333333;
+      background: #FFFFFF;
+    }
+
+    input:checked+label {
+      color: #FF7914;
+      background-color: #F7F7F7;
+    }
+  }
+
+  &__price {
+    label {
+      font: 600 12px/15px FuturaPT;
+      color: #333333;
+    }
+
+    input {
+      width: 100%;
+      min-width: 70px;
+      text-align: center;
+      padding: 10px 8px;
+      border: 1px solid #ECECEC;
+      font: normal 12px/14px Helvetica;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+
+      &::placeholder {
+        color: rgba(51, 51, 51, .5);
+      }
+    }
+
+    li {
+      padding: 0 10px;
+    }
+
+    li:first-of-type {
+      position: relative;
+
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 43px;
+        right: -6px;
+        width: 4px;
+        border-top: 1px solid #d4d4d4;
+      }
+    }
+  }
+
+  &__visible {
+    @include screen(xl) {
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    &+.filter__bg {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .5;
+    }
+
+    &+.catalog__filter-btn {
+      background-color: red;
+    }
+  }
+
+
+
+}
+
+.bg-shadowed .filter {
+  opacity: 1;
+  top: 2px;
+  visibility: visible;
+  pointer-events: initial;
+  z-index: 1001;
+}
+
+.bg-shadowed .catalog__filter-btn {
+  box-shadow: none;
+  background: #FF7914;
+  color: #ffffff;
+  z-index: 1001;
+
+  svg {
+    fill: #ffffff;
   }
 }

@@ -165,7 +165,8 @@
 
   &-product-card {
     position: relative;
-    background: white;
+    padding: 20px 0 60px;
+    margin: -20px 0 -60px;
 
     @include screen(xl) {
       margin-bottom: 20px;
@@ -259,4 +260,9 @@
       }
     }
   }
+}
+
+/* z-index при hover на карточку товара */
+.carousel-product-card.swiper-container-initialized.swiper-container-horizontal:hover {
+  z-index: 5!important;
 }
