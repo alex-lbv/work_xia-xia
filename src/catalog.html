@@ -1,0 +1,359 @@
+//= components/head.html
+
+<body>
+  //= components/header.html
+
+  <div class="catalog">
+
+    <div class="uk-container">
+      <div class="breadcrumbs uk-margin-small-bottom">
+        <ul class="uk-subnav uk-subnav-divider" uk-margin>
+          <li class="uk-active"><a href="#">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
+        </ul>
+      </div>
+      <div class="uk-flex uk-flex-between uk-margin-bottom">
+        <h1 class="title uk-width-1-3@l">Смартфоны Xiaomi Mi</h1>
+        <ul class="features features--row uk-flex uk-flex-between uk-visible@l uk-width-expand">
+          <li class="features__item features__item--orange uk-flex uk-flex-middle">
+            <div>
+              <svg width="36" height="42">
+                <use xlink:href="img/symbol/sprite.svg#feature-bag" />
+              </svg>
+            </div>
+            <p>Только оригинальная<br> продукция Xiaomi</p>
+          </li>
+          <li class="features__item features__item--silver uk-flex uk-flex-middle">
+            <div>
+              <svg width="36" height="42">
+                <use xlink:href="img/symbol/sprite.svg#feature-guard" />
+              </svg>
+            </div>
+            <p>Гарантия на всю<br> продукцию до 2 лет</p>
+          </li>
+          <li class="features__item features__item--violet uk-flex uk-flex-middle">
+            <div>
+              <svg width="36" height="42">
+                <use xlink:href="img/symbol/sprite.svg#feature-box" />
+              </svg>
+            </div>
+            <p>Доставка за 2-3 часа<br> в день заказа</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="uk-container bg-full-width">
+        <div class="uk-flex uk-flex-between uk-flex-middle@l uk-margin-top uk-flex-column@s">
+
+          <div class="catalog__swiper-container uk-width-expand">
+            <div class="catalog__swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="#">Mi A1</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Mi A2</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Mi A3</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Mi A2 Lite</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Mi MAX 2</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Mi MAX 3</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Mi MIX 2</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Mi MIX 2S</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Mi A1</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Add Arrows -->
+            <div class="catalog__swiper-button-next">
+              <svg width="10" height="10">
+                <use xlink:href="img/symbol/sprite.svg#arrow" />
+              </svg>
+            </div>
+            <div class="catalog__swiper-button-prev">
+              <svg width="10" height="10">
+                <use xlink:href="img/symbol/sprite.svg#arrow" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="catalog__sorting uk-width-1-4@l uk-flex uk-flex-between uk-flex-middle uk-flex-right@l">
+            <span class="catalog__sorting-title uk-visible@l">Сортировать</span>
+            <select class="uk-width-1-2@s">
+              <option data-display="Популярные">Популярные</option>
+              <option value="1">Some option</option>
+              <option value="2">Another option</option>
+              <option value="3" disabled>A disabled option</option>
+              <option value="4">Potato</option>
+            </select>
+            <button class="catalog__filter-btn uk-hidden@l uk-width-1-2@s"
+            uk-toggle="target: body; cls: bg-shadowed">
+              <svg width="21" height="18">
+                <use xlink:href="img/symbol/sprite.svg#filter" />
+              </svg>
+              Фильтр
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="uk-container bg-full-width">
+        <div class="catalog__content uk-flex uk-flex-column@s">
+          <div class="uk-width-1-6 uk-margin-small-right@l">
+            <div class="filter">
+              <div class="filter__unit">
+                <span class="filter__title">Модель</span>
+                <ul class="filter__checkbox">
+                  <li>
+                    <input class="uk-hidden" type="checkbox" id="f1" name="f1" checked="">
+                    <label for="f1">Mi</label>
+                  </li>
+                  <li>
+                    <input class="uk-hidden" type="checkbox" id="f2" name="f2">
+                    <label for="f2">Redmi</label>
+                  </li>
+                  <li>
+                    <input class="uk-hidden" type="checkbox" id="f3" name="f3">
+                    <label for="f3">Note</label>
+                  </li>
+                  <li>
+                    <input class="uk-hidden" type="checkbox" id="f4" name="f4">
+                    <label for="f4">Pocophone</label>
+                  </li>
+                  <li>
+                    <input class="uk-hidden" type="checkbox" id="f5" name="f5">
+                    <label for="f5">Mi MIX</label>
+                  </li>
+                  <li>
+                    <input class="uk-hidden" type="checkbox" id="f6" name="f6">
+                    <label for="f6">MI MAX</label>
+                  </li>
+                  <li>
+                    <input class="uk-hidden" type="checkbox" id="f7" name="f7">
+                    <label for="f7">Go</label>
+                  </li>
+                  <li>
+                    <input class="uk-hidden" type="checkbox" id="f8" name="f8">
+                    <label for="f8">SHARK</label>
+                  </li>
+                </ul>
+                <button type="button" uk-toggle="target: - .filter__checkbox; cls: filter__checkbox-full">Показать
+                  еще</button>
+              </div>
+
+              <ul class="catalog__accordion"
+                uk-accordion="multiple: true; content: > .catalog__accordion-content; toggle: > .catalog__accordion-title; transition: ease-out">
+                <li>
+                  <a class="catalog__accordion-title filter__title" href="#">Цвет</a>
+                  <ul
+                    class="catalog__accordion-content filter__colors uk-flex uk-flex-middle uk-child-width-1-5 uk-grid-small"
+                    uk-grid>
+                    <li class="filter__color filter__color--black">
+                      <input class="uk-hidden" type="checkbox" id="c1" name="c1" checked="">
+                      <label for="c1"></label>
+                    </li>
+                    <li class="filter__color filter__color--orange">
+                      <input class="uk-hidden" type="checkbox" id="c2" name="c2">
+                      <label for="c2"></label>
+                    </li>
+                    <li class="filter__color filter__color--violet">
+                      <input class="uk-hidden" type="checkbox" id="c3" name="c3">
+                      <label for="c3"></label>
+                    </li>
+                    <li class="filter__color filter__color--white">
+                      <input class="uk-hidden" type="checkbox" id="c4" name="c4">
+                      <label for="c4"></label>
+                    </li>
+                    <li class="filter__color filter__color--turquoise">
+                      <input class="uk-hidden" type="checkbox" id="c5" name="c5">
+                      <label for="c5"></label>
+                    </li>
+                    <li class="filter__color filter__color--pearl">
+                      <input class="uk-hidden" type="checkbox" id="c6" name="c6">
+                      <label for="c6"></label>
+                    </li>
+                    <li class="filter__color filter__color--gray">
+                      <input class="uk-hidden" type="checkbox" id="c7" name="c7">
+                      <label for="c7"></label>
+                    </li>
+                    <li class="filter__color filter__color--blue">
+                      <input class="uk-hidden" type="checkbox" id="c8" name="c8">
+                      <label for="c8"></label>
+                    </li>
+                    <li class="filter__color filter__color--green">
+                      <input class="uk-hidden" type="checkbox" id="c9" name="c9">
+                      <label for="c9"></label>
+                    </li>
+                    <li class="filter__color filter__color--red">
+                      <input class="uk-hidden" type="checkbox" id="c10" name="c10">
+                      <label for="c10"></label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="catalog__accordion"
+                uk-accordion="multiple: true; content: > .catalog__accordion-content; toggle: > .catalog__accordion-title; transition: ease-out">
+                <li>
+                  <a class="catalog__accordion-title filter__title" href="#">Объем памяти</a>
+                  <ul
+                    class="catalog__accordion-content filter__memory uk-flex uk-flex-wrap uk-flex-middle uk-grid-small"
+                    uk-grid>
+                    <li>
+                      <input class="uk-hidden" type="checkbox" id="m1" name="m1">
+                      <label for="m1">64 Gb</label>
+                    </li>
+                    <li>
+                      <input class="uk-hidden" type="checkbox" id="m2" name="m2" checked="">
+                      <label for="m2">256 Gb</label>
+                    </li>
+                    <li>
+                      <input class="uk-hidden" type="checkbox" id="m3" name="m3">
+                      <label for="m3">512 Gb</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="catalog__accordion"
+                uk-accordion="multiple: true; content: > .catalog__accordion-content; toggle: > .catalog__accordion-title; transition: ease-out">
+                <li>
+                  <a class="catalog__accordion-title filter__title" href="#">Количество SIM</a>
+                  <ul class="catalog__accordion-content">
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="catalog__accordion"
+                uk-accordion="multiple: true; content: > .catalog__accordion-content; toggle: > .catalog__accordion-title; transition: ease-out">
+                <li>
+                  <a class="catalog__accordion-title filter__title" href="#">Цена</a>
+                  <ul class="catalog__accordion-content filter__price uk-flex uk-child-width-1-2">
+                    <li>
+                      <label class="field__title field__title--filter" for="">от</label>
+                      <input id="mfilter-opts-price-min" type="text" class="field__input field__input--shaded"
+                        placeholder="0&nbsp;₽" value="">
+                    </li>
+                    <li>
+                      <label class="field__title field__title--filter" for="">до</label>
+                      <input type="text" class="field__input field__input--shaded" placeholder="0&nbsp;₽" value="">
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <button class="filter__drop">Сбросить фильтр</button>
+
+            </div>
+          </div>
+          <div class="uk-width-expand">
+            <ul
+              class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-margin-bottom"
+              uk-grid>
+              <li>
+                <div class="product-card product-card--catalog">
+                  <div class="uk-flex uk-flex-column@l">
+                    <a class="product-card__image" href="#">
+                      <img src="img/temp/card-phone.jpg" width="300" height="208" alt="" />
+                    </a>
+                    <div class="product-card__name">
+                      <span class="product-card__status">В наличии</span>
+                      <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
+                      <div class="product-card__price">13 990 ₽</div>
+                    </div>
+                  </div>
+                  <div class="product-card__footer">
+                    <div class="product-card__buttons uk-flex uk-flex-between uk-flex-column@l">
+                      <button class="btn btn--green-gradient" type="button">В корзину</button>
+                      <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="product-card product-card--catalog">
+                  <div class="uk-flex uk-flex-column@l">
+                    <a class="product-card__image" href="#">
+                      <img src="img/temp/card-phone-1.jpg" width="300" height="208" alt="" />
+                    </a>
+                    <div class="product-card__name">
+                      <span class="product-card__status">В наличии</span>
+                      <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
+                      <div class="product-card__price">13 990 ₽</div>
+                    </div>
+                  </div>
+                  <div class="product-card__footer">
+                    <div class="product-card__buttons uk-flex uk-flex-between uk-flex-column@l">
+                      <button class="btn btn--green-gradient" type="button">В корзину</button>
+                      <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="product-card product-card--catalog">
+                  <div class="uk-flex uk-flex-column@l">
+                    <a class="product-card__image" href="#">
+                      <img src="img/temp/card-phone-3.jpg" width="300" height="208" alt="" />
+                    </a>
+                    <div class="product-card__name">
+                      <span class="product-card__status">В наличии</span>
+                      <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
+                      <div class="product-card__price">13 990 ₽</div>
+                    </div>
+                  </div>
+                  <div class="product-card__footer">
+                    <div class="product-card__buttons uk-flex uk-flex-between uk-flex-column@l">
+                      <button class="btn btn--green-gradient" type="button">В корзину</button>
+                      <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="product-card product-card--catalog">
+                  <div class="uk-flex uk-flex-column@l">
+                    <a class="product-card__image" href="#">
+                      <img src="img/temp/card-phone-4.jpg" width="300" height="208" alt="" />
+                    </a>
+                    <div class="product-card__name">
+                      <span class="product-card__status">В наличии</span>
+                      <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
+                      <div class="product-card__price">13 990 ₽</div>
+                    </div>
+                  </div>
+                  <div class="product-card__footer">
+                    <div class="product-card__buttons uk-flex uk-flex-between uk-flex-column@l">
+                      <button class="btn btn--green-gradient" type="button">В корзину</button>
+                      <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            //= components/pagination.html
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  //= components/subscribe.html
+  //= components/footer.html
+</body>
+
+//= components/bottom.html

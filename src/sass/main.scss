@@ -6,8 +6,10 @@
 @import "base/fonts";
 @import "base/general";
 
-@import "components/uikit";
-@import "components/swiper.css";
+@import "vendors/uikit";
+@import "vendors/swiper";
+@import "vendors/nice-select";
+
 @import "components/search";
 @import "components/menu";
 @import "components/btn";
@@ -19,6 +21,7 @@
 @import "components/breadcrumbs";
 @import "components/list";
 @import "components/pagination";
+@import "components/filter";
 
 @import "layout/header";
 @import "layout/footer";
@@ -37,3 +40,4 @@
 @import "layout/credit";
 @import "layout/contacts";
 @import "layout/checkout";
+@import "layout/catalog";

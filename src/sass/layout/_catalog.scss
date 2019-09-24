@@ -1,0 +1,345 @@
+.catalog {
+  .breadcrumbs {
+    @include screen(xl) {
+      padding: 10px 0;
+    }
+
+    @include screen(l) {
+      padding: 20px 30px 0;
+    }
+  }
+
+  .title {
+    @include screen(l) {
+      padding: 0 100px 0 30px;
+    }
+  }
+
+  /* SWIPER */
+  &__swiper {
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+
+    @include screen(l) {
+      padding-right: 50px;
+    }
+
+    &-container {
+      position: relative;
+
+      @include screen(l) {
+        margin-right: 60px;
+      }
+    }
+
+    li {
+      width: auto !important;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      padding: 10px 20px;
+      font: 500 14px/18px Helvetica;
+      color: #333333;
+      background: #ffffff;
+      border-radius: 8px;
+    }
+
+    &-button-next {
+      position: absolute;
+      right: -15px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 30px;
+      height: inherit;
+      background: linear-gradient(180deg, #FF8F2D 0%, #FF5614 100%);
+      border-radius: 0 20px 20px 0;
+      z-index: 5;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        width: 7px;
+        height: 100%;
+        background-image: url("../img/pic/ico/border.png");
+        background-repeat: no-repeat;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        fill: #ffffff;
+        transform: rotate(-90deg);
+      }
+    }
+
+    &-button-prev {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 30px;
+      height: inherit;
+      background: linear-gradient(180deg, #FF8F2D 0%, #FF5614 100%);
+      border-radius: 20px 0 0 20px;
+      z-index: 5;
+      cursor: pointer;
+
+      &:not(.swiper-button-disabled) {
+        display: block;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -7px;
+        width: 7px;
+        height: 100%;
+        transform: scale(-1, 1);
+        background-image: url("../img/pic/ico/border.png");
+        background-repeat: no-repeat;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        fill: #ffffff;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .swiper-button-disabled {
+    display: none;
+  }
+
+  /* -------------------- */
+
+  &__sorting {
+
+    @include screen(xl) {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(223, 223, 223, .7);
+    }
+
+    &-title {
+      margin-right: 15px;
+      font: 700 12px/15px FuturaPT;
+      text-transform: uppercase;
+      opacity: .3;
+    }
+
+    /* Select */
+
+    .nice-select {
+      width: 100%;
+      max-width: 185px;
+      border: none;
+      background: #FFFFFF;
+      border-radius: 8px;
+
+      &::after {
+        width: 8px;
+        height: 8px;
+        right: 14px;
+        border-color: #FF5614;
+        transition: transform .3s;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        right: 5px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #F7F7F7;
+      }
+
+      span {
+        vertical-align: sub;
+        font: normal 14px/17px Helvetica;
+      }
+
+      .nice-select.open:after {
+        transform: rotate(-135deg);
+      }
+    }
+
+    /* --------------- */
+  }
+
+  &__content {
+    padding: 20px 0 60px;
+  }
+
+  .filter {
+    &__title {
+      font: 600 14px/18px FuturaPT;
+    }
+
+    &__checkbox {
+      margin-bottom: 20px;
+
+      &:not(.filter__checkbox-full) {
+        li:nth-child(n+6) {
+          display: none;
+        }
+      }
+    }
+
+    button {
+      padding: 0;
+      font: 500 14px/24px FuturaPT;
+      color: #FF7914;
+    }
+
+    &__drop {
+      margin-left: 20px;
+    }
+  }
+
+  /* Catalog-accordion */
+
+  &__accordion {
+    @include screen(xl) {
+      border: 1px solid #F0F0F0;
+      border-radius: 12px;
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      position: relative;
+      display: block;
+      padding: 15px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      transition: border-radius .3s;
+
+      @include screen(xl) {
+        font: normal 16px/20px FuturaPT;
+      }
+
+      @include screen(l) {
+        padding: 15px 20px;
+        font: normal 18px/26px FuturaPT;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        background: #F7F7F7;
+        border-radius: 50%;
+
+        @include screen(xl) {
+          top: 12px;
+        }
+
+        @include screen(l) {
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 22px;
+        display: inline-block;
+        transform: rotate(225deg);
+        width: 9px;
+        height: 9px;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        border-radius: 3px 0 0 0;
+        border-color: #FF5614;
+        transition: transform .3s;
+
+        @include screen(xl) {
+          top: 18px;
+        }
+
+        @include screen(l) {
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        .uk-open>& {
+          transform: rotate(45deg);
+
+        }
+      }
+
+      .uk-open>& {
+        border-radius: 6px 6px 0 0;
+      }
+    }
+
+    &-content {
+      margin: 0;
+      padding: 5px 20px 20px 10px;
+      font: normal 14px/24px Helvetica;
+      color: #333333;
+      border-radius: 0 0 6px 6px;
+      background-color: #ffffff;
+    }
+  }
+
+  /*  */
+
+
+  &__filter-btn {
+    @include screen(xl) {
+      position: relative;
+      margin-left: 10px;
+      padding: 10px 15px;
+      width: 100%;
+      z-index: 200;
+      max-width: 160px;
+      background-color: #FFFFFF;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      font: 500 14px/18px Helvetica;
+      color: #333333;
+      transition: background-color .15s, color .15s;
+    }
+
+    svg {
+      transform: translate(-10px, 4px);
+      transition: fill .15s;
+    }
+  }
+}
