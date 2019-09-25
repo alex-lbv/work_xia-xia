@@ -70,7 +70,9 @@
       @include screen(l) {
         border-radius: 8px;
         background: #F7F7F7;
-
+        /* No-swipe for desktop */
+        transform: translate3d(0px, 0, 0) !important;
+        transition: none !important;
       }
     }
 
@@ -155,7 +157,6 @@
     }
 
     /* buttons */
-
     &-button-next {
       @include screen(xl) {
         position: absolute;
@@ -251,21 +252,6 @@
     }
   }
 
-  .swiper-button-disabled {
-    @include screen(xl) {
-      display: none;
-    }
-  }
-
-
-  /* No-swipe for desktop */
-  .swiper-wrapper {
-    @include screen(l) {
-      transform: translate3d(0px, 0, 0) !important;
-      transition: none !important;
-    }
-  }
-
   /* -------------------- */
 
   /* tabs */
@@ -286,6 +272,12 @@
       background-color: #14CBFF;
       box-shadow: 0px 6px 15px rgba(0, 205, 255, 0.4);
       border-radius: 0px 0px 6px 6px;
+    }
+
+    .swiper-button-disabled {
+      @include screen(xl) {
+        display: none;
+      }
     }
   }
 

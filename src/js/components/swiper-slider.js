@@ -221,3 +221,36 @@ var swiperProduct = new Swiper('.product__swiper', {
   },
   /* slideToClickedSlide: true, */
 });
+
+var swiperTabAtributes = new Swiper('.tab-atributes__swiper', {
+  mousewheel: true,
+  slidesPerView: 2,
+  direction: 'vertical',
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  breakpoints: {
+    640: {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      direction: 'horizontal',
+      mousewheel: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        dynamicBullets: true,
+      },
+    },
+    1200: {
+      spaceBetween: 10,
+      slidesPerView: 2,
+      direction: 'horizontal',
+      mousewheel: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        dynamicBullets: true,
+      },
+    }
+  },
+});
