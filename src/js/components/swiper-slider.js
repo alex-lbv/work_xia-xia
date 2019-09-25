@@ -202,3 +202,22 @@ var swiperCatalog = new Swiper('.catalog__swiper', {
     }
   }
 });
+
+var initialSlideProduct = $('.product__swiper-link--active').index();
+var swiperProduct = new Swiper('.product__swiper', {
+  navigation: {
+    nextEl: '.product__swiper-button-next',
+    prevEl: '.product__swiper-button-prev',
+  },
+  slidesPerView: 7,
+  initialSlide: initialSlide,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 4,
+    }
+  },
+  /* slideToClickedSlide: true, */
+});

@@ -1,0 +1,294 @@
+.product {
+  &__header {
+    .breadcrumbs {
+      @include screen(xl) {
+        padding: 10px 0;
+      }
+
+      @include screen(l) {
+        padding: 20px 20px 0;
+      }
+    }
+
+    .title {
+      @include screen(l) {
+        padding: 0 20px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__rating {
+    padding-left: 20px;
+
+    span {
+      padding: 5px 15px;
+      border: 1px solid #14D75D;
+      border-radius: 8px;
+      font: 500 12px/14px FuturaPT;
+      text-transform: uppercase;
+      color: #14D75D;
+    }
+
+    ul {
+      align-self: flex-end;
+    }
+
+    &-item {
+      margin-right: 5px;
+
+      svg {
+        fill: #DEDEDE;
+      }
+
+      &--gold {
+        svg {
+          fill: #FF7914;
+        }
+      }
+    }
+  }
+
+  /* SWIPER */
+  &__swiper {
+    position: relative;
+
+    @include screen(xl) {
+      margin-left: 15px;
+      overflow-x: hidden;
+      padding-bottom: 30px;
+    }
+
+    .swiper-wrapper {
+      @include screen(xl) {
+        /* TODO: 100VH it work */
+        width: 100vh;
+        border-radius: 8px;
+        background: #F7F7F7;
+      }
+
+      @include screen(l) {
+        border-radius: 8px;
+        background: #F7F7F7;
+
+      }
+    }
+
+    &-container {
+      position: relative;
+    }
+
+    li {
+      position: relative;
+      width: auto !important;
+      border-radius: 8px;
+      background: #F7F7F7;
+
+      &:not(:first-of-type)::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 2px;
+        height: 15px;
+        background-color: #B9BABA;
+        opacity: 0.3;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        margin: auto;
+        width: 0;
+        height: 5px;
+        background-color: transparent;
+        border-radius: 0px 0px 6px 6px;
+        transition: width .4s;
+      }
+
+      &:last-of-type {
+        @include screen(l) {
+          margin: 0 0 0 auto !important;
+          border: 1px solid #14D75D;
+          border-radius: 8px;
+          box-shadow: -20px 0 0 #ffffff;
+          background: #FFFFFF;
+        }
+
+        a {
+          @include screen(l) {
+            color: #14D75D !important;
+          }
+        }
+
+        &::after {
+          @include screen(l) {
+            display: none;
+          }
+        }
+
+        &::before {
+          @include screen(l) {
+            left: -30px;
+            height: inherit;
+            width: 20px;
+            background: #F7F7F7;
+            border-radius: 8px;
+            z-index: 1;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      padding: 10px 20px;
+      font: 500 14px/18px Helvetica;
+      color: #333333;
+    }
+
+    /* buttons */
+
+    &-button-next {
+      @include screen(xl) {
+        position: absolute;
+        right: -15px;
+        top: 0;
+        width: 30px;
+        height: 38px;
+        background: linear-gradient(180deg, #FF8F2D 0%, #FF5614 100%);
+        border-radius: 0 20px 20px 0;
+        z-index: 5;
+        cursor: pointer;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+
+      &::before {
+        @include screen(xl) {
+          content: "";
+          position: absolute;
+          left: -7px;
+          width: 7px;
+          height: 100%;
+          background-image: url("../img/pic/ico/border.png");
+          background-repeat: no-repeat;
+        }
+      }
+
+      svg {
+        @include screen(xl) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          fill: #ffffff;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    &-button-prev {
+      @include screen(xl) {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 38px;
+        background: linear-gradient(180deg, #FF8F2D 0%, #FF5614 100%);
+        border-radius: 20px 0 0 20px;
+        z-index: 5;
+        cursor: pointer;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+
+      &:not(.swiper-button-disabled) {
+        @include screen(xl) {
+          display: block;
+        }
+      }
+
+      &::before {
+        @include screen(xl) {
+          content: "";
+          position: absolute;
+          right: -7px;
+          width: 7px;
+          height: 100%;
+          transform: scale(-1, 1);
+          background-image: url("../img/pic/ico/border.png");
+          background-repeat: no-repeat;
+        }
+      }
+
+      svg {
+        @include screen(xl) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          fill: #ffffff;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .swiper-button-disabled {
+    @include screen(xl) {
+      display: none;
+    }
+  }
+
+
+  /* No-swipe for desktop */
+  .swiper-wrapper {
+    @include screen(l) {
+      transform: translate3d(0px, 0, 0) !important;
+      transition: none !important;
+    }
+  }
+
+  /* -------------------- */
+
+  /* tabs */
+  .uk-active.swiper-slide {
+    a {
+      color: #14CBFF;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -5px;
+      margin: auto;
+      width: 80%;
+      height: 5px;
+      background-color: #14CBFF;
+      box-shadow: 0px 6px 15px rgba(0, 205, 255, 0.4);
+      border-radius: 0px 0px 6px 6px;
+    }
+  }
+
+  /*  */
+
+}
