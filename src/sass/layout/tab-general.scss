@@ -1,0 +1,583 @@
+.tab-general {
+  @include screen(l) {
+    margin-top: 30px
+  }
+
+  /* swiper-gallery */
+
+  &__gallery {
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      width: 445px;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-top {
+      @include screen(l) {
+        height: 80%;
+        width: 100%;
+      }
+
+      .swiper-slide {
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+      }
+    }
+
+    .gallery-thumbs {
+      margin-top: 20px;
+      height: 14%;
+      box-sizing: border-box;
+      padding: 10px 25px;
+      background: #F7F7F7;
+      border-radius: 8px;
+    }
+
+    .gallery-thumbs .swiper-slide {
+      padding: 10px 5px !important;
+      background-color: #ffffff !important;
+      background-size: contain !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      border-radius: 6px;
+      width: 70px;
+      height: 60px;
+      opacity: 0.4;
+    }
+
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-button-next {
+      right: 0;
+      transform: rotate(-90deg);
+      background-image: url(../img/pic/ico/arrow.svg);
+      background-size: 10px;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      transform: rotate(90deg);
+      background-image: url(../img/pic/ico/arrow.svg);
+      background-size: 10px;
+    }
+  }
+
+  /* ---------------------------------------------- */
+
+  &__price {
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+
+    @include screen(xl) {
+      padding: 15px 20px;
+      margin-bottom: 10px;
+    }
+
+    @include screen(l) {
+      padding: 19px 40px 22px;
+      margin-bottom: 20px;
+    }
+
+    &-old {
+      margin-right: 10px;
+      font: normal 12px/14px Helvetica;
+      color: #979797;
+      text-decoration: line-through;
+    }
+
+    &-sale {
+      padding: 4px 7px 3px;
+      font: 700 12px/15px Helvetica;
+      color: #ff4300;
+      background: #FFF0EC;
+      border-radius: 10.5px;
+
+      @include screen(l) {
+        margin-bottom: 3px;
+      }
+    }
+
+    &-total {
+      font: 700 32px/39px Helvetica;
+      color: #333333;
+    }
+
+    &-credit {
+      @include screen(xl) {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(185, 186, 186, .3);
+      }
+
+      @include screen(l) {
+        margin-left: 40px;
+        padding: 13px 0 0 40px;
+        border-left: 1px solid rgba(185, 186, 186, .3);
+      }
+
+      .tab-general__subtitle {
+        margin-bottom: 15px;
+      }
+
+      span:not(.tab-general__subtitle) {
+        font: 300 16px/36px Helvetica;
+        color: #333333;
+
+        span {
+          margin: 0 5px;
+          font-size: 40px;
+        }
+      }
+
+      button {
+        text-align: left;
+        padding: 0;
+        font: 500 14px/24px FuturaPT;
+        color: #FF7914;
+
+        @include screen(xl) {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &-buttons {
+      margin-top: 15px;
+
+      .btn {
+        padding: 12px 15px;
+        font: 500 18px/24px FuturaPT;
+        border-radius: 6px;
+
+        &:first-of-type {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font: 700 12px/15px FuturaPT;
+    color: rgba(43, 45, 48, .3);
+  }
+
+  &__delivery {
+    @include screen(xl) {
+      margin-bottom: 10px;
+      padding: 15px 20px;
+      border: 1px solid #F0F0F0;
+      border-radius: 8px;
+    }
+
+    ul {
+      &:first-of-type {
+        margin-bottom: 10px;
+        font: normal 14px/20px FuturaPT;
+
+        li {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+          }
+
+          &:first-of-type {
+            @include screen(l) {
+              margin-right: 60px;
+            }
+
+            &::before {
+              width: 14px;
+              height: 12px;
+              background: url('../img/pic/ico/samvivoz.svg') no-repeat;
+            }
+          }
+
+          &:last-of-type::before {
+            width: 14px;
+            height: 16px;
+            background: url('../img/pic/ico/dostavka.svg') no-repeat;
+          }
+        }
+      }
+
+      &:last-of-type {
+        li {
+          position: relative;
+          font: normal 12px/18px FuturaPT;
+
+          &:first-of-type {
+            color: #1FC119;
+
+            @include screen(xl) {
+              margin-bottom: 10px;
+              padding-bottom: 10px;
+              border-bottom: 1px solid #F0F0F0;
+            }
+
+            @include screen(l) {
+              margin-right: 60px;
+            }
+          }
+
+          &:last-of-type {
+            color: #FF7914;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 5px;
+              top: 2px;
+              width: 10px;
+              height: 14px;
+              background: url('../img/pic/ico/geo.svg') no-repeat;
+            }
+          }
+        }
+      }
+
+      li {
+        padding-left: 25px;
+      }
+    }
+  }
+
+  &__payment {
+    @include screen(xl) {
+      padding: 15px 20px;
+      border: 1px solid #F0F0F0;
+      border-radius: 8px;
+    }
+
+    @include screen(l) {
+      margin-left: 30px;
+      padding: 0 5px 0 40px;
+      border-left: 1px solid rgba(185, 186, 186, .3);
+    }
+
+    ul {
+      font: normal 14px/22px FuturaPT;
+    }
+
+    li {
+      position: relative;
+      padding-left: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 4px;
+        height: 4px;
+        background: #14D75D;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__tooltip {
+    position: relative;
+
+    a {
+      font: normal 12px/16px FuturaPT;
+      text-decoration-line: underline;
+      color: rgba(51, 51, 51, .8);
+      cursor: pointer;
+    }
+
+    a:hover~&-content {
+      opacity: 1;
+    }
+
+    &-content {
+      position: absolute;
+      background: #FFFFFF;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 100;
+      transition: opacity .3s;
+
+      @include screen(xl) {
+        width: 280px;
+        top: 35px;
+        left: -15px;
+        padding: 15px;
+      }
+
+      @include screen(l) {
+        top: -260px;
+        padding: 20px;
+        width: 340px;
+        max-width: 320px;
+      }
+
+      &::after {
+        @include screen(xl) {
+          content: "";
+          position: absolute;
+          top: -8px;
+          left: 73px;
+          border: 8px solid transparent;
+          border-top: none;
+          border-bottom: 8px solid #ffffff;
+          z-index: 11;
+          transform: translateX(-50%);
+        }
+
+        @include screen(l) {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          border: 8px solid transparent;
+          border-top: none;
+          border-bottom: 8px solid #ffffff;
+          z-index: 1;
+          transform: translateX(-50%) rotate(180deg);
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: 5px;
+      font: 600 16px/21px FuturaPT;
+    }
+  }
+
+  &__sales {
+    p {
+      margin-bottom: 10px;
+      font: 600 18px/26px FuturaPT;
+
+      @include screen(xl) {
+        text-align: center;
+      }
+
+      @include screen(l) {
+        padding-left: 30px;
+      }
+    }
+
+    /* Слайдер рекоммендаций */
+
+    .tab-general__swiper {
+      position: relative;
+      overflow: hidden;
+      max-height: 240px;
+      border-radius: 12px;
+
+      @include screen(xl) {
+        padding-right: 15px;
+        padding-bottom: 35px;
+      }
+
+      @include screen(l) {
+        background: #F7F7F7;
+      }
+
+      .product-card {
+        @include screen(l) {
+          margin: 0 30px 0 10px;
+          border-bottom: 2px solid rgba(185, 186, 186, .2);
+        }
+      }
+    }
+
+    .swiper-pagination {
+      @include screen(xl) {
+        position: relative;
+        bottom: -15px;
+        left: 40px !important;
+        overflow: visible;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      top: -1px;
+      height: 5px;
+      width: 40px;
+      background: #FF7914;
+      border-radius: 2.5px;
+    }
+
+    .swiper-container-vertical>.swiper-scrollbar {
+      background-color: transparent;
+    }
+
+    .swiper-scrollbar {
+      @include screen(xl) {
+        display: none !important;
+      }
+    }
+
+    /* ------------------ */
+  }
+
+  &__options {
+    @include screen(xl) {
+      position: relative;
+      height: 50px;
+    }
+
+    &-wrap {
+      @include screen(xl) {
+        margin-bottom: 20px;
+      }
+
+      @include screen(l) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &-toggle {
+      @include screen(xl) {
+        position: relative;
+        padding: 8px 12px 7px 15px;
+        width: 90px;
+        font: 500 12px/15px Helvetica;
+        color: #FF7914;
+        background: #F7F7F7;
+        border-radius: 8px;
+      }
+
+      svg {
+        width: 10px;
+        height: 10px;
+        fill: #333333;
+      }
+    }
+
+    .tab-general__subtitle {
+      @include screen(xl) {
+        margin-bottom: 5px;
+      }
+
+      @include screen(l) {
+        margin-right: 10px;
+      }
+    }
+
+    ul {
+      @include screen(xl) {
+        position: absolute;
+        top: 55px;
+        width: 90px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        z-index: 10;
+      }
+
+      &::after {
+        @include screen(xl) {
+          content: "";
+          display: block !important;
+          position: absolute;
+          top: -8px;
+          left: 73px;
+          border: 8px solid transparent;
+          border-top: none;
+          border-bottom: 8px solid #ffffff;
+          z-index: 11;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    ul:not(.visible) {
+      @include screen(xl) {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    li {
+      @include screen(l) {
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+
+      &:first-child {
+        @include screen(xl) {
+          border-radius: 6px 6px 0 0;
+          overflow: hidden;
+        }
+      }
+
+      &:last-child {
+        @include screen(xl) {
+          border-radius: 0 0 6px 6px;
+          overflow: hidden;
+        }
+      }
+
+      &.active {
+        a {
+          @include screen(xl) {
+            color: #FF7914;
+            background: #F7F7F7;
+          }
+
+          @include screen(l) {
+            color: #FF7914;
+            background: #F7F7F7;
+            border-color: transparent;
+          }
+        }
+      }
+    }
+
+    a {
+      @include screen(xl) {
+        display: block;
+        padding: 15px 20px;
+        font: 500 12px/15px Helvetica;
+        color: #333333;
+        background: #FFFFFF;
+      }
+
+      @include screen(l) {
+        padding: 8px 15px 7px;
+        border: 1px solid #E2E2E2;
+        border-radius: 8px;
+        font: 500 12px/15px Helvetica;
+        color: #333333;
+        background: #FFFFFF;
+      }
+    }
+  }
+
+  .features {
+    padding-top: 40px;
+  }
+}

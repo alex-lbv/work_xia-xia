@@ -1,0 +1,350 @@
+//= components/head.html
+
+<body>
+  //= components/header.html
+  <div class="product">
+    <div class="product__header uk-container uk-margin-top uk-margin-bottom">
+      <div class="breadcrumbs uk-margin-small-bottom">
+        <ul class="uk-subnav uk-subnav-divider" uk-margin>
+          <li class="uk-active"><a href="#">Главная</a></li>
+          <li><a href="#">Xiaomi Mi 9T 4/256GB Carbon Black</a></li>
+        </ul>
+      </div>
+
+      <h1 class="title uk-width-1-2@l">Xiaomi Mi 9T 4/256GB Carbon Black</h1>
+
+      <div class="product__rating uk-flex uk-flex-middle">
+        <span class="uk-margin-right">В наличии</span>
+        <ul class="uk-flex">
+          <li class="product__rating-item product__rating-item--gold">
+            <svg width="15" height="15">
+              <use xlink:href="img/symbol/sprite.svg#star" />
+            </svg>
+          </li>
+          <li class="product__rating-item product__rating-item--gold">
+            <svg width="15" height="15">
+              <use xlink:href="img/symbol/sprite.svg#star" />
+            </svg>
+          </li>
+          <li class="product__rating-item product__rating-item--gold">
+            <svg width="15" height="15">
+              <use xlink:href="img/symbol/sprite.svg#star" />
+            </svg>
+          </li>
+          <li class="product__rating-item product__rating-item--gold">
+            <svg width="15" height="15">
+              <use xlink:href="img/symbol/sprite.svg#star" />
+            </svg>
+          </li>
+          <li class="product__rating-item">
+            <svg width="15" height="15">
+              <use xlink:href="img/symbol/sprite.svg#star" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Tabs -->
+    <div class="uk-container">
+      <div class="product__swiper-container uk-width-expand">
+        <div class="product__swiper">
+          <ul class="swiper-wrapper" uk-switcher="connect: .uk-switcher; swiping: false">
+            <li class="swiper-slide">
+              <a href="#">О товаре</a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">Харакетристики</a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">Отзывы</a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">Оплата и доставка</a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">Частые вопросы</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Add Arrows -->
+        <div class="product__swiper-button-next">
+          <svg width="10" height="10">
+            <use xlink:href="img/symbol/sprite.svg#arrow" />
+          </svg>
+        </div>
+        <div class="product__swiper-button-prev">
+          <svg width="10" height="10">
+            <use xlink:href="img/symbol/sprite.svg#arrow" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- Tabs-content -->
+    <ul class="uk-switcher">
+      <li class="tab-general">
+        <div class="uk-container uk-flex uk-flex-column@s">
+          <div class="tab-general__gallery uk-margin-right@l">
+            <!-- Swiper -->
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background:url(./img/temp/card-phone.jpg)"></div>
+                <div class="swiper-slide" style="background:url(./img/temp/card-phone-1.jpg)"></div>
+                <div class="swiper-slide" style="background:url(./img/temp/card-phone-3.jpg)"></div>
+              </div>
+
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background:url(./img/temp/card-phone.jpg)"></div>
+                <div class="swiper-slide" style="background:url(./img/temp/checkout-1-1.jpg)"></div>
+                <div class="swiper-slide" style="background:url(./img/temp/checkout-1-1.jpg)"></div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <div class="tab-general__info uk-width-expand">
+
+            <div class="tab-general__options-wrap">
+              <div class="tab-general__options uk-flex uk-flex-bottom@l uk-flex-column@s">
+                <span class="tab-general__subtitle">Память:</span>
+                <span class="tab-general__options-toggle uk-flex uk-flex-between uk-flex-middle uk-hidden@l"
+                  uk-toggle="target: + ul; cls: visible">
+                  128 GB
+                  <svg>
+                    <use xlink:href="img/symbol/sprite.svg#arrow" />
+                  </svg>
+                </span>
+                <ul class="uk-flex uk-flex-column@s">
+                  <li>
+                    <a href="#">64 GB</a>
+                  </li>
+                  <li class="active">
+                    <a href="#">128 GB</a>
+                  </li>
+                  <li>
+                    <a href="#">256 GB</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tab-general__price uk-flex uk-flex-column@s">
+              <div class="uk-flex uk-flex-middle uk-flex-wrap">
+                <div class="uk-margin-right uk-margin-medium-right@l">
+                  <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+                    <span class="tab-general__price-old">46&nbsp;999&nbsp;&#8381;</span>
+                    <span class="tab-general__price-sale">-&nbsp;14&nbsp;131&nbsp;&#8381;</span>
+                  </div>
+                  <span class="tab-general__price-total">13&nbsp;990&nbsp;&#8381;</span>
+                  <div class="tab-general__tooltip">
+                    <a>Почему такая низкая цена?</a>
+                    <div class="tab-general__tooltip-content">
+                      <p class="tab-general__tooltip-title">Почему такая низкая цена?</p>
+                      <p class="tab-general__tooltip-text">Мы продаем американские и европейские смартфоны. На них
+                        цена на 15-20% дешевле, чем на смартфоны, выпущенные для Российского рынка. Для пользователя
+                        никакой разницы между Американскими и Российскими моделями нет. При желании, у нас есть и
+                        ростест модели, но цена на них будет выше.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-general__price-buttons">
+                  <button class="btn btn--green-gradient" type="button">В корзину</button>
+                  <button class="btn btn--gray" type="button">Купить&nbsp;в&nbsp;1&nbsp;клик</button>
+                </div>
+              </div>
+
+              <div class="tab-general__price-credit uk-flex uk-flex-column">
+                <span class="tab-general__subtitle">Покупка&nbsp;в&nbsp;кредит:</span>
+                <div class="uk-flex uk-flex-wrap uk-flex-between uk-flex-column@l">
+                  <span>от&nbsp;<span>990&#8381;</span>&nbsp;в&nbsp;месяц</span>
+                  <button type="button">Расчитать&nbsp;кредит</button>
+                </div>
+              </div>
+            </div>
+            <!-- pay and delivery -->
+            <div class="uk-flex uk-flex-column@s uk-margin-bottom">
+              <div class="tab-general__delivery">
+                <span class="tab-general__subtitle uk-hidden@l">Доставка:</span>
+                <ul class="uk-flex uk-flex-wrap uk-flex-between">
+                  <li>Доставка курьером –<br>бесплатно</li>
+                  <li>Самовывоз<br>до 22:00 – бесплатно</li>
+                </ul>
+                <ul class="uk-flex uk-flex-column@s">
+                  <li>Вермя доставки: ~ 16:00</li>
+                  <li>Пункты самовывоза</li>
+                </ul>
+              </div>
+
+              <div class="tab-general__payment uk-width-expand">
+                <span class="tab-general__subtitle">Опалата:</span>
+                <ul class="uk-flex uk-flex-wrap uk-child-width-1-2 uk-flex-column@s">
+                  <li>Карта</li>
+                  <li>Наличными</li>
+                  <li>Кредит от банка</li>
+                  <li>Безналичный расчет</li>
+                </ul>
+              </div>
+            </div>
+            <!-- swiper -->
+            <div class="tab-general__sales">
+              <p>Добавьте аксессуары в корзину вместе с Mi 9T по специальной цене:</p>
+              <div class="tab-general__swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="product-card product-card--checkout-recommendation uk-flex uk-flex-middle">
+                      <a class="product-card__image" href="#">
+                        <img src="img/temp/checkout-3.jpg" alt="">
+                      </a>
+                      <div class="uk-flex uk-flex-column uk-width-2-3">
+                        <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                        <div class="product-card__price uk-flex uk-flex-middle">
+                          <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                          <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                          <span class="product-card__price-sale">-25&#37;</span>
+                        </div>
+                        <button class="product-card__adds uk-flex uk-flex-middle">
+                          <svg width="16" height="16">
+                            <use xlink:href="img/symbol/sprite.svg#plus-circle" />
+                          </svg>
+                          <span>Добавить</span>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product-card product-card--checkout-recommendation uk-flex uk-flex-middle">
+                      <a class="product-card__image" href="#">
+                        <img src="img/temp/checkout-3.jpg" alt="">
+                      </a>
+                      <div class="uk-flex uk-flex-column uk-width-2-3">
+                        <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                        <div class="product-card__price uk-flex uk-flex-middle">
+                          <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                          <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                          <span class="product-card__price-sale">-25&#37;</span>
+                        </div>
+                        <button class="product-card__adds uk-flex uk-flex-middle">
+                          <svg width="16" height="16">
+                            <use xlink:href="img/symbol/sprite.svg#plus-circle" />
+                          </svg>
+                          <span>Добавить</span>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product-card product-card--checkout-recommendation uk-flex uk-flex-middle">
+                      <a class="product-card__image" href="#">
+                        <img src="img/temp/checkout-3.jpg" alt="">
+                      </a>
+                      <div class="uk-flex uk-flex-column uk-width-2-3">
+                        <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                        <div class="product-card__price uk-flex uk-flex-middle">
+                          <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                          <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                          <span class="product-card__price-sale">-25&#37;</span>
+                        </div>
+                        <button class="product-card__adds uk-flex uk-flex-middle">
+                          <svg width="16" height="16">
+                            <use xlink:href="img/symbol/sprite.svg#plus-circle" />
+                          </svg>
+                          <span>Добавить</span>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product-card product-card--checkout-recommendation uk-flex uk-flex-middle">
+                      <a class="product-card__image" href="#">
+                        <img src="img/temp/checkout-2.jpg" alt="">
+                      </a>
+                      <div class="uk-flex uk-flex-column uk-width-2-3">
+                        <a href="#" class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</a>
+                        <div class="product-card__price uk-flex uk-flex-middle">
+                          <span class="product-card__price-old uk-margin-small-right">6&nbsp;699&nbsp;&#8381;</span>
+                          <span class="product-card__price-total uk-margin-small-right">4&nbsp;990&nbsp;&#8381;</span>
+                          <span class="product-card__price-sale">-25&#37;</span>
+                        </div>
+                        <button class="product-card__adds uk-flex uk-flex-middle">
+                          <svg width="16" height="16">
+                            <use xlink:href="img/symbol/sprite.svg#plus-circle" />
+                          </svg>
+                          <span>Добавить</span>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- Add Scrollbar -->
+                <div class="swiper-scrollbar"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="uk-container bg-full-width features__wrap uk-margin-medium-top">
+          <ul class="features features--column uk-flex uk-flex-between uk-flex-column@s">
+            <li class="features__item features__item--orange uk-flex">
+              <div>
+                <svg width="36" height="42">
+                  <use xlink:href="img/symbol/sprite.svg#feature-bag" />
+                </svg>
+              </div>
+              <p>Только оригинальная<br> продукция Xiaomi</p>
+            </li>
+            <li class="features__item features__item--silver uk-flex">
+              <div>
+                <svg width="36" height="42">
+                  <use xlink:href="img/symbol/sprite.svg#feature-guard" />
+                </svg>
+              </div>
+              <p>Гарантия на всю<br> продукцию до 2 лет</p>
+            </li>
+            <li class="features__item features__item--violet uk-flex">
+              <div>
+                <svg width="36" height="35">
+                  <use xlink:href="img/symbol/sprite.svg#feature-box" />
+                </svg>
+              </div>
+              <p>Доставка за 2-3 часа<br> в день заказа</p>
+            </li>
+            <li class="features__item features__item--light-blue uk-flex">
+              <div>
+                <svg width="36" height="42">
+                  <use xlink:href="img/symbol/sprite.svg#feature-credit" />
+                </svg>
+              </div>
+              <p>Оформляем кредит<br> за 5 минут по телефону</p>
+            </li>
+            <li class="features__item features__item--green uk-flex">
+              <div>
+                <svg width="36" height="42">
+                  <use xlink:href="img/symbol/sprite.svg#feature-phone-check" />
+                </svg>
+              </div>
+              <p>Оплата только после<br> полного осмотра</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>Харакетристики</li>
+      <li>Отзывы</li>
+      <li>Гарантия</li>
+      <li>Оплата и доставка</li>
+      <li>Частые вопросы</li>
+    </ul>
+
+  </div>
+  //= components/subscribe.html
+  //= components/footer.html
+</body>
+
+//= components/bottom.html
