@@ -84,6 +84,7 @@
     </div>
     <!-- Tabs-content -->
     <ul class="uk-switcher">
+      <!-- General -->
       <li class="tab-general">
         <div class="uk-container uk-flex uk-flex-column@s">
           <div class="tab-general__gallery uk-margin-right@l">
@@ -335,6 +336,7 @@
           </ul>
         </div>
       </li>
+      <!-- Atributes -->
       <li class="tab-atributes">
         <div class="uk-container">
           <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
@@ -460,16 +462,113 @@
           </div>
         </div>
       </li>
+      <!-- Reviews -->
       <li>Отзывы</li>
+      <!-- Warranty -->
       <li class="tab-warranty">
         <div class="uk-container">
           <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
             <div>
-              <h2 class="title">Гарантия 1 год</h2>
+              <div class="tab-warranty__container">
+                <h2 class="title">Гарантия 1 год</h2>
+                <div class="tab-warranty__wrapper">
+                  <p>В своей работе мы руководствуемся положениями закона «О&nbsp;защите прав потребителей». Так, мы
+                    поможем вам избежать неприятностей, связанных с заводским браком и&nbsp;прочими недочетами
+                    производителя.</p>
+                  <ul class="features features--row uk-flex uk-flex-around uk-flex-column">
+                    <li class="features__item features__item--green uk-flex uk-flex-middle">
+                      <div class="uk-width-1-3">
+                        <svg width="36" height="42">
+                          <use xlink:href="img/symbol/sprite.svg#feature-calendar" />
+                        </svg>
+                      </div>
+                      <p class="uk-width-expand">На протяжении 14 дней со дня покупки вы выявляете заводской брак или
+                        прочие
+                        поломки устройства</p>
+                    </li>
+                    <li class="features__item features__item--orange uk-flex uk-flex-middle uk-child-width-1-2">
+                      <div class="uk-width-1-3">
+                        <svg width="36" height="42">
+                          <use xlink:href="img/symbol/sprite.svg#feature-diagnostic" />
+                        </svg>
+                      </div>
+                      <p class="uk-width-expand">Отдаете купленный товар на диагностику в одном из наших магазинов</p>
+                    </li>
+                    <li class="features__item features__item--blue uk-flex uk-flex-middle uk-child-width-1-2">
+                      <div class="uk-width-1-3">
+                        <svg width="36" height="42">
+                          <use xlink:href="img/symbol/sprite.svg#feature-return" />
+                        </svg>
+                      </div>
+                      <p class="uk-width-expand">Если проблема – по нашей вине, возвращаем деньги или меняем товар на
+                        такой
+                        же, но без дефектов.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h2 class="title uk-hidden@l">Частые вопросы</h2>
+              <ul class="accordion"
+                uk-accordion="multiple: true; content: > .accordion__content; toggle: > .accordion__title; transition: ease-out"
+                uk-height-match="row: false; target: .accordion__title">
+                <li>
+                  <a class="accordion__title" href="#">У вас есть доставка за пределы КАД?</a>
+                  <div class="accordion__content">
+                    <p>Да. Более того, мы можем доставить товар в любую России.</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="accordion__title" href="#">Есть ли у курьера сдача?</a>
+                  <div class="accordion__content">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor reprehenderit.</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="accordion__title" href="#">Курьер поможет активировать и настроить устройство?</a>
+                  <div class="accordion__content">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.
+                      Excepteur sint occaecat cupidatat proident.</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="accordion__title" href="#">Есть ли у курьера банковский терминал?</a>
+                  <div class="accordion__content">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.
+                      Excepteur sint occaecat cupidatat proident.</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="accordion__title" href="#">Как перенести доставку?</a>
+                  <div class="accordion__content">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.
+                      Excepteur sint occaecat cupidatat proident.</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="accordion__title" href="#">Могу ли я открыть и проверить товар перед оплатой?</a>
+                  <div class="accordion__content">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.
+                      Excepteur sint occaecat cupidatat proident.</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="accordion__title" href="#">Могу ли я оплатить картой курьеру?</a>
+                  <div class="accordion__content">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.
+                      Excepteur sint occaecat cupidatat proident.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
 
             <div>
-              <div class="product-card--large uk-flex uk-flex-column@s" uk-sticky="bottom: true; media: @l">
+              <div class="product-card--large uk-flex uk-flex-column@s" uk-sticky="bottom: .tab-warranty; media: @l">
                 <a class="product-card__image uk-flex uk-flex-middle uk-width-2-5@l" href="#">
                   <img src="img/temp/card-phone.jpg" alt="">
                 </a>
@@ -512,7 +611,9 @@
           </div>
         </div>
       </li>
+      <!-- Pay and Delivery -->
       <li>Оплата и доставка</li>
+      <!-- FAQ -->
       <li>Частые вопросы</li>
     </ul>
 
