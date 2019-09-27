@@ -1,0 +1,81 @@
+.tab-payment {
+  @include screen(l) {
+    margin-top: 40px;
+  }
+
+  .product-card--large {
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      margin-top: 55px;
+    }
+  }
+
+  .title {
+    margin-bottom: 15px;
+
+    @include screen(xl) {
+      padding-left: 15px;
+    }
+  }
+
+  .accordion {
+    @include screen(l) {
+      padding-right: 20px;
+    }
+  }
+
+  &__container {
+    background: #F7F7F7;
+    border-radius: 12px;
+
+    @include screen(xl) {
+      padding: 15px 15px 25px;
+    }
+
+    @include screen(l) {
+      padding: 20px 30px 30px;
+      margin-right: 20px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    font: 600 24px/40px FuturaPT;
+    margin-bottom: 20px;
+  }
+
+  .features {
+    &__item {
+      &:first-of-type {
+        @include screen(xl) {
+          margin-top: 15px;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      div {
+        width: 75px;
+        height: 75px;
+      }
+
+      p {
+        @include screen(xl) {
+          font: normal 14px/22px Helvetica;
+        }
+
+        @include screen(l) {
+          font: normal 16px/26px Helvetica;
+        }
+      }
+    }
+  }
+}
