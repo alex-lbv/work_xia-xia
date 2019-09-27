@@ -1,0 +1,29 @@
+.tab-faq {
+  @include screen(l) {
+    margin-top: 40px;
+  }
+
+  .product-card--large {
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      margin-top: 55px;
+    }
+  }
+
+  .title {
+    margin-bottom: 15px;
+
+    @include screen(xl) {
+      padding-left: 15px;
+    }
+  }
+
+  .accordion {
+    @include screen(l) {
+      padding-right: 20px;
+    }
+  }
+}
