@@ -1,0 +1,15 @@
+.tab-warranty {
+  @include screen(l) {
+    margin-top: 40px;
+  }
+
+  .product-card--large {
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      margin-top: 55px;
+    }
+  }
+}
