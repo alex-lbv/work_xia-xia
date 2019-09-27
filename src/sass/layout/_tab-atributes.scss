@@ -1,0 +1,78 @@
+.tab-atributes {
+  @include screen(l) {
+    margin-top: 40px;
+  }
+
+  .product-card--large {
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      margin-top: 55px;
+    }
+  }
+
+  &__lists {
+    @include screen(l) {
+      padding-right: 20px;
+    }
+
+    .title {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+
+    ul {
+      padding: 20px;
+      background: #F7F7F7;
+      border-radius: 12px;
+
+      &:first-of-type {
+        margin-bottom: 30px;
+
+        li {
+          span:first-child {
+            margin-right: 20px;
+          }
+        }
+      }
+
+      &:last-of-type {
+        li {
+          position: relative;
+          padding-left: 20px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #FF7914;
+          }
+        }
+      }
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      span {
+        font: normal 14px/17px Helvetica;
+
+        &:first-child {
+          color: #959595;
+        }
+
+        &:last-child {
+          color: #30373D;
+        }
+      }
+    }
+  }
+}
