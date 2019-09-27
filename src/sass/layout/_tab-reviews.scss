@@ -1,0 +1,121 @@
+.tab-reviews {
+  @include screen(l) {
+    margin-top: 40px;
+  }
+
+  .product-card--large {
+    @include screen(xl) {
+      margin-bottom: 20px;
+    }
+
+    @include screen(l) {
+      margin-top: 55px;
+    }
+  }
+
+  .title {
+    margin-bottom: 15px;
+    padding-left: 30px;
+  }
+
+  .pagination {
+    margin-top: 20px;
+  }
+
+  &__container {
+    background: #F4F4F4;
+    border-radius: 12px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    @include screen(l) {
+      padding: 20px;
+    }
+  }
+
+  &__author {
+    margin-bottom: 5px;
+    font: 500 16px/26px FuturaPT;
+  }
+
+  &__date {
+    margin-bottom: 10px;
+    opacity: .45;
+  }
+
+  &__comment {
+    margin-bottom: 20px;
+    position: relative;
+
+    &--plus {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 5px;
+        height: inherit;
+        border-radius: 0 12px 12px 0;
+        background-color: #14D75D;
+      }
+    }
+
+    &--minus {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 5px;
+        height: inherit;
+        border-radius: 0 12px 12px 0;
+        background-color: #FF7E62;
+      }
+    }
+  }
+
+  &__vote {
+    button {
+      min-width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #ffffff;
+
+      &:last-of-type {
+        margin-left: 5px;
+
+        svg {
+          transform: rotate(180deg);
+          transform: scale(1, -1);
+        }
+      }
+    }
+
+    svg {
+      margin-right: 2px;
+      width: 12px;
+      height: 12px;
+      fill: #B0B0B0;
+    }
+
+    span {
+      font: 500 12px/14px FuturaPT;
+    }
+  }
+
+  &__answer {
+    font: 500 16px/19px FuturaPT;
+    color: #FF5614;
+  }
+
+  &__adds-comment {
+    padding-top: 10px;
+    border-top: 1px solid #E4E4E4;
+  }
+}
