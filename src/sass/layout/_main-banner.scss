@@ -12,12 +12,8 @@
     position: relative;
     z-index: 1;
 
-    @include screen(x) {
-      padding: 70% 15px 50px 20px;
-    }
-
-    @include screen(sm) {
-      padding: 40px 15px 50px 20px;
+    @include screen(xl) {
+      padding: 320px 15px 50px 20px;
     }
 
     @include screen(l) {
@@ -38,41 +34,22 @@
     min-height: 425px;
 
     &--mia3 {
-      @include screen(xl) {
-        /*  background: url("../img/pic/bg/main-banner-1-mobile.jpg") no-repeat;
-        background-size: contain;
-        background-position: 50% -20%; */
-      }
-
-      @include screen(l) {
-        /* background: url("../img/pic/bg/main-banner-1.jpg") no-repeat;
-        background-size: 150% 150%;
-        background-position: 50% 90%; */
-      }
-    }
-
-    .main-banner__image {
-      @include screen(x) {
-        position: absolute;
-        top: -10%;
+      .main-banner__image {
         width: 100%;
         height: auto;
-      }
 
-      @include screen(sm) {
-        position: absolute;
-        top: -100px;
-        right: -400px;
-        width: 1200px;
-        height: auto;
-      }
+        @include screen(xl) {
+          position: absolute;
+          top: 10px;
+          max-width: 390px;
+        }
 
-      @include screen(l) {
-        position: absolute;
-        width: 150%;
-        height: 150%;
-        top: -180px;
-        left: -300px;
+        @include screen(l) {
+          position: absolute;
+          max-width: 425px;
+          top: 10px;
+          left: 400px;
+        }
       }
     }
   }

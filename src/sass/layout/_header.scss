@@ -17,7 +17,7 @@
 
   &__top {
     margin-bottom: 10px;
-    padding: 10px 0;
+    padding: 10px 0 5px;
     border-bottom: 1px solid #F0F0F0;
 
     a {
@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     border-radius: 12px;
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
     @include screen(xl) {
       justify-content: center;
@@ -129,7 +129,7 @@
 
   &__contact {
     @include screen(xl) {
-      margin-right: 25px;
+      margin: 7px 20px 0 auto;
     }
 
     @include screen(l) {
@@ -177,7 +177,8 @@
 
   &__logo {
     @include screen(xl) {
-      margin-right: 30px;
+      margin-right: 20px;
+      margin-top: 7px;
     }
 
     @include screen(l) {
@@ -214,22 +215,22 @@
   }
 
   &__hamburger {
-    @include screen (xs) {
-      margin-right: 20px;
+    @include screen (xl) {
+      margin-right: 15px;
       padding: 0;
     }
 
     span {
-      @include screen (xs) {
+      @include screen (xl) {
         display: flex;
         width: 32px;
         height: 4px;
-        background: #333333;
+        background: #FF7914;
         border-radius: 1.5px;
       }
 
       &:not(:last-of-type) {
-        @include screen (xs) {
+        @include screen (xl) {
           margin-bottom: 6px;
         }
       }
