@@ -90,13 +90,13 @@
         <li>м. Кузьминки, ул. Зеленодельская 121/35,</li>
         <li>м. Сокольники, Русаковская 26Бс1.</li>
       </ul>
-      <button class="btn btn--orange-gradient footer__btn" type="button">Посмотреть пункты самовывоза</button>
+      <button class="btn btn--orange-gradient footer__btn" type="button" href="#popupMaps" uk-toggle>Посмотреть пункты самовывоза</button>
       <div class="footer__contact">
         <a href="tel:88125076559">
           <span>(812)507-65-59</span>
         </a>
         <div>Бесплатно по всей територрии РФ<br> С 10:00 до 21:00, без выходных</div>
-        <button type="button">Вам перезвонить?</button>
+        <button type="button" href="#popupThanks" uk-toggle>Вам перезвонить?</button>
       </div>
     </div>
   </div>
@@ -125,6 +125,53 @@
 <div class="backdrop" uk-toggle="target: body; cls: bg-shadowed"></div>
 
 <script src="js/scripts.min.js"></script>
+
+
+<!-- modal popups -->
+
+<div id="popupCallBack" class="popup uk-flex-top" uk-modal>
+  <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Вам перезвонить?</h2>
+    <p>Оставьте свой номер, мы свяжемся с вами в&nbsp;течении дня.</p>
+    <div class="uk-flex uk-flex-column">
+      <label for="">Телефон</label>
+      <input type="text" placeholder="+7">
+    </div>
+    <button class="btn btn--orange-gradient" type="button">Перезвоните мне</button>
+  </div>
+</div>
+
+<div id="popupThanks" class="popup uk-flex-top" uk-modal>
+  <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Спасибо!</h2>
+    <p>Заявка отправлена, мы свяжемся с Вами в течении дня. Так же Вы можете связаться с нами по телефону: 8 (812)
+      507-65-59</p>
+    <button class="btn btn--orange-gradient" type="button">OK</button>
+  </div>
+</div>
+
+<div id="popupMaps" class="popup popup--maps uk-flex-top" uk-modal>
+  <div class="popup__dialog popup__dialog--large-plus uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Пункты самовывоза!</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.9365552051452!2d30.357610666329574!3d59.9331949318742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe1a3899db8dc698!2z0J3QvtGC0LDRgNC40LDQu9GM0L3QsNGPINC60L7QvdGC0L7RgNCwICLQktC-0YHRgdGC0LDQvdC40Y8gNiI!5e0!3m2!1sru!2sru!4v1563539776241!5m2!1sru!2sru"
+      width="100" height="500" style="border:0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- ------------------------------------- -->
 
 <button type="button" class="hamburger" uk-toggle="target: #uinav">
   <span></span>

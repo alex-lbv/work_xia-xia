@@ -1,0 +1,76 @@
+.popup {
+  &--maps {
+    .popup__dialog {
+      padding: 35px 0 0;
+      overflow: hidden;
+    }
+
+    .title {
+      padding-left: 40px;
+    }
+
+    iframe {
+      margin-top: 15px;
+      margin-bottom: -10px!important;
+      width: 100%;
+      height: 410px;
+    }
+  }
+
+  &__dialog {
+    box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+
+    &--small {
+      width: 460px;
+    }
+
+    &--medium {
+      width: 560px;
+    }
+
+    &--large {
+      width: 870px;
+    }
+
+    &--large-plus {
+      width: 900px;
+    }
+  }
+
+  &__close {
+    padding: 10px;
+    width: 40px;
+    height: auto;
+    fill: #B8B4B4;
+    cursor: pointer;
+  }
+
+  .title {
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    max-width: 300px;
+  }
+
+  label {
+    margin-bottom: 10px;
+    font: 600 14px/18px FuturaPT;
+  }
+
+  input {
+    padding: 20px 15px;
+    background: #F4F4F4;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+  }
+
+  .btn {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    font: 600 20px/26px FuturaPT;
+  }
+}
