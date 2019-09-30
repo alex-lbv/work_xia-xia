@@ -3,7 +3,9 @@
   z-index: 105;
 
   @include screen(xl) {
-    
+    order: 1;
+    margin-top: 7px;
+    margin-right: 10px;
   }
 
   @include screen(l) {
@@ -18,14 +20,16 @@
   }
 
   &__close {
-    display: none;
+    opacity: 0;
     position: absolute;
     right: 105px;
     top: 0;
     bottom: 0;
     margin: auto;
+    transition: opacity .3s;
 
     svg {
+      vertical-align: middle;
       width: 14px;
       height: 14px;
       fill: #B8B4B4;
@@ -33,19 +37,20 @@
   }
 
   &__btn {
-    display: none;
+    opacity: 0;
     position: absolute;
     right: 5px;
     top: 5px;
     max-width: 85px;
-    padding: 10px 20px;
+    padding: 8px 20px;
     font: 600 16px/22px FuturaPT;
     border-radius: 6px;
     z-index: 1000;
+    transition: opacity .3s;
   }
 
   input {
-    padding: 16px 50px;
+    padding: 20px 50px 13px;
     border: 1px solid #F0F0F0;
     border-radius: 12px;
 
@@ -59,10 +64,11 @@
 
   &-active {
     .search__close {
-      display: block;
+      opacity: 1;
     }
+
     .search__btn {
-      display: block;
+      opacity: 1;
     }
   }
 }
