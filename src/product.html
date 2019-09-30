@@ -468,6 +468,94 @@
           <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
             <div class="uk-margin-right@l">
               <h2 class="title">Отзывы</h2>
+              <!-- с добавленными комментами -->
+              <div class="tab-reviews__container">
+                <div class="uk-flex uk-flex-between uk-flex-middle">
+                  <div class="uk-flex uk-flex-column">
+                    <span class="tab-reviews__author">Антон Антонов</span>
+                    <span class="tab-reviews__date">12 мая 2019</span>
+                  </div>
+
+                  <ul class="uk-flex">
+                    <li class="product__rating-item product__rating-item--gold">
+                      <svg width="15" height="15">
+                        <use xlink:href="img/symbol/sprite.svg#star"></use>
+                      </svg>
+                    </li>
+                    <li class="product__rating-item product__rating-item--gold">
+                      <svg width="15" height="15">
+                        <use xlink:href="img/symbol/sprite.svg#star"></use>
+                      </svg>
+                    </li>
+                    <li class="product__rating-item product__rating-item--gold">
+                      <svg width="15" height="15">
+                        <use xlink:href="img/symbol/sprite.svg#star"></use>
+                      </svg>
+                    </li>
+                    <li class="product__rating-item product__rating-item--gold">
+                      <svg width="15" height="15">
+                        <use xlink:href="img/symbol/sprite.svg#star"></use>
+                      </svg>
+                    </li>
+                    <li class="product__rating-item">
+                      <svg width="15" height="15">
+                        <use xlink:href="img/symbol/sprite.svg#star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+
+                <p class="tab-reviews__comment tab-reviews__comment--plus">+ Размер экрана. В таком размере челка не так
+                  часто бросается в глаза, как на X. За счет экрана стала удобнее клавиатура. + Громкость динамиков
+                  стала выше, качество не изменилось. + Камера. Стала более резкой, улучшили алгоритмы HDR (но это же
+                  можно отнести в минусы/ фото менее контрастные). Улучшили портретный режим. + Золотой выглядит очень
+                  прикольно. Хотя в чехле, можно увидеть только низ медной окантовки. + Батарейка живет примерно также
+                  как и на новом Х;</p>
+
+                <p class="tab-reviews__comment tab-reviews__comment--minus">- Цена, ну очень дорого. на старте 110 т. р.
+                  - Очень бюджетный комплект, зарядка, кабель и наушники. - Камера, за счет HDR многие фото смотрятся
+                  более плоскими. - Появилось "улучшение кожи лица" или что то подобное, зачем?</p>
+
+                <p class="tab-reviews__comment">Обновления за год минимальные. Если нет лишних денег, лучше пока не
+                  брать, дождаться пока подешевеет.</p>
+
+                <div class="uk-flex uk-flex-between">
+                  <div class="tab-reviews__vote uk-flex">
+                    <button class="tab-reviews__vote-plus uk-flex" type="button">
+                      <svg width="12" height="12">
+                        <use xlink:href="img/symbol/sprite.svg#vote" />
+                      </svg>
+                      <span>7</span>
+                    </button>
+                    <button class="tab-reviews__vote-minus uk-flex uk-flex-center" type="button">
+                      <svg width="12" height="12">
+                        <use xlink:href="img/symbol/sprite.svg#vote" />
+                      </svg>
+                      <span>1</span>
+                    </button>
+                  </div>
+                  <button class="tab-reviews__answer" type="button">Ответить</button>
+                </div>
+                <div class="tab-reviews__added-comment uk-flex uk-flex-column">
+                  <div class="uk-flex uk-flex-between">
+                    <span class="tab-reviews__author">Василий</span>
+                    <span class="tab-reviews__date">12 мая 2019</span>
+                  </div>
+                  <p>Тоже взял его в рассрочку на старте продаж и очень доволен. Телефон шикарный. Работает идеально</p>
+                  <button class="tab-reviews__answer uk-flex-end" type="button">Ответить</button>
+
+                  <div class="tab-reviews__added-comment-inner uk-flex uk-flex-column">
+                    <div class="uk-flex uk-flex-between">
+                      <span class="tab-reviews__author">Оксана</span>
+                      <span class="tab-reviews__date">12 мая 2019</span>
+                    </div>
+                    <p>Гарантия какая?</p>
+                    <button class="tab-reviews__answer uk-flex-end" type="button">Ответить</button>
+                  </div>
+
+                </div>
+              </div>
+              <!-- добавить комменты -->
               <div class="tab-reviews__container">
                 <div class="uk-flex uk-flex-between uk-flex-middle">
                   <div class="uk-flex uk-flex-column">
@@ -537,25 +625,25 @@
                   <button class="tab-reviews__answer" type="button">Ответить</button>
                 </div>
 
-                <div class="add-reviews__adds-comment">
+                <div class="tab-reviews__adds-comment">
                   <div class="uk-flex uk-flex-column">
                     <label>Комментарий</label>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                   </div>
-                  <div class="uk-flex uk-flex-between">
+                  <div class="uk-flex uk-flex-between uk-child-width-1-2@l uk-flex-column@s">
                     <div class="uk-flex uk-flex-column">
                       <label for="">Телефон</label>
                       <input type="text">
                     </div>
-                    <div class="uk-flex uk-flex-column">
+                    <div class="uk-flex uk-flex-column uk-margin-left@l">
                       <label for="">Электронная почта</label>
                       <input type="text">
                     </div>
                   </div>
+                  <button class="btn btn--orange-gradient" type="button">Отправить</button>
                 </div>
               </div>
-
-
+              <!-- default -->
               <div class="tab-reviews__container">
                 <div class="uk-flex uk-flex-between uk-flex-middle">
                   <div class="uk-flex uk-flex-column">
@@ -630,7 +718,7 @@
             </div>
 
             <div>
-              <div class="product-card--large uk-flex uk-flex-column@s">
+              <div class="product-card--large uk-flex uk-flex-column@s uk-margin-bottom">
                 <a class="product-card__image uk-flex uk-flex-middle uk-width-2-5@l" href="#">
                   <img src="img/temp/card-phone.jpg" alt="">
                 </a>
@@ -668,6 +756,33 @@
                   </div>
                 </div>
 
+              </div>
+
+              <div class="tab-reviews__adds-review uk-margin-bottom@s">
+                <h3 class="title">Написать отзыв</h3>
+                <div class="uk-flex uk-flex-column">
+                  <label>Плюсы</label>
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="uk-flex uk-flex-column">
+                  <label>Минусы</label>
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="uk-flex uk-flex-column">
+                  <label>Комментарий</label>
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="uk-flex uk-flex-between uk-child-width-1-2@l uk-flex-column@s">
+                  <div class="uk-flex uk-flex-column">
+                    <label for="">Телефон</label>
+                    <input type="text">
+                  </div>
+                  <div class="uk-flex uk-flex-column uk-margin-left@l">
+                    <label for="">Электронная почта</label>
+                    <input type="text">
+                  </div>
+                </div>
+                <button class="btn btn--orange-gradient" type="button">Отправить</button>
               </div>
             </div>
           </div>
