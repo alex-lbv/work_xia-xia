@@ -148,7 +148,10 @@ var swiperProductCard3 = new Swiper('.swiper-product-card4', {
 });
 
 var swiperBanner = new Swiper('.main-banner__swiper', {
-
+  navigation: {
+    nextEl: '.main-banner__swiper-button-next',
+    prevEl: '.main-banner__swiper-button-prev',
+  },
 });
 
 var swiperCheckout = new Swiper('.checkout__swiper', {
