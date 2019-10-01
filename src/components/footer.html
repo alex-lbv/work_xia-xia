@@ -90,13 +90,15 @@
         <li>м. Кузьминки, ул. Зеленодельская 121/35,</li>
         <li>м. Сокольники, Русаковская 26Бс1.</li>
       </ul>
-      <button class="btn btn--orange-gradient footer__btn" type="button">Посмотреть пункты самовывоза</button>
+      <button class="btn btn--orange-gradient footer__btn" type="button" data-href="#popupMaps"
+        data-uk-toggle>Посмотреть пункты
+        самовывоза</button>
       <div class="footer__contact">
         <a href="tel:88125076559">
           <span>(812)507-65-59</span>
         </a>
         <div>Бесплатно по всей територрии РФ<br> С 10:00 до 21:00, без выходных</div>
-        <button type="button">Вам перезвонить?</button>
+        <button type="button" data-href="#popupCallBack" data-uk-toggle>Вам перезвонить?</button>
       </div>
     </div>
   </div>
@@ -122,41 +124,275 @@
   </ul>
 </footer>
 
-<div class="backdrop" uk-toggle="target: body; cls: bg-shadowed"></div>
+<div class="backdrop" data-uk-toggle="target: body; cls: bg-shadowed"></div>
 
 <script src="js/scripts.min.js"></script>
 
-<button type="button" class="hamburger" uk-toggle="target: #uinav">
-  <span></span>
-  <span></span>
-  <span></span>
 
-  <style>
-    .hamburger {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      margin-right: 20px;
-      padding: 0;
-      z-index: 99999;
-    }
+<!-- modal popups -->
+<!-- CallBack -->
+<div id="popupCallBack" class="popup uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
 
-    .hamburger span {
-      display: flex;
-      width: 32px;
-      height: 4px;
-      background: #333333;
-      border-radius: 1.5px;
-      margin-bottom: 6px;
-    }
-  </style>
+    <h2 class="title">Вам перезвонить?</h2>
+    <p>Оставьте свой номер, мы свяжемся с вами в&nbsp;течении дня.</p>
+    <div class="uk-flex uk-flex-column">
+      <label>Телефон</label>
+      <input type="text" placeholder="+7">
+    </div>
+    <button class="btn btn--orange-gradient" type="button">Перезвоните мне</button>
+  </div>
+</div>
+<!-- OneClick -->
+<div id="popupOneClick" class="popup popup--one-click uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
 
+    <h2 class="title">Купить в 1 клик</h2>
+    <p>Оставьте свой номер, мы свяжемся с вами в&nbsp;течении дня.</p>
+
+    <div class="popup__section product-card product-card--popup uk-flex uk-flex-middle">
+      <div class="product-card__image">
+        <img src="img/temp/checkout-1-1.jpg" alt="">
+      </div>
+      <div class="uk-flex uk-flex-column uk-width-2-3">
+        <span class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</span>
+        <div class="product-card__price uk-flex uk-flex-wrap uk-flex-middle">
+          <span class="product-card__price-old uk-margin-small-right">2&nbsp;699&nbsp;&#8381;</span>
+          <span class="product-card__price-total uk-margin-small-right">1&nbsp;990&nbsp;&#8381;</span>
+          <span class="product-card__price-sale">-15&#37;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-flex uk-flex-column">
+      <label>Телефон</label>
+      <input type="text" placeholder="+7">
+    </div>
+    <button class="btn btn--orange-gradient" type="button">Перезвоните мне</button>
+    <button class="btn btn--gray" type="button">Остались вопросы?</button>
+    <div class="popup__contact uk-align-center">
+      <span class="popup__contact-title">или позвоните нам по номеру:</span>
+      <a href="tel:88125092480">
+        <span>+7&nbsp;(812)&nbsp;509-24-80</span>
+      </a>
+      <span class="popup__contact-text">С 10:00 до 21:00, без выходных, бесплатно по РФ</span>
+    </div>
+  </div>
+</div>
+<!-- Credit -->
+<div id="popupCredit" class="popup popup--credit uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--medium uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Купить в кредит</h2>
+
+    <div class="popup__section product-card product-card--popup uk-flex uk-flex-middle">
+      <div class="product-card__image">
+        <img src="img/temp/checkout-1-1.jpg" alt="">
+      </div>
+      <div class="uk-flex uk-flex-column uk-width-2-3">
+        <span class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</span>
+        <div class="product-card__price uk-flex uk-flex-wrap uk-flex-middle">
+          <span class="product-card__price-old uk-margin-small-right">2&nbsp;699&nbsp;&#8381;</span>
+          <span class="product-card__price-total uk-margin-small-right">1&nbsp;990&nbsp;&#8381;</span>
+          <span class="product-card__price-sale">-15&#37;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-flex uk-flex-column">
+      <label>Выберите банк</label>
+      <select class="popup__select">
+        <option data-display="Любой">Любой</option>
+        <option value="1">Some option</option>
+        <option value="2">Another option</option>
+        <option value="3" disabled>A disabled option</option>
+        <option value="4">Potato</option>
+      </select>
+    </div>
+
+    <div class="popup__section uk-flex uk-flex-column">
+      <label>Срок кредита (месяцев):</label>
+      <!-- Calc -->
+    </div>
+
+    <div class="popup__section uk-flex uk-flex-column@s uk-child-width-1-2@l">
+      <div class="uk-margin-right@l">
+        <label>Есть задолженность по кредитам?</label>
+        <ul class="popup__radio">
+          <li>
+            <input class="uk-hidden" type="radio" id="creditPlus" name="credit-store" checked>
+            <label for="creditPlus">Есть</label>
+          </li>
+          <li>
+            <input class="uk-hidden" type="radio" id="creditMinus" name="credit-store">
+            <label for="creditMinus">Нет</label>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <label>Ваш возраст</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <span class="popup__subtitle">Напишите свой номер и мы позвоним<br>Вам в течение 5 минут</span>
+    <div class="uk-flex uk-flex-column">
+      <label>Телефон</label>
+      <input type="text" placeholder="+7">
+    </div>
+    <button class="btn btn--orange-gradient" type="button">Перезвоните мне</button>
+    <button class="btn btn--gray" type="button">Остались вопросы?</button>
+    <div class="popup__contact uk-align-center">
+      <span class="popup__contact-title">или позвоните нам по номеру:</span>
+      <a href="tel:88125092480">
+        <span>+7&nbsp;(812)&nbsp;509-24-80</span>
+      </a>
+      <span class="popup__contact-text">С 10:00 до 21:00, без выходных, бесплатно по РФ</span>
+    </div>
+  </div>
+</div>
+<!-- CartAdd -->
+<div id="popupCartAdd" class="popup popup--cart-add uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Товар добавлен<br>в корзину</h2>
+
+    <div class="product-card product-card--popup uk-flex uk-flex-middle">
+      <div class="product-card__image">
+        <img src="img/temp/checkout-1-1.jpg" alt="">
+      </div>
+      <div class="uk-flex uk-flex-column uk-width-2-3">
+        <span class="product-card__name">Xiaomi Mi 9T 4/256GB Carbon Black</span>
+        <div class="product-card__price uk-flex uk-flex-wrap uk-flex-middle">
+          <span class="product-card__price-old uk-margin-small-right">2&nbsp;699&nbsp;&#8381;</span>
+          <span class="product-card__price-total uk-margin-small-right">1&nbsp;990&nbsp;&#8381;</span>
+          <span class="product-card__price-sale">-15&#37;</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn--orange-gradient" type="button">Перейти к оформлению заказа</button>
+    <button class="btn btn--gray" type="button">Продолжить покупки</button>
+  </div>
+</div>
+<!-- Question -->
+<div id="popupQuestion" class="popup popup--question uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Остались вопросы?</h2>
+    <p>Оставьте свой номер, мы свяжемся с вами в&nbsp;течении дня.</p>
+    <div class="uk-flex uk-flex-column">
+      <label>Опишите свой вопрос</label>
+      <textarea cols="30" rows="10"></textarea>
+    </div>
+    <div class="uk-flex uk-flex-column">
+      <label>Телефон</label>
+      <input type="text" placeholder="+7">
+    </div>
+    <button class="btn btn--orange-gradient" type="button">Перезвоните мне</button>
+  </div>
+</div>
+<!-- Reviews -->
+<div id="popupAddsReview" class="popup popup--review uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--large uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Добавить отзыв</h2>
+    <p>Вам понравилось покупать у нас или есть замечания? Поделитесь своими впечатлениями в форме ниже:</p>
+
+    <div class="uk-flex uk-flex-column@s uk-child-width-1-2@l">
+      <div class="uk-margin-right@l">
+        <div class="uk-flex uk-flex-column">
+          <label>Плюсы</label>
+          <textarea cols="30" rows="10"></textarea>
+        </div>
+        <div class="uk-flex uk-flex-column">
+          <label>Минусы</label>
+          <textarea cols="30" rows="10"></textarea>
+        </div>
+        <div class="uk-flex uk-flex-column">
+          <label>Комментарий</label>
+          <textarea cols="30" rows="10"></textarea>
+        </div>
+      </div>
+
+      <div>
+        <div class="uk-flex uk-flex-column">
+          <label>Имя</label>
+          <input type="text">
+        </div>
+        <div class="uk-flex uk-flex-column">
+          <label>Телефон</label>
+          <input type="text" placeholder="+7">
+        </div>
+        <div class="uk-flex uk-flex-column">
+          <label>Email</label>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+    <button class="btn btn--orange-gradient" type="button">Перезвоните мне</button>
+  </div>
+</div>
+<!-- Thanks -->
+<div id="popupThanks" class="popup uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Спасибо!</h2>
+    <p>Заявка отправлена, мы свяжемся с Вами в течении дня. Так же Вы можете связаться с нами по телефону: 8 (812)
+      507-65-59</p>
+    <button class="btn btn--orange-gradient" type="button">OK</button>
+  </div>
+</div>
+<!-- Map -->
+<div id="popupMaps" class="popup popup--maps uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--large-plus uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+
+    <h2 class="title">Пункты самовывоза!</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.9365552051452!2d30.357610666329574!3d59.9331949318742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe1a3899db8dc698!2z0J3QvtGC0LDRgNC40LDQu9GM0L3QsNGPINC60L7QvdGC0L7RgNCwICLQktC-0YHRgdGC0LDQvdC40Y8gNiI!5e0!3m2!1sru!2sru!4v1563539776241!5m2!1sru!2sru"
+      width="100" height="500" style="border:0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<button type="button" class="hamburger"
+  style="position: fixed; bottom: 20px; left: 20px; margin-right: 20px; padding: 0; z-index: 99999;"
+  data-uk-toggle="target: #uinav">
+  <span
+    style="display: flex; width: 32px; height: 4px; background: #333333; border-radius: 1.5px; margin-bottom: 6px;"></span>
+  <span
+    style="display: flex; width: 32px; height: 4px; background: #333333; border-radius: 1.5px; margin-bottom: 6px;"></span>
+  <span
+    style="display: flex; width: 32px; height: 4px; background: #333333; border-radius: 1.5px; margin-bottom: 6px;"></span>
 </button>
-<div id="uinav" uk-offcanvas="overlay: true; mode: none;">
+<div id="uinav" data-uk-offcanvas="overlay: true; mode: none;">
   <div class="uk-offcanvas-bar">
     <button class="uk-button" type="button"
-      uk-toggle="target: #toggle-animation-multiple; animation:  uk-animation-slide-left, uk-animation-slide-bottom"
-      uk-icon="grid"></button>
+      data-uk-toggle="target: #toggle-animation-multiple; animation:  uk-animation-slide-left, uk-animation-slide-bottom"
+      data-uk-icon="grid"></button>
     <ul id="toggle-animation-multiple" class="uk-card uk-card-default uk-card-body uk-margin-small">
       <li style="margin-bottom: 10px;">
         <a href="index.html" style="color: #fff;">Главная</a>

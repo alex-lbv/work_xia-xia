@@ -1044,4 +1044,67 @@
       }
     }
   }
+
+  &--popup {
+    padding: 10px;
+
+    .product-card {
+      position: relative;
+
+      &__image {
+        margin-right: 25px;
+        padding: 0 5px;
+        width: 90px;
+        text-align: center;
+        border-radius: 8px;
+        background: #FFFFFF;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &__name {
+        margin-bottom: 10px;
+        font: normal 16px/26px FuturaPT;
+
+        @include screen(sm) {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        @include screen(l) {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &__price {
+        margin-bottom: 10px;
+
+        &-old {
+          font: normal 14px/17px Helvetica;
+          text-decoration-line: line-through;
+          color: #333333;
+          opacity: .2;
+        }
+
+        &-total {
+          font: 500 18px/22px Helvetica;
+          color: #333333;
+        }
+
+        &-sale {
+          padding: 3px 8px 2px;
+          font: 700 12px/15px Helvetica;
+          color: #ffffff;
+          background-color: #FF5614;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
 }

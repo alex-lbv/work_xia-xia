@@ -5,7 +5,7 @@
   <div class="product">
     <div class="product__header uk-container uk-margin-top uk-margin-bottom">
       <div class="breadcrumbs uk-margin-small-bottom">
-        <ul class="uk-subnav uk-subnav-divider" uk-margin>
+        <ul class="uk-subnav uk-subnav-divider uk-margin">
           <li class="uk-active"><a href="#">Главная</a></li>
           <li><a href="#">Xiaomi Mi 9T 4/256GB Carbon Black</a></li>
         </ul>
@@ -48,7 +48,7 @@
     <div class="uk-container">
       <div class="product__swiper-container uk-width-expand">
         <div class="product__swiper">
-          <ul class="swiper-wrapper" uk-switcher="connect: .uk-switcher; swiping: false">
+          <ul class="swiper-wrapper" data-uk-switcher="connect: .uk-switcher; swiping: false">
             <li class="swiper-slide">
               <a href="#">О товаре</a>
             </li>
@@ -115,7 +115,7 @@
               <div class="tab-general__options uk-flex uk-flex-bottom@l uk-flex-column@s">
                 <span class="tab-general__subtitle">Память:</span>
                 <span class="tab-general__options-toggle uk-flex uk-flex-between uk-flex-middle uk-hidden@l"
-                  uk-toggle="target: + ul; cls: visible">
+                  data-uk-toggle="target: + ul; cls: visible">
                   128 GB
                   <svg>
                     <use xlink:href="img/symbol/sprite.svg#arrow" />
@@ -155,8 +155,10 @@
                   </div>
                 </div>
                 <div class="tab-general__price-buttons">
-                  <button class="btn btn--green-gradient" type="button">В корзину</button>
-                  <button class="btn btn--gray" type="button">Купить&nbsp;в&nbsp;1&nbsp;клик</button>
+                  <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>В
+                    корзину</button>
+                  <button class="btn btn--gray" type="button" data-href="#popupOneClick"
+                    data-uk-toggle>Купить&nbsp;в&nbsp;1&nbsp;клик</button>
                 </div>
               </div>
 
@@ -164,7 +166,7 @@
                 <span class="tab-general__subtitle">Покупка&nbsp;в&nbsp;кредит:</span>
                 <div class="uk-flex uk-flex-wrap uk-flex-between uk-flex-column@l">
                   <span>от&nbsp;<span>990&#8381;</span>&nbsp;в&nbsp;месяц</span>
-                  <button type="button">Расчитать&nbsp;кредит</button>
+                  <button type="button" data-href="#popupCredit" data-uk-toggle>Расчитать&nbsp;кредит</button>
                 </div>
               </div>
             </div>
@@ -178,7 +180,7 @@
                 </ul>
                 <ul class="uk-flex uk-flex-column@s">
                   <li>Вермя доставки: ~ 16:00</li>
-                  <li>Пункты самовывоза</li>
+                  <li data-href="#popupMaps" data-uk-toggle>Пункты самовывоза</li>
                 </ul>
               </div>
 
@@ -419,7 +421,7 @@
               </ul>
             </div>
             <div>
-              <div class="product-card--large uk-flex uk-flex-column@s" uk-sticky="bottom: true; media: @l">
+              <div class="product-card--large uk-flex uk-flex-column@s" data-uk-sticky="bottom: true; media: @l">
                 <a class="product-card__image uk-flex uk-flex-middle uk-width-2-5@l" href="#">
                   <img src="img/temp/card-phone.jpg" alt="">
                 </a>
@@ -443,8 +445,10 @@
                       </div>
                     </div>
                     <div class="product-card-buttons">
-                      <button class="btn btn--green-gradient" type="button">В корзину</button>
-                      <button class="btn btn--gray" type="button">Купить&nbsp;в&nbsp;1&nbsp;клик</button>
+                      <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>В
+                        корзину</button>
+                      <button class="btn btn--gray" type="button" data-href="#popupOneClick"
+                        data-uk-toggle>Купить&nbsp;в&nbsp;1&nbsp;клик</button>
                     </div>
                   </div>
 
@@ -452,7 +456,7 @@
                     <span class="product-card__subtitle">Покупка&nbsp;в&nbsp;кредит:</span>
                     <div class="uk-flex uk-flex-wrap uk-flex-top">
                       <span>от&nbsp;<span>990&#8381;</span>&nbsp;в&nbsp;месяц</span>
-                      <button type="button">Расчитать&nbsp;кредит</button>
+                      <button type="button" data-href="#popupCredit" data-uk-toggle>Расчитать&nbsp;кредит</button>
                     </div>
                   </div>
                 </div>
@@ -628,15 +632,15 @@
                 <div class="tab-reviews__adds-comment">
                   <div class="uk-flex uk-flex-column">
                     <label>Комментарий</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea cols="30" rows="10"></textarea>
                   </div>
                   <div class="uk-flex uk-flex-between uk-child-width-1-2@l uk-flex-column@s">
                     <div class="uk-flex uk-flex-column">
-                      <label for="">Телефон</label>
+                      <label>Телефон</label>
                       <input type="text">
                     </div>
                     <div class="uk-flex uk-flex-column uk-margin-left@l">
-                      <label for="">Электронная почта</label>
+                      <label>Электронная почта</label>
                       <input type="text">
                     </div>
                   </div>
@@ -762,23 +766,23 @@
                 <h3 class="title">Написать отзыв</h3>
                 <div class="uk-flex uk-flex-column">
                   <label>Плюсы</label>
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                  <textarea cols="30" rows="10"></textarea>
                 </div>
                 <div class="uk-flex uk-flex-column">
                   <label>Минусы</label>
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                  <textarea cols="30" rows="10"></textarea>
                 </div>
                 <div class="uk-flex uk-flex-column">
                   <label>Комментарий</label>
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                  <textarea cols="30" rows="10"></textarea>
                 </div>
                 <div class="uk-flex uk-flex-between uk-child-width-1-2@l uk-flex-column@s">
                   <div class="uk-flex uk-flex-column">
-                    <label for="">Телефон</label>
+                    <label>Телефон</label>
                     <input type="text">
                   </div>
                   <div class="uk-flex uk-flex-column uk-margin-left@l">
-                    <label for="">Электронная почта</label>
+                    <label>Электронная почта</label>
                     <input type="text">
                   </div>
                 </div>
@@ -833,8 +837,8 @@
               </div>
               <h2 class="title uk-hidden@l">Частые вопросы</h2>
               <ul class="accordion"
-                uk-accordion="multiple: true; content: > .accordion__content; toggle: > .accordion__title; transition: ease-out"
-                uk-height-match="row: false; target: .accordion__title">
+                data-uk-accordion="multiple: true; content: > .accordion__content; toggle: > .accordion__title; transition: ease-out"
+                data-uk-height-match="row: false; target: .accordion__title">
                 <li>
                   <a class="accordion__title" href="#">У вас есть доставка за пределы КАД?</a>
                   <div class="accordion__content">
@@ -892,7 +896,8 @@
             </div>
 
             <div>
-              <div class="product-card--large uk-flex uk-flex-column@s" uk-sticky="bottom: .tab-warranty; media: @l">
+              <div class="product-card--large uk-flex uk-flex-column@s"
+                data-uk-sticky="bottom: .tab-warranty; media: @l">
                 <a class="product-card__image uk-flex uk-flex-middle uk-width-2-5@l" href="#">
                   <img src="img/temp/card-phone.jpg" alt="">
                 </a>
@@ -1025,7 +1030,8 @@
             </div>
 
             <div>
-              <div class="product-card--large uk-flex uk-flex-column@s" uk-sticky="bottom: .tab-payment; media: @l">
+              <div class="product-card--large uk-flex uk-flex-column@s"
+                data-uk-sticky="bottom: .tab-payment; media: @l">
                 <a class="product-card__image uk-flex uk-flex-middle uk-width-2-5@l" href="#">
                   <img src="img/temp/card-phone.jpg" alt="">
                 </a>
@@ -1075,8 +1081,8 @@
             <div>
               <h2 class="title">Частые вопросы</h2>
               <ul class="accordion"
-                uk-accordion="multiple: true; content: > .accordion__content; toggle: > .accordion__title; transition: ease-out"
-                uk-height-match="row: false; target: .accordion__title">
+                data-uk-accordion="multiple: true; content: > .accordion__content; toggle: > .accordion__title; transition: ease-out"
+                data-uk-height-match="row: false; target: .accordion__title">
                 <li>
                   <a class="accordion__title" href="#">У вас есть доставка за пределы КАД?</a>
                   <div class="accordion__content">
@@ -1134,7 +1140,7 @@
             </div>
 
             <div>
-              <div class="product-card--large uk-flex uk-flex-column@s" uk-sticky="bottom: .tab-faq; media: @l">
+              <div class="product-card--large uk-flex uk-flex-column@s" data-uk-sticky="bottom: .tab-faq; media: @l">
                 <a class="product-card__image uk-flex uk-flex-middle uk-width-2-5@l" href="#">
                   <img src="img/temp/card-phone.jpg" alt="">
                 </a>
