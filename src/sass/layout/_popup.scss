@@ -11,11 +11,45 @@
 
     iframe {
       margin-top: 15px;
-      margin-bottom: -10px!important;
+      margin-bottom: -10px !important;
       width: 100%;
       height: 410px;
     }
   }
+
+  &--question {
+    textarea {
+      padding: 15px;
+      margin-bottom: 15px;
+      max-height: 160px;
+      border: 1px solid #ECECEC;
+      border-radius: 8px;
+      background: #F4F4F4;
+      resize: none;
+    }
+  }
+
+  &--review {
+    p {
+      max-width: none !important;
+    }
+
+    textarea {
+      margin-bottom: 15px;
+      padding: 15px;
+      max-height: 80px;
+      border: 1px solid #ECECEC;
+      border-radius: 8px;
+      background: #F4F4F4;
+      resize: none;
+    }
+
+    input {
+      margin-bottom: 15px;
+    }
+  }
+
+  &--credit {}
 
   &__dialog {
     box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.2);
@@ -35,6 +69,102 @@
 
     &--large-plus {
       width: 900px;
+    }
+  }
+
+
+  .product-card {
+    margin-bottom: 20px;
+  }
+
+  &__select {
+    margin-bottom: 15px;
+
+    .list {
+      width: 100%;
+    }
+  }
+
+  &__section {
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(185, 186, 186, .2);
+  }
+
+  &__radio {
+    padding: 0 0 20px 25px;
+    margin-bottom: 15px;
+
+    label {
+      position: relative;
+      cursor: pointer;
+      font: normal 14px/17px Helvetica !important;
+    }
+
+    input+label::after {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: -3px;
+      bottom: 0;
+      margin: auto;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid #DADADA;
+      background-color: #ffffff;
+    }
+
+    input:checked+label::before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: -3px;
+      bottom: 0;
+      margin: auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #FF7914;
+      z-index: 1;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 20px;
+
+    @include screen(xl) {
+      font: 600 18px/23px FuturaPT;
+    }
+
+    @include screen(l) {
+      font: 600 24px/31px FuturaPT;
+    }
+  }
+
+  &__contact {
+    span {
+      display: block;
+      text-align: center;
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      font: 700 12px/15px FuturaPT;
+      text-transform: uppercase;
+      opacity: .3;
+    }
+
+    a {
+      span {
+        margin-bottom: 15px;
+        font: 500 32px/39px Helvetica;
+      }
+    }
+
+    &-text {
+      font: normal 12px/14px Helvetica;
+      opacity: .5;
     }
   }
 
@@ -62,15 +192,26 @@
 
   input {
     padding: 20px 15px;
+    width: 100%;
     background: #F4F4F4;
     border: 1px solid #ECECEC;
     border-radius: 8px;
   }
 
   .btn {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 12px;
-    font: 600 20px/26px FuturaPT;
+    &--orange-gradient {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 12px;
+      font: 600 20px/26px FuturaPT;
+    }
+
+    &--gray {
+      margin-top: 20px;
+      padding: 13px 15px;
+      border-radius: 6px;
+      font: 500 16px/22px FuturaPT;
+      color: #333333;
+    }
   }
 }
