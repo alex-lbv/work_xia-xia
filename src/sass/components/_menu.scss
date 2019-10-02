@@ -118,12 +118,16 @@
     }
   }
 
-  &.uk-offcanvas:not(.uk-open) {
+  &.uk-offcanvas:not(.uk-open) {  
     position: relative;
     top: auto;
     bottom: auto;
     left: auto;
     z-index: 50;
+
+    @include screen(xl) {
+      display: none!important;
+    }
 
     @include screen(l) {
       display: block;
