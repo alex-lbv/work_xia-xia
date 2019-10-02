@@ -165,15 +165,16 @@
 
   &-product-card {
     position: relative;
-    padding: 20px 100px 60px 0;
-    margin: -20px 0 -60px;
 
     @include screen(xl) {
       margin-bottom: 20px;
+      padding-right: 30px;
     }
 
     @include screen(l) {
       overflow: hidden;
+      padding: 20px 100px 80px 0;
+      margin: -20px 0 -80px;
     }
 
     .swiper-slide {
@@ -273,5 +274,5 @@
 
 /* z-index при hover на карточку товара */
 .carousel-product-card.swiper-container-initialized.swiper-container-horizontal:hover {
-  z-index: 5!important;
+  z-index: 5 !important;
 }

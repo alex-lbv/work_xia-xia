@@ -53,22 +53,28 @@
     padding: 20px 50px 13px;
     border: 1px solid #F0F0F0;
     border-radius: 12px;
-
     background: url('../img/pic/ico/search.svg') 20px center no-repeat, #F8F8F8;
-
-    &::placeholder {
-      font: normal 14px/18px FuturaPT;
-      color: rgba(43, 45, 48, .9);
-    }
   }
 
-  &-active {
-    .search__close {
-      opacity: 1;
-    }
+  &__result {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: opacity .3s;
 
-    .search__btn {
-      opacity: 1;
+    a {
+      display: block;
+      padding: 17px 20px 15px;
+      border-bottom: 1px solid #E6E6E6;
+
+      &:hover {
+        background: #F4F4F4;
+      }
     }
   }
 }
