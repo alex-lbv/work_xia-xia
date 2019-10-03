@@ -115,6 +115,7 @@
 
   &-reviews {
     position: relative;
+    display: flex;
     background: white;
 
     @include screen(xl) {
@@ -139,6 +140,14 @@
         opacity: 1;
         transition: opacity .5s;
       }
+    }
+
+    .swiper-wrapper {
+      max-width: 405px;
+    }
+
+    .swiper-slide {
+      margin-right: 10px;
     }
 
     .swiper-pagination {
@@ -214,11 +223,16 @@
       }
     }
 
+    .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, .6);
+      opacity: 1;
+    }
+
     .swiper-pagination-bullet-active {
       top: -1px;
       height: 5px;
       width: 35px;
-      background: #FF7914;
+      background: rgba(0, 0, 0, 0.2);
       border-radius: 2.5px;
     }
   }

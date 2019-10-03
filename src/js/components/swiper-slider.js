@@ -65,12 +65,16 @@ var swiperProductCard1 = new Swiper('.swiper-product-card1', {
   spaceBetween: 10,
   slidesPerView: 4,
   breakpoints: {
-    640: {
+    550: {
       slidesPerView: 1,
       loop: false,
     },
-    1200: {
+    900: {
       slidesPerView: 2,
+      loop: false,
+    },
+    1200: {
+      slidesPerView: 3,
     }
   },
   navigation: {
@@ -88,12 +92,16 @@ var swiperProductCard2 = new Swiper('.swiper-product-card2', {
   spaceBetween: 10,
   slidesPerView: 4,
   breakpoints: {
-    640: {
+    550: {
       slidesPerView: 1,
       loop: false,
     },
-    1200: {
+    900: {
       slidesPerView: 2,
+      loop: false,
+    },
+    1200: {
+      slidesPerView: 3,
     }
   },
   navigation: {
@@ -111,12 +119,16 @@ var swiperProductCard3 = new Swiper('.swiper-product-card3', {
   spaceBetween: 10,
   slidesPerView: 4,
   breakpoints: {
-    640: {
+    550: {
       slidesPerView: 1,
       loop: false,
     },
-    1200: {
+    900: {
       slidesPerView: 2,
+      loop: false,
+    },
+    1200: {
+      slidesPerView: 3,
     }
   },
   navigation: {
@@ -134,12 +146,16 @@ var swiperProductCard3 = new Swiper('.swiper-product-card4', {
   spaceBetween: 10,
   slidesPerView: 4,
   breakpoints: {
-    640: {
+    550: {
       slidesPerView: 1,
       loop: false,
     },
-    1200: {
+    900: {
       slidesPerView: 2,
+      loop: false,
+    },
+    1200: {
+      slidesPerView: 3,
     }
   },
   navigation: {

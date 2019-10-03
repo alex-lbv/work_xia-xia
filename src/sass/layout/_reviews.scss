@@ -76,7 +76,21 @@
       }
     }
 
-    .reviews__button {
+    .review {
+      max-width: 405px;
+      height: 410px;
+
+      p {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 10;
+        max-height: 260px;
+      }
+    }
+
+    .reviews__button-vertical {
       position: relative;
       z-index: 101;
       background: #F4F4F4;
