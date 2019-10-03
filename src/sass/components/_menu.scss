@@ -16,6 +16,13 @@
       background-color: #ffffff;
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
       border-radius: 0px 0px 12px 12px;
+      overflow: hidden;
+
+      &>li {
+        @include screen(xl) {
+          border-top: 1px solid #E6E6E6;
+        }
+      }
     }
 
     li {
@@ -26,7 +33,21 @@
       position: relative;
       display: block;
       padding: 20px;
-      font: 500 16px/20px Helvetica;
+
+      @include screen(xl) {
+        font: normal 16px/19px Helvetica;
+      }
+
+      @include screen(l) {
+        font: 500 16px/20px Helvetica;
+      }
+
+      &:hover,
+      &:active {
+        @include screen(xl) {
+          background: rgba(230, 230, 230, .3);
+        }
+      }
 
       &::after {
         content: "";
@@ -51,8 +72,10 @@
 
     li {
       &:hover .menu__sublist {
-        opacity: 1;
-        pointer-events: initial;
+        @include screen(l) {
+          opacity: 1;
+          pointer-events: initial;
+        }
       }
     }
   }
@@ -65,17 +88,30 @@
     a::before {
       content: "";
       position: absolute;
-      right: 0;
       top: 0;
       bottom: 0;
       margin: auto;
       width: 10px;
       height: 13px;
       background: url(../img/pic/ico/lightning.svg) no-repeat;
+
+      @include screen(xl) {
+        left: 85px;
+      }
+
+      @include screen(l) {
+        right: 0;
+      }
     }
   }
 
   &__sublist {
+    @include screen(xl) {
+      height: 0;
+      opacity: 0;
+      border-top: 1px solid #E6E6E6;
+    }
+
     @include screen(l) {
       position: absolute;
       top: calc(100% + 4px);
@@ -118,7 +154,7 @@
     }
   }
 
-  &.uk-offcanvas:not(.uk-open) {  
+  &.uk-offcanvas:not(.uk-open) {
     position: relative;
     top: auto;
     bottom: auto;
@@ -126,7 +162,7 @@
     z-index: 50;
 
     @include screen(xl) {
-      display: none!important;
+      display: none !important;
     }
 
     @include screen(l) {
@@ -158,5 +194,35 @@
     background: 0 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  &__list a.active {
+    &+.menu__sublist {
+      @include screen(xl) {
+        opacity: 1;
+        height: 100%;
+      }
+    }
+  }
+
+  &__footer {
+    padding-bottom: 10px;
+    background: #F4F4F4;
+
+    li {
+      margin: 10px 0 0 10px;
+    }
+
+    a {
+      padding: 10px 15px;
+      border: 1px solid #E5E5E5;
+      border-radius: 8px;
+      background: #FFFFFF;
+      font: normal 16px/19px FuturaPT;
+
+      &:after {
+        display: none;
+      }
+    }
   }
 }

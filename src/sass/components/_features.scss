@@ -148,9 +148,6 @@
   }
 
   &__wrap {
-    border-bottom: 1px solid #DFDFDF;
-    border-radius: 0.5px;
-
     @include screen(xl) {
       padding: 30px 35px;
     }

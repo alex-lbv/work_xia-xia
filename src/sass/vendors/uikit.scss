@@ -7963,6 +7963,243 @@ iframe.uk-cover {
   }
 }
 
+.uk-padding {
+
+  /* padding default */
+  &-top {
+    &\@s {
+      @include screen(xl) {
+        padding-top: 20px;
+      }
+    }
+
+    &\@l {
+      @include screen(l) {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &-bottom {
+    &\@s {
+      @include screen(xl) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &\@l {
+      @include screen(l) {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &-left {
+    &\@s {
+      @include screen(xl) {
+        padding-left: 20px;
+      }
+    }
+
+    &\@l {
+      @include screen(l) {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &-right {
+    &\@s {
+      @include screen(xl) {
+        padding-right: 20px;
+      }
+    }
+
+    &\@l {
+      @include screen(l) {
+        padding-right: 20px;
+      }
+    }
+  }
+
+  /* padding-small */
+  &-small {
+    &-top {
+      &\@s {
+        @include screen(xl) {
+          padding-top: 10px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-top: 10px !important;
+        }
+      }
+    }
+
+    &-bottom {
+      &\@s {
+        @include screen(xl) {
+          padding-bottom: 10px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-bottom: 10px !important;
+        }
+      }
+    }
+
+    &-left {
+      &\@s {
+        @include screen(xl) {
+          padding-left: 10px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-left: 10px !important;
+        }
+      }
+    }
+
+    &-right {
+      &\@s {
+        @include screen(xl) {
+          padding-right: 10px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-right: 10px !important;
+        }
+      }
+    }
+  }
+
+  /* padding-medium */
+  &-medium {
+    &-top {
+      &\@s {
+        @include screen(xl) {
+          padding-top: 40px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-top: 40px !important;
+        }
+      }
+    }
+
+    &-bottom {
+      &\@s {
+        @include screen(xl) {
+          padding-bottom: 40px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-bottom: 40px !important;
+        }
+      }
+    }
+
+    &-left {
+      &\@s {
+        @include screen(xl) {
+          padding-left: 40px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-left: 40px !important;
+        }
+      }
+    }
+
+    &-right {
+      &\@s {
+        @include screen(xl) {
+          padding-right: 40px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-right: 40px !important;
+        }
+      }
+    }
+  }
+
+  /* padding-large */
+  &-large {
+    &-top {
+      &\@s {
+        @include screen(xl) {
+          padding-top: 60px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-top: 60px !important;
+        }
+      }
+    }
+
+    &-bottom {
+      &\@s {
+        @include screen(xl) {
+          padding-bottom: 60px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-bottom: 60px !important;
+        }
+      }
+    }
+
+    &-left {
+      &\@s {
+        @include screen(xl) {
+          padding-left: 60px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-left: 60px !important;
+        }
+      }
+    }
+
+    &-right {
+      &\@s {
+        @include screen(xl) {
+          padding-right: 60px !important;
+        }
+      }
+
+      &\@l {
+        @include screen(l) {
+          padding-right: 60px !important;
+        }
+      }
+    }
+  }
+}
+
 .uk-margin {
 
   /* margin default */

@@ -20,3 +20,8 @@ $("body").on('blur', '#searchInput', function () {
 /* $("#searchInput").on('keyup', function () {
   $('.search-results').addClass('active');
 }); */
+
+$('.menu__list a').on('click', function () {
+  $('.menu__list a').not($(this)).removeClass('active');
+  $(this).toggleClass('active');
+});
