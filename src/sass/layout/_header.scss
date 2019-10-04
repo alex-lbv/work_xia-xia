@@ -193,6 +193,12 @@
       margin-right: 30px;
       color: #FF7914;
       cursor: pointer;
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s;
+
+      &:hover {
+        border-color: #FF7914;
+      }
     }
 
     span:last-child {
@@ -246,10 +252,12 @@
   &.search-active {
     .search__close {
       opacity: 1;
+      pointer-events: inherit;
     }
 
     .search__btn {
       opacity: 1;
+      pointer-events: inherit;
     }
 
     .search__result {

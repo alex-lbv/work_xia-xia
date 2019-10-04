@@ -40,11 +40,17 @@
     a {
       display: block;
       text-align: center;
-      padding: 10px 20px;
+      padding: 12px 20px 8px;
       font: 500 14px/18px Helvetica;
       color: #333333;
       background: #ffffff;
       border-radius: 8px;
+      transition: background .3s, color .1s;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #FF7914;
+      }
     }
 
     &-button-next {

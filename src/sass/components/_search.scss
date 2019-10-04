@@ -27,6 +27,7 @@
     bottom: 0;
     margin: auto;
     transition: opacity .3s;
+    pointer-events: none;
 
     svg {
       vertical-align: middle;
@@ -38,7 +39,7 @@
 
   &__btn {
     opacity: 0;
-    position: absolute;
+    position: absolute !important;
     right: 5px;
     top: 5px;
     max-width: 85px;
@@ -47,6 +48,7 @@
     border-radius: 6px;
     z-index: 1000;
     transition: opacity .3s;
+    pointer-events: none;
   }
 
   input {

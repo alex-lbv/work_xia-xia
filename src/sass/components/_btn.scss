@@ -1,27 +1,71 @@
 .btn {
+  position: relative;
   display: block;
   width: 100%;
   text-align: center;
   font-family: FuturaPT;
   color: #ffffff;
+  backface-visibility: hidden;
+  transition: background-color .3s, box-shadow .3s, color .1s;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
 
   &--orange {
     background: #FF7914;
     box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
+
+    &:hover {
+      background: #FF5614;
+      box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
+    }
   }
 
   &--orange-gradient {
     background: linear-gradient(180deg, #FFB02D 0%, #FF7914 100%);
     box-shadow: 0px 4px 15px rgba(255, 121, 20, 0.4);
+
+    &:after {
+      background: #FF7914;
+      box-shadow: 0px 6px 20px rgba(255, 121, 20, 0.5);
+    }
   }
 
   &--green-gradient {
     background: linear-gradient(180deg, #90E744 0%, #53B525 100%);
     box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
+
+    &::after {
+      background: linear-gradient(180deg, #8EE641 0%, #43D000 100%);
+      box-shadow: 0px 5px 20px rgba(137, 225, 64, 0.6);
+    }
   }
 
   &--gray {
     color: #333333;
     background: #F7F7F7;
+
+    &:hover {
+      color: #ffffff !important;
+      background: #FF7914;
+    }
   }
 }
