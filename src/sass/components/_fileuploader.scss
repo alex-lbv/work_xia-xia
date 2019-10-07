@@ -1,0 +1,135 @@
+.fileuploader {
+  &__title {
+    position: relative;
+    padding-left: 20px;
+    color: #FF7914;
+
+    svg {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      fill: #FF7914;
+    }
+  }
+
+  &-theme-thumbnails {
+    background: none;
+  }
+
+  &-theme-thumbnails .fileuploader-thumbnails-input,
+  &-theme-thumbnails .fileuploader-items-list .fileuploader-item {
+    margin: 0;
+  }
+
+  &-theme-thumbnails .fileuploader-thumbnails-input-inner {
+    background: none;
+    border: none;
+    display: flex;
+
+    p {
+      padding: 0 15px;
+    }
+  }
+
+  &-items-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* &-theme-thumbnails .fileuploader-items-list .fileuploader-item,
+  &-theme-thumbnails .fileuploader-thumbnails-input {
+    margin-right: 5px;
+  } */
+
+  &-thumbnails-input {
+    /*  display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    margin-right: 5px;
+    border: 1px dashed #4bd964;
+    border-radius: 6px;
+    background-color: #fff;
+    text-align: center;
+    font-family: Roboto;
+    color: #4bd964; */
+
+    &:only-child {
+      /*  flex: 1;
+      padding: 15px 0 10px; */
+      cursor: pointer;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: baseline;
+      font: 500 14px/24px FuturaPT;
+      color: #FF7914;
+    }
+  }
+
+  .file-type-image {
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      height: 64px;
+    }
+  }
+
+  &-download {
+    display: none;
+
+    position: relative;
+    padding-left: 20px;
+    color: #FF7914;
+
+    svg {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      fill: #FF7914;
+    }
+
+    .fileuploader-thumbnails-input:only-child & {
+      display: block;
+    }
+  }
+
+  /* &__icon {
+    display: block;
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    .fileuploader-thumbnails-input:only-child & {
+      width: 24px;
+      height: 20px;
+      margin: 0 auto 6px;
+    }
+  } */
+
+  &-thumbnails-input:only-child .fileuploader-download--more {
+    display: none;
+  }
+
+  &-download--more {
+    display: block;
+  }
+
+  &-action-remove {
+    display: block;
+    margin-right: 5px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background: url('../img/pic/ico/close.svg') no-repeat;
+
+    i {
+      display: none;
+    }
+  }
+}
