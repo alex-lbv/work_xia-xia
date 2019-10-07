@@ -284,6 +284,10 @@
   /*  */
 
   &__carousel {
+    @include screen(xl) {
+      overflow: hidden;
+    }
+
     &-title {
       color: #333333;
 

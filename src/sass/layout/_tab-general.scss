@@ -147,10 +147,17 @@
       }
 
       button {
+        max-width: max-content;
         text-align: left;
         padding: 0;
+        border-bottom: 1px solid transparent;
         font: 500 14px/24px FuturaPT;
         color: #FF7914;
+        transition: border-color .3s;
+
+        &:hover {
+          border-bottom: 1px solid #FF7914;
+        }
 
         @include screen(xl) {
           margin-left: 10px;
