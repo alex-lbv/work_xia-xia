@@ -111,29 +111,77 @@
 
           <div class="tab-general__info uk-width-expand">
 
-            <div class="tab-general__options-wrap">
-              <div class="tab-general__options uk-flex uk-flex-bottom@l uk-flex-column@s">
-                <span class="tab-general__subtitle">Память:</span>
-                <span class="tab-general__options-toggle uk-flex uk-flex-between uk-flex-middle uk-hidden@l"
-                  data-uk-toggle="target: + ul; cls: visible">
-                  128 GB
-                  <svg>
-                    <use xlink:href="img/symbol/sprite.svg#arrow" />
-                  </svg>
-                </span>
-                <ul class="uk-flex uk-flex-column@s">
-                  <li>
-                    <a href="#">64 GB</a>
+            <div class="tab-general__options-wrap uk-flex uk-flex-wrap">
+              <div class="tab-general__options uk-flex">
+                <div class="uk-margin-small-right uk-flex uk-flex-bottom@l uk-flex-column@s">
+                  <span class="tab-general__subtitle">Память:</span>
+                  <span class="tab-general__options-toggle uk-flex uk-flex-between uk-flex-middle uk-hidden@l"
+                    data-uk-toggle="target: + ul; cls: visible">
+                    128 GB
+                    <svg>
+                      <use xlink:href="img/symbol/sprite.svg#arrow" />
+                    </svg>
+                  </span>
+                  <ul class="uk-flex uk-flex-column@s">
+                    <li>
+                      <a href="#">64 GB</a>
+                    </li>
+                    <li class="active">
+                      <a href="#">128 GB</a>
+                    </li>
+                    <li>
+                      <a href="#">256 GB</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="uk-flex uk-flex-bottom@l uk-margin-small-right uk-flex-column@s">
+                  <span class="tab-general__subtitle">ОЗУ:</span>
+                  <span class="tab-general__options-toggle uk-flex uk-flex-between uk-flex-middle uk-hidden@l"
+                    data-uk-toggle="target: + ul; cls: visible">
+                    4 Gb
+                    <svg>
+                      <use xlink:href="img/symbol/sprite.svg#arrow" />
+                    </svg>
+                  </span>
+                  <ul class="uk-flex uk-flex-column@s">
+                    <li>
+                      <a href="#">3 Gb</a>
+                    </li>
+                    <li class="active">
+                      <a href="#">4 Gb</a>
+                    </li>
+                    <li>
+                      <a href="#">5 Gb</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-bottom@l uk-flex-column@s">
+                <span class="tab-general__subtitle uk-margin-small-right@l uk-margin-small-bottom@s">Цвет:</span>
+                <ul class="filter__colors uk-flex uk-child-width-1-4 uk-grid-small uk-grid" data-uk-grid=""
+                  aria-hidden="false">
+                  <li class="filter__color filter__color--black uk-first-column">
+                    <input class="uk-hidden" type="radio" id="c1" name="color" checked="">
+                    <label for="c1"></label>
                   </li>
-                  <li class="active">
-                    <a href="#">128 GB</a>
+                  <li class="filter__color filter__color--orange">
+                    <input class="uk-hidden" type="radio" id="c2" name="color">
+                    <label for="c2"></label>
                   </li>
-                  <li>
-                    <a href="#">256 GB</a>
+                  <li class="filter__color filter__color--violet">
+                    <input class="uk-hidden" type="radio" id="c3" name="color">
+                    <label for="c3"></label>
+                  </li>
+                  <li class="filter__color filter__color--white">
+                    <input class="uk-hidden" type="radio" id="c4" name="color">
+                    <label for="c4"></label>
                   </li>
                 </ul>
               </div>
             </div>
+
+
 
             <div class="tab-general__price uk-flex uk-flex-column@s">
               <div class="uk-flex uk-flex-middle uk-flex-wrap">
@@ -155,8 +203,9 @@
                   </div>
                 </div>
                 <div class="tab-general__price-buttons">
-                  <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>В
-                    корзину</button>
+                  <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                    <span>В корзину</span>
+                  </button>
                   <button class="btn btn--gray" type="button" data-href="#popupOneClick"
                     data-uk-toggle>Купить&nbsp;в&nbsp;1&nbsp;клик</button>
                 </div>
@@ -445,8 +494,9 @@
                       </div>
                     </div>
                     <div class="product-card-buttons">
-                      <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>В
-                        корзину</button>
+                      <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                        <span>В корзину</span>
+                      </button>
                       <button class="btn btn--gray" type="button" data-href="#popupOneClick"
                         data-uk-toggle>Купить&nbsp;в&nbsp;1&nbsp;клик</button>
                     </div>
@@ -470,7 +520,7 @@
       <li class="tab-reviews">
         <div class="uk-container">
           <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
-            <div class="uk-margin-right@l">
+            <div class="uk-padding-right@l">
               <h2 class="title">Отзывы</h2>
               <!-- с добавленными комментами -->
               <div class="tab-reviews__container">
@@ -746,7 +796,9 @@
                       </div>
                     </div>
                     <div class="product-card-buttons">
-                      <button class="btn btn--green-gradient" type="button">В корзину</button>
+                      <button class="btn btn--green-gradient" type="button">
+                        <span>В корзину</span>
+                      </button>
                       <button class="btn btn--gray" type="button">Купить&nbsp;в&nbsp;1&nbsp;клик</button>
                     </div>
                   </div>
@@ -921,7 +973,9 @@
                       </div>
                     </div>
                     <div class="product-card-buttons">
-                      <button class="btn btn--green-gradient" type="button">В корзину</button>
+                      <button class="btn btn--green-gradient" type="button">
+                        <span>В корзину</span>
+                      </button>
                       <button class="btn btn--gray" type="button">Купить&nbsp;в&nbsp;1&nbsp;клик</button>
                     </div>
                   </div>
@@ -1055,7 +1109,9 @@
                       </div>
                     </div>
                     <div class="product-card-buttons">
-                      <button class="btn btn--green-gradient" type="button">В корзину</button>
+                      <button class="btn btn--green-gradient" type="button">
+                        <span>В корзину</span>
+                      </button>
                       <button class="btn btn--gray" type="button">Купить&nbsp;в&nbsp;1&nbsp;клик</button>
                     </div>
                   </div>
@@ -1164,7 +1220,9 @@
                       </div>
                     </div>
                     <div class="product-card-buttons">
-                      <button class="btn btn--green-gradient" type="button">В корзину</button>
+                      <button class="btn btn--green-gradient" type="button">
+                        <span>В корзину</span>
+                      </button>
                       <button class="btn btn--gray" type="button">Купить&nbsp;в&nbsp;1&nbsp;клик</button>
                     </div>
                   </div>
@@ -1417,7 +1475,7 @@
         <div class="swiper-button swiper-button-next"></div>
       </div>
     </div>
-    <!-- Swiper 1-->
+    <!-- Swiper 2-->
     <div class="uk-container uk-margin-small-bottom@s product__carousel">
       <p class="product__carousel-title">Недавно просмотренные</p>
       <div class="carousel__wrap carousel__wrap-product-card uk-position-relative">
