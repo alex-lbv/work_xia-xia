@@ -283,4 +283,20 @@
 
   /*  */
 
+  &__carousel {
+    &-title {
+      color: #333333;
+
+      @include screen(xl) {
+        margin: 15px 0;
+        font: 500 18px/28px FuturaPT;
+      }
+
+      @include screen(l) {
+        margin: 20px 0;
+        font: 500 24px/40px FuturaPT;
+      }
+    }
+  }
+
 }
