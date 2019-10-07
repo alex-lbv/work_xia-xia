@@ -25,6 +25,12 @@
     padding: 10px 12px 10px 20px;
     background: #F4F4F4;
     border-radius: 6px;
+    transition: background .3s, box-shadow .3s;
+
+    &:hover {
+      background: #FFFFFF;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    }
 
     span {
       margin-right: 30px;
@@ -76,13 +82,28 @@
       }
     }
 
-    .reviews__button {
+    .review {
+      max-width: 405px;
+      height: 410px;
+
+      p {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 10;
+        max-height: 260px;
+      }
+    }
+
+    .reviews__button-vertical {
       position: relative;
       z-index: 101;
       background: #F4F4F4;
       border-radius: 12px;
       cursor: pointer;
       transition: background-color .4s, box-shadow .4s;
+      overflow: hidden;
 
       @include screen(xl) {
         display: flex;

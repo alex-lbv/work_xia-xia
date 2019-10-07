@@ -7,6 +7,10 @@
     border-radius: 12px;
     background: #ffffff;
 
+    @include screen(xl) {
+      overflow: hidden;
+    }
+
     .product-card__image {
       position: relative;
       display: block;
@@ -109,6 +113,7 @@
     .product-card__price {
       @include screen(l) {
         padding: 15px;
+        border-top: 1px solid #F0F0F0;
         transition: transform .3s;
       }
 
@@ -178,6 +183,35 @@
     }
   }
 
+  &--super-price {
+    background: linear-gradient(360deg, #FFE9E3 0%, #FFFFFF 57.06%) !important;
+
+    .product-card__price-text {
+      font: 500 11px/13px Helvetica;
+      color: #FF5614;
+    }
+
+    .product-card__price-total {
+      color: #FF5614 !important;
+    }
+
+    .product-card__price-sale {
+      background: #ffffff !important;
+    }
+
+    &:hover .product-card__buttons {
+      @include screen(l) {
+        background: #FFE9E3 !important;
+      }
+    }
+
+    .product-card__buttons {
+      @include screen(xl) {
+        background: transparent !important;
+      }
+    }
+  }
+
   &--catalog {
     padding: 20px 0 15px;
     border: 1px solid #F0F0F0;
@@ -189,7 +223,7 @@
       display: block;
       padding: 0 15px;
       min-height: 180px;
-      margin-bottom: 5px;
+      margin-bottom: 15px;
       mix-blend-mode: darken;
 
       img {
@@ -264,9 +298,11 @@
     }
 
     .product-card__name {
-      padding: 0 15px;
-      margin-bottom: 10px;
       transition: transform .3s;
+
+      @include screen(xl) {
+        padding-right: 15px;
+      }
 
       a {
         display: block;
@@ -275,19 +311,36 @@
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
-        max-height: 55px;
-        min-height: 55px;
+
         font: normal 18px/28px FuturaPT;
         color: #2B2D30;
-      }
 
-      span {
-        font: 500 11px/13px Helvetica;
-        color: #14D75D;
+        @include screen(xl) {
+          border-bottom: 1px solid #F0F0F0;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          max-height: 60px;
+          min-height: 60px;
+        }
+
+        @include screen(l) {
+          padding: 0 15px;
+          max-height: 55px;
+          min-height: 55px;
+        }
       }
     }
 
-    .product-card__price {
+    .product-card__status {
+      font: 500 11px/13px Helvetica;
+      color: #14D75D;
+
+      @include screen(l) {
+        padding: 0 15px;
+      }
+    }
+
+    /* .product-card__price {
       border-top: 1px solid #F0F0F0;
       font: 500 24px/29px Helvetica;
       color: #2B2D30;
@@ -300,6 +353,42 @@
 
       @include screen(l) {
         padding: 15px;
+      }
+    } */
+
+    .product-card__price {
+      @include screen(xl) {
+        align-items: flex-start;
+      }
+
+      @include screen(l) {
+        padding: 15px;
+        border-top: 1px solid #F0F0F0;
+        transition: transform .3s;
+      }
+
+      &-old {
+        font: normal 14px/17px Helvetica;
+        text-decoration-line: line-through;
+        color: #333333;
+        opacity: .2;
+      }
+
+      &-total {
+        font: 500 24px/29px Helvetica;
+        color: #2B2D30;
+      }
+
+      &-sale {
+        padding: 2px 8px 3px;
+        font: 700 12px/15px Helvetica;
+        color: #FF4300;
+        background-color: #FFF0EC;
+        border-radius: 6px;
+
+        @include screen(xl) {
+          margin-bottom: 15px;
+        }
       }
     }
 
@@ -364,20 +453,45 @@
       padding-top: 40px;
     }
 
+    &-title {
+      @include screen(xl) {
+        display: block;
+        margin-bottom: 15px;
+        font: 500 24px/32px FuturaPT;
+        color: #ffffff;
+        text-align: center;
+      }
+    }
+
     &--violet {
       @include screen(xl) {
         padding-right: 0;
+        padding-bottom: 10px;
         background: linear-gradient(180deg, #B779FA 0%, #8044F3 100%);
       }
     }
 
-    .title {
+    &--blue {
       @include screen(xl) {
-        margin-bottom: 15px;
+        padding-right: 0;
+        padding-bottom: 10px;
+        background: linear-gradient(180deg, #64CEF7 0%, #34A0ED 100%);
       }
+    }
 
-      @include screen(l) {
-        margin-bottom: 30px;
+    &--orange {
+      @include screen(xl) {
+        padding-right: 0;
+        padding-bottom: 10px;
+        background: linear-gradient(180deg, #FF964A 0%, #FF6B19 100%);
+      }
+    }
+
+    &--violet-light {
+      @include screen(xl) {
+        padding-right: 0;
+        padding-bottom: 10px;
+        background: linear-gradient(180deg, #E39EF0 0%, #C365DD 100%);
       }
     }
 
@@ -388,14 +502,13 @@
       cursor: pointer;
       backface-visibility: hidden;
       transition: background-color .4s, box-shadow .4s;
+      overflow: hidden;
 
       @include screen(xl) {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin: 0 0 0 auto;
-        padding: 10px 15px 10px 20px;
-        width: 185px;
+        align-self: flex-end;
+        margin-right: 35px;
+        width: 90px;
+        white-space: nowrap;
       }
 
       @include screen(l) {
@@ -406,69 +519,93 @@
       }
 
       &:after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 12px;
-        transition: opacity 0.5s ease-out;
-        opacity: 0;
+        @include screen(l) {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          transition: opacity 0.5s ease-out;
+          opacity: 0;
+        }
       }
 
       &:hover:after {
-        opacity: 1;
+        @include screen(l) {
+          opacity: 1;
+        }
       }
 
       &--violet {
-        background: linear-gradient(90deg, #B779FA 0%, #8044F3 100%);
         color: #ffffff;
 
+        @include screen(l) {
+          background: linear-gradient(90deg, #B779FA 0%, #8044F3 100%);
+        }
+
         &::after {
-          background: linear-gradient(180deg, #B779FA 0%, #8044F3 100%);
+          @include screen(l) {
+            background: linear-gradient(180deg, #B779FA 0%, #8044F3 100%);
+          }
         }
       }
 
       &--blue {
-        background: linear-gradient(90deg, #64CEF7 0%, #34A0ED 100%);
         color: #ffffff;
 
+        @include screen(l) {
+          background: linear-gradient(90deg, #64CEF7 0%, #34A0ED 100%);
+        }
+
         &::after {
-          background: linear-gradient(180deg, #64CEF7 0%, #34A0ED 100%);
+          @include screen(l) {
+            background: linear-gradient(180deg, #64CEF7 0%, #34A0ED 100%);
+          }
         }
       }
 
       &--orange {
-        background: linear-gradient(90deg, #FF964A 0%, #FF6B19 100%);
         color: #ffffff;
 
+        @include screen(l) {
+          background: linear-gradient(90deg, #FF964A 0%, #FF6B19 100%);
+        }
+
         &::after {
-          background: linear-gradient(180deg, #FF964A 0%, #FF6B19 100%);
+          @include screen(l) {
+            background: linear-gradient(180deg, #FF964A 0%, #FF6B19 100%);
+          }
         }
       }
 
       &--violet-light {
-        background: linear-gradient(90deg, #E39EF0 0%, #C365DD 100%);
         color: #ffffff;
 
+        @include screen(l) {
+          background: linear-gradient(90deg, #E39EF0 0%, #C365DD 100%);
+        }
+
         &::after {
-          background: linear-gradient(180deg, #E39EF0 0%, #C365DD 100%);
+          @include screen(l) {
+            background: linear-gradient(180deg, #E39EF0 0%, #C365DD 100%);
+          }
         }
       }
 
       span {
-        position: relative;
-        display: block;
-        z-index: 1;
-
         @include screen(xl) {
-          margin-right: 20px;
-          white-space: nowrap;
-          font: 500 16px/19px FuturaPT;
+          display: none;
         }
 
         @include screen(l) {
+          position: relative;
+          display: block;
+          z-index: 1;
+          margin-right: 20px;
+          white-space: nowrap;
+          font: 500 16px/19px FuturaPT;
           transform: rotate(-90deg) translate(200%, 90%);
           height: 100%;
           width: 100%;

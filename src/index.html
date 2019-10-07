@@ -43,7 +43,9 @@
                 </div>
               </div>
               <div class="product-card__buttons">
-                <button class="btn btn--green-gradient" type="button">В корзину</button>
+                <button class="btn btn--green-gradient" type="button">
+                  <span>В корзину</span>
+                </button>
                 <button class="btn btn--gray" type="button">Купить в 1 клик</button>
               </div>
             </div>
@@ -84,7 +86,9 @@
                 </div>
               </div>
               <div class="product-card__buttons">
-                <button class="btn btn--green-gradient" type="button">В корзину</button>
+                <button class="btn btn--green-gradient" type="button">
+                  <span>В корзину</span>
+                </button>
                 <button class="btn btn--gray" type="button">Купить в 1 клик</button>
               </div>
             </div>
@@ -143,15 +147,19 @@
     </ul>
   </div>
 
-  <div class="uk-container product-card__main product-card__main--violet">
+  <div class="uk-container uk-margin-top uk-margin-bottom@s">
     <h2 class="title">Категории и товары</h2>
+  </div>
+  <!-- slider-1 -->
+  <div class="uk-container uk-margin-small-bottom@s product-card__main product-card__main--violet">
+    <span class="uk-hidden@l product-card__main-title">Популярное</span>
     <div class="uk-flex uk-flex-column-reverse@s uk-overflow-hidden@s">
       <div class="product-card__button product-card__button--violet">
         <a href="#">Смотреть все</a>
         <span>Популярное</span>
       </div>
       <div class="carousel__wrap carousel__wrap-product-card uk-width-expand uk-position-relative">
-        <div class="swiper-product-card1 carousel-product-card ">
+        <div class="swiper-product-card1 swiper-products carousel-product-card">
           <ul class="swiper-wrapper" data-uk-height-match="target: .product-card">
             <li class="swiper-slide">
               <div class="product-card product-card--default">
@@ -171,8 +179,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -191,8 +202,41 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="product-card product-card--default product-card--super-price">
+                <a class="product-card__image" href="#">
+                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
+                </a>
+                <div class="product-card__name">
+                  <span class="product-card__status">В наличии</span>
+                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
+                </div>
+                <div class="product-card__footer uk-flex-between">
+                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
+                    <div class="uk-flex uk-flex-column uk-flex-middle@l uk-margin-small-right@l">
+                      <span class="product-card__price-old">46&nbsp;999&nbsp;&#8381;</span>
+                      <span class="product-card__price-sale">-&nbsp;14&nbsp;131&nbsp;&#8381;</span>
+                    </div>
+                    <div class="uk-flex uk-flex-column">
+                      <span class="product-card__price-text">Суперцена</span>
+                      <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
+                    </div>
+                  </div>
+                  <div class="product-card__buttons">
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -211,8 +255,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -231,8 +278,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -251,8 +301,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -271,8 +324,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -291,8 +347,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -311,28 +370,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
-                </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
-                  </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -342,19 +384,20 @@
           <div class="swiper-pagination"></div>
         </div>
         <!-- Add Arrows -->
-        <div class="product-card1-button-next swiper-button swiper-button-next"></div>
+        <div class="swiper-button swiper-button-next"></div>
       </div>
     </div>
   </div>
-
-  <div class="uk-container product-card__main">
+  <!-- slider-2 -->
+  <div class="uk-container uk-margin-small-bottom@s product-card__main product-card__main--blue">
+    <span class="uk-hidden@l product-card__main-title">Популярное</span>
     <div class="uk-flex uk-flex-column-reverse@s uk-overflow-hidden@s">
       <div class="product-card__button product-card__button--blue">
         <a href="#">Смотреть все</a>
-        <span>Популярное</span>
+        <span>Новинки</span>
       </div>
       <div class="carousel__wrap carousel__wrap-product-card uk-width-expand uk-position-relative">
-        <div class="swiper-product-card2 carousel-product-card ">
+        <div class="swiper-product-card2 swiper-products carousel-product-card">
           <ul class="swiper-wrapper" data-uk-height-match="target: .product-card">
             <li class="swiper-slide">
               <div class="product-card product-card--default">
@@ -367,15 +410,18 @@
                 </div>
                 <div class="product-card__footer uk-flex-between">
                   <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <div class="uk-flex uk-flex-column uk-flex-middle uk-margin-small-right">
+                    <div class="uk-flex uk-flex-column uk-flex-middle@l uk-margin-small-right@l">
                       <span class="product-card__price-old">46&nbsp;999&nbsp;&#8381;</span>
                       <span class="product-card__price-sale">-&nbsp;14&nbsp;131&nbsp;&#8381;</span>
                     </div>
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -394,8 +440,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -414,8 +463,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -434,8 +486,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -454,8 +509,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -474,8 +532,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -494,8 +555,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -514,8 +578,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -534,8 +601,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -545,19 +615,20 @@
           <div class="swiper-pagination"></div>
         </div>
         <!-- Add Arrows -->
-        <div class="product-card2-button-next swiper-button swiper-button-next"></div>
+        <div class="swiper-button swiper-button-next"></div>
       </div>
     </div>
   </div>
-
-  <div class="uk-container product-card__main">
+  <!-- slider-3 -->
+  <div class="uk-container uk-margin-small-bottom@s product-card__main product-card__main--orange">
+    <span class="uk-hidden@l product-card__main-title">Популярное</span>
     <div class="uk-flex uk-flex-column-reverse@s uk-overflow-hidden@s">
       <div class="product-card__button product-card__button--orange" data-uk-height-match="target: .swiper-slide">
         <a href="#">Смотреть все</a>
-        <span>Популярное</span>
+        <span>Акции</span>
       </div>
       <div class="carousel__wrap carousel__wrap-product-card uk-width-expand uk-position-relative">
-        <div class="swiper-product-card3 carousel-product-card ">
+        <div class="swiper-product-card3 swiper-products carousel-product-card">
           <ul class="swiper-wrapper" data-uk-height-match="target: .product-card">
             <li class="swiper-slide">
               <div class="product-card product-card--default">
@@ -570,15 +641,18 @@
                 </div>
                 <div class="product-card__footer uk-flex-between">
                   <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <div class="uk-flex uk-flex-column uk-flex-middle uk-margin-small-right">
+                    <div class="uk-flex uk-flex-column uk-flex-middle@l uk-margin-small-right@l">
                       <span class="product-card__price-old">46&nbsp;999&nbsp;&#8381;</span>
                       <span class="product-card__price-sale">-&nbsp;14&nbsp;131&nbsp;&#8381;</span>
                     </div>
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -597,8 +671,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -617,8 +694,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -637,8 +717,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -657,8 +740,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -677,8 +763,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -697,8 +786,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -717,8 +809,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -737,8 +832,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -748,19 +846,21 @@
           <div class="swiper-pagination"></div>
         </div>
         <!-- Add Arrows -->
-        <div class="product-card3-button-next swiper-button swiper-button-next"></div>
+        <div class="swiper-button swiper-button-next"></div>
       </div>
     </div>
   </div>
-
-  <div class="uk-container product-card__main">
+  <!-- slider-4 -->
+  <div
+    class="uk-container uk-margin-small-bottom@s uk-padding-large-bottom@l product-card__main product-card__main--violet-light">
+    <span class="uk-hidden@l product-card__main-title">Популярное</span>
     <div class="uk-flex uk-flex-column-reverse@s uk-overflow-hidden@s">
       <div class="product-card__button product-card__button--violet-light" data-uk-height-match="target: .swiper-slide">
         <a href="#">Смотреть все</a>
-        <span>Популярное</span>
+        <span>Аксессуары</span>
       </div>
       <div class="carousel__wrap carousel__wrap-product-card uk-width-expand uk-position-relative">
-        <div class="swiper-product-card4 carousel-product-card ">
+        <div class="swiper-product-card4 swiper-products carousel-product-card">
           <ul class="swiper-wrapper" data-uk-height-match="target: .product-card">
             <li class="swiper-slide">
               <div class="product-card product-card--default">
@@ -773,15 +873,18 @@
                 </div>
                 <div class="product-card__footer uk-flex-between">
                   <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <div class="uk-flex uk-flex-column uk-flex-middle uk-margin-small-right">
+                    <div class="uk-flex uk-flex-column uk-flex-middle@l uk-margin-small-right@l">
                       <span class="product-card__price-old">46&nbsp;999&nbsp;&#8381;</span>
                       <span class="product-card__price-sale">-&nbsp;14&nbsp;131&nbsp;&#8381;</span>
                     </div>
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -800,8 +903,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -820,8 +926,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -840,8 +949,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -860,8 +972,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -880,8 +995,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -900,8 +1018,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -920,8 +1041,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -940,8 +1064,11 @@
                     <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
                   </div>
                   <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                    <button class="btn btn--green-gradient" type="button" data-href="#popupCartAdd" data-uk-toggle>
+                      <span>В корзину</span>
+                    </button>
+                    <button class="btn btn--gray" type="button" data-href="#popupOneClick" data-uk-toggle>Купить в 1
+                      клик</button>
                   </div>
                 </div>
               </div>
@@ -951,7 +1078,7 @@
           <div class="swiper-pagination"></div>
         </div>
         <!-- Add Arrows -->
-        <div class="product-card4-button-next swiper-button swiper-button-next"></div>
+        <div class="swiper-button swiper-button-next"></div>
       </div>
     </div>
   </div>
@@ -962,7 +1089,7 @@
   <div class="uk-container reviews__main">
     <h2 class="title">Отзывы</h2>
     <div class="uk-flex uk-flex-column-reverse@s uk-overflow-hidden@s">
-      <div class="reviews__button">
+      <div class="reviews__button-vertical" data-href="#popupAddsReview" data-uk-toggle>
         <div class="reviews__plus">
           <svg width="18" height="18">
             <use xlink:href="img/symbol/sprite.svg#plus" />
@@ -971,189 +1098,388 @@
         <span>Добавить отзыв</span>
       </div>
       <div class="carousel__wrap carousel__wrap-reviews uk-width-expand uk-position-relative">
-        <div class="swiper-reviews carousel-reviews ">
-          <ul class="swiper-wrapper" data-uk-height-match="target: .product-card">
+        <div class="swiper-reviews carousel-reviews">
+          <ul class="swiper-wrapper" data-uk-height-match="target: .review">
             <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
+                  </div>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
+                  </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
                 </div>
-                <div class="product-card__footer uk-flex-between">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <div class="uk-flex uk-flex-column uk-flex-middle uk-margin-small-right">
-                      <span class="product-card__price-old">46&nbsp;999&nbsp;&#8381;</span>
-                      <span class="product-card__price-sale">-&nbsp;14&nbsp;131&nbsp;&#8381;</span>
-                    </div>
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
-                  </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
-                  </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
                 </div>
               </div>
             </li>
             <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
-                </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
                   </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
                   </div>
-                </div>
-              </div>
-            </li>
-            <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
-                </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
-                  </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
-                </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
-                  </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
-                  </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
                 </div>
               </div>
             </li>
             <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
-                </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
                   </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
                   </div>
-                </div>
-              </div>
-            </li>
-            <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
-                </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
-                  </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
-                </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
-                  </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
-                  </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
                 </div>
               </div>
             </li>
             <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
+                  </div>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
+                  </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
                 </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
-                  </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
-                  </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
                 </div>
               </div>
             </li>
             <li class="swiper-slide">
-              <div class="product-card product-card--default">
-                <a class="product-card__image" href="#">
-                  <img src="img/temp/card-phone.jpg" width="242" height="208" alt="" />
-                </a>
-                <div class="product-card__name">
-                  <span class="product-card__status">В наличии</span>
-                  <a href="#">Xiaomi Mi A3 4/128GB More than White</a>
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
+                  </div>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
+                  </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
                 </div>
-                <div class="product-card__footer">
-                  <div class="product-card__price uk-flex uk-flex-column@s uk-flex-middle">
-                    <span class="product-card__price-total">13&nbsp;990&nbsp;&#8381;</span>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
                   </div>
-                  <div class="product-card__buttons">
-                    <button class="btn btn--green-gradient" type="button">В корзину</button>
-                    <button class="btn btn--gray" type="button">Купить в 1 клик</button>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
                   </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
+                </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
+                  </div>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
+                  </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
+                </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
+                  </div>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
+                  </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
+                </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
+                  </div>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
+                  </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
+                </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
                 </div>
               </div>
             </li>
@@ -1231,44 +1557,5 @@
   //= components/about.html
   //= components/subscribe.html
   //= components/footer.html
-  <script>
-    (function () {
-      var _overlay = document.getElementById('overlay');
-      var _clientY = null; // remember Y position on touch start
-
-      _overlay.addEventListener('touchstart', function (event) {
-        if (event.targetTouches.length === 1) {
-          // detect single touch
-          _clientY = event.targetTouches[0].clientY;
-        }
-      }, false);
-
-      _overlay.addEventListener('touchmove', function (event) {
-        if (event.targetTouches.length === 1) {
-          // detect single touch
-          disableRubberBand(event);
-        }
-      }, false);
-
-      function disableRubberBand(event) {
-        var clientY = event.targetTouches[0].clientY - _clientY;
-
-        if (_overlay.scrollTop === 0 && clientY > 0) {
-          // element is at the top of its scroll
-          event.preventDefault();
-        }
-
-        if (isOverlayTotallyScrolled() && clientY < 0) {
-          //element is at the top of its scroll
-          event.preventDefault();
-        }
-      }
-
-      function isOverlayTotallyScrolled() {
-        // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
-        return _overlay.scrollHeight - _overlay.scrollTop <= _overlay.clientHeight;
-      }
-    }())
-  </script>
 </body>
 //= components/bottom.html
