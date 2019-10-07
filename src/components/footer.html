@@ -338,6 +338,19 @@
           <label>Комментарий</label>
           <textarea cols="30" rows="10"></textarea>
         </div>
+
+        <div>
+          <span class="rating__title">Оценка</span>
+          <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="Rocks!">5 stars</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Pretty good">4
+              stars</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Meh">3 stars</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Kinda bad">2 stars</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Sucks big time">1
+              star</label>
+          </div>
+        </div>
       </div>
 
       <div>
@@ -353,8 +366,94 @@
           <label>Email</label>
           <input type="text">
         </div>
+
+        <!-- <div class="rating">
+          <div class="rating__title">
+            <svg width="15" height="15">
+              <use xlink:href="img/symbol/sprite.svg#clip" />
+            </svg>
+            <span>Прикрепить файл</span>
+          </div>
+          <fieldset class="rating uk-flex">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="Rocks!">5
+              stars</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Pretty good">4
+              stars</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Meh">3
+              stars</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Kinda bad">2
+              stars</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Sucks big time">1
+              star</label>
+          </fieldset>
+        </div> -->
+
+        <div>
+          <div class="fileuploader__title">
+            <!--  <svg width="15" height="15">
+              <use xlink:href="img/symbol/sprite.svg#clip" />
+            </svg>
+            <span>Прикрепить файл</span> -->
+          </div>
+          <div class="fileuploader fileuploader-theme-thumbnails"><input type="hidden"
+              name="fileuploader-list-file"><input type="file" name="file[]" multiple="multiple"
+              style="position: absolute; z-index: -9999; height: 0px; width: 0px; padding: 0px; margin: 0px; line-height: 0; outline: 0px; border: 0px; opacity: 0;">
+            <div class="fileuploader-items">
+              <ul class="fileuploader-items-list">
+                <li class="fileuploader-thumbnails-input">
+                  <div class="fileuploader-thumbnails-input-inner">
+                    <div class="fileuploader-download">
+                      <svg width="15" height="15">
+                        <use xlink:href="img/symbol/sprite.svg#clip" />
+                      </svg>
+                      <span>Прикрепить файл</span>
+                    </div>
+                    <div class="fileuploader-download fileuploader-download--more">
+                      <svg class="fileuploader__icon">
+                        <use xlink:href="img/symbol/sprite.svg#plus-upload"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="fileuploader fileuploader-theme-thumbnails"><input type="hidden"
+              name="fileuploader-list-file"><input type="file" name="file[]" multiple="multiple"
+              style="position: absolute; z-index: -9999; height: 0px; width: 0px; padding: 0px; margin: 0px; line-height: 0; outline: 0px; border: 0px; opacity: 0;">
+            <div class="fileuploader-items">
+              <ul class="fileuploader-items-list">
+                <li class="fileuploader-item file-type-image file-ext-png file-has-popup">
+                  <div class="fileuploader-thumbnails-input-inner">
+                    <div class="actions-holder">
+                      <a class="fileuploader-action fileuploader-action-remove" title="Remove"><i></i></a>
+                    </div>
+                    <span>IMG_234.jpg</span>
+                  </div>
+                </li>
+                <li class="fileuploader-thumbnails-input">
+                  <div class="fileuploader-thumbnails-input-inner">
+                    <div class="fileuploader-download">
+                      <svg width="15" height="15">
+                        <use xlink:href="img/symbol/sprite.svg#clip" />
+                      </svg>
+                      <span>Прикрепить файл</span>
+                    </div>
+                    <div class="fileuploader-download fileuploader-download--more">
+                      <svg class="fileuploader__icon">
+                        <use xlink:href="img/symbol/sprite.svg#plus-upload"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+
     <button class="btn btn--orange-gradient" type="button">
       <span>Перезвоните мне</span>
     </button>
