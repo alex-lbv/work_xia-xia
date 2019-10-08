@@ -144,24 +144,40 @@ var swiperCatalog = new Swiper('.catalog__swiper', {
   }
 });
 
-var initialSlideProduct = $('.product__swiper-link--active').index();
-var swiperProduct = new Swiper('.product__swiper', {
-  navigation: {
-    nextEl: '.product__swiper-button-next',
-    prevEl: '.product__swiper-button-prev',
-  },
-  slidesPerView: 7,
-  initialSlide: initialSlideProduct,
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-    },
-    1200: {
-      slidesPerView: 4,
-    }
-  },
-  /* slideToClickedSlide: true, */
+var swiperProduct = undefined;
+
+function initSwiper() {
+  var screenWidth = $(window).width();
+  if (screenWidth < 1200 && swiperProduct == undefined) {
+    var initialSlideProduct = $('.product__swiper-link--active').index();
+    var swiperProduct = new Swiper('.product__swiper', {
+      navigation: {
+        nextEl: '.product__swiper-button-next',
+        prevEl: '.product__swiper-button-prev',
+      },
+      slidesPerView: 7,
+      initialSlide: initialSlideProduct,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 4,
+          speed: 100,
+        }
+      },
+    });
+  }
+}
+//Swiper plugin initialization
+initSwiper();
+//Swiper plugin initialization on window resize
+$(window).on('resize', function () {
+  setTimeout(function () {
+    initSwiper();
+  }, 500);
 });
+
 
 $(document).ready(function () {
 
