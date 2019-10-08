@@ -82,9 +82,12 @@
 
     li {
       position: relative;
-      width: auto !important;
       border-radius: 8px;
       background: #F7F7F7;
+
+      @include screen(l) {
+        width: auto !important;
+      }
 
       &:not(:first-of-type)::before {
         content: "";
@@ -154,6 +157,7 @@
       padding: 10px 20px;
       font: 500 14px/18px Helvetica;
       color: #333333;
+      white-space: nowrap;
     }
 
     /* buttons */
