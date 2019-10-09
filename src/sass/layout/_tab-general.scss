@@ -391,12 +391,12 @@
       }
     }
 
-    /* Слайдер рекоммендаций */
+    /* Swiper recommendation */
 
     .tab-general__swiper {
       position: relative;
       overflow: hidden;
-      max-height: 240px;
+      max-height: 234px;
       border-radius: 12px;
 
       @include screen(xl) {
