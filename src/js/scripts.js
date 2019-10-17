@@ -21,7 +21,7 @@ $("body").on('blur', '#searchInput', function () {
   $('.search-results').addClass('active');
 }); */
 
-$('.menu__list a').on('click', function () {
-  $('.menu__list a').not($(this)).removeClass('active');
+$('.menu__list > li').on('click', function () {
+  $('.menu__list > li').not($(this)).removeClass('active');
   $(this).toggleClass('active');
 });
