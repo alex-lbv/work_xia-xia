@@ -22,6 +22,13 @@
         @include screen(xl) {
           border-top: 1px solid #E6E6E6;
         }
+
+        &>a {
+          @include screen(xl) {
+            font: normal 16px/19px Helvetica;
+            pointer-events: none;
+          }
+        }
       }
     }
 
@@ -157,8 +164,6 @@
         font: 500 15px/18px Helvetica;
       }
     }
-
-
   }
 
   &.uk-offcanvas:not(.uk-open) {
@@ -203,8 +208,8 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  &__list a.active {
-    &+.menu__sublist {
+  &__list li.active {
+    & .menu__sublist {
       @include screen(xl) {
         opacity: 1;
         height: 100%;
