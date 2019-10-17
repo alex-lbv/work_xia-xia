@@ -134,16 +134,8 @@ var swiperCatalog = new Swiper('.catalog__swiper', {
     prevEl: '.catalog__swiper-button-prev',
   },
   initialSlide: initialSlideCatalog,
-  slidesPerView: 8,
+  slidesPerView: 'auto',
   spaceBetween: 5,
-  breakpoints: {
-    640: {
-      slidesPerView: 3,
-    },
-    1200: {
-      slidesPerView: 6,
-    }
-  }
 });
 
 var swiperProduct = undefined;
