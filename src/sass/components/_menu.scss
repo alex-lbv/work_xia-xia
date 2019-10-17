@@ -151,7 +151,14 @@
       &::after {
         display: none;
       }
+
+      @include screen(l) {
+        padding: 8px 20px;
+        font: 500 15px/18px Helvetica;
+      }
     }
+
+
   }
 
   &.uk-offcanvas:not(.uk-open) {

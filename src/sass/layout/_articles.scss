@@ -32,10 +32,6 @@
       @include screen(xl) {
         margin-bottom: 20px;
       }
-
-      @include screen(l) {
-        margin-left: 60px;
-      }
     }
 
     .title {
