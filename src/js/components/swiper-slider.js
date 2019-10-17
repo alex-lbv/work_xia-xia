@@ -127,11 +127,13 @@ var swiperCheckout = new Swiper('.checkout__swiper', {
   },
 });
 
+var initialSlideCatalog = $('.subcat-active').index();
 var swiperCatalog = new Swiper('.catalog__swiper', {
   navigation: {
     nextEl: '.catalog__swiper-button-next',
     prevEl: '.catalog__swiper-button-prev',
   },
+  initialSlide: initialSlideCatalog,
   slidesPerView: 8,
   spaceBetween: 5,
   breakpoints: {
