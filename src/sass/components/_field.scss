@@ -1,0 +1,15 @@
+.field {
+  &--error {
+    label {
+      color: #F04E27;
+    }
+
+    input {
+      border: 1px solid #F04E27 !important;
+    }
+
+    span {
+      color: #F04E27;
+    }
+  }
+}

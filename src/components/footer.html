@@ -389,62 +389,26 @@
         </div> -->
 
         <div>
-          <div class="fileuploader__title">
-            <!--  <svg width="15" height="15">
-              <use xlink:href="img/symbol/sprite.svg#clip" />
-            </svg>
-            <span>Прикрепить файл</span> -->
-          </div>
-          <div class="fileuploader fileuploader-theme-thumbnails"><input type="hidden"
-              name="fileuploader-list-file"><input type="file" name="file[]" multiple="multiple"
+          <div class="fileuploader fileuploader-theme-thumbnails"><input type="hidden" name="fileuploader-list-file"
+              value="[{&quot;file&quot;:&quot;0:/212121.jpg&quot;}]"><input type="file" name="file[]"
+              multiple="multiple"
+              style="position: absolute; z-index: -9999; height: 0px; width: 0px; padding: 0px; margin: 0px; line-height: 0; outline: 0px; border: 0px; opacity: 0;"><input
+              type="file" name="file[]" multiple="multiple"
               style="position: absolute; z-index: -9999; height: 0px; width: 0px; padding: 0px; margin: 0px; line-height: 0; outline: 0px; border: 0px; opacity: 0;">
             <div class="fileuploader-items">
               <ul class="fileuploader-items-list">
-                <li class="fileuploader-thumbnails-input">
-                  <div class="fileuploader-thumbnails-input-inner">
-                    <div class="fileuploader-download">
-                      <svg width="15" height="15">
-                        <use xlink:href="img/symbol/sprite.svg#clip" />
-                      </svg>
-                      <span>Прикрепить файл</span>
-                    </div>
-                    <div class="fileuploader-download fileuploader-download--more">
-                      <svg class="fileuploader__icon">
-                        <use xlink:href="img/symbol/sprite.svg#plus-upload"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="fileuploader fileuploader-theme-thumbnails"><input type="hidden"
-              name="fileuploader-list-file"><input type="file" name="file[]" multiple="multiple"
-              style="position: absolute; z-index: -9999; height: 0px; width: 0px; padding: 0px; margin: 0px; line-height: 0; outline: 0px; border: 0px; opacity: 0;">
-            <div class="fileuploader-items">
-              <ul class="fileuploader-items-list">
-                <li class="fileuploader-item file-type-image file-ext-png file-has-popup">
-                  <div class="fileuploader-thumbnails-input-inner">
-                    <div class="actions-holder">
-                      <a class="fileuploader-action fileuploader-action-remove" title="Remove"><i></i></a>
-                    </div>
-                    <span>IMG_234.jpg</span>
+                <li class="fileuploader-item file-has-popup file-type-image file-ext-jpg">
+                  <div class="fileuploader-item-inner">
+                    <div class="actions-holder"><a class="fileuploader-action fileuploader-action-remove"
+                        title="Remove"><i></i></a></div>
+                    <div class="thumbnail-holder">212121.jpg</div>
+                    <div class="progress-holder"></div>
                   </div>
                 </li>
                 <li class="fileuploader-thumbnails-input">
-                  <div class="fileuploader-thumbnails-input-inner">
-                    <div class="fileuploader-download">
-                      <svg width="15" height="15">
-                        <use xlink:href="img/symbol/sprite.svg#clip" />
-                      </svg>
-                      <span>Прикрепить файл</span>
-                    </div>
-                    <div class="fileuploader-download fileuploader-download--more">
-                      <svg class="fileuploader__icon">
-                        <use xlink:href="img/symbol/sprite.svg#plus-upload"></use>
-                      </svg>
-                    </div>
-                  </div>
+                  <div class=""><svg width="15" height="15" color="#FF7914">
+                      <use xlink:href="img/symbol/sprite.svg#clip"></use>
+                    </svg><span onclick="clickTrigger('.fileuploader-thumbnails-input')">Прикрепить файл</span></div>
                 </li>
               </ul>
             </div>

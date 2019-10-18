@@ -16,12 +16,12 @@
     background: none;
   }
 
-  &-theme-thumbnails .fileuploader-thumbnails-input,
+  &-theme-thumbnails .fileuploader-download,
   &-theme-thumbnails .fileuploader-items-list .fileuploader-item {
     margin: 0;
   }
 
-  &-theme-thumbnails .fileuploader-thumbnails-input-inner {
+  &-theme-thumbnails .fileuploader-download-inner {
     background: none;
     border: none;
     display: flex;
@@ -31,32 +31,19 @@
     }
   }
 
-  &-items-list {
+  &-item-inner {
     display: flex;
-    flex-wrap: wrap;
   }
 
-  /* &-theme-thumbnails .fileuploader-items-list .fileuploader-item,
-  &-theme-thumbnails .fileuploader-thumbnails-input {
-    margin-right: 5px;
-  } */
+  &-items-list {
+    display: flex;
+    flex-direction: column;
+  }
 
   &-thumbnails-input {
-    /*  display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 78px;
-    margin-right: 5px;
-    border: 1px dashed #4bd964;
-    border-radius: 6px;
-    background-color: #fff;
-    text-align: center;
-    font-family: Roboto;
-    color: #4bd964; */
+    order: -1;
 
     &:only-child {
-      /*  flex: 1;
-      padding: 15px 0 10px; */
       cursor: pointer;
     }
 
@@ -93,24 +80,10 @@
       fill: #FF7914;
     }
 
-    .fileuploader-thumbnails-input:only-child & {
+    .fileuploader-download:only-child & {
       display: block;
     }
   }
-
-  /* &__icon {
-    display: block;
-    margin: 0 auto;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-
-    .fileuploader-thumbnails-input:only-child & {
-      width: 24px;
-      height: 20px;
-      margin: 0 auto 6px;
-    }
-  } */
 
   &-thumbnails-input:only-child .fileuploader-download--more {
     display: none;
