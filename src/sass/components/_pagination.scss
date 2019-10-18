@@ -19,6 +19,10 @@
     overflow: hidden;
     transition: color 0s, fill 0s;
 
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+
     span {
       position: relative;
       z-index: 1;
