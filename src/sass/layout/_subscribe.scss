@@ -60,7 +60,7 @@
     }
 
     &--mail {
-      background: linear-gradient(180deg, #FFB02D 0%, #FF7914 100%);
+      background: linear-gradient(180deg, rgb(255, 176, 45) 0%, rgb(255, 121, 20) 100%);
 
       svg {
         fill: #ffffff;
@@ -77,7 +77,7 @@
     }
 
     &--viber {
-      background: linear-gradient(180deg, #B568D9 0%, #7E37B1 100%);
+      background: linear-gradient(180deg, rgb(181, 104, 217) 0%, rgb(126, 55, 177) 100%);
 
       svg {
         fill: #ffffff;
@@ -94,7 +94,7 @@
     }
 
     &--whatsapp {
-      background: linear-gradient(180deg, #57DC77 0%, #2CB742 100%);
+      background: linear-gradient(180deg, rgb(87, 220, 119) 0%, rgb(44, 183, 66) 100%);
 
       svg {
         fill: #ffffff;
@@ -111,7 +111,7 @@
     }
 
     &--telegram {
-      background: linear-gradient(180deg, #57D1F2 0%, #2CA5E0 100%);
+      background: linear-gradient(180deg, rgb(87, 209, 242) 0%, rgb(44, 165, 224) 100%);
 
       svg {
         fill: #ffffff;
