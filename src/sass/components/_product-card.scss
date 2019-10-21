@@ -1075,6 +1075,8 @@
       }
 
       &__price {
+        white-space: nowrap;
+
         &-old {
           margin-right: 10px;
           font: normal 12px/14px Helvetica;
