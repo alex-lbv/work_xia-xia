@@ -265,4 +265,242 @@
       pointer-events: inherit;
     }
   }
+
+  &--sticky {
+    @include screen(l) {
+      padding: 10px 0;
+      border-bottom: 1px solid #E3E8EB;
+    }
+
+    .header__top {
+      @include screen(l) {
+        display: none;
+      }
+    }
+
+    .header__cart {
+      @include screen(l) {
+        justify-content: center;
+        padding: 0;
+        width: 58px;
+        height: 58px;
+      }
+
+      span {
+        @include screen(l) {
+          display: none;
+        }
+      }
+
+      svg {
+        @include screen(l) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .header__container {
+      @include screen(l) {
+        margin-bottom: 0;
+      }
+    }
+
+    .header__contact {
+      @include screen(l) {
+        width: auto;
+        margin: 7px 20px 0 auto;
+      }
+
+      svg {
+        @include screen(l) {
+          width: 24px;
+          height: 24px;
+          fill: #000000;
+        }
+      }
+
+      a {
+        span {
+          @include screen(l) {
+            display: none;
+          }
+        }
+      }
+
+      div {
+        @include screen(l) {
+          display: none;
+        }
+      }
+    }
+
+    .header__logo {
+      @include screen(l) {
+        margin-right: 20px;
+        margin-top: 7px;
+      }
+    }
+
+    .header__hamburger {
+      @include screen (l) {
+        display: block !important;
+        margin-right: 15px;
+        padding: 0;
+      }
+
+      span {
+        @include screen (l) {
+          display: flex;
+          width: 32px;
+          height: 4px;
+          background: #FF7914;
+          border-radius: 1.5px;
+        }
+
+        &:not(:last-of-type) {
+          @include screen (l) {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+
+    .uk-container {
+      @include screen(l) {
+        flex-direction: row;
+      }
+    }
+
+    .menu {
+      @include screen(l) {
+        display: none !important;
+      }
+
+      &__list {
+        @include screen(l) {
+          display: block;
+          width: 100%;
+          background-color: #ffffff;
+          box-shadow: 0;
+          border-radius: 0;
+          overflow: hidden;
+
+          &-info {
+            @include screen(l) {
+              display: flex;
+              align-items: flex-end;
+            }
+          }
+
+          &>.menu-label {
+            @include screen(l) {
+              font: 600 18px/18px Helvetica;
+              padding: 26px 20px 20px 20px;
+            }
+          }
+
+          &>li {
+            @include screen(l) {
+              border-top: 1px solid #E6E6E6;
+            }
+
+            &>a {
+              @include screen(l) {
+                font: normal 16px/19px Helvetica;
+              }
+
+              &.active {
+                @include screen(l) {
+                  background: rgba(230, 230, 230, 0.3);
+                  color: #FF7914;
+                }
+              }
+            }
+          }
+        }
+
+        a {
+          @include screen(l) {
+            font: normal 16px/19px Helvetica;
+          }
+
+          &:hover,
+          &:active {
+            @include screen(l) {
+              background: rgba(230, 230, 230, .3);
+            }
+          }
+        }
+      }
+
+      &__discount {
+        a::before {
+          @include screen(l) {
+            left: 85px;
+          }
+        }
+      }
+
+      &__sublist {
+        @include screen(l) {
+          height: 0;
+          /* opacity: 0; */
+          border-top: 1px solid #E6E6E6;
+          overflow: hidden;
+        }
+
+        a {
+          @include screen(l) {
+            font: normal 15px/18px Helvetica;
+            padding: 10px 20px;
+          }
+        }
+      }
+
+      & .uk-offcanvas-bar {
+        @include screen(l) {
+          padding: 0 0;
+          background-color: #fff;
+        }
+      }
+
+      &__list li.active {
+        & .menu__sublist {
+          @include screen(l) {
+            opacity: 1;
+          }
+        }
+      }
+
+      &__wrap {
+        @include screen(l) {
+          display: flex;
+          align-items: stretch;
+          flex-wrap: wrap;
+          height: 100%;
+        }
+      }
+    }
+
+    .search {
+      @include screen(l) {
+        flex: 0;
+        order: 1;
+        margin-top: 7px;
+        margin-right: 10px;
+      }
+
+      input {
+        @include screen(l) {
+          display: none;
+        }
+      }
+
+      &__open {
+        @include screen(l) {
+          display: block;
+        }
+      }
+    }
+  }
 }
