@@ -15,11 +15,11 @@
     margin-right: 20px;
     width: 48px;
     height: 48px;
-    background: linear-gradient(180deg, #F8916A 0%, #EF5839 100%);
+    background: linear-gradient(180deg, rgb(248, 145, 106) 0%, rgb(239, 88, 57) 100%);
     border-radius: 50%;
 
     &--violet {
-      background: linear-gradient(180deg, #E29CF0 0%, #C263DC 100%);
+      background: linear-gradient(180deg, rgb(226, 156, 240) 0%, rgb(194, 99, 220) 100%);
     }
 
     span {

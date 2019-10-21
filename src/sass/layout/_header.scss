@@ -81,12 +81,12 @@
     }
 
     &--empty {
-      background-image: linear-gradient(180deg, #90E744 0%, #53B525 100%);
+      background-image: linear-gradient(180deg, rgb(144, 231, 68) 0%, rgb(83, 181, 37) 100%);
       box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
 
       &:after {
         box-shadow: 0px 5px 20px rgba(137, 225, 64, 0.6);
-        background-image: linear-gradient(180deg, #8EE641 0%, #43D000 100%);
+        background-image: linear-gradient(180deg, rgb(142, 230, 65) 0%, rgb(67, 208, 0) 100%);
       }
     }
 

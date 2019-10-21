@@ -92,6 +92,9 @@ var swiperBanner = new Swiper('.main-banner__swiper', {
     nextEl: '.main-banner__swiper-button-next',
     prevEl: '.main-banner__swiper-button-prev',
   },
+  pagination: {
+    el: '.swiper-pagination',
+  },
 });
 
 var swiperCheckout = new Swiper('.checkout__swiper', {

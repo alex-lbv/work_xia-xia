@@ -40,7 +40,7 @@
   }
 
   &--orange-gradient {
-    background: linear-gradient(180deg, #FFB02D 0%, #FF7914 100%);
+    background: linear-gradient(180deg, rgb(255, 176, 45) 0%, rgb(255, 121, 20) 100%);
     box-shadow: 0px 4px 15px rgba(255, 121, 20, 0.4);
 
     &:after {
@@ -50,11 +50,11 @@
   }
 
   &--green-gradient {
-    background: linear-gradient(180deg, #90E744 0%, #53B525 100%);
+    background: linear-gradient(180deg, rgb(144, 231, 68) 0%, rgb(83, 181, 37) 100%);
     box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
 
     &::after {
-      background: linear-gradient(180deg, #8EE641 0%, #43D000 100%);
+      background: linear-gradient(180deg, rgb(142, 230, 65) 0%, rgb(67, 208, 0) 100%);
       box-shadow: 0px 5px 20px rgba(137, 225, 64, 0.6);
     }
   }
