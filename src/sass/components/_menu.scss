@@ -115,7 +115,7 @@
   &__sublist {
     @include screen(xl) {
       height: 0;
-      opacity: 0;
+      /* opacity: 0; */
       border-top: 1px solid #E6E6E6;
     }
 
@@ -167,18 +167,17 @@
   }
 
   &.uk-offcanvas:not(.uk-open) {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    z-index: 50;
-
-    @include screen(xl) {
+    /*  @include screen(xl) {
       display: none !important;
-    }
+    } */
 
     @include screen(l) {
       display: block;
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      z-index: 50;
     }
 
     & .uk-offcanvas-bar {
@@ -196,23 +195,25 @@
   }
 
   & .uk-offcanvas-bar {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    padding: 0 10px;
-    width: 100%;
-    background: 0 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    @include screen(l) {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding: 0 10px;
+      width: 100%;
+      background: 0 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   &__list li.active {
     & .menu__sublist {
       @include screen(xl) {
         opacity: 1;
-        height: 100%;
+        /* height: 100%; */
       }
     }
   }
