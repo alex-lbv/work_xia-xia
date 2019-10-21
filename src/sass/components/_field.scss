@@ -1,4 +1,25 @@
 .field {
+  label {
+    transition: color .5s;
+  }
+
+  input {
+    transition: border-color .6s, background-color .5s;
+  }
+
+  &.has-success {
+    label {
+      color: #53B525;
+      transition: color .5s;
+    }
+
+    input {
+      border: 1px solid #53B525;
+      background-color: rgba(83, 181, 37, .05);
+      transition: border-color .6s, background-color .5s;
+    }
+  }
+
   &--error {
     label {
       color: #F04E27;

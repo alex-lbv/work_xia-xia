@@ -41,7 +41,7 @@
         &>a {
           @include screen(xl) {
             font: normal 16px/19px Helvetica;
-            pointer-events: none;
+            /*  pointer-events: none; */
           }
 
           &.active {
@@ -56,6 +56,28 @@
 
     li {
       position: relative;
+
+      &.has-child {
+        & > a:first-child {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: inline-block;
+            margin: auto auto auto 8px;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid;
+            border-left: 2px solid;
+            border-radius: 3px 0 0 0;
+            transform: rotate(225deg) translate(0, 50%);
+          }
+        }
+      }
     }
 
     a {
@@ -76,22 +98,6 @@
         @include screen(xl) {
           background: rgba(230, 230, 230, .3);
         }
-      }
-
-      &::after {
-        content: "";
-        position: relative;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        display: inline-block;
-        margin: auto auto auto 8px;
-        width: 8px;
-        height: 8px;
-        border-top: 2px solid;
-        border-left: 2px solid;
-        border-radius: 3px 0 0 0;
-        transform: rotate(225deg) translate(0, 50%);
       }
 
       &:hover {

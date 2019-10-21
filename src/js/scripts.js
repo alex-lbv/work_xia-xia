@@ -9,10 +9,10 @@ function toggleMenu() {
 
   if ($(window).width() < 1200) {
     navLink.click(function (e) {
-      e.preventDefault();
+      $(this).removeAttr('href');
       var nav = $(this).next()
       var nav_all = $(this).parents('.menu__list').find('> li > a').not($(this)).next();
-      $(this).toggleClass('active');
+      $(this).parent().toggleClass('active');
       $('.menu__list > li > a').not($(this)).removeClass('active');
 
       nav_all.stop().animate({
