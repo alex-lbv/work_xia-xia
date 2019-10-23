@@ -130,7 +130,7 @@ var swiperCheckout = new Swiper('.checkout__swiper', {
   },
 });
 
-var initialSlideCatalog = $('.subcat-active').index();
+var initialSlideCatalog = $('.subcat-active').index() - 2;
 var swiperCatalog = new Swiper('.catalog__swiper', {
   navigation: {
     nextEl: '.catalog__swiper-button-next',
