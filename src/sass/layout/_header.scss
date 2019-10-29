@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 100;
+  z-index: 150;
   background-color: #ffffff;
 
   @include screen(xl) {
@@ -18,7 +18,7 @@
   &__top {
     margin-bottom: 10px;
     padding: 10px 0 5px;
-    border-bottom: 1px solid #F0F0F0;
+    background-color: #F4F4F4;
 
     a {
       font: normal 16px/20px FuturaPT;
@@ -38,7 +38,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     backface-visibility: hidden;
 
     @include screen(xl) {
@@ -50,7 +50,8 @@
     @include screen(l) {
       max-width: 220px;
       color: #ffffff;
-      padding: 10px 10px 10px 20px;
+      padding: 11px 10px 12px 20px;
+      border-radius: 0 12px 12px 0;
     }
 
     &:after {
@@ -60,7 +61,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: 12px;
+      border-radius: 0 12px 12px 0;
       transition: opacity 0.5s ease-out;
       z-index: 2;
       opacity: 0;
@@ -70,17 +71,17 @@
       opacity: 1;
     }
 
-    &--active {
-      background: #FF7914;
+    &--empty {
+      background-color: #FF7914;
       box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
 
       &:after {
-        background: #FF5614;
+        background-color: #FF5614;
         box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
       }
     }
 
-    &--empty {
+    &--active {
       background-image: linear-gradient(180deg, rgb(144, 231, 68) 0%, rgb(83, 181, 37) 100%);
       box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
 

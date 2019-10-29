@@ -1,6 +1,5 @@
 .about {
   font: 400 14px/24px Helvetica;
-  background: #F2F2F2;
 
   @include screen(xl) {
     padding-top: 40px;
@@ -100,6 +99,47 @@
     @include screen(l) {
       max-width: 580px;
       max-height: 400px;
+    }
+  }
+
+  .features {
+    border-top: 1px solid #DFDFDF;
+
+    @include screen(xl) {
+      margin-top: 20px;
+      padding: 20px 0 0;
+    }
+
+    @include screen(l) {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    @include screen(l) {
+      text-align: center;
+    }
+
+    div {
+      @include screen(l) {
+        margin: 0 auto 20px;
+      }
+    }
+
+    p {
+      @include screen (xl) {
+        padding: 0;
+      }
+
+      @include screen(l) {
+        padding: 0 30px;
+      }
+
+      br {
+        @include screen(l) {
+          display: none;
+        }
+      }
+
     }
   }
 }

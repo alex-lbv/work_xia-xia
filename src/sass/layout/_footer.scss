@@ -48,11 +48,11 @@
     }
 
     p {
-      font: 500 12px/20px Helvetica;
+      font: normal 12px/20px Helvetica;
       color: rgba(51, 51, 51, .4);
 
       &:last-of-type {
-        font: 500 11px/18px Helvetica;
+        font: normal 11px/18px Helvetica;
 
         @include screen(l) {
           overflow: visible;
@@ -177,12 +177,10 @@
 
   &__btn {
     margin: 10px 0 30px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 8px;
-
-    @include screen(xl) {
-      max-width: 250px;
-    }
+    max-width: 250px;
+    font: 500 16px/19px FuturaPT;
   }
 
   &__bottom {

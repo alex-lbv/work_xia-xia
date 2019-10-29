@@ -18,6 +18,7 @@
     backface-visibility: hidden;
     overflow: hidden;
     transition: color 0s, fill 0s;
+    background-color: #fff;
 
     &:not(:last-of-type) {
       margin-right: 10px;
