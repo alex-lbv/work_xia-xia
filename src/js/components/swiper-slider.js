@@ -88,6 +88,7 @@ var swiperReviews = new Swiper('.swiper-reviews', {
 });
 
 var swiperBanner = new Swiper('.main-banner__swiper', {
+  loop: true,
   navigation: {
     nextEl: '.main-banner__swiper-button-next',
     prevEl: '.main-banner__swiper-button-prev',

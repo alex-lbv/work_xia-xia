@@ -1,4 +1,6 @@
 .article-card {
+  display: block;
+  overflow: hidden;
   background: #FFFFFF;
   border-radius: 12px;
   font: 400 14px/24px Helvetica;
@@ -14,11 +16,23 @@
   &__title {
     margin-bottom: 15px;
     font: 500 22px/28px FuturaPT;
+    transition: color 0.5s;
   }
 
   img {
     width: 100%;
     height: auto;
     border-radius: 12px 12px 0 0;
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    .article-card__title {
+      color: #FF7914;
+    }
+
+    img {
+      transform: scale(1.2);
+    }
   }
 }

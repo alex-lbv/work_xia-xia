@@ -1,6 +1,23 @@
 .breadcrumbs {
   .uk-subnav>*>:first-child {
     font: normal 12px/15px Helvetica !important;
+    text-transform: inherit;
+    color: rgba(43, 45, 48, .5);
+  }
+
+  .uk-subnav>.uk-active>a {
+    color: #B9BABA;
+  }
+
+  .uk-subnav-divider> :nth-child(n+2):not(.uk-first-column)::before {
+    content: "";
+    margin-right: 10px;
+    height: 15px;
+    border-left: 2px solid #e5e5e5;
+    border-radius: 1px;
+  }
+
+  .uk-subnav>li:not(:first-of-type) {
+    padding-left: 10px;
   }
 }
-

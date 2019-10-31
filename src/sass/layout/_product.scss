@@ -123,11 +123,22 @@
           border-radius: 8px;
           box-shadow: -20px 0 0 #ffffff;
           background: #FFFFFF;
+          transition: background-color .3s, color .15s;
+
+          &:hover {
+            background: #14D75D;
+          }
         }
 
         a {
           @include screen(l) {
-            color: #14D75D !important;
+            color: #14D75D;
+            transition: background-color .3s, color .15s;
+
+            &:hover {
+
+              color: #ffffff !important;
+            }
           }
         }
 
