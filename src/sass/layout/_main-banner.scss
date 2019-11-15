@@ -40,6 +40,10 @@
     position: relative;
     min-height: 425px;
 
+    @include screen(l) {
+      margin-left: 328px;
+    }
+
     &--mia3 {
       .main-banner__image {
         width: 100%;
@@ -193,6 +197,10 @@
   .swiper-pagination {
     @include screen(xl) {
       transform: translateY(-5px);
+    }
+
+    @include screen(l) {
+      left: 360px;
     }
 
     &-bullet {
