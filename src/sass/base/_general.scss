@@ -53,6 +53,12 @@ button {
     opacity: 1;
     z-index: 100;
   }
+
+  header.header-catalog-active & {
+    visibility: visible;
+    opacity: 1;
+    z-index: 101;
+  }
 }
 
 .title {
@@ -96,6 +102,25 @@ button {
   }
 }
 
+.bg-full-width-white {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    display: block !important;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+    background-color: #ffffff;
+  }
+}
+
 select {
   display: none;
 }
@@ -103,5 +128,4 @@ select {
 img {
   max-width: 100%;
   height: auto;
-
 }

@@ -58,3 +58,12 @@ $(window).on('resize', function () {
 });
 
 toggleMenu();
+
+$('.header__catalog, .header__catalog-menu').hover(
+  function () {
+    $('header').addClass('header-catalog-active')
+  },
+  function () {
+    $('header').removeClass('header-catalog-active')
+  }
+)

@@ -1,4 +1,4 @@
-<header class="header" uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
+<header class="header" uk-sticky="media: (max-width:1250px)">
   <div class="header__top uk-visible@l">
     <div class="uk-container uk-flex uk-flex-between uk-padding uk-padding-remove-vertical">
 
@@ -33,7 +33,7 @@
         </picture>
       </a>
 
-      <ul class="header__links-list uk-width-expand uk-flex uk-flex-between">
+      <ul class="header__links-list uk-width-expand uk-flex uk-flex-between uk-visible@l">
         <li>
           <a href="warranty.html">Гарантия</a>
         </li>
@@ -68,8 +68,9 @@
         <div>С 10:00 до 21:00 без выходных</div>
       </div>
     </div>
-    <div class="uk-flex uk-flex-middle">
-      <!-- <nav class="menu uk-offcanvas uk-width-expand" id="menuMobile" data-uk-offcanvas="overlay: true; mode: reveal;">
+    <div class="header__bottom uk-flex uk-flex-middle bg-full-width-white" uk-sticky="media: @l">
+      <nav class="menu uk-offcanvas uk-width-expand uk-hidden@l" id="menuMobile"
+        data-uk-offcanvas="overlay: true; mode: reveal;">
         <div class="uk-offcanvas-bar">
           <div class="menu__wrap">
             <ul class="menu__list uk-flex uk-flex-between">
@@ -257,18 +258,18 @@
             </div>
           </div>
         </div>
-      </nav> -->
+      </nav>
 
 
-      <div class="header__catalog">
-        <div class="header__catalog-btn uk-flex uk-flex-middle">
+      <div class="header__catalog uk-visible@l">
+        <button id="div1" type="button" class="header__catalog-btn uk-flex uk-flex-middle">
           <svg width="24" height="24" fill="#FF7914">
             <use xlink:href="img/symbol/sprite.svg#header-catalog-btn" />
           </svg>
           <span>Каталог товаров</span>
-        </div>
+        </button>
 
-        <ul class="header__catalog-menu">
+        <ul class="header__catalog-menu" uk-dropdown="boundary:.header__catalog;">
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
@@ -276,85 +277,145 @@
               </svg>
               <span>Смартфоны</span>
             </a>
+
+            <ul class="header__catalog-sublist">
+              <li>
+                <a href="#">
+                  <span>Mi 5</span>
+                </a>
+                <ul class="header__catalog-innerlist">
+                  <li>
+                    <a href="#">Mi 6 Max</a>
+                  </li>
+                  <li>
+                    <a href="#">Mi 6 S</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Mi 6</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Mi 7S</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Mi 8 Pro</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Mi Note 9</span>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-2" />
               </svg>
-              <span>Смартфоны</span>
+              <span>«Умный дом»</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-3" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Компьютерная техника</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-4" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Гаджеты</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-5" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Наушники и колонки</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-6" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Зарядные устройства</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-7" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Аксессуары</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-8" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Одежда, обувь</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-9" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Транспорт</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-10" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Робот-пылесос</span>
             </a>
           </li>
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
+                <use xlink:href="img/symbol/sprite.svg#menu-11" />
               </svg>
-              <span>Смартфоны</span>
+              <span>Фото и видео</span>
+            </a>
+          </li>
+          <li class="header__catalog-list">
+            <a href="">
+              <svg width="20" height="20">
+                <use xlink:href="img/symbol/sprite.svg#menu-12" />
+              </svg>
+              <span>Телевизоры</span>
+            </a>
+          </li>
+          <li class="header__catalog-list">
+            <a href="">
+              <svg width="20" height="20">
+                <use xlink:href="img/symbol/sprite.svg#menu-13" />
+              </svg>
+              <span>Детские товары</span>
+            </a>
+          </li>
+          <li class="header__catalog-list">
+            <a href="">
+              <svg width="20" height="20" fill="#FF4300">
+                <use xlink:href="img/symbol/sprite.svg#menu-14" />
+              </svg>
+              <span>Скидки</span>
             </a>
           </li>
         </ul>

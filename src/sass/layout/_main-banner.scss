@@ -8,7 +8,7 @@
   }
 
   @include screen(l) {
-    padding-bottom: 85px;
+    padding-bottom: 120px;
   }
 
   .swiper-slide {
@@ -226,6 +226,23 @@
       &-active {
         background: #14CBFF;
         box-shadow: 0px 6px 15px rgba(0, 205, 255, 0.4);
+      }
+    }
+  }
+
+  .header__catalog-menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translate(-430px, -18px);
+    height: max-content;
+    z-index: 150;
+
+    li:last-of-type {
+      a::after {
+        display: none;
       }
     }
   }

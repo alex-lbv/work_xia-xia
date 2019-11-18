@@ -10,7 +10,7 @@
 
   &__container {
     @include screen(l) {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       padding: 0 25px;
     }
   }
@@ -522,7 +522,12 @@
     width: 100%;
     max-width: 260px;
 
+
+
     &-btn {
+      position: relative;
+      z-index: 300;
+      width: 100%;
       padding: 16px 15px;
       border: 1px solid #FF7914;
       border-radius: 12px;
@@ -539,8 +544,8 @@
     &-menu {
       position: absolute;
       left: 0;
-      transform: translateY(20px);
-      z-index: 100;
+      transform: translateY(10px);
+      z-index: 99;
       padding: 11px 5px;
       width: 260px;
       border: 1px solid #F0F0F0;
@@ -550,28 +555,162 @@
     }
 
     &-list {
+      &:hover {
+        .header__catalog-sublist {
+          opacity: 1;
+          pointer-events: inherit;
+        }
+      }
+
+      &:last-of-type {
+        a::after {
+          display: none;
+        }
+      }
+
       a {
         position: relative;
         display: block;
-        padding: 9px 15px 6px;
+        padding: 7px 15px 3px;
         border-radius: 8px;
+        overflow: hidden;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: url('../img/pic/ico/arrow.svg') no-repeat;
+          width: 10px;
+          height: 10px;
+          transform: rotate(-90deg);
+        }
+
+        &:hover {
+          background: #FF7915;
+
+          svg {
+            fill: #ffffff;
+          }
+
+          span {
+            color: #ffffff;
+          }
+
+          &::after {
+            background: url('../img/pic/ico/arrow-white.svg') no-repeat;
+            transform: rotate(0);
+          }
+        }
 
         svg {
           position: absolute;
-          left: 0;
+          left: 15px;
           top: 0;
           bottom: 0;
           margin: auto;
         }
 
         span {
-          padding-left: 20px;
+          padding-left: 30px;
           font: 500 14px/17px Helvetica;
           color: #333333;
         }
       }
     }
+
+    &-sublist {
+      position: absolute;
+      top: 0;
+      right: -160px;
+      padding: 11px 5px;
+      min-width: 150px;
+      border: 1px solid #F0F0F0;
+      box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      background: #FFFFFF;
+      opacity: 0;
+      pointer-events: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 15px;
+        left: -15px;
+        top: 0;
+        background: transparent;
+      }
+
+      a {
+        span {
+          padding-left: 0;
+        }
+      }
+
+      li:hover {
+        .header__catalog-innerlist {
+          opacity: 1;
+          pointer-events: inherit;
+        }
+      }
+    }
+
+    &-innerlist {
+      position: absolute;
+      top: 0;
+      right: -160px;
+      padding: 11px 5px;
+      min-width: 150px;
+      border: 1px solid #F0F0F0;
+      box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      background: #FFFFFF;
+      opacity: 0;
+      pointer-events: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 15px;
+        left: -15px;
+        top: 0;
+        background: transparent;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 15px;
+        right: -15px;
+        top: 0;
+        background: transparent;
+      }
+
+      a {
+        span {
+          padding-left: 0;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 
+  &__bottom {
+    @include screen(l) {
+      padding: 0 25px;
+      z-index: 150;
+    }
 
+    &.uk-sticky-fixed {
+      z-index: 150;
+    }
+  }
 }
