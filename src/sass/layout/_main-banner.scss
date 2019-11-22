@@ -234,14 +234,15 @@
   }
 
   .header__catalog-menu {
+    display: block;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    transform: translate(-430px, -18px);
+    transform: translate(-430px, -14px);
     height: max-content;
-    z-index: 150;
+    z-index: 10;
 
     li:last-of-type {
       a::after {
