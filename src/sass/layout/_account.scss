@@ -1,0 +1,697 @@
+.account {
+  &__wrapper {
+    @include screen(xl) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .title {
+    @include screen(l) {
+      padding: 30px 30px 0 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list {
+    background: #F7F7F7;
+    border-radius: 8px;
+
+    @include screen(xl) {
+      overflow: scroll;
+    }
+
+    @include screen(l) {
+      /* padding: 0 30px; */
+    }
+
+    a:not(.account__logout) {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px 5px;
+      font: 500 14px/18px Helvetica;
+      color: #333333;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        margin: auto;
+        width: 2px;
+        height: 16px;
+        background-color: rgba(185, 186, 186, .3);
+      }
+    }
+
+    li:nth-of-type(6n-1) {
+      a:before {
+        display: none;
+      }
+    }
+
+    a {
+      white-space: nowrap;
+    }
+
+    li.active a {
+      position: relative;
+      color: #14CBFF;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 60%;
+        height: 5px;
+        background-color: #14CBFF;
+        border-radius: 0px 0px 6px 6px;
+      }
+    }
+  }
+
+  &__logout {
+    position: relative;
+    padding: 10px 15px 5px;
+    display: inline-block;
+    font: 500 14px/18px Helvetica;
+    color: #FF5614;
+
+    svg {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .account__date {
+    font: normal 14px/24px Helvetica;
+    color: #30373D;
+
+    @include screen(xl) {
+      align-self: flex-start;
+    }
+
+    @include screen (l) {
+      text-align: right;
+    }
+  }
+
+  .account__order-status {
+    text-align: right;
+    font: normal 14px/24px Helvetica;
+
+    &--process {
+      color: #FF9600;
+    }
+
+    &--transit {
+      color: #0095FF;
+    }
+
+    &--done {
+      color: #27CC00;
+    }
+  }
+
+  .account__order-number {
+    font: 700 18px/24px Helvetica;
+    color: #FF548C;
+  }
+
+  .account__info-list {
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .account__container-link {
+    border-bottom: 1px solid transparent;
+    font: 500 14px/16px FuturaPT;
+    color: #FF7914;
+
+    @include screen(l) {
+      display: inline-block;
+      width: max-content;
+      transition: border .3s;
+    }
+
+    &:hover {
+      @include screen(l) {
+        border-color: #FF7914;
+      }
+    }
+  }
+
+  .account__container-title {
+    display: inline-block;
+    font: 500 18px/21px FuturaPT;
+    color: #30373D;
+  }
+
+  /* main */
+  &--main {
+    .account {
+      &__content {
+        @include screen(xl) {
+          padding: 20px;
+        }
+
+        @include screen(l) {
+          padding: 20px 0;
+        }
+      }
+
+      &__container {
+        border-radius: 15px;
+        font: normal 14px/24px Helvetica;
+
+        @include screen(xl) {
+          padding: 20px;
+        }
+
+        @include screen(l) {
+          padding: 20px 30px;
+        }
+
+        &--cart {
+          min-height: 220px;
+          color: rgba(255, 255, 255, .7);
+          background: #FF7914;
+
+          .account__container-link {
+            @include screen(xl) {
+              margin-top: 30px;
+            }
+          }
+
+          .account__container-left {
+            @include screen(xl) {
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+              border-bottom: 1px solid rgba(255, 255, 255, .2);
+            }
+
+            @include screen(l) {
+              margin-right: 30px;
+              border-right: 1px solid rgba(255, 255, 255, .2);
+            }
+          }
+
+          .account__container-right {
+            font: normal 18px/24px Helvetica;
+            color: #ffffff;
+
+            li {
+              &:not(:last-of-type) {
+                margin-bottom: 15px;
+              }
+            }
+          }
+
+          .account__container-title {
+            margin-bottom: 5px;
+            color: #ffffff;
+          }
+
+          .account__container-link {
+            @include screen(l) {
+              color: #ffffff;
+            }
+
+            &:hover {
+              @include screen(l) {
+                border-color: #ffffff;
+              }
+            }
+          }
+        }
+
+        &--order {
+          color: rgba(48, 55, 61, .7);
+          background: #FFFFFF;
+          border: 1px solid #EEEEEE;
+
+          .account__container-link {
+            @include screen(xl) {
+              padding-top: 20px;
+              margin-top: 15px;
+              border-top: 1px solid rgba(0, 0, 0, .1);
+            }
+          }
+
+          .account__container-left {
+            @include screen(xl) {
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+              border-bottom: 1px solid rgba(0, 0, 0, .1);
+            }
+
+            @include screen(l) {
+              margin-right: 30px;
+              border-right: 1px solid rgba(0, 0, 0, .1);
+            }
+          }
+
+          .account__container-right {
+            &>li:not(:first-of-type) {
+              border-top: 1px solid rgba(0, 0, 0, .1);
+
+              @include screen(xl) {
+                margin-top: 15px;
+                padding-top: 15px;
+              }
+
+              @include screen(l) {
+                margin-top: 20px;
+                padding-top: 20px;
+              }
+            }
+          }
+
+          .account__container-title {
+            margin-bottom: 5px;
+            color: #30373D;
+          }
+        }
+      }
+    }
+  }
+
+  /* -------- */
+
+  /* cashback */
+  &--cashback {
+    .account {
+      &__content {
+        @include screen(xl) {
+          padding: 20px;
+        }
+
+        @include screen(l) {
+          padding: 30px;
+        }
+      }
+
+      &__cashback {
+        &-header {
+          padding: 20px 25px;
+          color: #ffffff;
+          background: #2C0952;
+          border-radius: 15px;
+
+          span {
+            &:first-of-type {
+              font: normal 18px/24px Roboto;
+
+              @include screen(xl) {
+                margin-bottom: 15px;
+              }
+            }
+
+            &:last-of-type {
+              font: 700 24px/24px Roboto;
+            }
+          }
+        }
+
+        &-list {
+          li {
+            padding: 20px 0;
+
+            &:not(:first-of-type) {
+              border-top: 1px solid rgba(0, 0, 0, .1);
+            }
+          }
+        }
+
+        &-subtitle {
+          font: 700 18px/24px Roboto;
+          color: #30373D;
+        }
+      }
+    }
+  }
+
+  /* -------- */
+
+  /* orders */
+  &--orders {
+    .account {
+      &__content {
+        @include screen(xl) {
+          padding: 20px;
+        }
+
+        @include screen(l) {
+          padding: 30px;
+        }
+      }
+
+      &__info-list {
+        color: rgba(48, 55, 61, .7);
+      }
+
+      &__container-link {
+        padding: 0;
+        white-space: nowrap;
+        font: normal 14px/24px Roboto;
+
+        @include screen(l) {
+          margin-right: 30px;
+        }
+      }
+
+      &__date {
+        white-space: nowrap;
+      }
+
+      &__order-list {
+        &>li {
+          margin-bottom: 20px;
+
+          &:not(:first-of-type) {
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, .1);
+          }
+        }
+      }
+    }
+  }
+
+  /* -------- */
+
+  /* reviews */
+  &--reviews {
+    .account {
+      &__container {
+        @include screen(xl) {
+          padding: 20px;
+        }
+
+        @include screen(l) {
+          padding: 30px;
+        }
+
+        &:first-of-type {
+          .btn {
+            margin-top: 20px;
+            padding: 15px;
+            font: 600 16px/19px FuturaPT;
+            text-transform: uppercase;
+          }
+        }
+
+        &:not(:first-of-type) {
+          border-top: 1px solid rgba(0, 0, 0, .1);
+        }
+
+        &-link {
+          font: normal 14px/22px Roboto;
+        }
+      }
+    }
+  }
+
+  /* -------- */
+
+  /* cart */
+  &--cart {
+    .account {
+      &__content {
+        @include screen(xl) {
+          padding: 20px;
+        }
+
+        @include screen(l) {
+          padding: 30px;
+        }
+      }
+    }
+  }
+
+  /* -------- */
+}
+
+.profile {
+  @include screen(xl) {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 15px 15px 20px;
+  }
+
+  @include screen(l) {
+    margin-top: 30px;
+  }
+
+  &__header-mobile {
+    @include screen(xl) {
+      position: relative;
+      padding: 0 20px;
+      margin: 20px 0;
+    }
+
+    a {
+      @include screen(xl) {
+        position: absolute;
+        top: 7px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+  }
+
+  /* title */
+  .uk-accordion-title:hover,
+  .uk-accordion-title:focus {
+    color: #2B2D30
+  }
+
+  li.uk-open {
+    &>.uk-accordion-title::before {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .uk-accordion-title {
+    @include screen(xl) {
+      position: relative;
+    }
+
+    @include screen(l) {
+      pointer-events: none;
+    }
+
+    &::before {
+      @include screen(xl) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 25px;
+        height: 25px;
+        background: url("../img/pic/ico/arrow-bottom-ico.svg") no-repeat, #E9E9E9;
+        background-size: 10px 7px;
+        background-position: center;
+        border-radius: 50%;
+        transition: transform .3s;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+    }
+  }
+
+  &__wrap {
+    @include screen(xl) {
+      padding: 0 20px;
+      margin-bottom: 40px;
+    }
+
+    @include screen(l) {
+      margin: 85px 0 0 20px;
+      padding: 15px 24px 25px 21px;
+      border: 1px solid #E7E7E7;
+      background: #F7F7F7;
+      border-radius: 12px;
+    }
+  }
+
+  &__title {
+    font: 600 18px/21px FuturaPT;
+  }
+
+  &__edit {
+    margin: 0;
+    border-bottom: 1px solid transparent;
+    font: normal 14px/22px Helvetica;
+    color: #FF7914;
+    transition: border .3s;
+
+    &:hover {
+      border-color: #FF7914;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    color: #2B2D30;
+
+    @include screen(xl) {
+      font: 500 24px/28px FuturaPT;
+    }
+
+    @include screen(l) {
+      font: 500 24px/28px FuturaPT;
+    }
+  }
+
+  &__region {
+    color: rgba(48, 55, 61, .7);
+
+    @include screen(xl) {
+      font: normal 14px/22px Helvetica;
+    }
+
+    @include screen(l) {
+      font: normal 16px/22px Helvetica;
+    }
+  }
+
+  &__logo {
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include screen(xl) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include screen(l) {
+      width: 80px;
+      height: 80px;
+
+    }
+  }
+
+  &__balance {
+    padding: 15px 0;
+    border-top: 1px solid #EAEAEA;
+
+    span {
+      font: 600 18px/21px FuturaPT;
+      color: #FE4E1D;
+    }
+
+    button {
+      width: 100%;
+      max-width: 180px;
+      padding: 10px 15px 9px;
+      text-align: center;
+      border-radius: 6px;
+
+      span {
+        white-space: nowrap;
+        font: 500 16px/19px FuturaPT;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__data {
+    padding: 20px 0;
+    border-top: 1px solid #EAEAEA;
+
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+
+    span:not(.profile__subtitle) {
+      font: normal 16px/22px Helvetica;
+      color: #30373D;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font: 500 16px/24px FuturaPT;
+    color: #2B2D30;
+  }
+
+  &__offers {
+    padding: 20px 0;
+    border-top: 1px solid #EAEAEA;
+
+    .profile__subtitle {
+      margin-bottom: 15px;
+    }
+
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+
+    label {
+      font: normal 14px/17px Helvetica;
+    }
+
+    .filter__checkbox {
+      margin: 0;
+
+      input+label::after {
+        background-color: #FFFFFF;
+      }
+    }
+  }
+
+  &__referral {
+    padding: 20px 0;
+    border-top: 1px solid #EAEAEA;
+
+    .profile__subtitle {
+      margin-bottom: 15px;
+    }
+
+    &-link {
+      padding: 5px 10px;
+      margin-bottom: 15px;
+      background: #F2F2F2;
+      border-radius: 6px;
+
+      .profile__referral-text {
+        border: none;
+        padding: 0;
+        background: none;
+        font: normal 14px/22px Helvetica;
+        color: #FF7914;
+      }
+
+      .profile__referral-copy {
+        cursor: pointer;
+        font: normal 12px/14px Helvetica;
+        color: rgba(48, 55, 61, .4);
+        transition: color .3s;
+
+        &:hover {
+          color: #30373D;
+        }
+      }
+    }
+  }
+}

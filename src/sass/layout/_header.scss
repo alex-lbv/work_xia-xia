@@ -11,7 +11,7 @@
   &__container {
     @include screen(l) {
       margin-bottom: 10px;
-      padding: 0 25px;
+      /* padding: 0 25px; */
     }
   }
 
@@ -72,7 +72,7 @@
       width: 100%;
       height: 100%;
       border-radius: 10px;
-     /*  transition: opacity 0.5s ease-out; */
+      /*  transition: opacity 0.5s ease-out; */
       z-index: 2;
       opacity: 0;
     }
@@ -82,10 +82,16 @@
       border: none;
     }
 
-
-
     &--empty {
       border: 1px solid #FF7914;
+
+      span {
+        &:last-of-type {
+          color: #FF7914;
+          border: 1px solid #FF7914;
+          background: transparent;
+        }
+      }
 
       svg {
         fill: #FF7914;
@@ -112,6 +118,7 @@
     }
 
     &--active {
+      padding: 9px 10px 8px 21px;
       background-image: linear-gradient(180deg, rgb(144, 231, 68) 0%, rgb(83, 181, 37) 100%);
       box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
 
@@ -127,14 +134,12 @@
         box-shadow: 0px 5px 20px rgba(137, 225, 64, 0.6);
         background-image: linear-gradient(180deg, rgb(142, 230, 65) 0%, rgb(67, 208, 0) 100%);
       }
-
-
     }
 
     svg {
       position: relative;
       z-index: 3;
-     /*  transition: fill 0.15s ease-out; */
+      /*  transition: fill 0.15s ease-out; */
 
       @include screen(l) {
         margin-right: 15px;
@@ -163,8 +168,8 @@
           border-radius: 6px;
           font: 300 16px/19px FuturaPT;
           white-space: nowrap;
-          background: #FF5614;
-          color: #ffffff;
+          /*  background: #FF5614; */
+          /*  color: #ffffff; */
           /* transition: background-color .3s; */
         }
       }
@@ -541,7 +546,7 @@
       position: relative;
       z-index: 300;
       width: 100%;
-      padding: 10px 15px;
+      padding: 11px 15px;
       border: 1px solid #FF7914;
       border-radius: 12px;
       background: #FF7914;
@@ -727,7 +732,7 @@
 
   &__bottom {
     @include screen(l) {
-      padding: 0 25px;
+      /* padding: 0 25px; */
       z-index: 150;
     }
 
