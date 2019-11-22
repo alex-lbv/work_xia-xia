@@ -41,7 +41,7 @@
     min-height: 425px;
 
     @include screen(l) {
-      margin-left: 328px;
+      width: 550px;
     }
 
     &--mia3 {
@@ -200,7 +200,10 @@
     }
 
     @include screen(l) {
-      left: 360px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: translateX(-45px);
     }
 
     &-bullet {
