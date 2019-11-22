@@ -47,8 +47,8 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    /* border-radius: 12px; */
     backface-visibility: hidden;
+
 
     @include screen(xl) {
       justify-content: center;
@@ -58,10 +58,10 @@
 
     @include screen(l) {
       max-width: 220px;
-      color: #ffffff;
-      padding: 11px 10px 12px 20px;
-      /*  border-radius: 0 12px 12px 0; */
+      color: #FF7914;
+      padding: 8px 10px 7px 20px;
       border-radius: 12px;
+
     }
 
     &:after {
@@ -71,20 +71,39 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* border-radius: 0 12px 12px 0; */
-      border-radius: 12px;
-      transition: opacity 0.5s ease-out;
+      border-radius: 10px;
+     /*  transition: opacity 0.5s ease-out; */
       z-index: 2;
       opacity: 0;
     }
 
     &:hover:after {
       opacity: 1;
+      border: none;
     }
 
+
+
     &--empty {
-      background-color: #FF7914;
-      box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
+      border: 1px solid #FF7914;
+
+      svg {
+        fill: #FF7914;
+      }
+
+      &:hover {
+        span {
+          color: #ffffff;
+
+          &:last-of-type {
+            background: rgba(51, 51, 51, 0.2);
+          }
+        }
+
+        svg {
+          fill: #ffffff;
+        }
+      }
 
       &:after {
         background-color: #FF5614;
@@ -96,16 +115,26 @@
       background-image: linear-gradient(180deg, rgb(144, 231, 68) 0%, rgb(83, 181, 37) 100%);
       box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
 
+      span {
+        color: #ffffff;
+      }
+
+      svg {
+        fill: #ffffff;
+      }
+
       &:after {
         box-shadow: 0px 5px 20px rgba(137, 225, 64, 0.6);
         background-image: linear-gradient(180deg, rgb(142, 230, 65) 0%, rgb(67, 208, 0) 100%);
       }
+
+
     }
 
     svg {
-      fill: #FFFFFF;
       position: relative;
       z-index: 3;
+     /*  transition: fill 0.15s ease-out; */
 
       @include screen(l) {
         margin-right: 15px;
@@ -115,6 +144,7 @@
     span {
       position: relative;
       z-index: 3;
+      /* transition: color 0.15s ease-out; */
 
       @include screen(xl) {
         display: none;
@@ -129,11 +159,13 @@
 
       &:last-of-type {
         @include screen(l) {
-          padding: 10px 20px;
+          padding: 6px 20px;
           border-radius: 6px;
           font: 300 16px/19px FuturaPT;
           white-space: nowrap;
-          background: rgba(51, 51, 51, 0.2);
+          background: #FF5614;
+          color: #ffffff;
+          /* transition: background-color .3s; */
         }
       }
     }
@@ -258,23 +290,6 @@
   .uk-container {
     @include screen(xl) {
       flex-direction: row;
-    }
-  }
-
-  &.search-active {
-    .search__close {
-      opacity: 1;
-      pointer-events: inherit;
-    }
-
-    .search__btn {
-      opacity: 1;
-      pointer-events: inherit;
-    }
-
-    .search__result {
-      opacity: 1;
-      pointer-events: inherit;
     }
   }
 
@@ -522,26 +537,25 @@
     width: 100%;
     max-width: 260px;
 
-
-
     &-btn {
       position: relative;
       z-index: 300;
       width: 100%;
-      padding: 16px 15px;
+      padding: 10px 15px;
       border: 1px solid #FF7914;
       border-radius: 12px;
-      background: #FFFFFF;
+      background: #FF7914;
       cursor: pointer;
 
       span {
         margin-left: 12px;
         font: 500 18px/24px FuturaPT;
-        color: #FF7914;
+        color: #ffffff;
       }
     }
 
     &-menu {
+      display: none;
       position: absolute;
       left: 0;
       transform: translateY(10px);
@@ -633,6 +647,7 @@
       background: #FFFFFF;
       opacity: 0;
       pointer-events: none;
+      transition: opacity .3s;
 
       &::before {
         content: "";
@@ -670,6 +685,7 @@
       background: #FFFFFF;
       opacity: 0;
       pointer-events: none;
+      transition: opacity .3s;
 
       &::before {
         content: "";
@@ -692,8 +708,14 @@
       }
 
       a {
+        transition: color 0s;
+
         span {
           padding-left: 0;
+        }
+
+        &:hover {
+          color: #ffffff;
         }
 
         &::after {
@@ -711,6 +733,11 @@
 
     &.uk-sticky-fixed {
       z-index: 150;
+      padding: 5px 25px;
+
+      &:after {
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 }
