@@ -21,6 +21,12 @@
     font: normal 16px/20px FuturaPT;
     background-color: #F4F4F4;
 
+    .uk-container {
+      @include screen(l) {
+        padding: 0 15px;
+      }
+    }
+
     &-text-gray {
       color: #989898;
     }
@@ -54,6 +60,8 @@
       justify-content: center;
       width: 58px;
       height: 58px;
+      border-radius: 12px;
+      padding: 0;
     }
 
     @include screen(l) {
@@ -82,7 +90,7 @@
       border: none;
     }
 
-    &--empty {
+    /* &--empty {
       border: 1px solid #FF7914;
 
       span {
@@ -115,12 +123,15 @@
         background-color: #FF5614;
         box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
       }
-    }
+    } */
 
     &--active {
-      padding: 9px 10px 8px 21px;
       background-image: linear-gradient(180deg, rgb(144, 231, 68) 0%, rgb(83, 181, 37) 100%);
-      box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.4);
+      box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.6);
+
+      @include screen(l) {
+        padding: 9px 10px 8px 21px;
+      }
 
       span {
         color: #ffffff;
@@ -232,6 +243,18 @@
 
     @include screen(l) {
       margin-right: 40px;
+    }
+
+    img {
+      @include screen(xl) {
+        width: 100px;
+        height: 25px
+      }
+
+      @include screen(l) {
+        width: 130x;
+        height: 25px;
+      }
     }
   }
 
@@ -547,8 +570,8 @@
       z-index: 300;
       width: 100%;
       padding: 11px 15px;
-      border: 1px solid #FF7914;
-      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
+      border-radius: 6px;
       background: #FF7914;
       cursor: pointer;
 
@@ -579,13 +602,26 @@
           opacity: 1;
           pointer-events: inherit;
         }
+
+        &>a {
+          /*  background: rgba(255, 121, 21,.85); */
+
+          span {
+            color: #FF7914;
+          }
+
+          /* &::after {
+            background: url(../img/pic/ico/arrow-white.svg) no-repeat;
+            transform: rotate(360deg);
+          } */
+        }
       }
 
-      &:last-of-type {
+      /* &:last-of-type {
         a::after {
           display: none;
         }
-      }
+      } */
 
       a {
         position: relative;
@@ -608,20 +644,16 @@
         }
 
         &:hover {
-          background: #FF7915;
-
-          svg {
-            fill: #ffffff;
-          }
+          /* background: rgba(255, 121, 21, .85); */
 
           span {
-            color: #ffffff;
+            color: #FF7914;
           }
 
-          &::after {
+          /*  &::after {
             background: url('../img/pic/ico/arrow-white.svg') no-repeat;
             transform: rotate(0);
-          }
+          } */
         }
 
         svg {
@@ -675,6 +707,23 @@
           opacity: 1;
           pointer-events: inherit;
         }
+
+        &>a {
+          /*  background: rgba(255, 121, 21,.85); */
+
+          span {
+            color: #FF7914;
+          }
+
+          /* svg {
+            fill: #ffffff
+          } */
+
+          /* &::after {
+            background: url(../img/pic/ico/arrow-white.svg) no-repeat;
+            transform: rotate(360deg);
+          } */
+        }
       }
     }
 
@@ -720,7 +769,7 @@
         }
 
         &:hover {
-          color: #ffffff;
+          color: #FF7914;
         }
 
         &::after {
@@ -738,7 +787,7 @@
 
     &.uk-sticky-fixed {
       z-index: 150;
-      padding: 5px 25px;
+      padding: 5px 0;
 
       &:after {
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);

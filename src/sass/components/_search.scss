@@ -3,8 +3,7 @@
 
   @include screen(xl) {
     order: 1;
-    margin-top: 7px;
-    margin-right: 10px;
+    margin: 7px 10px 0 10px;
   }
 
   @include screen(l) {
@@ -27,6 +26,7 @@
     margin: auto;
     transition: opacity .3s;
     pointer-events: none;
+    z-index: 350;
 
     svg {
       vertical-align: middle;
@@ -51,10 +51,11 @@
   }
 
   input {
-    padding: 16px 50px;
+    padding: 18px 50px 14px;
     border: 1px solid #F0F0F0;
     border-radius: 12px;
     background: url('../img/pic/ico/search.svg') 20px center no-repeat, #ffffff;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
   }
 
   &__result {
