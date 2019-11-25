@@ -1,0 +1,158 @@
+//= components/head.html
+
+<body class="account account--reviews">
+  //= components/header.html
+  <div class="account__wrapper uk-container bg-full-width--gradient">
+    <div class="frame uk-flex uk-flex-column-reverse@s">
+
+      <div class="uk-width-expand@l">
+        <h1 class="title title--medium uk-margin-bottom@s uk-visible@l">Здравствуйте, Василий!</h1>
+        <div class="account__list-wrap">
+          <ul class="account__list uk-flex">
+            <li>
+              <a href="account-main.html">Главная</a>
+            </li>
+            <li>
+              <a href="account-orders.html">Мои товары</a>
+            </li>
+            <li>
+              <a href="account-cart.html">Заказы</a>
+            </li>
+            <li>
+              <a href="account-cashback.html">Кешбэк</a>
+            </li>
+            <li class="active">
+              <a href="account-reviews.html">Отзывы <span class="uk-visible@l">и обратная связь</span></a>
+            </li>
+            <li class="uk-visible@l position-right">
+              <a class=" account__logout" href="#">Выйти</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="account__content">
+          <div class="account__container">
+            <span class="account__container-title uk-margin-bottom">Задать вопрос</span>
+            <div class="uk-flex uk-flex-column@s">
+              <div class="uk-flex uk-flex-column uk-width-1-3@l uk-margin-right@l uk-margin-bottom@s">
+                <div class="uk-flex uk-flex-column uk-margin-bottom">
+                  <label>Тема вопроса</label>
+                  <input type="text">
+                </div>
+                <div class="uk-flex uk-flex-column">
+                  <label>Емейл для ответа</label>
+                  <input type="email">
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-column uk-width-expand@l">
+                <label>Детально опишите свой вопрос</label>
+                <textarea rows="150"></textarea>
+              </div>
+            </div>
+            <button class="btn btn--orange-gradient">
+              <span>Задать вопрос</span>
+            </button>
+          </div>
+
+          <ul class="uk-flex uk-flex-column uk-margin-bottom">
+            <li class="uk-margin-small-bottom">
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
+                  </div>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
+                  </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
+                </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="review">
+                <div class="review__author uk-flex uk-flex-middle">
+                  <div class="review__avatar">
+                    <span>АА</span>
+                  </div>
+                  <div class="review__info uk-flex uk-flex-column uk-width-expand">
+                    <span class="review__name">Антон Антонов</span>
+                    <span class="review__name">12 мая 2019</span>
+                  </div>
+                  <div class="review__mark">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                    <svg width="16" height="16">
+                      <use xlink:href="img/symbol/sprite.svg#star" />
+                    </svg>
+                  </div>
+                </div>
+                <p>Нашёл этот сайт по рекламе в гугл. Довольно долго экономил на новый телефон, и тут оказалось, что в
+                  этом
+                  магазине мог купить смартфон на 10-15тыс. дешевле чем на том же реСторе, всё это связано с тем, что
+                  телефон
+                  Американский и продаётся у нас в стране под гарантией магазина. Телефон мне понравился, покупал его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся. Телефон мне понравился, покупал
+                  его на
+                  несколько лет в перёд, ну качество материалов смартфона мне нравятся.</p>
+                <div class="review__images" data-uk-lightbox="animation: slide">
+                  <img src="img/temp/review-1.jpg" alt="">
+                  <img src="img/temp/review-2.jpg" alt="">
+                  <img src="img/temp/review-3.jpg" alt="">
+                </div>
+              </div>
+            </li>
+          </ul>
+          //= components/pagination.html
+
+        </div>
+      </div>
+
+      //= components/account-profile.html
+    </div>
+  </div>
+
+  //= components/subscribe.html
+  //= components/footer.html
+</body>
+//= components/bottom.html

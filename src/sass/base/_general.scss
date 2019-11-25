@@ -207,3 +207,19 @@ img {
     z-index: 350;
   }
 }
+
+.position-right {
+  margin: auto 0 auto auto;
+
+  &\@l {
+    @include screen(l) {
+      margin: auto 0 auto auto;
+    }
+  }
+
+  &\@s {
+    @include screen(xl) {
+      margin: auto 0 auto auto;
+    }
+  }
+}

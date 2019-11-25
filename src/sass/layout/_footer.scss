@@ -40,10 +40,14 @@
     img {
       @include screen(xl) {
         margin: 30px 0;
+        width: 100px;
+        height: 25px
       }
 
       @include screen(l) {
         margin-bottom: 20px;
+        width: 130x;
+        height: 25px;
       }
     }
 
