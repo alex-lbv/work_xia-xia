@@ -16,7 +16,7 @@
     background: #fff;
 
     @include screen(l) {
-       padding-bottom: 30px;
+      padding-bottom: 30px;
     }
   }
 
@@ -72,6 +72,47 @@
           max-width: 425px;
           top: 50px;
           left: 400px;
+        }
+      }
+    }
+
+    &--note8pro {
+      .main-banner__image {
+        width: 100%;
+        height: auto;
+
+        @include screen(xl) {
+          position: absolute;
+          top: 10px;
+          max-width: 390px;
+        }
+
+        @include screen(l) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &--airs3 {
+      .main-banner__image {
+        width: 100%;
+        height: auto;
+
+        @include screen(xl) {
+          position: absolute;
+          top: 10px;
+          max-width: 390px;
+        }
+
+        @include screen(l) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          background: #F7F5F6;
         }
       }
     }
@@ -215,7 +256,7 @@
       left: 0;
       right: 0;
       margin: auto;
-      transform: translate(-100px,-30px);
+      transform: translate(-100px, -30px);
     }
 
     &-bullet {
