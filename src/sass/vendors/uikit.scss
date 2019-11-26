@@ -8391,3 +8391,35 @@ iframe.uk-cover {
     }
   }
 }
+
+.uk-flex-row {
+  flex-direction: row;
+
+  &\@s {
+    @include screen(xl) {
+      flex-direction: row;
+    }
+  }
+
+  &\@l {
+    @include screen(l) {
+      flex-direction: row;
+    }
+  }
+}
+
+.uk-flex-row-reverse {
+  flex-direction: row-reverse;
+
+  &\@s {
+    @include screen(xl) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &\@l {
+    @include screen(l) {
+      flex-direction: row-reverse;
+    }
+  }
+}
