@@ -68,4 +68,13 @@
       background: #FF7914;
     }
   }
+
+  &--disabled {
+    background: #AFAFAF;
+    cursor: not-allowed;
+
+    span {
+      color: #ffffff;
+    }
+  }
 }
