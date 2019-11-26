@@ -53,6 +53,14 @@ $("body").on('blur', '#searchInput', function () {
   $('body').removeClass('search--opened');
 });
 
+$("body").on('focus', '#searchInputMobile', function () {
+  $('body').addClass('search--opened-mobile');
+});
+
+$("body").on('blur', '#searchInputMobile', function () {
+  $('body').removeClass('search--opened-mobile');
+});
+
 $(window).on('resize', function () {
   toggleMenu();
 });

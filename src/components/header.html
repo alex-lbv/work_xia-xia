@@ -1,39 +1,18 @@
 <header class="header" uk-sticky="media: (max-width:1199px)">
   <div class="header__top uk-visible@l">
-    <div class="uk-container uk-flex uk-flex-between uk-padding uk-padding-remove-vertical">
+    <div class="uk-container uk-flex uk-flex-middle uk-flex-between uk-padding uk-padding-remove-vertical">
 
       <!-- <div class="header__feedback">
         <span data-href="#popupQuestion" data-uk-toggle>Задать вопрос</span>
         <span class="feedback__online">Мы онлайн</span>
       </div> -->
 
-      <div class="uk-flex uk-width-1-4@l">
+      <div class="uk-flex uk-width-1-5">
         <span class="header__top-text-gray uk-margin-small-right@l">Ваш город:</span>
-        <span>Москва</span>
+        <span class="header__top-text-orange">Санкт-Петербург</span>
       </div>
 
-      <div class="uk-flex uk-width-1-4@l uk-flex-right">
-        <a class="header__top-text-gray uk-margin-right@l" href="#">Регистрация</a>
-        <a class="header__top-text-orange" href="#">Войти в личный кабинет</a>
-      </div>
-    </div>
-  </div>
-  <div class="uk-container uk-flex uk-flex-between uk-flex-column">
-    <div class="header__container uk uk-flex uk-flex-middle uk-width-1-1@l">
-      <button type="button" class="header__hamburger uk-hidden@l" data-uk-toggle="target: #menuMobile">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a class="header__logo" href="index.html">
-        <picture>
-          <source srcset="img/pic/logo/xiaxia.svg" media="(min-width:1200px)">
-          <source srcset="img/pic/logo/xiaxia.svg" media="(min-width:375px)">
-          <img src="img/pic/logo/xiaxia.svg" alt="Логотип Xiaomi">
-        </picture>
-      </a>
-
-      <ul class="header__links-list uk-width-expand uk-flex uk-flex-between uk-visible@l">
+      <ul class="header__links-list uk-flex uk-flex-between uk-visible@l uk-width-expand">
         <li>
           <a href="warranty.html">Гарантия</a>
         </li>
@@ -57,20 +36,40 @@
         </li>
       </ul>
 
-      <!-- <div class="backdrop" data-uk-toggle="target: header; cls: search-active"></div> -->
-      <div class="header__contact">
-        <a href="tel:88125076559">
+      <!--  <div class="uk-flex uk-width-1-4@l uk-flex-right">
+        <a class="header__top-text-gray uk-margin-right@l" href="#">Регистрация</a>
+        <a class="header__top-text-orange" href="#">Войти в личный кабинет</a>
+      </div> -->
+
+      <div class="header__contact uk-flex uk-flex-middle">
+        <a class="uk-flex uk-flex-middle" href="tel:88125076559">
           <svg width="16" height="16">
             <use xlink:href="img/symbol/sprite.svg#phone" />
           </svg>
           <span>(812)507-65-59</span>
         </a>
-        <div>С 10:00 до 21:00 без выходных</div>
+        <div class="uk-margin-left">Бесплатно <br>Сб-Пт 10:00 - 19-00</div>
       </div>
     </div>
-    <div class="header__bottom uk-flex uk-flex-middle bg-full-width-white" uk-sticky="media: @l">
+  </div>
+
+  <div class="uk-container uk-flex uk-flex-between uk-flex-column bg-full-width-gray">
+    <div class="header__container uk uk-flex uk-flex-middle uk-width-1-1@l">
+      <button type="button" class="header__hamburger uk-hidden@l" data-uk-toggle="target: #menuMobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source srcset="img/pic/logo/xiaxia.svg" media="(min-width:1200px)">
+          <source srcset="img/pic/logo/xiaxia.svg" media="(min-width:375px)">
+          <img src="img/pic/logo/xiaxia.svg" alt="Логотип Xiaomi">
+        </picture>
+      </a>
+
       <nav class="menu uk-offcanvas uk-width-expand uk-hidden@l" id="menuMobile"
-        data-uk-offcanvas="overlay: true; mode: reveal;">
+        data-uk-offcanvas="overlay: true; mode: slide;">
         <div class="uk-offcanvas-bar">
           <div class="menu__wrap">
             <ul class="menu__list uk-flex uk-flex-between">
@@ -260,14 +259,13 @@
         </div>
       </nav>
 
-
       <div class="header__catalog uk-visible@l">
         <button type="button" class="header__catalog-btn uk-flex uk-flex-middle"
           uk-toggle="target: body; cls: menu--opened">
-          <svg width="24" height="24" fill="#ffffff">
-            <use xlink:href="img/symbol/sprite.svg#header-catalog-btn" />
+          <svg width="18" height="14" fill="#ffffff">
+            <use xlink:href="img/symbol/sprite.svg#hamburger" />
           </svg>
-          <span>Каталог товаров</span>
+          <span>Каталог</span>
         </button>
 
         <div class="backdrop" uk-toggle="target: body; cls: menu--opened"></div>
@@ -374,13 +372,13 @@
             </a>
           </li>
           <!-- <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-9" />
-              </svg>
-              <span>Транспорт</span>
-            </a>
-          </li> -->
+              <a href="">
+                <svg width="20" height="20" fill="#FF7914">
+                  <use xlink:href="img/symbol/sprite.svg#menu-9" />
+                </svg>
+                <span>Транспорт</span>
+              </a>
+            </li> -->
           <li class="header__catalog-list">
             <a href="">
               <svg width="20" height="20" fill="#FF7914">
@@ -424,7 +422,20 @@
         </ul>
       </div>
 
+      <div class="header__contact uk-flex uk-flex-middle uk-hidden@l">
+        <a class="uk-flex uk-flex-middle" href="tel:88125076559">
+          <svg width="16" height="16">
+            <use xlink:href="img/symbol/sprite.svg#phone" />
+          </svg>
+        </a>
+      </div>
+
       <div class="search">
+
+        <div class="searchbox uk-hidden@l">
+          <input id="searchInputMobile" type="search" class="search-mobile" placeholder="Search...">
+        </div>
+
         <button class="search__open" type="button">
           <svg width="24" height="24">
             <use xlink:href="img/symbol/sprite.svg#search" />
@@ -445,7 +456,7 @@
             <a href="#">iphone xr 128</a>
           </li>
           <li>
-            <a href="#">iphone xr чехол</a> 
+            <a href="#">iphone xr чехол</a>
           </li>
         </ul>
         <button class="search__close" type="button">
@@ -456,13 +467,20 @@
         <button class="btn btn--orange search__btn" type="button">Найти</button>
         <div class="backdrop" uk-toggle="target: body; cls: search--opened"></div>
       </div>
+
       <a href="#" class="header__cart header__cart--active">
         <svg width="22" height="22">
           <use xlink:href="img/symbol/sprite.svg#cart" />
         </svg>
         <span>Корзина</span>
-        <span>0 шт</span>
+        <!-- <span>0 шт</span> -->
       </a>
+
+      <button class="header__login uk-visible@l" type="button">Вход или регистрация</button>
+
+      <!-- <div class="backdrop" data-uk-toggle="target: header; cls: search-active"></div> -->
     </div>
+    <!--  <div class="header__bottom uk-flex uk-flex-middle bg-full-width-gray" uk-sticky="media: @l">
+    </div> -->
   </div>
 </header>
