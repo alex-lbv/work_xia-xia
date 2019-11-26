@@ -1,56 +1,4 @@
 .popup {
-  &--maps {
-    .popup__dialog {
-      padding: 35px 0 0;
-      overflow: hidden;
-    }
-
-    .title {
-      padding-left: 40px;
-    }
-
-    iframe {
-      margin-top: 15px;
-      margin-bottom: -10px !important;
-      width: 100%;
-      height: 410px;
-    }
-  }
-
-  &--question {
-    textarea {
-      padding: 15px;
-      margin-bottom: 15px;
-      max-height: 160px;
-      border: 1px solid #ECECEC;
-      border-radius: 8px;
-      background: #F4F4F4;
-      resize: none;
-    }
-  }
-
-  &--review {
-    p {
-      max-width: none !important;
-    }
-
-    textarea {
-      margin-bottom: 15px;
-      padding: 15px;
-      max-height: 80px;
-      border: 1px solid #ECECEC;
-      border-radius: 8px;
-      background: #F4F4F4;
-      resize: none;
-    }
-
-    input {
-      margin-bottom: 15px;
-    }
-  }
-
-  &--credit {}
-
   &__dialog {
     box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.2);
     border-radius: 24px;
@@ -70,8 +18,11 @@
     &--large-plus {
       width: 900px;
     }
-  }
 
+    &--middle {
+      width: 600;
+    }
+  }
 
   .product-card {
     margin-bottom: 20px;
@@ -212,6 +163,263 @@
       border-radius: 6px;
       font: 500 16px/22px FuturaPT;
       color: #333333;
+    }
+
+    &--disabled {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 12px;
+      font: 600 20px/26px FuturaPT;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid rgba(216, 216, 216, .5);
+
+    @include screen(xl) {
+      margin-top: 20px;
+      padding: 20px 20px 0;
+    }
+
+    @include screen(l) {
+      margin-top: 30px;
+      padding: 20px 30px 0 30px;
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+      font: normal 14px/16px Helvetica;
+      color: #30373D;
+    }
+
+    input+label::after {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: -5px;
+      margin: auto;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background-color: #F6F6F6;
+    }
+
+    input:checked+label::before {
+      content: "";
+      position: absolute;
+      left: -21px;
+      top: 0;
+      width: 12px;
+      height: 10px;
+      background: url("../img/pic/ico/check-orange.svg") no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+
+    a {
+      color: #FF7914;
+      border-bottom: 1px solid #FF7914;
+
+      @include screen(x) {
+        display: block;
+        width: max-content;
+      }
+    }
+  }
+
+  &--maps {
+    .popup__dialog {
+      padding: 35px 0 0;
+      overflow: hidden;
+    }
+
+    .title {
+      padding-left: 40px;
+    }
+
+    iframe {
+      margin-top: 15px;
+      margin-bottom: -10px !important;
+      width: 100%;
+      height: 410px;
+    }
+  }
+
+  &--question {
+    textarea {
+      padding: 15px;
+      margin-bottom: 15px;
+      max-height: 160px;
+      border: 1px solid #ECECEC;
+      border-radius: 8px;
+      background: #F4F4F4;
+      resize: none;
+    }
+  }
+
+  &--review {
+    p {
+      max-width: none !important;
+    }
+
+    textarea {
+      margin-bottom: 15px;
+      padding: 15px;
+      max-height: 80px;
+      border: 1px solid #ECECEC;
+      border-radius: 8px;
+      background: #F4F4F4;
+      resize: none;
+    }
+
+    input {
+      margin-bottom: 15px;
+    }
+  }
+
+  &--message {
+    .popup__container {
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(216, 216, 216, .5);
+    }
+
+    p {
+      margin-top: 15px;
+      margin-bottom: 0;
+      max-width: inherit;
+      font: normal 14px/20px Helvetica;
+      color: rgba(48, 55, 61, .5);
+    }
+  }
+
+  &--accepted {
+    p {
+      max-width: inherit;
+    }
+  }
+
+  &--pay {
+    .title {
+      margin-bottom: 0;
+    }
+
+    .popup__link {
+      margin: 30px auto;
+      display: block;
+      width: max-content;
+      color: #FF7914;
+      border-bottom: 1px solid #FF7914;
+    }
+
+    .popup__list-select {
+      margin-top: 30px;
+      border-radius: 8px;
+      background: #F7F7F7;
+
+      img {
+        mix-blend-mode: darken;
+      }
+
+      span {
+        font: 500 14px/18px Helvetica;
+
+        @include screen(xl) {
+          text-align: center;
+        }
+
+        @include screen(l) {
+          text-align: left;
+        }
+      }
+
+      li {
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+
+        @include screen(xl) {
+          padding: 20px;
+        }
+
+        @include screen(l) {
+          padding: 20px 10px 20px;
+        }
+
+        &:not(:last-of-type) {
+          position: relative;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: rgba(185, 186, 186, .3);
+
+            @include screen(xl) {
+              right: 0;
+              left: 0;
+              bottom: 0;
+              margin: auto;
+              width: 90%;
+              height: 2px;
+            }
+
+            @include screen(l) {
+              right: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              width: 2px;
+              height: 40px;
+            }
+          }
+
+          /* @include screen(xl) {
+            border-bottom: 1px solid #E9E9E9;
+          }
+
+          @include screen(l) {
+            border-right: 1px solid #E9E9E9;
+          } */
+        }
+
+        /* &:first-of-type {
+          border-radius: 10px 0 0 10px;
+        }
+
+        &:last-of-type {
+          border-radius: 0 10px 10px 0;
+        } */
+
+        &.active {
+          z-index: 1;
+
+          &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 85%;
+            height: 6px;
+            background-color: #14CBFF;
+            border-radius: 0 0 6px 6px;
+          }
+
+          span {
+            display: inline-block;
+            color: #14CBFF;
+
+            @include screen(l) {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
     }
   }
 }

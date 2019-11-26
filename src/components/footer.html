@@ -144,6 +144,7 @@
     <li class="uk-width-1-2 uk-width-auto@l uk-flex-last@l">antonov.design</li>
   </ul>
 </footer>
+<button type="button" data-href="#popupLogin" data-uk-toggle>Вам перезвонить?</button>
 
 <!-- <div class="backdrop" data-uk-toggle="target: body; cls: bg-shadowed"></div> -->
 
@@ -166,6 +167,7 @@
     </button>
   </div>
 </div>
+
 <!-- OneClick -->
 <div id="popupOneClick" class="popup popup--one-click uk-flex-top" data-uk-modal>
   <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -207,6 +209,7 @@
     </div>
   </div>
 </div>
+
 <!-- Credit -->
 <div id="popupCredit" class="popup popup--credit uk-flex-top" data-uk-modal>
   <div class="popup__dialog popup__dialog--medium uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -284,6 +287,7 @@
     </div>
   </div>
 </div>
+
 <!-- CartAdd -->
 <div id="popupCartAdd" class="popup popup--cart-add uk-flex-top" data-uk-modal>
   <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -313,6 +317,7 @@
     <button class="btn btn--gray" type="button">Продолжить покупки</button>
   </div>
 </div>
+
 <!-- Question -->
 <div id="popupQuestion" class="popup popup--question uk-flex-top" data-uk-modal>
   <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -335,6 +340,7 @@
     </button>
   </div>
 </div>
+
 <!-- Reviews -->
 <div id="popupAddsReview" class="popup popup--review uk-flex-top" data-uk-modal>
   <div class="popup__dialog popup__dialog--large uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -444,6 +450,7 @@
     </button>
   </div>
 </div>
+
 <!-- Thanks -->
 <div id="popupThanks" class="popup uk-flex-top" data-uk-modal>
   <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -459,6 +466,7 @@
     </button>
   </div>
 </div>
+
 <!-- Map -->
 <div id="popupMaps" class="popup popup--maps uk-flex-top" data-uk-modal>
   <div class="popup__dialog popup__dialog--large-plus uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -470,6 +478,123 @@
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.9365552051452!2d30.357610666329574!3d59.9331949318742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe1a3899db8dc698!2z0J3QvtGC0LDRgNC40LDQu9GM0L3QsNGPINC60L7QvdGC0L7RgNCwICLQktC-0YHRgdGC0LDQvdC40Y8gNiI!5e0!3m2!1sru!2sru!4v1563539776241!5m2!1sru!2sru"
       width="100" height="500" style="border:0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Login -->
+<div id="popupLogin" class="popup uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--middle uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+    <h2 class="title uk-margin-bottom">Войти или создать профиль</h2>
+    <div class="uk-flex uk-flex-column">
+      <label>Контактный телефон</label>
+      <input type="text" placeholder="+7">
+    </div>
+
+    <button class="btn btn--orange-gradient" type="button">
+      <span>Войти</span>
+    </button>
+
+    <div class="popup__footer uk-flex uk-flex-column">
+      <div class="uk-margin-small-bottom">
+        <input class="uk-hidden" type="checkbox" id="g1" name="g1" checked="">
+        <label for="g1">Согласен с условиями <a href="#">Публичной оферты</a></label>
+      </div>
+      <div>
+        <input class="uk-hidden" type="checkbox" id="g2" name="g2">
+        <label for="g2">Получать эксклюзивные скидки в SMS‑рассылке</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Message -->
+<div id="popupMessage" class="popup popup--message uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--middle uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+    <h2 class="title uk-margin-bottom">Введите код из СМС</h2>
+    <div class="popup__container uk-flex uk-flex-middle">
+      <div class="uk-margin-small-right">
+        <img src="img/pic/ico/popup-arrow.svg" width="40" height="40" alt="">
+      </div>
+      <div class="uk-flex uk-flex-column">
+        <span>Код выслан на номер</span>
+        <span>+7 098 765 43 21</span>
+      </div>
+    </div>
+    <div class="uk-flex uk-flex-column">
+      <input type="text">
+      <p>Повторная доставка доступна через 48 секунд</p>
+    </div>
+
+    <button class="btn btn--disabled" type="button">
+      <span>Остались вопросы?</span>
+    </button>
+
+    <div class="popup__footer">
+      <input class="uk-hidden" type="checkbox" id="a1" name="a1" checked="">
+      <label for="a1">Согласен с условиями <a href="#">Публичной оферты</a></label>
+    </div>
+  </div>
+</div>
+
+<!-- Pay -->
+<div id="popupPay" class="popup popup--pay uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--middle uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+    <h2 class="title">Доступно 5065&nbsp;&#8381;</h2>
+    <span>Выберите куда хотите получить выплату</span>
+
+    <ul class="popup__list-select uk-flex uk-flex-column@s uk-child-width-1-2@l uk-margin-bottom">
+      <li class="uk-flex uk-flex-center uk-flex-middle">
+        <div class="uk-margin-right@l uk-margin-right@s">
+          <img src="img/pic/ico/popup-cash.svg" width="50" height="48" alt="">
+        </div>
+        <span>На э-кошелек <br>Qiwi, Webmoney</span>
+      </li>
+      <li class="active uk-flex uk-flex-center uk-flex-middle">
+        <div class="uk-margin-right@l uk-margin-right@s">
+          <img src="img/pic/ico/popup-card.svg" width="60" height="40" alt="">
+        </div>
+        <span>На карту <br>Visa, MC, Мир</span>
+      </li>
+    </ul>
+    <div class="uk-flex uk-flex-column">
+      <label>Номер карты, телефона или эл. кошелька</label>
+      <input type="text">
+    </div>
+
+    <button class="btn btn--orange-gradient" type="button">
+      <span>Получить деньги</span>
+    </button>
+
+    <a class="popup__link" href="#">Есть вопросы?</a>
+
+    <div class="popup__footer">
+      <input class="uk-hidden" type="checkbox" id="z1" name="z1" checked="">
+      <label for="z1">Согласен с условиями <a href="#">Публичной оферты</a></label>
+    </div>
+  </div>
+</div>
+
+<!-- Accepted -->
+<div id="popupAccepted" class="popup popup--accepted uk-flex-top" data-uk-modal>
+  <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    <svg class="popup__close uk-modal-close-default" width="25" height="25">
+      <use xlink:href="img/symbol/sprite.svg#close" />
+    </svg>
+    <h2 class="title uk-margin-bottom">Заявка принята!</h2>
+    <p>Заявка отправлена, мы свяжемся с Вами в течении дня. Так&nbsp;же Вы можете связаться с нами по телефону: <a
+        href="tel:88125076559">(812)&nbsp;507-65-59</a></p>
+    <button class="btn btn--orange-gradient" type="button">
+      <span>Понятно</span>
+    </button>
   </div>
 </div>
 
