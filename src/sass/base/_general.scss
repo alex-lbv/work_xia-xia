@@ -223,3 +223,48 @@ img {
     }
   }
 }
+
+/* nice-select */
+
+.nice-select {
+  min-width: 215px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E7E7E7 !important;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 10px !important;
+
+  &::after {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0;
+    right: 12px;
+    margin: auto !important;
+    height: 8px !important;
+    width: 8px !important;
+    border-bottom: 2px solid #FF7914 !important;
+    border-right: 2px solid #FF7914 !important;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out !important;
+  }
+
+  .option {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    min-height: auto !important;
+    padding: 15px 15px !important;
+    font: normal 14px/20px Helvetica !important;
+    color: #30373D !important;
+
+    &.selected {
+      font-weight: 500 !important;
+    }
+  }
+
+  &.open .list {
+    width: 100%;
+  }
+}

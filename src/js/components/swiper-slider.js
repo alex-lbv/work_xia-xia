@@ -59,7 +59,6 @@ var swiperArticle = new Swiper('.swiper-article', {
     },
     1200: {
       slidesPerView: 2,
-
     }
   },
 });
@@ -181,18 +180,22 @@ $(window).on('resize', function () {
 $(document).ready(function () {
 
   var swiperGeneral = new Swiper('.tab-general__swiper', {
-    mousewheel: true,
+    /* mousewheel: true, */
     slidesPerView: 2,
-    direction: 'vertical',
-    scrollbar: {
-      el: '.swiper-scrollbar',
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.tab-general__swiper-button-next',
     },
+    /* direction: 'vertical', */
+    /*  scrollbar: {
+       el: '.swiper-scrollbar',
+     }, */
     breakpoints: {
       640: {
-        spaceBetween: 10,
+       /*  spaceBetween: 10,
         slidesPerView: 1,
         direction: 'horizontal',
-        mousewheel: false,
+        mousewheel: false, */
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
@@ -200,10 +203,10 @@ $(document).ready(function () {
         },
       },
       1200: {
-        spaceBetween: 10,
+        /* spaceBetween: 10,
         slidesPerView: 2,
         direction: 'horizontal',
-        mousewheel: false,
+        mousewheel: false, */
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
@@ -214,17 +217,20 @@ $(document).ready(function () {
   });
 
   var galleryThumbs = new Swiper('.gallery-thumbs', {
-    spaceBetween: 20,
+    spaceBetween: 18,
     slidesPerView: 5,
     freeMode: true,
+    direction: 'vertical',
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     breakpoints: {
       640: {
         slidesPerView: 4,
+        direction: 'horizontal',
       },
       1200: {
         slidesPerView: 8,
+        direction: 'horizontal',
       }
     },
   });
