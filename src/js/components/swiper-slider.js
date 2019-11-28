@@ -14,6 +14,8 @@ document.querySelectorAll(".swiper-products").forEach(function (slider, index) {
     spaceBetween: 10,
     slidesPerView: 4,
     loop: true,
+    threshold: 20,
+    followFinger: false,
     breakpoints: {
       550: {
         slidesPerView: 1,
@@ -192,10 +194,10 @@ $(document).ready(function () {
      }, */
     breakpoints: {
       640: {
-       /*  spaceBetween: 10,
-        slidesPerView: 1,
-        direction: 'horizontal',
-        mousewheel: false, */
+        /*  spaceBetween: 10,
+         slidesPerView: 1,
+         direction: 'horizontal',
+         mousewheel: false, */
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',

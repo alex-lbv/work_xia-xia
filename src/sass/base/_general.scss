@@ -36,31 +36,6 @@ button {
   background-color: transparent;
 }
 
-/* .backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, .2);
-  visibility: hidden;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity .3s;
-
-  header.search-active & {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
-  }
-
-  header.header-catalog-active & {
-    visibility: visible;
-    opacity: 1;
-    z-index: 101;
-  }
-} */
-
 .title {
   color: #2B2D30;
 
@@ -140,6 +115,25 @@ button {
   }
 }
 
+.bg-full-width-header {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    display: block !important;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+    background-color: #f7f7f7;
+  }
+}
+
 select {
   display: none;
 }
@@ -167,8 +161,12 @@ img {
 }
 
 .menu--opened {
-  .header__catalog-menu {
+  .header__catalog-container {
     display: block;
+  }
+
+  .header__catalog-menu {
+    /* display: block; */
   }
 
   .main-banner .header__catalog-menu {
@@ -177,22 +175,48 @@ img {
 
   .backdrop {
     display: block;
+    /*  background: rgba(255, 255, 255, .3); */
+    backdrop-filter: blur(5px);
+    /* filter: url('#blur');
+    filter: blur(5px); */
+
+    &::before {
+      content: '';
+      position: fixed;
+      opacity: 1;
+      width: 100%;
+      height: 100vh;
+      filter: url('#blur');
+      filter: blur(5px);
+    }
   }
+
+  /* header,
+  footer,
+  .uk-container {
+    filter: url('#blur');
+    filter: blur(5px);
+  } */
 
   .header__catalog {
     z-index: 300;
   }
 
   .header__catalog-btn {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    position: relative;
 
-    span {
+    &::before {
+      display: block;
+    }
+
+    /* span {
       color: #FF7914;
-    }
+    } */
 
-    svg {
+    /* svg {
       fill: #FF7914;
-    }
+    } */
   }
 }
 
@@ -202,9 +226,9 @@ img {
   }
 
   .search {
-    position: absolute;
+    /*  position: absolute; */
     z-index: 350;
-    width: 100%;
+    /*  width: 100%; */
   }
 
   .search input {
@@ -227,23 +251,6 @@ img {
     pointer-events: inherit;
     z-index: 350;
   }
-
-  &-mobile {
-    .backdrop {
-      display: block;
-    }
-
-    /* .search {
-      position: absolute;
-      z-index: 350;
-      width: 100%;
-    } */
-
-    .searchbox {
-      position: fixed;
-      left: 0;
-    }
-  }
 }
 
 .position-right {
@@ -261,8 +268,6 @@ img {
     }
   }
 }
-
-/* nice-select */
 
 .nice-select {
   min-width: 215px !important;

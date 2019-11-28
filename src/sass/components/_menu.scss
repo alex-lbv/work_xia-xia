@@ -29,8 +29,16 @@
 
       &>.menu-label {
         @include screen(xl) {
+          border-color: transparent;
           font: 600 18px/18px Helvetica;
           padding: 26px 20px 20px 20px;
+          background-color: #f7f7f7;
+        }
+
+        svg {
+          position: absolute;
+          top: 28px;
+          right: 20px;
         }
       }
 
@@ -56,7 +64,7 @@
     }
 
     li {
-      position: relative;
+      /*  position: relative; */
 
       &.has-child {
         &>a:first-child {
@@ -64,10 +72,10 @@
 
           &::after {
             content: "";
-            position: relative;
-            top: 0;
+            position: absolute;
+            top: -2px;
             bottom: 0;
-            right: 0;
+            right: 20px;
             display: inline-block;
             margin: auto auto auto 8px;
             width: 8px;
@@ -75,7 +83,7 @@
             border-top: 2px solid;
             border-left: 2px solid;
             border-radius: 3px 0 0 0;
-            transform: rotate(225deg) translate(0, 50%);
+            transform: rotate(135deg);
           }
         }
       }
@@ -143,10 +151,36 @@
 
   &__sublist {
     @include screen(xl) {
-      height: 0;
-      /* opacity: 0; */
       border-top: 1px solid #E6E6E6;
       overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 65px;
+      background: #ffffff;
+      z-index: 10;
+      transform: translate(100%);
+      transition: transform .5s;
+      /*   right: 500%; */
+    }
+
+    &.open-list {
+      transform: translate(0%);
+      /* right: 0; */
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: calc(100% - 65px);
+        background: #ffffff;
+        z-index: 100;
+      }
+
+      .menu__footer {
+        display: none;
+      }
     }
 
     @include screen(l) {
@@ -186,12 +220,24 @@
 
     a {
       @include screen(xl) {
-        font: normal 15px/18px Helvetica;
-        padding: 10px 20px;
+        font: normal 16px/19px Helvetica;
+        padding: 20px;
       }
 
       &::after {
-        display: none;
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: 0;
+        right: 20px;
+        display: inline-block;
+        margin: auto auto auto 8px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        border-radius: 3px 0 0 0;
+        transform: rotate(135deg);
       }
 
       @include screen(l) {
@@ -201,6 +247,7 @@
     }
 
     li {
+      border-top: 1px solid #E6E6E6;
       position: static;
 
       &:hover .menu__innerlist {
@@ -214,10 +261,26 @@
 
   &__innerlist {
     @include screen(xl) {
-      height: 0;
+      /*  height: 0; */
       /* opacity: 0; */
-      border-top: 1px solid #E6E6E6;
-      overflow: hidden;
+      /* border-top: 1px solid #E6E6E6;
+      overflow: hidden; */
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background: #ffffff;
+      z-index: 11;
+      transform: translate(100%);
+      transition: transform .5s;
+    }
+
+    &.open-sublist {
+      transform: translate(0%);
+
+      .menu__footer {
+        display: none;
+      }
     }
 
     @include screen(l) {
@@ -257,8 +320,8 @@
 
     a {
       @include screen(xl) {
-        font: normal 15px/18px Helvetica;
-        padding: 10px 20px;
+        font: normal 16px/19px Helvetica;
+        padding: 20px;
       }
 
       &::after {
@@ -270,6 +333,19 @@
         font: 500 15px/18px Helvetica;
       }
     }
+  }
+
+  .uk-offcanvas-bar {
+    width: 100%;
+    transform: translate(-100%);
+    left: 0;
+    transition: transform .5s;
+    overflow-x: hidden;
+  }
+
+  &.uk-open>.uk-offcanvas-bar {
+    /* left: 0; */
+    transform: translate(0%) !important;
   }
 
   &.uk-offcanvas:not(.uk-open) {
@@ -355,10 +431,25 @@
 
   &__wrap {
     @include screen(xl) {
+      position: relative;
       display: flex;
       align-items: stretch;
       flex-wrap: wrap;
       height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__prev {
+    border: none !important;
+
+    a {
+      color: #FF7914;
+
+      &::after {
+        content: "";
+        display: none;
+      }
     }
   }
 }

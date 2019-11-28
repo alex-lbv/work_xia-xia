@@ -71,13 +71,11 @@
     }
 
     .gallery-thumbs .swiper-slide {
-      /*  padding: 10px 5px !important; */
       background-color: #ffffff !important;
       background-size: contain !important;
       background-position: center !important;
       background-repeat: no-repeat !important;
       border-radius: 6px;
-      /* width: 70px !important; */
       height: 60px !important;
       opacity: 0.4;
       cursor: pointer;
@@ -138,27 +136,18 @@
     }
   }
 
-  /* ---------------------------------------------- */
-
   &__price {
-    /* border: 1px solid #F0F0F0;
-    border-radius: 12px; */
     border-top: 1px solid #EAEAEA;
     border-bottom: 1px solid #EAEAEA;
 
-
     @include screen(xl) {
-      /* padding: 15px 20px;
-      margin-bottom: 10px; */
-      margin: 20px 20px 15px;
-      padding: 20px 0;
+      margin: 15px 20px;
+      padding: 15px 0 5px;
     }
 
     @include screen(l) {
-      /*  padding: 19px 40px 22px;
-      margin-bottom: 20px; */
-      margin: 20px 20px 15px;
-      padding: 20px 0;
+      margin: 15px 20px 15px;
+      padding: 10px 0;
     }
 
     &-old {
@@ -175,75 +164,11 @@
       color: #FF5C17;
       background: #FFF0EC;
       border-radius: 10.5px;
-
-      @include screen(l) {
-        /* margin-bottom: 3px; */
-      }
     }
 
     &-total {
       font: 700 38px/28px Helvetica;
       color: #333333;
-    }
-
-    &-credit {
-      @include screen(xl) {
-        /*  margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid rgba(185, 186, 186, .3); */
-      }
-
-      @include screen(l) {
-        /* margin-left: 40px;
-        padding: 13px 0 0 40px;
-        border-left: 1px solid rgba(185, 186, 186, .3); */
-      }
-
-      .tab-general__subtitle {
-        /* margin-bottom: 15px; */
-      }
-
-      span:not(.tab-general__subtitle) {
-        /* font: 300 16px/36px Helvetica;
-        color: #333333; */
-
-        span {
-          /* margin: 0 5px;
-          font-size: 40px; */
-        }
-      }
-
-      button {
-        /* max-width: max-content;
-        text-align: left;
-        padding: 0;
-        border-bottom: 1px solid transparent;
-        font: 500 14px/24px FuturaPT;
-        color: #FF7914;
-        transition: border-color .3s; */
-
-        &:hover {
-          /* border-bottom: 1px solid #FF7914; */
-        }
-
-        @include screen(xl) {
-          /* margin-left: 10px; */
-        }
-      }
-    }
-
-    &-buttons {
-      /* margin-top: 15px; */
-
-      .btn {
-        /*  padding: 12px 15px;
-        font: 500 18px/24px FuturaPT;
-        border-radius: 6px; */
-
-        &:first-of-type {
-          /*  margin-bottom: 10px; */
-        }
-      }
     }
   }
 
@@ -333,42 +258,6 @@
         }
       }
 
-      /*  &:last-of-type {
-        li {
-          position: relative;
-          
-
-          &:first-of-type {
-            color: #1FC119;
-
-            @include screen(xl) {
-              margin-bottom: 10px;
-              padding-bottom: 10px;
-              border-bottom: 1px solid #F0F0F0;
-            }
-
-            @include screen(l) {
-              margin-right: 60px;
-            }
-          }
-
-          &:last-of-type {
-            color: #FF7914;
-            cursor: pointer;
-
-            &::before {
-              content: "";
-              position: absolute;
-              left: 5px;
-              top: 2px;
-              width: 10px;
-              height: 14px;
-              background: url('../img/pic/ico/geo.svg') no-repeat;
-            }
-          }
-        }
-      } */
-
       li {
         padding-left: 25px;
       }
@@ -383,9 +272,7 @@
     }
 
     @include screen(l) {
-      /* margin-left: 30px; */
       padding: 0 5px 0 40px;
-      /*  border-left: 1px solid rgba(185, 186, 186, .3); */
     }
 
     ul {
@@ -509,7 +396,7 @@
 
       @include screen(xl) {
         padding-right: 15px;
-        padding-bottom: 35px;
+        padding-bottom: 10px;
       }
 
       @include screen(l) {
@@ -658,141 +545,6 @@
     /* ------------------ */
   }
 
-  /* &__options {
-    @include screen(xl) {
-      position: relative;
-      height: 50px;
-    }
-
-    &-wrap {
-      @include screen(xl) {
-        margin-bottom: 20px;
-      }
-
-      @include screen(l) {
-        margin-bottom: 25px;
-      }
-    }
-
-    &-toggle {
-      @include screen(xl) {
-        position: relative;
-        padding: 8px 12px 7px 15px;
-        width: 90px;
-        font: 500 12px/15px Helvetica;
-        color: #FF7914;
-        background: #F7F7F7;
-        border-radius: 8px;
-      }
-
-      svg {
-        width: 10px;
-        height: 10px;
-        fill: #333333;
-      }
-    }
-
-    .tab-general__subtitle {
-      @include screen(xl) {
-        margin-bottom: 5px;
-      }
-
-      @include screen(l) {
-        margin-right: 10px;
-      }
-    }
-
-    ul {
-      @include screen(xl) {
-        position: absolute;
-        top: 55px;
-        width: 90px;
-        background: #FFFFFF;
-        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
-        border-radius: 6px;
-        z-index: 10;
-      }
-
-      &::after {
-        @include screen(xl) {
-          content: "";
-          display: block !important;
-          position: absolute;
-          top: -8px;
-          left: 73px;
-          border: 8px solid transparent;
-          border-top: none;
-          border-bottom: 8px solid #ffffff;
-          z-index: 11;
-          transform: translateX(-50%);
-        }
-      }
-    }
-
-    ul:not(.visible) {
-      @include screen(xl) {
-        opacity: 0;
-        pointer-events: none;
-      }
-    }
-
-    li {
-      @include screen(l) {
-        &:not(:last-child) {
-          margin-right: 5px;
-        }
-      }
-
-      &:first-child {
-        @include screen(xl) {
-          border-radius: 6px 6px 0 0;
-          overflow: hidden;
-        }
-      }
-
-      &:last-child {
-        @include screen(xl) {
-          border-radius: 0 0 6px 6px;
-          overflow: hidden;
-        }
-      }
-
-      &.active {
-        a {
-          @include screen(xl) {
-            color: #FF7914;
-            background: #F7F7F7;
-          }
-
-          @include screen(l) {
-            color: #FF7914;
-            background: #F7F7F7;
-            border-color: transparent;
-          }
-        }
-      }
-    }
-
-    a {
-      @include screen(xl) {
-        display: block;
-        padding: 15px 20px;
-        font: 500 12px/15px Helvetica;
-        color: #333333;
-        background: #FFFFFF;
-      }
-
-      @include screen(l) {
-        padding: 8px 15px 7px;
-        border: 1px solid #E2E2E2;
-        border-radius: 8px;
-        font: 500 12px/15px Helvetica;
-        color: #333333;
-        background: #FFFFFF;
-      }
-    }
-  } */
-
   .features {
     @include screen(l) {
       padding-top: 20px;
@@ -801,7 +553,7 @@
     li {
       &:not(:last-of-type) {
         @include screen(l) {
-          margin-bottom: 30px;
+          margin-bottom: 50px;
         }
       }
     }
@@ -827,7 +579,6 @@
     border-radius: 8px;
 
     @include screen(l) {
-      padding: 15px0 20px;
       width: 100%;
       max-width: 410px;
     }
@@ -858,7 +609,7 @@
     }
 
     .nice-select {
-      margin-top: 9px;
+      margin-top: 4px;
       padding-top: 4px;
       height: inherit;
 
@@ -886,7 +637,7 @@
   }
 
   &__oneclick {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 0 20px;
 
     &-title {
@@ -902,7 +653,7 @@
 
     input {
       width: 100%;
-      padding: 15px;
+      padding: 13px 15px;
       font: normal 14px/20px Helvetica;
       color: #30373D;
       background: #FFFFFF;
@@ -921,7 +672,7 @@
     }
 
     .btn {
-      padding: 15px 13px;
+      padding: 13px 13px;
       font: 600 18px/21px FuturaPT;
       text-transform: uppercase;
       border-radius: 8px;
@@ -932,8 +683,9 @@
     }
 
     &-btn {
+      margin-top: 15px;
       width: 100%;
-      padding: 19px 15px;
+      padding: 14px 15px 13px;
       font: 600 18px/21px FuturaPT;
       text-transform: uppercase;
       background: linear-gradient(180deg, #90E744 0%, #53B525 100%);
@@ -985,6 +737,10 @@
   }
 
   &__options {
-    padding: 20px 20px 0;
+    padding: 15px 20px 0;
+
+    @include screen(l) {
+      align-items: baseline;
+    }
   }
 }

@@ -13,7 +13,7 @@
   }
 
   .swiper-slide {
-    background: #f7f7f7;
+    background: #fdfdfd;
 
     @include screen(l) {
       padding-bottom: 30px;
@@ -29,7 +29,8 @@
     }
 
     @include screen(l) {
-      padding: 50px 0 99px 50px;
+      padding: 50px 0 30px 50px;
+      min-height: 420px;
     }
 
     .btn {
@@ -47,16 +48,19 @@
 
     &>div {
       @include screen(l) {
-        width: 900px;
-        margin: 10px 0 auto auto;
-        border: 1px solid #F0F0F0;
-        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+        width: 875px;
+        margin: 10px auto auto 0;
+        /* border: 1px solid #F0F0F0; */
+        /*  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1); */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
         position: relative;
+        overflow: hidden;
+        mix-blend-mode: darken;
       }
     }
 
-    &--mia3 {
+    &--1 {
       .main-banner__image {
         width: 100%;
         height: auto;
@@ -76,7 +80,7 @@
       }
     }
 
-    &--note8pro {
+    &--2 {
       .main-banner__image {
         width: 100%;
         height: auto;
@@ -96,7 +100,7 @@
       }
     }
 
-    &--airs3 {
+    &--3 {
       .main-banner__image {
         width: 100%;
         height: auto;
@@ -113,6 +117,27 @@
           height: 100%;
           object-fit: contain;
           background: #F7F5F6;
+        }
+      }
+    }
+
+    &--4 {
+      .main-banner__image {
+        width: 100%;
+        height: auto;
+
+        @include screen(xl) {
+          position: absolute;
+          top: 10px;
+          max-width: 390px;
+        }
+
+        @include screen(l) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          /* background: #F7F5F6; */
         }
       }
     }
@@ -247,6 +272,10 @@
     }
   }
 
+  &__pagination-container {
+    position: relative;
+  }
+
   .swiper-pagination {
     @include screen(xl) {
       transform: translateY(-5px);
@@ -254,9 +283,8 @@
 
     @include screen(l) {
       left: 0;
-      right: 0;
       margin: auto;
-      transform: translate(-100px, -30px);
+      transform: translate(25px, -30px);
     }
 
     &-bullet {
@@ -299,6 +327,57 @@
     li:last-of-type {
       a::after {
         display: none;
+      }
+    }
+  }
+
+  &__mini {
+    @include screen(l) {
+      position: absolute;
+      z-index: 10;
+      top: -450px;
+      right: 15px;
+    }
+
+    &-wrap {
+      @include screen(l) {
+        position: relative;
+      }
+    }
+
+
+    &-block {
+      @include screen(l) {
+        padding: 30px 15px;
+        width: 285px;
+        height: 205px;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      p {
+        font: 500 24px/24px FuturaPT;
+        color: #333333;
+      }
+
+      span {
+        font: 500 16px/24px FuturaPT;
+        color: #333333;
+      }
+
+      &--1 {
+        margin-bottom: 10px;
+        background: url(../img/pic/bg/main-banner-mini-1.jpg) no-repeat, #ffffff;
+        background-size: 205px 110px;
+        background-position: center 90px;
+        box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      &--2 {
+        background: url(../img/pic/bg/main-banner-mini-2.jpg) no-repeat, #ffffff;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
       }
     }
   }
