@@ -25,11 +25,11 @@
     z-index: 1;
 
     @include screen(xl) {
-      padding: 320px 15px 50px 20px;
+      /*  padding: 320px 15px 50px 20px; */
     }
 
     @include screen(l) {
-      padding: 50px 0 30px 50px;
+      /*  padding: 50px 0 30px 50px; */
       min-height: 420px;
     }
 
@@ -44,7 +44,16 @@
 
   &__container {
     position: relative;
-    min-height: 425px;
+
+    @include screen(xl) {
+      padding-left: 0;
+      padding-right: 0;
+      height: 402px;
+    }
+
+    @include screen(l) {
+      min-height: 425px;
+    }
 
     &>div {
       @include screen(l) {
@@ -62,20 +71,25 @@
 
     &--1 {
       .main-banner__image {
+        display: block;
         width: 100%;
         height: auto;
 
         @include screen(xl) {
-          position: absolute;
-          top: 10px;
-          max-width: 390px;
+          /*  position: absolute; */
+          /* max-width: 390px; */
+          margin: 0 auto;
+          height: 402px;
+          width: inherit;
+          max-width: inherit;
         }
 
         @include screen(l) {
-          position: absolute;
-          max-width: 425px;
-          top: 50px;
-          left: 400px;
+          /* position: absolute; */
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          /* background: #F7F5F6; */
         }
       }
     }
@@ -107,8 +121,12 @@
 
         @include screen(xl) {
           position: absolute;
-          top: 10px;
-          max-width: 390px;
+          /* top: 10px;
+          max-width: 390px; */
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          background: #F7F5F6;
         }
 
         @include screen(l) {
@@ -134,10 +152,9 @@
 
         @include screen(l) {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          /* background: #F7F5F6; */
+          max-width: 425px;
+          top: 50px;
+          left: 400px;
         }
       }
     }
@@ -209,11 +226,10 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: url(../img/pic/ico/arrow-next.svg) center no-repeat, #F7F7F7;
     cursor: pointer;
     mix-blend-mode: luminosity;
 
-    @include screen(x) {
+    /* @include screen(x) {
       bottom: calc(50% - 80px);
       right: 20px;
     }
@@ -221,11 +237,18 @@
     @include screen(sm) {
       bottom: calc(50% + 20px);
       right: 20px;
+    } */
+
+    @include screen(xl) {
+      bottom: calc(50% - 140px);
+      right: 20px;
+      background: url(../img/pic/ico/arrow-next.svg) center no-repeat, rgba(0, 0, 0, .5);
     }
 
     @include screen(l) {
       top: calc(50% - 80px);
       right: 20px;
+      background: url(../img/pic/ico/arrow-next.svg) center no-repeat, #F7F7F7;
     }
 
     &:hover {
@@ -241,11 +264,11 @@
     height: 50px;
     background: #F7F7F7;
     border-radius: 50%;
-    background: url(../img/pic/ico/arrow-next.svg) center no-repeat, #F7F7F7;
+
     cursor: pointer;
     mix-blend-mode: luminosity;
 
-    @include screen(x) {
+    /* @include screen(x) {
       bottom: calc(50% - 80px);
       right: 80px;
     }
@@ -253,11 +276,17 @@
     @include screen(sm) {
       bottom: calc(50% + 20px);
       right: 80px;
+    } */
+    @include screen(xl) {
+      bottom: calc(50% - 140px);
+      right: 80px;
+      background: url(../img/pic/ico/arrow-next.svg) center no-repeat, rgba(0, 0, 0, .5);
     }
 
     @include screen(l) {
       left: 20px;
       top: calc(50% - 80px);
+      background: url(../img/pic/ico/arrow-next.svg) center no-repeat, #F7F7F7;
     }
 
     &:hover {
@@ -278,7 +307,7 @@
 
   .swiper-pagination {
     @include screen(xl) {
-      transform: translateY(-5px);
+      transform: translate(25px, 23px);
     }
 
     @include screen(l) {
@@ -289,7 +318,7 @@
 
     &-bullet {
       margin-right: 5px;
-      background: #E3E8EB;
+      background: #C9C9C9;
       opacity: 1;
       transition: background-color .3s, box-shadow .3s;
 
@@ -297,7 +326,7 @@
         vertical-align: top;
         width: 40px;
         height: 5px;
-        border-radius: 6px 6px 0 0;
+        border-radius: 0px 0px 6px 6px;
       }
 
       @include screen(l) {

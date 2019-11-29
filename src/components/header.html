@@ -63,6 +63,7 @@
         <div class="uk-offcanvas-bar">
           <div class="menu__wrap">
             <ul class="menu__list uk-flex uk-flex-between">
+              <!-- menu title -->
               <li class="menu-label uk-hidden@l">
                 <span>Каталог</span>
                 <button type="button" data-uk-toggle="target: #menuMobile">
@@ -71,52 +72,104 @@
                   </svg>
                 </button>
               </li>
-              <li class="has-child">
-                <a href="#" uk-toggle="target: ~ ul; cls: open-list">
-                  <span>Смартфоны</span>
+
+              <!-- menu-1 -->
+              <li class="has-child first-level-1">
+                <a href="#" uk-toggle="target: .first-level-1; cls: active">
+                  <span uk-toggle="target: .menu__list; cls: sublist-opened">Смартфоны</span>
                 </a>
+
+                <!-- submenu -->
                 <ul class="menu__sublist" id="cat-1">
+
+                  <!-- prev -->
                   <li class="menu__prev">
-                    <a href="#" uk-toggle="target: #cat-1; cls: open-list">Назад</a>
-                  </li>
-                  <li>
-                    <a href="#" title="Перейти на страницу" uk-toggle="target: ~ ul; cls: open-sublist">
-                      <span>Mi</span>
+                    <a href="#" uk-toggle="target: .first-level-1; cls: active">
+                      <span uk-toggle="target: .menu__list; cls: sublist-opened">Назад</span>
                     </a>
+                  </li>
+
+                  <li class="second-level-1">
+                    <a href="#" uk-toggle="target: .second-level-1; cls: active">
+                      <span uk-toggle="target: .menu__sublist; cls: sublist-opened">Mi</span>
+                    </a>
+
+                    <!-- inner-menu-1 -->
                     <ul class="menu__innerlist" id="cat-1-1">
+
+                      <!-- prev -->
                       <li class="menu__prev">
-                        <a href="#" uk-toggle="target: #cat-1-1; cls: open-sublist">Назад</a>
+                        <a href="#" uk-toggle="target: .second-level-1; cls: active">
+                          <span uk-toggle="target: .menu__sublist; cls: sublist-opened">Назад</span>
+                        </a>
                       </li>
+
                       <li>
                         <a href="#" title="Перейти на страницу">
                           <span>Mi 6</span>
                         </a>
                       </li>
+
                       <li>
                         <a href="#" title="Перейти на страницу">
                           <span>Mi 6 S</span>
                         </a>
                       </li>
+
                       <li>
                         <a href="#" title="Перейти на страницу">
                           <span>Mi 6 Pro</span>
                         </a>
                       </li>
+
                       <li>
                         <a href="#" title="Перейти на страницу">
                           <span>Mi 7</span>
                         </a>
                       </li>
+
                       <li>
                         <a href="#" title="Перейти на страницу">
                           <span>Mi 8</span>
                         </a>
                       </li>
+
                       <li>
                         <a href="#" title="Перейти на страницу">
                           <span>Mi 8 S</span>
                         </a>
                       </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 T</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 6 Pro</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 7</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 S</span>
+                        </a>
+                      </li>
+
                       <li>
                         <a href="#" title="Перейти на страницу">
                           <span>Mi 8 T</span>
@@ -124,11 +177,17 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#" title="Перейти на страницу">
+
+                  <li class="second-level-2">
+                    <a href="#" title="Перейти на страницу" uk-toggle="target: ~ ul; cls: open-sublist">
                       <span>Mi Note</span>
                     </a>
-                    <ul class="menu__innerlist">
+
+                    <!-- inner-menu-2 -->
+                    <ul class="menu__innerlist" id="cat-1-2">
+                      <li class="menu__prev">
+                        <a href="#" uk-toggle="target: #cat-1-2; cls: open-sublist">Назад</a>
+                      </li>
                       <li>
                         <a href="#" title="Перейти на страницу">
                           <span>Mi 6 Note</span>
@@ -158,10 +217,13 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
+
+              <!-- menu-2 -->
+              <li class="has-child first-level-2">
                 <a href="#">
-                  <span>Redmi</span>
+                  <span>«Умный дом»</span>
                 </a>
+
                 <ul class="menu__sublist">
                   <li>
                     <a href="#" title="Перейти на страницу">
@@ -187,9 +249,11 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
+
+              <!-- menu-3 -->
+              <li class="has-child first-level-3">
                 <a href="#">
-                  <span>Redmi Note</span>
+                  <span>Компьютерная техника</span>
                 </a>
                 <ul class="menu__sublist">
                   <li>
@@ -204,8 +268,12 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
-                <a href="#">Pocophone</a>
+
+              <!-- menu-4 -->
+              <li class="has-child first-level-4">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
                 <ul class="menu__sublist">
                   <li>
                     <a href="#" title="Перейти на страницу">
@@ -219,8 +287,12 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
-                <a href="#">Аксессуары</a>
+
+              <!-- menu-5 -->
+              <li class="has-child first-level-5">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
                 <ul class="menu__sublist">
                   <li>
                     <a href="#" title="Перейти на страницу">
@@ -234,8 +306,12 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
-                <a href="#">Электроника</a>
+
+              <!-- menu-6 -->
+              <li class="has-child first-level-6">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
                 <ul class="menu__sublist">
                   <li>
                     <a href="#" title="Перейти на страницу">
@@ -249,11 +325,147 @@
                   </li>
                 </ul>
               </li>
+
+              <!-- menu-7 -->
+              <li class="has-child first-level-7">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-8 -->
+              <li class="has-child first-level-8">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-9 -->
+              <li class="has-child first-level-9">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-10 -->
+              <li class="has-child first-level-10">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-11 -->
+              <li class="has-child first-level-11">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-12 -->
+              <li class="has-child first-level-12">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-13 -->
+              <li class="has-child first-level-13">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-14 -->
               <li class="menu__discount">
                 <a href="#">
                   <span>Скидки</span>
                 </a>
               </li>
+
             </ul>
             <div class="menu__list-info uk-hidden@l">
               <div>
