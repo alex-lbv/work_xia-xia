@@ -1,39 +1,13 @@
 <header class="header" uk-sticky="media: (max-width:1199px)">
   <div class="header__top uk-visible@l">
-    <div class="uk-container uk-flex uk-flex-between uk-padding uk-padding-remove-vertical">
+    <div class="uk-container uk-flex uk-flex-middle uk-flex-between uk-padding uk-padding-remove-vertical">
 
-      <!-- <div class="header__feedback">
-        <span data-href="#popupQuestion" data-uk-toggle>Задать вопрос</span>
-        <span class="feedback__online">Мы онлайн</span>
-      </div> -->
-
-      <div class="uk-flex uk-width-1-4@l">
+      <div class="uk-flex uk-width-1-5">
         <span class="header__top-text-gray uk-margin-small-right@l">Ваш город:</span>
-        <span>Москва</span>
+        <span class="header__top-text-orange">Санкт-Петербург</span>
       </div>
 
-      <div class="uk-flex uk-width-1-4@l uk-flex-right">
-        <a class="header__top-text-gray uk-margin-right@l" href="#">Регистрация</a>
-        <a class="header__top-text-orange" href="#">Войти в личный кабинет</a>
-      </div>
-    </div>
-  </div>
-  <div class="uk-container uk-flex uk-flex-between uk-flex-column">
-    <div class="header__container uk uk-flex uk-flex-middle uk-width-1-1@l">
-      <button type="button" class="header__hamburger uk-hidden@l" data-uk-toggle="target: #menuMobile">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a class="header__logo" href="index.html">
-        <picture>
-          <source srcset="img/pic/logo/xiaxia.svg" media="(min-width:1200px)">
-          <source srcset="img/pic/logo/xiaxia.svg" media="(min-width:375px)">
-          <img src="img/pic/logo/xiaxia.svg" alt="Логотип Xiaomi">
-        </picture>
-      </a>
-
-      <ul class="header__links-list uk-width-expand uk-flex uk-flex-between uk-visible@l">
+      <ul class="header__links-list uk-flex uk-flex-between uk-visible@l uk-width-expand">
         <li>
           <a href="warranty.html">Гарантия</a>
         </li>
@@ -57,51 +31,208 @@
         </li>
       </ul>
 
-      <!-- <div class="backdrop" data-uk-toggle="target: header; cls: search-active"></div> -->
-      <div class="header__contact">
-        <a href="tel:88125076559">
+      <div class="header__contact uk-flex uk-flex-middle">
+        <a class="uk-flex uk-flex-middle" href="tel:88125076559">
           <svg width="16" height="16">
             <use xlink:href="img/symbol/sprite.svg#phone" />
           </svg>
           <span>(812)507-65-59</span>
         </a>
-        <div>С 10:00 до 21:00 без выходных</div>
+        <div class="uk-margin-left">Бесплатно <br>Сб-Пт 10:00 - 19-00</div>
       </div>
     </div>
-    <div class="header__bottom uk-flex uk-flex-middle bg-full-width-white" uk-sticky="media: @l">
+  </div>
+
+  <div class="uk-container uk-flex uk-flex-between uk-flex-column bg-full-width-header">
+    <div class="header__container uk-flex uk-flex-middle uk-width-1-1@l bg-full-width-header" uk-sticky="media: @l">
+      <button type="button" class="header__hamburger uk-hidden@l" data-uk-toggle="target: #menuMobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source srcset="img/pic/logo/xiaxia.svg" media="(min-width:1200px)">
+          <source srcset="img/pic/logo/xiaxia.svg" media="(min-width:375px)">
+          <img src="img/pic/logo/xiaxia.svg" alt="Логотип Xiaomi">
+        </picture>
+      </a>
+
       <nav class="menu uk-offcanvas uk-width-expand uk-hidden@l" id="menuMobile"
-        data-uk-offcanvas="overlay: true; mode: reveal;">
+        data-uk-offcanvas="overlay: true; mode: slide;">
         <div class="uk-offcanvas-bar">
           <div class="menu__wrap">
             <ul class="menu__list uk-flex uk-flex-between">
+              <!-- menu title -->
               <li class="menu-label uk-hidden@l">
                 <span>Каталог</span>
+                <button type="button" data-uk-toggle="target: #menuMobile">
+                  <svg width="20" height="20" fill="#000000">
+                    <use xlink:href="img/symbol/sprite.svg#modal-close" />
+                  </svg>
+                </button>
               </li>
-              <li class="has-child">
-                <a href="#">
-                  <span>Mi</span>
+
+              <!-- menu-1 -->
+              <li class="has-child first-level-1">
+                <a href="#" uk-toggle="target: .first-level-1; cls: active">
+                  <span uk-toggle="target: .menu__list; cls: sublist-opened">Смартфоны</span>
                 </a>
-                <ul class="menu__sublist">
-                  <li>
-                    <a href="#" title="Перейти на страницу">
-                      <span>test 1</span>
+
+                <!-- submenu -->
+                <ul class="menu__sublist" id="cat-1">
+
+                  <!-- prev -->
+                  <li class="menu__prev">
+                    <a href="#" uk-toggle="target: .first-level-1; cls: active">
+                      <span uk-toggle="target: .menu__list; cls: sublist-opened">Назад</span>
                     </a>
-                    <ul class="menu__innerlist">
-                      <li>
-                        <a href="#" title="Перейти на страницу">
-                          <span>test 3</span>
+                  </li>
+
+                  <li class="second-level-1">
+                    <a href="#" uk-toggle="target: .second-level-1; cls: active">
+                      <span uk-toggle="target: .menu__sublist; cls: sublist-opened">Mi</span>
+                    </a>
+
+                    <!-- inner-menu-1 -->
+                    <ul class="menu__innerlist" id="cat-1-1">
+
+                      <!-- prev -->
+                      <li class="menu__prev">
+                        <a href="#" uk-toggle="target: .second-level-1; cls: active">
+                          <span uk-toggle="target: .menu__sublist; cls: sublist-opened">Назад</span>
                         </a>
                       </li>
+
                       <li>
                         <a href="#" title="Перейти на страницу">
-                          <span>test 5</span>
+                          <span>Mi 6</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 6 S</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 6 Pro</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 7</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 S</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 T</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 6 Pro</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 7</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 S</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 T</span>
                         </a>
                       </li>
                     </ul>
                   </li>
+
+                  <li class="second-level-2">
+                    <a href="#" title="Перейти на страницу" uk-toggle="target: ~ ul; cls: open-sublist">
+                      <span>Mi Note</span>
+                    </a>
+
+                    <!-- inner-menu-2 -->
+                    <ul class="menu__innerlist" id="cat-1-2">
+                      <li class="menu__prev">
+                        <a href="#" uk-toggle="target: #cat-1-2; cls: open-sublist">Назад</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 6 Note</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 7 Note</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 Note</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 Note S</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="Перейти на страницу">
+                          <span>Mi 8 Note Max</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-2 -->
+              <li class="has-child first-level-2">
+                <a href="#">
+                  <span>«Умный дом»</span>
+                </a>
+
+                <ul class="menu__sublist">
                   <li>
                     <a href="#" title="Перейти на страницу">
-                      <span>test 2</span>
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
                     </a>
                     <ul class="menu__innerlist">
                       <li>
@@ -118,38 +249,11 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
+
+              <!-- menu-3 -->
+              <li class="has-child first-level-3">
                 <a href="#">
-                  <span>Redmi</span>
-                </a>
-                <ul class="menu__sublist">
-                  <li>
-                    <a href="#" title="Перейти на страницу">
-                      <span>iPhone XS Max</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" title="Перейти на страницу">
-                      <span>iPhone XS</span>
-                    </a>
-                    <ul class="menu__innerlist">
-                      <li>
-                        <a href="#" title="Перейти на страницу">
-                          <span>test 4</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Перейти на страницу">
-                          <span>test 6</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-child">
-                <a href="#">
-                  <span>Redmi Note</span>
+                  <span>Компьютерная техника</span>
                 </a>
                 <ul class="menu__sublist">
                   <li>
@@ -164,8 +268,12 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
-                <a href="#">Pocophone</a>
+
+              <!-- menu-4 -->
+              <li class="has-child first-level-4">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
                 <ul class="menu__sublist">
                   <li>
                     <a href="#" title="Перейти на страницу">
@@ -179,8 +287,12 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
-                <a href="#">Аксессуары</a>
+
+              <!-- menu-5 -->
+              <li class="has-child first-level-5">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
                 <ul class="menu__sublist">
                   <li>
                     <a href="#" title="Перейти на страницу">
@@ -194,8 +306,12 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-child">
-                <a href="#">Электроника</a>
+
+              <!-- menu-6 -->
+              <li class="has-child first-level-6">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
                 <ul class="menu__sublist">
                   <li>
                     <a href="#" title="Перейти на страницу">
@@ -209,11 +325,147 @@
                   </li>
                 </ul>
               </li>
+
+              <!-- menu-7 -->
+              <li class="has-child first-level-7">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-8 -->
+              <li class="has-child first-level-8">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-9 -->
+              <li class="has-child first-level-9">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-10 -->
+              <li class="has-child first-level-10">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-11 -->
+              <li class="has-child first-level-11">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-12 -->
+              <li class="has-child first-level-12">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-13 -->
+              <li class="has-child first-level-13">
+                <a href="#">
+                  <span>Компьютерная техника</span>
+                </a>
+                <ul class="menu__sublist">
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS Max</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Перейти на страницу">
+                      <span>iPhone XS</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- menu-14 -->
               <li class="menu__discount">
                 <a href="#">
                   <span>Скидки</span>
                 </a>
               </li>
+
             </ul>
             <div class="menu__list-info uk-hidden@l">
               <div>
@@ -260,172 +512,394 @@
         </div>
       </nav>
 
-
       <div class="header__catalog uk-visible@l">
-        <button type="button" class="header__catalog-btn uk-flex uk-flex-middle"
-          uk-toggle="target: body; cls: menu--opened">
-          <svg width="24" height="24" fill="#ffffff">
-            <use xlink:href="img/symbol/sprite.svg#header-catalog-btn" />
+        <button type="button" class="header__catalog-btn uk-flex uk-flex-middle" data-href="#popupCatalog"
+          data-uk-toggle>
+          <svg width="18" height="14" fill="#ffffff">
+            <use xlink:href="img/symbol/sprite.svg#hamburger" />
           </svg>
-          <span>Каталог товаров</span>
+          <span>Каталог</span>
         </button>
 
-        <div class="backdrop" uk-toggle="target: body; cls: menu--opened"></div>
+        <!-- catalog -->
+        <div id="popupCatalog" class="popup header__catalog-popup uk-flex-top uk-modal uk-modal-container"
+          data-uk-modal="container: false">
+          <div class="popup__dialog popup__dialog--small uk-modal-dialog uk-modal-body">
+            <button type="button" class="header__catalog-btn uk-flex uk-flex-middle" data-href="#popupCatalog"
+              data-uk-toggle>
+              <svg width="18" height="14" fill="#ffffff">
+                <use xlink:href="img/symbol/sprite.svg#modal-close" />
+              </svg>
+              <span>Каталог</span>
+            </button>
+            <div class="header__catalog-container">
+              <ul class="header__catalog-menu">
+                <li class="header__catalog-list active">
+                  <a href="">
+                    <span>Смартфоны</span>
+                  </a>
 
-        <ul class="header__catalog-menu">
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-1" />
-              </svg>
-              <span>Смартфоны</span>
-            </a>
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Mi</b></a></li>
+                        <li><a href="#">Mi 6</a></li>
+                        <li><a href="#">Mi 6 S</a></li>
+                        <li><a href="#">Mi 6 Pro</a></li>
+                        <li><a href="#">Mi 7</a></li>
+                        <li><a href="#">Mi 8</a></li>
+                        <li><a href="#">Mi 8 S</a></li>
+                        <li><a href="#">Mi 8 T</a></li>
+                      </ul>
+                    </li>
 
-            <ul class="header__catalog-sublist">
-              <li>
-                <a href="#">
-                  <span>Mi 5</span>
-                </a>
-                <ul class="header__catalog-innerlist">
-                  <li>
-                    <a href="#">Mi 6 Max</a>
-                  </li>
-                  <li>
-                    <a href="#">Mi 6 S</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Mi 6</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Mi 7S</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Mi 8 Pro</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Mi Note 9</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-2" />
-              </svg>
-              <span>«Умный дом»</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-3" />
-              </svg>
-              <span>Компьютерная техника</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-4" />
-              </svg>
-              <span>Гаджеты</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-5" />
-              </svg>
-              <span>Наушники и колонки</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-6" />
-              </svg>
-              <span>Зарядные устройства</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-7" />
-              </svg>
-              <span>Аксессуары</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-8" />
-              </svg>
-              <span>Одежда, обувь</span>
-            </a>
-          </li>
-          <!-- <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-9" />
-              </svg>
-              <span>Транспорт</span>
-            </a>
-          </li> -->
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-10" />
-              </svg>
-              <span>Робот-пылесос</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-11" />
-              </svg>
-              <span>Фото и видео</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-12" />
-              </svg>
-              <span>Телевизоры</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF7914">
-                <use xlink:href="img/symbol/sprite.svg#menu-13" />
-              </svg>
-              <span>Детские товары</span>
-            </a>
-          </li>
-          <li class="header__catalog-list">
-            <a href="">
-              <svg width="20" height="20" fill="#FF4300">
-                <use xlink:href="img/symbol/sprite.svg#menu-14" />
-              </svg>
-              <span>Скидки</span>
-            </a>
-          </li>
-        </ul>
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Mi Note</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                        <li><a href="#">Mi 8 Note Max</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Redmi</b></a></li>
+                        <li><a href="#">Redmi 6</a></li>
+                        <li><a href="#">Redmi 4S</a></li>
+                        <li><a href="#">Redmi 8</a></li>
+                        <li><a href="#">Redmi 6S</a></li>
+                        <li><a href="#">Redmi 8 Max</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Redmi Note</b></a></li>
+                        <li><a href="#">Redmi 8</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Redmi 6S</a></li>
+                        <li><a href="#">Redmi 8 Max</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Pocophone</b></a></li>
+                        <li><a href="#">Pocophone 1S</a></li>
+                        <li><a href="#">Pocophone 2S</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Mi Note</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                        <li><a href="#">Mi 8 Note Max</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>«Умный дом»</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом</b></a></li>
+                        <li><a href="#">Умный дом 1</a></li>
+                        <li><a href="#">MУмный дом 2</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом 2</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Компьютерная техника</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>test 1</b></a></li>
+                        <li><a href="#">test 1 1</a></li>
+                        <li><a href="#">test 1</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>test 2</b></a></li>
+                        <li><a href="#">test 2</a></li>
+                        <li><a href="#">test 2</a></li>
+                        <li><a href="#">test 12</a></li>
+                        <li><a href="#">124141S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Гаджеты</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>test 1</b></a></li>
+                        <li><a href="#">test 1 1</a></li>
+                        <li><a href="#">test 1</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>test 2</b></a></li>
+                        <li><a href="#">test 2</a></li>
+                        <li><a href="#">test 2</a></li>
+                        <li><a href="#">test 12</a></li>
+                        <li><a href="#">124141S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Наушники и колонки</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом</b></a></li>
+                        <li><a href="#">Умный дом 1</a></li>
+                        <li><a href="#">MУмный дом 2</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом 2</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Зарядные устройства</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом</b></a></li>
+                        <li><a href="#">Умный дом 1</a></li>
+                        <li><a href="#">MУмный дом 2</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом 2</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Аксессуары</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом</b></a></li>
+                        <li><a href="#">Умный дом 1</a></li>
+                        <li><a href="#">MУмный дом 2</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом 2</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Одежда, обувь</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом</b></a></li>
+                        <li><a href="#">Умный дом 1</a></li>
+                        <li><a href="#">MУмный дом 2</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом 2</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Транспорт</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом</b></a></li>
+                        <li><a href="#">Умный дом 1</a></li>
+                        <li><a href="#">MУмный дом 2</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом 2</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Робот-пылесос</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом</b></a></li>
+                        <li><a href="#">Умный дом 1</a></li>
+                        <li><a href="#">MУмный дом 2</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом 2</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Фото и видео</span>
+                  </a>
+
+                  <ul class="header__catalog-sublist">
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом</b></a></li>
+                        <li><a href="#">Умный дом 1</a></li>
+                        <li><a href="#">MУмный дом 2</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <ul>
+                        <li><a href="#"><b>Умный дом 2</b></a></li>
+                        <li><a href="#">Mi 6 Note</a></li>
+                        <li><a href="#">Mi 7 Note</a></li>
+                        <li><a href="#">Mi 8 Note</a></li>
+                        <li><a href="#">Mi 8 Note S</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Телевизоры</span>
+                  </a>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Детские товары</span>
+                  </a>
+                </li>
+
+                <li class="header__catalog-list">
+                  <a href="">
+                    <span>Скидки</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__contact uk-flex uk-flex-middle uk-hidden@l">
+        <a class="uk-flex uk-flex-middle" href="tel:88125076559">
+          <svg width="16" height="16">
+            <use xlink:href="img/symbol/sprite.svg#phone" />
+          </svg>
+        </a>
       </div>
 
       <div class="search">
-        <button class="search__open" type="button">
+        <button id="searchInputMobile" class="search__open" type="button">
           <svg width="24" height="24">
             <use xlink:href="img/symbol/sprite.svg#search" />
           </svg>
@@ -445,7 +919,7 @@
             <a href="#">iphone xr 128</a>
           </li>
           <li>
-            <a href="#">iphone xr чехол</a> 
+            <a href="#">iphone xr чехол</a>
           </li>
         </ul>
         <button class="search__close" type="button">
@@ -456,13 +930,16 @@
         <button class="btn btn--orange search__btn" type="button">Найти</button>
         <div class="backdrop" uk-toggle="target: body; cls: search--opened"></div>
       </div>
+
       <a href="#" class="header__cart header__cart--active">
         <svg width="22" height="22">
           <use xlink:href="img/symbol/sprite.svg#cart" />
         </svg>
         <span>Корзина</span>
-        <span>0 шт</span>
+        <!-- <span>0 шт</span> -->
       </a>
+
+      <button class="header__login uk-visible@l" type="button">Вход или регистрация</button>
     </div>
   </div>
 </header>

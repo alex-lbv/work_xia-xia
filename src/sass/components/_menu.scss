@@ -1,6 +1,4 @@
 .menu {
-  background-color: #F4F4F4;
-
   @include screen(xl) {
     display: none;
   }
@@ -18,7 +16,9 @@
       background-color: #ffffff;
       box-shadow: 0;
       border-radius: 0;
-      overflow: hidden;
+      overflow: auto;
+      overflow-x: hidden;
+      position: relative;
 
       &-info {
         @include screen(xl) {
@@ -29,14 +29,30 @@
 
       &>.menu-label {
         @include screen(xl) {
+          border-color: transparent;
           font: 600 18px/18px Helvetica;
-          padding: 26px 20px 20px 20px;
+          /* padding: 26px 20px 20px 20px; */
+          background-color: #f7f7f7;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 100;
+        }
+
+        button {
+          position: absolute;
+          top: 15px;
+          right: 20px;
         }
       }
 
       &>li {
         @include screen(xl) {
           border-top: 1px solid #E6E6E6;
+        }
+
+        &:nth-child(2) {
+          margin-top: 59px;
         }
 
         &>a {
@@ -56,7 +72,7 @@
     }
 
     li {
-      position: relative;
+      /*  position: relative; */
 
       &.has-child {
         &>a:first-child {
@@ -64,10 +80,10 @@
 
           &::after {
             content: "";
-            position: relative;
-            top: 0;
+            position: absolute;
+            top: -2px;
             bottom: 0;
-            right: 0;
+            right: 20px;
             display: inline-block;
             margin: auto auto auto 8px;
             width: 8px;
@@ -75,7 +91,7 @@
             border-top: 2px solid;
             border-left: 2px solid;
             border-radius: 3px 0 0 0;
-            transform: rotate(225deg) translate(0, 50%);
+            transform: rotate(135deg);
           }
         }
       }
@@ -84,7 +100,7 @@
     a {
       position: relative;
       display: block;
-      padding: 20px;
+      /* padding: 20px; */
 
       @include screen(xl) {
         font: normal 16px/19px Helvetica;
@@ -106,6 +122,11 @@
       }
     }
 
+    span {
+      display: block;
+      padding: 20px;
+    }
+
     li {
       &:hover .menu__sublist {
         @include screen(l) {
@@ -114,39 +135,79 @@
         }
       }
     }
-  }
 
-  &__discount {
-    a::after {
-      display: none;
-    }
-
-    a::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      width: 10px;
-      height: 13px;
-      background: url(../img/pic/ico/lightning.svg) no-repeat;
-
-      @include screen(xl) {
-        left: 85px;
+    &.sublist-opened {
+      >li:not(.active):not(.menu-label) {
+        display: none;
       }
 
-      @include screen(l) {
-        right: 0;
+      >li.active>a {
+        display: none;
+      }
+    }
+
+    &>li.active {
+      .menu__sublist {
+        transform: translate(0%);
+        height: 100%;
+        /*  transition: transform .3s; */
+        /* right: 0; */
+
+        /*  &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          height: 15%;
+          background: #ffffff;
+          opacity: 1;
+        } */
+
+        /*   &::before {
+          opacity: 1;
+          pointer-events: inherit;
+        } */
       }
     }
   }
 
   &__sublist {
     @include screen(xl) {
-      height: 0;
-      /* opacity: 0; */
       border-top: 1px solid #E6E6E6;
-      overflow: hidden;
+      /* overflow: hidden; */
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 59px;
+      background: #ffffff;
+      z-index: 10;
+      transform: translate(105%);
+      transition: transform .3s ease-out;
+      overflow: auto;
+      box-shadow: 2px 0 15px rgba(0, 0, 0, .15);
+      /*   right: 500%; */
+
+      /*  &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 0;
+        background: #ffffff;
+        opacity: 0;
+      } */
+
+      /* &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        right: 100%;
+        background: rgba(0, 0, 0, .03);
+        opacity: 0;
+        pointer-events: none;
+      } */
     }
 
     @include screen(l) {
@@ -186,12 +247,24 @@
 
     a {
       @include screen(xl) {
-        font: normal 15px/18px Helvetica;
-        padding: 10px 20px;
+        font: normal 16px/19px Helvetica;
+        /* padding: 20px; */
       }
 
       &::after {
-        display: none;
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: 0;
+        right: 20px;
+        display: inline-block;
+        margin: auto auto auto 8px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        border-radius: 3px 0 0 0;
+        transform: rotate(135deg);
       }
 
       @include screen(l) {
@@ -201,6 +274,7 @@
     }
 
     li {
+      border-top: 1px solid #E6E6E6;
       position: static;
 
       &:hover .menu__innerlist {
@@ -210,14 +284,57 @@
         }
       }
     }
+
+    &.sublist-opened {
+      >li:not(.active):not(.menu-label) {
+        display: none;
+      }
+
+      >li.active>a {
+        display: none;
+      }
+    }
+
+    &>li.active {
+      .menu__innerlist {
+        transform: translate(0%);
+        height: 100%;
+        overflow: auto;
+        /*  transition: transform .3s; */
+        /* right: 0; */
+
+        /*  &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          height: 15%;
+          background: #ffffff;
+          opacity: 1;
+        } */
+
+        /*   &::before {
+          opacity: 1;
+          pointer-events: inherit;
+        } */
+      }
+    }
   }
 
   &__innerlist {
     @include screen(xl) {
-      height: 0;
-      /* opacity: 0; */
       border-top: 1px solid #E6E6E6;
-      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      position: absolute;
+      background: #ffffff;
+      z-index: 20;
+      transform: translate(105%);
+      transition: transform .3s ease-out;
+      overflow: auto;
+      overflow-x: hidden;
+      box-shadow: 2px 0 15px rgba(0, 0, 0, .15);
     }
 
     @include screen(l) {
@@ -257,8 +374,8 @@
 
     a {
       @include screen(xl) {
-        font: normal 15px/18px Helvetica;
-        padding: 10px 20px;
+        font: normal 16px/19px Helvetica;
+        /* padding: 20px; */
       }
 
       &::after {
@@ -270,6 +387,44 @@
         font: 500 15px/18px Helvetica;
       }
     }
+  }
+
+  &__discount {
+    a::after {
+      display: none;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 10px;
+      height: 13px;
+      background: url(../img/pic/ico/lightning.svg) no-repeat;
+
+      @include screen(xl) {
+        left: 85px;
+      }
+
+      @include screen(l) {
+        right: 0;
+      }
+    }
+  }
+
+  .uk-offcanvas-bar {
+    width: 100%;
+    transform: translate(-100%);
+    left: 0;
+    transition: transform .5s;
+    overflow-x: hidden;
+  }
+
+  &.uk-open>.uk-offcanvas-bar {
+    /* left: 0; */
+    transform: translate(0%) !important;
   }
 
   &.uk-offcanvas:not(.uk-open) {
@@ -355,10 +510,29 @@
 
   &__wrap {
     @include screen(xl) {
+      position: relative;
       display: flex;
       align-items: stretch;
       flex-wrap: wrap;
       height: 100%;
+      /* overflow: hidden;  */
     }
+  }
+
+  &__prev {
+    border: none !important;
+
+    a {
+      color: #FF7914;
+
+      &::after {
+        content: "";
+        display: none;
+      }
+    }
+  }
+
+  .sublist-opened+.menu__list-info {
+    display: none;
   }
 }
