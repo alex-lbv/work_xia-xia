@@ -12,6 +12,10 @@
     /* padding-bottom: 30px; */
   }
 
+  &__swiper {
+    position: relative;
+  }
+
   .swiper-slide {
     background: #fdfdfd;
 
@@ -82,6 +86,10 @@
           height: 402px;
           width: inherit;
           max-width: inherit;
+        }
+
+        @include screen(m) {
+          width: 100%;
         }
 
         @include screen(l) {
@@ -307,7 +315,7 @@
 
   .swiper-pagination {
     @include screen(xl) {
-      transform: translate(25px, 23px);
+      transform: translate(25px, 0);
     }
 
     @include screen(l) {
@@ -376,6 +384,12 @@
 
 
     &-block {
+      @include screen(xl) {
+        margin-top: 20px;
+        padding: 30px 30px 40px;
+        border-radius: 12px;
+      }
+
       @include screen(l) {
         padding: 30px 15px;
         width: 285px;
@@ -397,16 +411,38 @@
       &--1 {
         margin-bottom: 10px;
         background: url(../img/pic/bg/main-banner-mini-1.jpg) no-repeat, #ffffff;
-        background-size: 205px 110px;
-        background-position: center 90px;
         box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.08);
+
+        @include screen(xl) {
+          background-size: 140px 75px;
+          background-position: center right;
+        }
+
+        @include screen(l) {
+          background-size: 205px 110px;
+          background-position: center 90px;
+        }
       }
 
       &--2 {
-        background: url(../img/pic/bg/main-banner-mini-2.jpg) no-repeat, #ffffff;
-        background-size: cover;
-        background-position: center;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+        @include screen(xl) {
+          background: url(../img/pic/bg/main-banner-mini-2-mobile.jpg) no-repeat, #2E095E;
+          background-size: contain;
+          background-position: right bottom;
+        }
+
+        @include screen(l) {
+          background: url(../img/pic/bg/main-banner-mini-2.jpg) no-repeat, #ffffff;
+          background-size: cover;
+          background-position: center;
+        }
+
+        p,
+        span {
+          color: #ffffff;
+        }
       }
     }
   }
