@@ -4,7 +4,6 @@
   background-color: #ffffff;
 
   @include screen(xl) {
-    /*  padding: 10px 0; */
     border-bottom: 1px solid #E3E8EB;
   }
 
@@ -15,9 +14,7 @@
     }
 
     @include screen(l) {
-      /* margin-bottom: 10px; */
       padding: 15px 0;
-      /* padding: 0 25px; */
     }
 
     &.uk-sticky-fixed {
@@ -29,10 +26,6 @@
         box-shadow: 0 1px 15px rgba(0, 0, 0, .1);
       }
 
-      /*  .header__catalog-container {
-        top: 50px;
-      } */
-
       .header__catalog-popup {
         padding-top: 58px;
       }
@@ -40,7 +33,6 @@
   }
 
   &__top {
-    /* margin-bottom: 10px; */
     padding: 7px 0 6px;
     font: normal 16px/20px FuturaPT;
     background-color: #f7f7f7;
@@ -62,7 +54,6 @@
   }
 
   &__links-list {
-    /* margin-right: 40px; */
     padding: 0 40px 0 0;
     max-width: 720px;
 
@@ -106,7 +97,6 @@
       width: 100%;
       height: 100%;
       border-radius: 10px;
-      /*  transition: opacity 0.5s ease-out; */
       z-index: 2;
       opacity: 0;
     }
@@ -116,49 +106,9 @@
       border: none;
     }
 
-    /* &--empty {
-      border: 1px solid #FF7914;
-
-      span {
-        &:last-of-type {
-          color: #FF7914;
-          border: 1px solid #FF7914;
-          background: transparent;
-        }
-      }
-
-      svg {
-        fill: #FF7914;
-      }
-
-      &:hover {
-        span {
-          color: #ffffff;
-
-          &:last-of-type {
-            background: rgba(51, 51, 51, 0.2);
-          }
-        }
-
-        svg {
-          fill: #ffffff;
-        }
-      }
-
-      &:after {
-        background-color: #FF5614;
-        box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
-      }
-    } */
-
     &--active {
       background-image: linear-gradient(180deg, rgb(144, 231, 68) 0%, rgb(83, 181, 37) 100%);
       box-shadow: 0px 6px 15px rgba(137, 225, 64, 0.6);
-
-      @include screen(l) {
-        /* padding: 9px 10px 8px 21px; */
-        /*  padding: 13px 5px; */
-      }
 
       span {
         color: #ffffff;
@@ -187,7 +137,6 @@
     span {
       position: relative;
       z-index: 3;
-      /* transition: color 0.15s ease-out; */
 
       @include screen(xl) {
         display: none;
@@ -195,20 +144,7 @@
 
       &:first-of-type {
         @include screen(l) {
-          /* margin-right: 20px; */
           font: 500 16px/22px FuturaPT;
-        }
-      }
-
-      &:last-of-type {
-        @include screen(l) {
-          /*  padding: 6px 20px;
-          border-radius: 6px;
-          font: 300 16px/19px FuturaPT;
-          white-space: nowrap; */
-          /*  background: #FF5614; */
-          /*  color: #ffffff; */
-          /* transition: background-color .3s; */
         }
       }
     }
@@ -217,10 +153,6 @@
   &__contact {
     @include screen(xl) {
       margin: 0 10px 0 auto;
-    }
-
-    @include screen(l) {
-      /* width: 195px; */
     }
 
     svg {
@@ -256,7 +188,6 @@
       }
 
       @include screen(l) {
-        /* padding-left: 21px; */
         font: normal 12px/14px FuturaPT;
         opacity: .5;
       }
@@ -603,10 +534,14 @@
       z-index: 300;
       width: 100%;
       padding: 11px 15px;
-      /* box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4); */
       border-radius: 6px;
       background: #FF7914;
       cursor: pointer;
+      /* transition: box-shadow .3s; */
+
+      &:hover {
+        box-shadow: 0px 6px 15px rgba(255, 86, 20, 0.4);
+      }
 
       span {
         margin-left: 20px;
@@ -633,6 +568,10 @@
         top: -47px;
         left: 187px;
         width: 148px;
+
+        &:hover {
+          box-shadow: none;
+        }
 
         &::before {
           content: "";
@@ -703,24 +642,6 @@
     &-list {
       &:hover {
         background: #FFFFFF;
-
-        /* .header__catalog-sublist {
-          opacity: 1;
-          pointer-events: inherit;
-        } */
-
-        &>a {
-          /*  background: rgba(255, 121, 21,.85); */
-
-          /* span {
-            color: #FF7914;
-          } */
-
-          /* &::after {
-            background: url(../img/pic/ico/arrow-white.svg) no-repeat;
-            transform: rotate(360deg);
-          } */
-        }
       }
 
       &.active {
@@ -816,7 +737,7 @@
       /* background: red; */
       opacity: 0;
       pointer-events: none;
-     /*  transition: opacity .15s; */
+      /*  transition: opacity .15s; */
 
       &::before {
         content: "";
@@ -943,6 +864,8 @@
     }
   } */
 
+
+
   &__login {
     position: relative;
     margin-left: 10px;
@@ -953,6 +876,10 @@
     background: #FFFFFF;
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
+
+    &:hover {
+      box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+    }
 
     &::after {
       content: "";

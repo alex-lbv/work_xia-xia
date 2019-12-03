@@ -3,6 +3,15 @@
 ::after {
   box-sizing: border-box !important;
   outline: none;
+
+  @include screen(xl) {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -239,6 +248,7 @@ img {
   .search__close {
     opacity: 1;
     pointer-events: inherit;
+    z-index: 351;
   }
 
   .search__btn {
@@ -315,4 +325,23 @@ img {
 .uk-offcanvas-overlay::before {
   background: rgba(0, 0, 0, 0.5) !important;
   filter: blur(3px);
+}
+
+.uk-lightbox {
+  background-color: #ffffff !important;
+}
+
+a.uk-lightbox-button {
+  background: rgb(192, 188, 188);
+  border-radius: 50%;
+
+  polyline {
+    stroke: #ffffff !important;
+  }
+}
+
+button.uk-lightbox-toolbar-icon.uk-close-large.uk-icon.uk-close {
+  line {
+    stroke: #ffffff !important;
+  }
 }

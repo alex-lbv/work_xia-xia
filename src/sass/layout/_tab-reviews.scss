@@ -189,6 +189,7 @@
 
       @include screen(l) {
         margin-top: 20px;
+        padding-right: 25px;
       }
     }
 
@@ -300,6 +301,10 @@
       @include screen(l) {
         max-width: 120px;
       }
+    }
+
+    .tab-reviews__adds-comment {
+      display: none;
     }
   }
 }

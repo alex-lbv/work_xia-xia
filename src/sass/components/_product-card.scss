@@ -498,10 +498,12 @@
       position: relative;
       z-index: 101;
       border-radius: 12px;
+      width: 100%;
       cursor: pointer;
       backface-visibility: hidden;
       transition: background-color .4s, box-shadow .4s;
       overflow: hidden;
+      transform: scale(-1, -1);
 
       @include screen(xl) {
         align-self: flex-end;
@@ -599,19 +601,16 @@
         }
 
         @include screen(l) {
-          position: relative;
-          display: block;
+          position: absolute;
+          display: flex;
+          backface-visibility: hidden;
           z-index: 1;
-          margin-right: 20px;
-          white-space: nowrap;
-          font: 500 16px/19px FuturaPT;
-          transform: rotate(-90deg) translate(200%, 90%);
-          height: 100%;
-          width: 100%;
+          writing-mode: vertical-lr;
+          left: 25px;
+          bottom: 30px;
           transform-origin: 100% 100%;
           white-space: nowrap;
           font: 500 28px/33px FuturaPT;
-          letter-spacing: -1px;
         }
       }
 

@@ -6,7 +6,7 @@
     }
 
     @include screen(l) {
-      padding: 20px 30px 0;
+      padding: 20px 0 0;
       margin-bottom: 30px;
     }
   }
@@ -34,7 +34,6 @@
 
     @include screen(l) {
       margin-bottom: 10px;
-      padding-left: 30px;
       max-width: 860px;
     }
   }
@@ -46,7 +45,6 @@
     }
 
     @include screen(l) {
-      padding-left: 30px;
       margin-top: 40px;
       font: normal 18px/32px Helvetica;
     }
@@ -55,10 +53,6 @@
   &__date {
     margin-bottom: 20px;
     color: #14CBFF;
-
-    @include screen(l) {
-      padding-left: 30px;
-    }
   }
 
   &__more {

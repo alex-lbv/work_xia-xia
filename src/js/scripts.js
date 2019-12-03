@@ -83,3 +83,10 @@ var menu_li = $('body').find('.header__catalog-list');
 $(menu_li).hover(function () {
   $(this).addClass('active').siblings().removeClass('active');
 })
+
+/* $(document).ready(function () {
+  $('#clear').on('click', function () {
+    $('#searchInput').addClass('qwfqw');
+    console.log('nika loh');
+  })
+}) */

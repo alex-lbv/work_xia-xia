@@ -91,10 +91,16 @@
             <div class="tab-general__gallery uk-flex uk-flex-row-reverse@l uk-flex-column@s">
               <!-- Swiper -->
               <div class="swiper-container gallery-top">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide" style="background:url(./img/temp/card-phone-test.jpg)"></div>
-                  <div class="swiper-slide" style="background:url(./img/temp/card-phone-1.jpg)"></div>
-                  <div class="swiper-slide" style="background:url(./img/temp/card-phone-3.jpg)"></div>
+                <div class="swiper-wrapper" uk-lightbox>
+                  <div class="swiper-slide" style="background:url(./img/temp/card-phone-test.jpg)">
+                    <a href="../img/temp/card-phone-test.jpg" data-alt="Image 1"></a>
+                  </div>
+                  <div class="swiper-slide" style="background:url(./img/temp/card-phone-1.jpg)">
+                    <a href="../img/temp/card-phone-1.jpg" data-alt="Image 2"></a>
+                  </div>
+                  <div class="swiper-slide" style="background:url(./img/temp/card-phone-3.jpg)">
+                    <a href="../img/temp/card-phone-3.jpg" data-alt="Image 3"></a>
+                  </div>
                 </div>
 
               </div>
@@ -327,6 +333,7 @@
               </div>
               <!-- Add Arrows -->
               <div class="tab-general__swiper-button-next uk-visible@l"></div>
+              <div class="tab-general__swiper-button-prev uk-visible@l"></div>
             </div>
           </div>
 
@@ -377,8 +384,8 @@
       <!-- Atributes -->
       <li class="tab-atributes">
         <div class="uk-container">
-          <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
-            <div class="tab-atributes__lists">
+          <div class="uk-flex uk-child-width-1-2@l uk-flex-column@s">
+            <div class="tab-atributes__lists uk-margin-bottom@s">
               <h2 class="title">Технические характеристики</h2>
               <ul>
                 <li class="uk-flex uk-child-width-1-2">
@@ -506,8 +513,8 @@
       <!-- Reviews -->
       <li class="tab-reviews">
         <div class="uk-container">
-          <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
-            <div class="uk-padding-right@l">
+          <div class="uk-flex uk-child-width-1-2@l uk-flex-column@s">
+            <div class="uk-padding-right@l uk-margin-bottom@s">
               <h2 class="title">Отзывы</h2>
               <!-- с добавленными комментами -->
               <div class="tab-reviews__container">
@@ -591,7 +598,7 @@
                       <span class="tab-reviews__date">12 мая 2019</span>
                     </div>
                     <p>Гарантия какая?</p>
-                    <button class="tab-reviews__answer uk-flex-end" type="button">Ответить</button>
+
                   </div>
 
                 </div>
@@ -751,7 +758,26 @@
                     </button>
                   </div>
 
-                  <button class="tab-reviews__answer" type="button">Ответить</button>
+                  <button class="tab-reviews__answer" type="button"
+                    uk-toggle="target: #addsReview-1; cls: uk-hidden">Ответить</button>
+                </div>
+
+                <div id="addsReview-1" class="tab-reviews__adds-comment uk-hidden">
+                  <div class="uk-flex uk-flex-column">
+                    <label>Комментарий</label>
+                    <textarea cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="uk-flex uk-flex-between uk-child-width-1-2@l uk-flex-column@s">
+                    <div class="uk-flex uk-flex-column">
+                      <label>Телефон</label>
+                      <input type="text">
+                    </div>
+                    <div class="uk-flex uk-flex-column uk-margin-left@l">
+                      <label>Электронная почта</label>
+                      <input type="text">
+                    </div>
+                  </div>
+                  <button class="btn btn--orange-gradient" type="button">Отправить</button>
                 </div>
               </div>
 
@@ -802,6 +828,25 @@
               </div>
 
               <div class="tab-reviews__adds-review uk-margin-bottom@s">
+
+                <div id="addsReview-0" class="tab-reviews__adds-comment">
+                  <div class="uk-flex uk-flex-column">
+                    <label>Комментарий</label>
+                    <textarea cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="uk-flex uk-flex-between uk-child-width-1-2@l uk-flex-column@s">
+                    <div class="uk-flex uk-flex-column">
+                      <label>Телефон</label>
+                      <input type="text">
+                    </div>
+                    <div class="uk-flex uk-flex-column uk-margin-left@l">
+                      <label>Электронная почта</label>
+                      <input type="text">
+                    </div>
+                  </div>
+                  <button class="btn btn--orange-gradient" type="button">Отправить</button>
+                </div>
+
                 <h3 class="title">Написать отзыв</h3>
                 <div class="uk-flex uk-flex-column">
                   <label>Плюсы</label>
@@ -834,8 +879,8 @@
       <!-- Warranty -->
       <li class="tab-warranty">
         <div class="uk-container">
-          <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
-            <div>
+          <div class="uk-flex uk-child-width-1-2@l uk-flex-column">
+            <div class="uk-margin-bottom@s">
               <div class="tab-warranty__container">
                 <h2 class="title">Гарантия 1 год</h2>
                 <div class="tab-warranty__wrapper">
@@ -984,8 +1029,8 @@
       <!-- Pay and Delivery -->
       <li class="tab-payment">
         <div class="uk-container">
-          <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
-            <div>
+          <div class="uk-flex uk-child-width-1-2@l uk-flex-column@s">
+            <div class="uk-margin-bottom@s">
               <h2 class="title">Оплата и доставка</h2>
               <div class="tab-payment__container">
                 <h3 class="tab-payment__title">Доставка</h3>
@@ -1120,8 +1165,8 @@
       <!-- FAQ -->
       <li class="tab-faq">
         <div class="uk-container">
-          <div class="uk-flex uk-child-width-1-2@l uk-flex-column-reverse@s">
-            <div>
+          <div class="uk-flex uk-child-width-1-2@l uk-flex-column@s">
+            <div class="uk-margin-bottom@s">
               <h2 class="title">Частые вопросы</h2>
               <ul class="accordion"
                 data-uk-accordion="multiple: true; content: > .accordion__content; toggle: > .accordion__title; transition: ease-out"

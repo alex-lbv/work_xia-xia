@@ -31,22 +31,23 @@
     width: 100%;
 
     li {
-      /*  position: relative; */
-
-      /* &:not(.active) {
-        overflow: hidden;
-      } */
+      border-bottom: 1px solid rgba(230, 230, 230, .5);
     }
 
     span {
       display: block;
-      padding: 10px;
-      font-size: 20px;
+      padding: 15px 20px;
+      font: normal 16px/19px Helvetica;
+      color: #2B2D30;
     }
 
     &.sublist-opened {
       &>li:not(.active) {
         display: none;
+      }
+
+      &>li>a>span {
+        opacity: 0;
       }
 
       >li.active .menu__sublist {
@@ -57,6 +58,13 @@
         * {
           opacity: 1;
           height: auto;
+        }
+
+        .menu__innerlist {
+          * {
+            height: 0;
+            opacity: 0;
+          }
         }
       }
     }
@@ -76,44 +84,89 @@
 
     &.innerlist-opened {
       &>li:not(.active) {
-        display: none;
+        border-color: transparent;
+
+        * {
+          display: none;
+          height: 0;
+          opacity: 0;
+          padding: 0;
+        }
+      }
+
+      &>li>a>span {
+        opacity: 0;
       }
 
       >li.active .menu__innerlist {
         transform: translate(0%);
         background: #ffffff;
-        height: auto;
+        height: 100%;
+        opacity: 1;
         display: block;
+        z-index: 10;
 
         * {
-          opacity: 1;
-          height: auto;
+          opacity: 1 !important;
+          height: auto !important;
         }
       }
     }
   }
 
   &__innerlist {
-    display: none;
     position: absolute;
     top: 0;
     transform: translate(100%);
     transition: transform .3s;
     width: 100%;
-
-    * {
-      height: 0;
-    }
   }
 
   &__close {
     position: absolute;
-    top: 20px;
+    top: 14px;
     right: 20px;
     z-index: 50;
   }
 
   .sublist-opened+.menu__list-info {
     display: none;
+  }
+
+  &__title {
+    background-color: #f7f7f7;
+
+    span {
+      font: 500 18px/19px Helvetica;
+    }
+  }
+
+  &__prev {
+    span {
+      padding: 15px 0 15px 10px;
+      color: #FF7914;
+    }
+  }
+
+  &__footer {
+    padding: 5px;
+    background-color: #F4F4F4;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin: 5px;
+
+
+      a {
+        display: block;
+        padding: 9px 15px;
+        border: 1px solid #E5E5E5;
+        background: #FFFFFF;
+        border-radius: 8px;
+        font: normal 16px/20px FuturaPT;
+        color: #333333;
+      }
+    }
   }
 }

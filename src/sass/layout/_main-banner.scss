@@ -59,12 +59,11 @@
       min-height: 425px;
     }
 
-    &>div {
+    &>a {
       @include screen(l) {
+        display: block;
         width: 875px;
         margin: 10px auto auto 0;
-        /* border: 1px solid #F0F0F0; */
-        /*  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1); */
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
         position: relative;
@@ -80,8 +79,6 @@
         height: auto;
 
         @include screen(xl) {
-          /*  position: absolute; */
-          /* max-width: 390px; */
           margin: 0 auto;
           height: 402px;
           width: inherit;
@@ -93,11 +90,9 @@
         }
 
         @include screen(l) {
-          /* position: absolute; */
           width: 100%;
           height: auto;
           object-fit: cover;
-          /* background: #F7F5F6; */
         }
       }
     }
@@ -384,6 +379,9 @@
 
 
     &-block {
+      display: block;
+      transition: box-shadow .2s, transform .2s;
+
       @include screen(xl) {
         margin-top: 20px;
         padding: 30px 30px 40px;
@@ -396,6 +394,10 @@
         height: 205px;
         border-radius: 12px;
         text-align: center;
+      }
+
+      &:hover {
+        transform: scale(1.05);
       }
 
       p {
@@ -422,6 +424,10 @@
           background-size: 205px 110px;
           background-position: center 90px;
         }
+
+        &:hover {
+          box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+        }
       }
 
       &--2 {
@@ -437,6 +443,10 @@
           background: url(../img/pic/bg/main-banner-mini-2.jpg) no-repeat, #ffffff;
           background-size: cover;
           background-position: center;
+        }
+
+        &:hover {
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         p,
