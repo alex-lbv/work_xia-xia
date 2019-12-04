@@ -598,7 +598,7 @@
 <!-- Search -->
 <div id="popupSearch" class="popup popup--search" uk-modal>
   <div class="uk-modal-dialog uk-modal-body">
-    <input id="#searchInputModal" class="uk-width-1-1" type="text" placeholder="Поиск" pattern=".{0}" value="" />
+    <input id="#searchInputModal" class="uk-width-1-1" type="text" placeholder="Поиск" pattern=".{0}" value="" autocomplete="off"/>
     <button class="search__clear" type="button">
       <svg width="24" height="24">
         <use xlink:href="img/symbol/sprite.svg#close" />
@@ -609,8 +609,8 @@
 </div>
 
 
-
-<script src="js/scripts.min.js"></script>
+<script defer src="js/library.min.js"></script>
+<script defer src="js/scripts.min.js"></script>
 
 <button type="button" class="hamburger"
   style="position: fixed; bottom: 20px; left: 20px; margin-right: 20px; padding: 0; z-index: 99999;"

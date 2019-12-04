@@ -1,8 +1,3 @@
-//= jquery.js
-//= uikit.js
-//= swiper.js
-//= nice-select.js
-
 /* function toggleMenu() {
   var navLink = $('.menu__list li > a');
   var animateTime = 350;
