@@ -37,6 +37,7 @@ var swiperArticles = new Swiper('.swiper-articles', {
     el: '.swiper-pagination',
     dynamicBullets: true,
   },
+  threshold: 20,
   spaceBetween: 10,
   slidesPerView: 4,
   breakpoints: {
@@ -48,11 +49,13 @@ var swiperArticles = new Swiper('.swiper-articles', {
     }
   },
 });
+
 var swiperArticle = new Swiper('.swiper-article', {
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true,
   },
+  threshold: 20,
   spaceBetween: 10,
   slidesPerView: 3,
   breakpoints: {
@@ -71,6 +74,7 @@ var swiperReviews = new Swiper('.swiper-reviews', {
     type: 'bullets',
     dynamicBullets: true,
   },
+  threshold: 20,
   loop: true,
   spaceBetween: 10,
   slidesPerView: 2,
@@ -91,6 +95,7 @@ var swiperReviews = new Swiper('.swiper-reviews', {
 var swiperBanner = new Swiper('.main-banner__swiper', {
   effect: 'fade',
   loop: true,
+  threshold: 20,
   navigation: {
     nextEl: '.main-banner__swiper-button-next',
     prevEl: '.main-banner__swiper-button-prev',
@@ -102,6 +107,7 @@ var swiperBanner = new Swiper('.main-banner__swiper', {
 
 var swiperCheckout = new Swiper('.checkout__swiper', {
   mousewheel: true,
+  threshold: 20,
   slidesPerView: 2,
   direction: 'vertical',
   scrollbar: {
@@ -139,6 +145,7 @@ var swiperCatalog = new Swiper('.catalog__swiper', {
     nextEl: '.catalog__swiper-button-next',
     prevEl: '.catalog__swiper-button-prev',
   },
+  threshold: 20,
   initialSlide: initialSlideCatalog,
   slidesPerView: 'auto',
   spaceBetween: 5,
@@ -155,6 +162,7 @@ function initSwiper() {
         nextEl: '.product__swiper-button-next',
         prevEl: '.product__swiper-button-prev',
       },
+      threshold: 20,
       slidesPerView: 7,
       initialSlide: initialSlideProduct,
       breakpoints: {
@@ -182,43 +190,36 @@ $(window).on('resize', function () {
 $(document).ready(function () {
 
   var swiperGeneral = new Swiper('.tab-general__swiper', {
-    /* mousewheel: true, */
+    threshold: 20,
     slidesPerView: 2,
     spaceBetween: 10,
     navigation: {
       nextEl: '.tab-general__swiper-button-next',
+      prevEl: '.tab-general__swiper-button-prev',
     },
-    /* direction: 'vertical', */
-    /*  scrollbar: {
-       el: '.swiper-scrollbar',
-     }, */
     breakpoints: {
       640: {
-        /*  spaceBetween: 10,
-         slidesPerView: 1,
-         direction: 'horizontal',
-         mousewheel: false, */
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
           dynamicBullets: true,
         },
+        slidesPerView: 3,
+        loop: true,
       },
       1200: {
-        /* spaceBetween: 10,
-        slidesPerView: 2,
-        direction: 'horizontal',
-        mousewheel: false, */
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
-          dynamicBullets: true,
         },
+        dynamicBullets: true,
+        slidesPerView: 4,
       }
     },
   });
 
   var galleryThumbs = new Swiper('.gallery-thumbs', {
+    threshold: 20,
     spaceBetween: 18,
     slidesPerView: 5,
     freeMode: true,
@@ -237,6 +238,7 @@ $(document).ready(function () {
     },
   });
   var galleryTop = new Swiper('.gallery-top', {
+    threshold: 20,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

@@ -3,6 +3,15 @@
 ::after {
   box-sizing: border-box !important;
   outline: none;
+
+  @include screen(xl) {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -143,12 +152,6 @@ img {
   height: auto;
 }
 
-/* .common-home {
-  .header__catalog-menu {
-    display: none;
-  }
-} */
-
 .backdrop {
   display: none;
   content: "";
@@ -163,10 +166,6 @@ img {
 .menu--opened {
   .header__catalog-container {
     display: block;
-  }
-
-  .header__catalog-menu {
-    /* display: block; */
   }
 
   .main-banner .header__catalog-menu {
@@ -191,32 +190,16 @@ img {
     }
   }
 
-  /* header,
-  footer,
-  .uk-container {
-    filter: url('#blur');
-    filter: blur(5px);
-  } */
-
   .header__catalog {
     z-index: 300;
   }
 
   .header__catalog-btn {
-    /* background-color: #ffffff; */
     position: relative;
 
     &::before {
       display: block;
     }
-
-    /* span {
-      color: #FF7914;
-    } */
-
-    /* svg {
-      fill: #FF7914;
-    } */
   }
 }
 
@@ -226,9 +209,7 @@ img {
   }
 
   .search {
-    /*  position: absolute; */
     z-index: 350;
-    /*  width: 100%; */
   }
 
   .search input {
@@ -239,6 +220,7 @@ img {
   .search__close {
     opacity: 1;
     pointer-events: inherit;
+    z-index: 351;
   }
 
   .search__btn {
@@ -250,6 +232,29 @@ img {
     opacity: 1;
     pointer-events: inherit;
     z-index: 350;
+  }
+
+  &-mobile {
+    .search input {
+      display: block !important;
+      z-index: 500;
+      pointer-events: inherit;
+    }
+
+    .search__close {
+      opacity: 1;
+      pointer-events: inherit;
+      z-index: 351;
+    }
+
+    .search__btn {
+      opacity: 1;
+      pointer-events: inherit;
+    }
+
+    .backdrop {
+      display: block;
+    }
   }
 }
 
@@ -315,4 +320,23 @@ img {
 .uk-offcanvas-overlay::before {
   background: rgba(0, 0, 0, 0.5) !important;
   filter: blur(3px);
+}
+
+.uk-lightbox {
+  background-color: #ffffff !important;
+}
+
+a.uk-lightbox-button {
+  background: rgb(192, 188, 188);
+  border-radius: 50%;
+
+  polyline {
+    stroke: #ffffff !important;
+  }
+}
+
+button.uk-lightbox-toolbar-icon.uk-close-large.uk-icon.uk-close {
+  line {
+    stroke: #ffffff !important;
+  }
 }

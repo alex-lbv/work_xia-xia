@@ -11,6 +11,10 @@
     @include screen(l) {
       margin-top: 55px;
     }
+
+    &.uk-sticky-fixed {
+      z-index: 0;
+    }
   }
 
   &__lists {

@@ -6,21 +6,19 @@
       }
 
       @include screen(l) {
-        padding: 20px 20px 0;
+        padding: 0;
       }
     }
 
     .title {
       @include screen(l) {
-        padding: 0 20px;
+        padding: 0;
         margin-bottom: 15px;
       }
     }
   }
 
   &__rating {
-    padding-left: 20px;
-
     span {
       padding: 5px 15px;
       border: 1px solid #14D75D;
@@ -136,7 +134,6 @@
             transition: background-color .3s, color .15s;
 
             &:hover {
-
               color: #ffffff !important;
             }
           }
@@ -274,8 +271,6 @@
     }
   }
 
-  /* -------------------- */
-
   /* tabs */
   .uk-active.swiper-slide {
     a {
@@ -310,8 +305,6 @@
     }
   }
 
-  /*  */
-
   &__carousel {
     @include screen(xl) {
       overflow: hidden;
@@ -331,5 +324,4 @@
       }
     }
   }
-
 }
