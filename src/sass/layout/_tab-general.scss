@@ -396,8 +396,6 @@
     .tab-general__swiper {
       margin: 20px 0;
       overflow: hidden;
-      /* max-height: 234px; */
-      /* border-radius: 12px; */
       position: relative;
 
       @include screen(xl) {
@@ -500,7 +498,6 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        right: -25px;
         z-index: 5;
         margin: auto;
         width: 48px;
@@ -510,6 +507,17 @@
         cursor: pointer;
         background: url(../img/pic/ico/arrow-next.svg) center no-repeat, #ffffff;
 
+        @include screen(xl) {
+          right: -10px;
+        }
+
+        @include screen(l) {
+          right: -25px;
+        }
+
+        &.swiper-button-disabled {
+          display: none;
+        }
       }
 
       &-button-prev {
@@ -517,7 +525,6 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: -45px;
         z-index: 5;
         margin: auto;
         width: 48px;
@@ -527,7 +534,21 @@
         cursor: pointer;
         background: url(../img/pic/ico/arrow-next.svg) center no-repeat, #ffffff;
         transform: rotate(180deg);
+
+        @include screen(xl) {
+          left: -30px;
+        }
+
+        @include screen(l) {
+          left: -45px;
+        }
+
+        &.swiper-button-disabled {
+          display: none;
+        }
       }
+
+
     }
 
     .swiper-slide {

@@ -261,6 +261,29 @@ img {
     pointer-events: inherit;
     z-index: 350;
   }
+
+  &-mobile {
+    .search input {
+      display: block !important;
+      z-index: 500;
+      pointer-events: inherit;
+    }
+
+    .search__close {
+      opacity: 1;
+      pointer-events: inherit;
+      z-index: 351;
+    }
+
+    .search__btn {
+      opacity: 1;
+      pointer-events: inherit;
+    }
+
+    .backdrop {
+      display: block;
+    }
+  }
 }
 
 .position-right {

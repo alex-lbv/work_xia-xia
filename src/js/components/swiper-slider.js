@@ -190,7 +190,6 @@ $(window).on('resize', function () {
 $(document).ready(function () {
 
   var swiperGeneral = new Swiper('.tab-general__swiper', {
-    /* mousewheel: true, */
     threshold: 20,
     slidesPerView: 2,
     spaceBetween: 10,
@@ -198,32 +197,23 @@ $(document).ready(function () {
       nextEl: '.tab-general__swiper-button-next',
       prevEl: '.tab-general__swiper-button-prev',
     },
-    /* direction: 'vertical', */
-    /*  scrollbar: {
-       el: '.swiper-scrollbar',
-     }, */
     breakpoints: {
       640: {
-        /*  spaceBetween: 10,
-         slidesPerView: 1,
-         direction: 'horizontal',
-         mousewheel: false, */
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
           dynamicBullets: true,
         },
+        slidesPerView: 3,
+        loop: true,
       },
       1200: {
-        /* spaceBetween: 10,
-        slidesPerView: 2,
-        direction: 'horizontal',
-        mousewheel: false, */
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
-          dynamicBullets: true,
         },
+        dynamicBullets: true,
+        slidesPerView: 4,
       }
     },
   });

@@ -140,6 +140,11 @@
     display: none;
   }
 
+  .swiper-slide-active a {
+    color: #ffffff;
+    background-color: #FF7914;
+  }
+
   /* -------------------- */
 
   &__sorting {

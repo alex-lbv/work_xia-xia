@@ -53,13 +53,10 @@ $("body").on('blur', '#searchInput', function () {
   $('body').removeClass('search--opened');
 });
 
-$("body").on('focus', '#searchInputMobile', function () {
+/* $("#searchInputMobile").on('click', function () {
   $('body').addClass('search--opened-mobile');
-});
-
-$("body").on('blur', '#searchInputMobile', function () {
-  $('body').removeClass('search--opened-mobile');
-});
+  $('#searchInput').focus();
+}); */
 
 /* $(window).on('resize', function () {
   toggleMenu();
@@ -84,9 +81,15 @@ $(menu_li).hover(function () {
   $(this).addClass('active').siblings().removeClass('active');
 })
 
-/* $(document).ready(function () {
-  $('#clear').on('click', function () {
-    $('#searchInput').addClass('qwfqw');
+/* clear val for search input */
+$(document).ready(function () {
+  $('.search__close').on('click', function () {
+    $('#searchInput').val('');
     console.log('nika loh');
   })
-}) */
+
+  $('body').on('click', '.search__clear', function () {
+    $(this).prev().val('');
+    console.log('nika loh 2');
+  })
+})
