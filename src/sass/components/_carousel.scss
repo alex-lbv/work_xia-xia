@@ -72,6 +72,13 @@
       }
     }
 
+    .swiper-slide {
+      @include screen(l) {
+        margin-right: 0 !important;
+        margin-bottom: 15px;
+      }
+    }
+
     .title {
       @include screen(xl) {
         margin-bottom: 15px;

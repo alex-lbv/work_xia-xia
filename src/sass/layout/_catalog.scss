@@ -201,8 +201,6 @@
         transform: rotate(-135deg);
       }
     }
-
-    /* --------------- */
   }
 
   &__content {
@@ -236,7 +234,6 @@
   }
 
   /* Catalog-accordion */
-
   &__accordion {
     @include screen(xl) {
       border: 1px solid #F0F0F0;

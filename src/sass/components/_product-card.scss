@@ -340,22 +340,6 @@
       }
     }
 
-    /* .product-card__price {
-      border-top: 1px solid #F0F0F0;
-      font: 500 24px/29px Helvetica;
-      color: #2B2D30;
-      transition: transform .3s;
-
-      @include screen(xl) {
-        padding-top: 15px;
-        margin-top: 15px;
-      }
-
-      @include screen(l) {
-        padding: 15px;
-      }
-    } */
-
     .product-card__price {
       @include screen(xl) {
         align-items: flex-start;

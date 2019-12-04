@@ -547,8 +547,6 @@
           display: none;
         }
       }
-
-
     }
 
     .swiper-slide {
@@ -579,14 +577,6 @@
     .swiper-container-vertical>.swiper-scrollbar {
       background-color: transparent;
     }
-
-    /* .swiper-scrollbar {
-      @include screen(xl) {
-        display: none !important;
-      }
-    } */
-
-    /* ------------------ */
   }
 
   .features {

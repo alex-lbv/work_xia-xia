@@ -1,0 +1,261 @@
+.profile {
+  @include screen(xl) {
+    background: #F7F7F7;
+    border: 1px solid #E7E7E7;
+    border-radius: 12px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 15px 20px;
+  }
+
+  @include screen(l) {
+    margin-top: 30px;
+  }
+
+  &__header-mobile {
+    @include screen(xl) {
+      position: relative;
+      padding: 0 20px;
+      margin: 20px 0;
+    }
+
+    a {
+      @include screen(xl) {
+        position: absolute;
+        top: 7px;
+        right: 25px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  /* title */
+  .uk-accordion-title:hover,
+  .uk-accordion-title:focus {
+    color: #2B2D30
+  }
+
+  li.uk-open {
+    &>.uk-accordion-title::before {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .uk-accordion-title {
+    @include screen(xl) {
+      position: relative;
+    }
+
+    @include screen(l) {
+      pointer-events: none;
+    }
+
+    &::before {
+      @include screen(xl) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 25px;
+        height: 25px;
+        background: url("../img/pic/ico/arrow-orange.svg") no-repeat, #E9E9E9;
+        background-size: 10px 7px;
+        background-position: center;
+        border-radius: 50%;
+        transition: transform .3s;
+      }
+
+      @include screen(l) {
+        display: none;
+      }
+    }
+  }
+
+  &__wrap {
+    height: max-content;
+
+    @include screen(xl) {
+      padding: 0 20px;
+      margin-bottom: 40px;
+    }
+
+    @include screen(l) {
+      margin: 85px 0 0 20px;
+      padding: 15px 24px 25px 21px;
+      border: 1px solid #E7E7E7;
+      background: #F7F7F7;
+      border-radius: 12px;
+    }
+  }
+
+  &__title {
+    font: 600 18px/21px FuturaPT;
+  }
+
+  &__edit {
+    margin: 0;
+    border-bottom: 1px solid transparent;
+    font: normal 14px/22px Helvetica;
+    color: #FF7914;
+    transition: border .3s;
+
+    &:hover {
+      border-color: #FF7914;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    color: #2B2D30;
+
+    @include screen(xl) {
+      font: 500 24px/28px FuturaPT;
+    }
+
+    @include screen(l) {
+      font: 500 24px/28px FuturaPT;
+    }
+  }
+
+  &__region {
+    color: rgba(48, 55, 61, .7);
+
+    @include screen(xl) {
+      font: normal 14px/22px Helvetica;
+    }
+
+    @include screen(l) {
+      font: normal 16px/22px Helvetica;
+    }
+  }
+
+  &__logo {
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include screen(xl) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include screen(l) {
+      width: 80px;
+      height: 80px;
+
+    }
+  }
+
+  &__balance {
+    padding: 15px 0;
+    border-top: 1px solid #EAEAEA;
+
+    span {
+      font: 600 18px/21px FuturaPT;
+      color: #FE4E1D;
+    }
+
+    button {
+      width: 100%;
+      max-width: 180px;
+      padding: 10px 15px 9px;
+      text-align: center;
+      border-radius: 6px;
+
+      span {
+        white-space: nowrap;
+        font: 500 16px/19px FuturaPT;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__data {
+    padding: 20px 0;
+    border-top: 1px solid #EAEAEA;
+
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+
+    span:not(.profile__subtitle) {
+      font: normal 16px/22px Helvetica;
+      color: #30373D;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font: 500 16px/24px FuturaPT;
+    color: #2B2D30;
+  }
+
+  &__offers {
+    padding: 20px 0;
+    border-top: 1px solid #EAEAEA;
+
+    .profile__subtitle {
+      margin-bottom: 15px;
+    }
+
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+
+    label {
+      font: normal 14px/17px Helvetica;
+    }
+
+    .filter__checkbox {
+      margin: 0;
+
+      input+label::after {
+        background-color: #FFFFFF;
+      }
+    }
+  }
+
+  &__referral {
+    padding: 20px 0 0;
+    border-top: 1px solid #EAEAEA;
+
+    .profile__subtitle {
+      margin-bottom: 15px;
+    }
+
+    &-link {
+      padding: 5px 10px;
+      margin-bottom: 15px;
+      background: #F2F2F2;
+      border-radius: 6px;
+
+      .profile__referral-text {
+        border: none;
+        padding: 0;
+        background: none;
+        font: normal 14px/22px Helvetica;
+        color: #FF7914;
+      }
+
+      .profile__referral-copy {
+        cursor: pointer;
+        font: normal 12px/14px Helvetica;
+        color: rgba(48, 55, 61, .4);
+        transition: color .3s;
+
+        &:hover {
+          color: #30373D;
+        }
+      }
+    }
+
+    p {
+      font-size: normal 14px/22px Helvetica;
+      color: rgba(48, 55, 61, .5);
+    }
+  }
+}

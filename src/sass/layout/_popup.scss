@@ -375,23 +375,7 @@
               height: 40px;
             }
           }
-
-          /* @include screen(xl) {
-            border-bottom: 1px solid #E9E9E9;
-          }
-
-          @include screen(l) {
-            border-right: 1px solid #E9E9E9;
-          } */
         }
-
-        /* &:first-of-type {
-          border-radius: 10px 0 0 10px;
-        }
-
-        &:last-of-type {
-          border-radius: 0 10px 10px 0;
-        } */
 
         &.active {
           z-index: 1;
@@ -428,14 +412,6 @@
       padding: 0;
       border-radius: 12px;
       overflow: hidden;
-    }
-
-    .uk-modal-dialog {
-      
-    }
-
-    &.uk-open > .uk-modal-dialog {
-    
     }
 
     .search__clear {
