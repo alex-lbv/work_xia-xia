@@ -27,7 +27,7 @@
       }
 
       .header__catalog-popup {
-        padding-top: 58px;
+        padding-top: 58px !important;
       }
     }
   }
@@ -548,7 +548,7 @@
     }
 
     &-popup {
-      padding-top: 104px;
+      padding-top: 104px !important;
       background-color: rgba(0, 0, 0, .2);
       backdrop-filter: blur(5px);
 
