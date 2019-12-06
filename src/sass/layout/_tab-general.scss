@@ -422,6 +422,7 @@
 
       .product-card--checkout-recommendation {
         width: 160px;
+        height: 100%;
         padding: 10px;
         background: #FFFFFF;
         border: 1px solid #F0F0F0;
@@ -550,7 +551,9 @@
     }
 
     .swiper-slide {
+      margin-right: 10px;
       width: 160px !important;
+      height: auto;
     }
 
     .swiper-pagination {
