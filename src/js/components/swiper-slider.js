@@ -240,8 +240,8 @@ $(document).ready(function () {
   var galleryTop = new Swiper('.gallery-top', {
     threshold: 20,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.gallery__swiper-button-next',
+      prevEl: '.gallery__swiper-button-prev',
     },
     thumbs: {
       swiper: galleryThumbs

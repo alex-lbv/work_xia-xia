@@ -327,16 +327,17 @@
       opacity: 0;
       z-index: 100;
       transition: opacity .3s;
+      white-space: normal;
 
       @include screen(xl) {
         width: 280px;
-        top: 35px;
-        left: -115px;
+        top: 110%;
+        left: -135px;
         padding: 15px;
       }
 
       @include screen(l) {
-        top: -260px;
+        top: 120%;
         padding: 20px;
         width: 340px;
         max-width: 320px;
@@ -347,23 +348,24 @@
           content: "";
           position: absolute;
           top: -8px;
-          left: 73px;
+          right: 35%;
           border: 8px solid transparent;
           border-top: none;
           border-bottom: 8px solid #ffffff;
           z-index: 11;
-          transform: translateX(-50%);
         }
 
         @include screen(l) {
           content: "";
           position: absolute;
-          bottom: -8px;
+          /* bottom: -8px; */
+          top: -8px;
           border: 8px solid transparent;
           border-top: none;
           border-bottom: 8px solid #ffffff;
           z-index: 1;
-          transform: translateX(-50%) rotate(180deg);
+          /* transform: translateX(-50%) rotate(180deg); */
+          /* transform: translateX(20%); */
         }
       }
     }
