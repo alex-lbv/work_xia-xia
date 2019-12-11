@@ -660,13 +660,13 @@
       top: 0;
       right: 0px;
       display: flex;
-      flex-wrap: wrap;
       flex-direction: column;
       padding: 35px 20px 20px 30px;
       width: 77%;
       height: 100%;
       opacity: 0;
       pointer-events: none;
+      overflow-y: scroll;
 
       &::before {
         content: "";
@@ -690,14 +690,20 @@
 
       li {
         margin-bottom: 12px;
-
-        &:first-of-type {
-          margin-bottom: 15px;
-        }
       }
 
       ul {
-        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        li {
+          width: 25%;
+
+          &:first-of-type {
+            width: 100%;
+          }
+        }
       }
 
       li:hover {
