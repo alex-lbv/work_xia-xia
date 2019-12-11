@@ -111,7 +111,7 @@
         <li>м. Кузьминки, ул. Зеленодельская 121/35,</li>
         <li>м. Сокольники, Русаковская 26Бс1.</li>
       </ul>
-      <button class="btn btn--orange-gradient footer__btn" type="button" data-href="#popupMaps" data-uk-toggle>
+      <button class="btn btn--orange-gradient footer__btn" type="button" data-href="#popupCredit" data-uk-toggle>
         <span>Посмотреть пункты самовывоза</span>
       </button>
       <div class="footer__contact">
@@ -215,7 +215,7 @@
     </svg>
 
     <h2 class="title">Купить в кредит</h2>
- 
+
     <div class="popup__section product-card product-card--popup uk-flex uk-flex-middle">
       <div class="product-card__image">
         <img src="img/temp/checkout-1-1.jpg" alt="">
@@ -241,9 +241,33 @@
       </select>
     </div>
 
-    <div class="popup__section uk-flex uk-flex-column">
+    <!-- calc -->
+    <div class="calc popup__section uk-flex uk-flex-column">
       <label>Срок кредита (месяцев):</label>
 
+      <div class="calc__range-wrap">
+        <input class="calc__range" type="range" value="2" min="2" max="36" step="1" />
+        <span class="calc__range-input-val">2</span>
+        <ul class="calc__range-items">
+          <li class="calc__range-item">2</li>
+          <li class="calc__range-item">6</li>
+          <li class="calc__range-item">12</li>
+          <li class="calc__range-item">18</li>
+          <li class="calc__range-item">24</li>
+          <li class="calc__range-item"></li>
+          <li class="calc__range-item">36</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="calc__subtitle">Приблизительный ежемесячный платеж:</p>
+        <div class="calc__total uk-flex uk-child-width-1-2">
+          <span class="calc__result">16 990 ₽</span>
+          <span class="calc__info">Точный платеж<br>расчитывается менеджером</span>
+        </div>
+      </div>
+
+      <input class="calc__total-price-current" name="total_sum" type="hidden" value="89990">
     </div>
 
     <div class="popup__section uk-flex uk-flex-column@s uk-child-width-1-2@l">
@@ -598,7 +622,8 @@
 <!-- Search -->
 <div id="popupSearch" class="popup popup--search" uk-modal>
   <div class="uk-modal-dialog uk-modal-body">
-    <input id="#searchInputModal" class="uk-width-1-1" type="text" placeholder="Поиск" pattern=".{0}" value="" autocomplete="off"/>
+    <input id="#searchInputModal" class="uk-width-1-1" type="text" placeholder="Поиск" pattern=".{0}" value=""
+      autocomplete="off" />
     <button class="search__clear" type="button">
       <svg width="24" height="24">
         <use xlink:href="img/symbol/sprite.svg#close" />

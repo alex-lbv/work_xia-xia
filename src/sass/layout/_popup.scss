@@ -141,7 +141,7 @@
     font: 600 14px/18px FuturaPT;
   }
 
-  input {
+  input:not([type='range']) {
     padding: 20px 15px;
     width: 100%;
     background: #F4F4F4;
