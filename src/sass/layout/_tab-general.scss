@@ -657,7 +657,13 @@
         width: 175px !important;
       }
 
-      img {
+      .option {
+        padding: 10px 15px !important;
+      }
+
+      img,
+      svg {
+        margin-bottom: 5px;
         margin-right: 10px;
         width: 28px;
         height: 28px;

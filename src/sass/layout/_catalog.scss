@@ -140,15 +140,9 @@
     display: none;
   }
 
-  .swiper-slide-active a {
-    color: #ffffff;
-    background-color: #FF7914;
-  }
-
   /* -------------------- */
 
   &__sorting {
-
     @include screen(xl) {
       margin-top: 10px;
       padding-top: 10px;
@@ -165,11 +159,16 @@
     /* Select */
 
     .nice-select {
+      height: auto;
       width: 100%;
       max-width: 185px;
       border: none;
       background: #FFFFFF;
       border-radius: 8px;
+
+      & .option {
+        padding: 10px 15px !important;
+      }
 
       &::after {
         width: 8px;
