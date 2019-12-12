@@ -17,6 +17,11 @@ $(menu_li).hover(function () {
   $(this).addClass('active').siblings().removeClass('active');
 })
 
+var inner_menu_li = $('body').find('.header__catalog-sublist > li');
+$(inner_menu_li).hover(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+})
+
 /* clear val for search input */
 $(document).ready(function () {
   $('.search__close').on('click', function () {
