@@ -1,0 +1,67 @@
+.description {
+  color: #2A2D30;
+
+  @include screen(l) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__frame {
+    border-radius: 24px;
+    background-color: #FFFFFF;
+
+    @include screen(l) {
+      padding: 40px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font: 600 48px/54px FuturaPT;
+  }
+
+  &__section {
+    &:not(:last-of-type) {
+      margin-bottom: 60px;
+    }
+
+    img {
+      border-radius: 8px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    span:not(.description__title) {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font: 600 24px/34px FuturaPT;
+    }
+
+    p {
+      font: normal 18px/28px FuturaPT;
+    }
+
+    & div {
+      padding: 50px;
+    }
+
+    &--column {
+      flex-direction: column-reverse;
+
+      & div {
+        padding: 60px 160px 40px;
+        text-align: center;
+        background: #F7F7F7;
+        border-radius: 12px 12px 0 0;
+      }
+
+      img {
+        border-radius: 0 0 12px 12px;
+      }
+    }
+  }
+}
