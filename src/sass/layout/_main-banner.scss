@@ -49,6 +49,8 @@
     }
 
     &>a {
+      width: 100%;
+      height: 100%;
       @include screen(l) {
         display: block;
         width: 875px;
@@ -88,19 +90,24 @@
 
     &--2 {
       .main-banner__image {
+        display: block;
         width: 100%;
         height: auto;
 
         @include screen(xl) {
-          position: absolute;
-          top: 10px;
-          max-width: 390px;
+          margin: 0 auto;
+          height: 402px;
+          width: 100%;
+          max-width: inherit;
+        }
+
+        @include screen(m) {
+          width: 100%;
         }
 
         @include screen(l) {
-          position: absolute;
           width: 100%;
-          height: 100%;
+          height: auto;
           object-fit: cover;
         }
       }
