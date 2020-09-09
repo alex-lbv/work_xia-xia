@@ -1,1 +1,14 @@
-<h1>Xiaomi SPB<h1>
+# work_xia-xia
+## Installation
+```sh
+$ yarn
+```
+or
+```sh
+$ npm i
+```
+
+### dev mode
+```sh
+$ gulp dev
+```
